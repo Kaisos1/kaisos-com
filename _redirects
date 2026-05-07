@@ -1,1 +1,31 @@
 https://www.kaisos.com/* https://kaisos.com/:splat 301!
+
+# Block bots and scanners — 410 Gone reduces future probing
+/wp-admin/*          410
+/wp-content/*        410
+/wp-includes/*       410
+/wp-json/*           410
+/wp-login.php        410
+/wp-cron.php         410
+/wp-config.php       410
+/site/wp-admin/*     410
+/site/wp-content/*   410
+/site/wp-includes/*  410
+/site/wp-json/*      410
+/xmlrpc.php          410
+/.env                410
+/.env.*              410
+/.git/*              410
+/.htaccess           410
+/vendor/*            410
+/admin/*             410
+/phpmyadmin/*        410
+/pma/*               410
+/phpinfo.php         410
+/info.php            410
+/config.php          410
+/setup.php           410
+/install.php         410
+/shell.php           410
+/alfa.php            410
+/upload.php          410
