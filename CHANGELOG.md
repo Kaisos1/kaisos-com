@@ -2,6 +2,14 @@
 
 ---
 
+## Session 7 — FL Studio affiliate card
+
+### Added
+- Featured affiliate card in the Gear section for FL Studio (Image-Line affiliate link)
+- `.gear-featured` CSS component: full-width card with gold top gradient, responsive flex layout, gold CTA button
+
+---
+
 ## Session 1 — Initial changes
 
 ### Added

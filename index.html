@@ -6,7 +6,7 @@
 <meta name="description" content="Kaisos is a lo-fi music producer from Munich. Stream ambient beats, chill study music and lo-fi hip-hop across six self-released albums — on Spotify, Apple Music and YouTube."/>
 <meta property="og:title" content="Kaisos — Lo-Fi Music Producer from Munich"/>
 <meta property="og:description" content="Stream ambient beats, chill study music and lo-fi hip-hop by Kaisos — six self-released albums on Spotify, Apple Music, and YouTube."/>
-<meta property="og:image" content="https://kaisos.com/Profileimage.png"/>
+<meta property="og:image" content="https://kaisos.com/ProfileImg.png"/>
 <meta property="og:image:alt" content="Kaisos — Lo-Fi Music Producer from Munich"/>
 <meta property="og:image:type" content="image/png"/>
 <meta property="og:url" content="https://kaisos.com"/>
@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Kaisos — Lo-Fi Music Producer from Munich"/>
 <meta name="twitter:description" content="Ambient beats, chill study music and lo-fi hip-hop from Munich — six albums out now on Spotify, Apple Music, and YouTube."/>
-<meta name="twitter:image" content="https://kaisos.com/Profileimage.png"/>
+<meta name="twitter:image" content="https://kaisos.com/ProfileImg.png"/>
 <meta name="twitter:image:alt" content="Kaisos — Lo-Fi Music Producer from Munich"/>
 <!-- SOCIAL METADATA — When the site focus or latest release changes, update:
      og:title, og:description, twitter:title, twitter:description,
@@ -30,7 +30,7 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2307070f'/><text x='15' y='25' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='23' font-weight='400' fill='%23d4a017'>K</text><circle cx='26' cy='6' r='3.5' fill='%235b2a86'/></svg>"/>
 <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='40' fill='%2307070f'/><text x='88' y='138' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='130' font-weight='400' fill='%23d4a017'>K</text><circle cx='148' cy='32' r='20' fill='%235b2a86'/></svg>"/>
 <link rel="canonical" href="https://kaisos.com"/>
-<link rel="preload" as="image" href="Profileimage.png"/>
+<link rel="preload" as="image" href="ProfileImg.png"/>
 <meta name="author" content="Adnan Cengiz"/>
 <link rel="dns-prefetch" href="https://open.spotify.com"/>
 <link rel="dns-prefetch" href="https://ko-fi.com"/>
@@ -45,7 +45,7 @@
   "description":"Lo-fi music producer from Munich, Germany. Creating ambient beats, chill study music, and lo-fi hip-hop since 2024. Six self-released albums available on Spotify, Apple Music, and YouTube.",
   "genre":["Lo-fi","Lo-fi Hip Hop","Chillhop","Ambient","Chill","Study Music"],
   "url":"https://kaisos.com",
-  "image":"https://kaisos.com/Profileimage.png",
+  "image":"https://kaisos.com/ProfileImg.png",
   "foundingLocation":{"@type":"Place","name":"Munich, Germany"},
   "sameAs":[
     "https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M",
@@ -218,6 +218,16 @@ nav.scrolled{border-bottom-color:var(--border)}
 .gear-card p{font-size:0.83rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem}
 .gear-link{font-size:0.73rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:0.35rem;transition:gap 0.2s}
 .gear-card:hover .gear-link{gap:0.6rem}
+.gear-featured{display:flex;align-items:center;justify-content:space-between;gap:2rem;margin-top:1px;background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:2.25rem 2.5rem;text-decoration:none;position:relative;overflow:hidden;transition:background 0.2s}
+.gear-featured::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,var(--gold),var(--accent),transparent);opacity:0.7}
+.gear-featured:hover{background:var(--surface)}
+.gear-featured-body{flex:1}
+.gear-featured-body .gear-num{margin-bottom:0.75rem}
+.gear-featured-body h3{font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:0.5rem}
+.gear-featured-body p{font-size:0.85rem;color:var(--muted);line-height:1.75;margin-bottom:1.25rem;max-width:56ch}
+.gear-featured-cta{flex-shrink:0;display:inline-block;padding:0.7rem 1.5rem;background:var(--gold);color:var(--bg);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border-radius:3px;white-space:nowrap;transition:opacity 0.2s}
+.gear-featured:hover .gear-featured-cta{opacity:0.85}
+@media(max-width:600px){.gear-featured{flex-direction:column;align-items:flex-start}.gear-featured-cta{width:100%;text-align:center}}
 
 /* CONNECT */
 .connect-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
@@ -599,7 +609,7 @@ iframe:not([src]){display:block;height:0!important;visibility:hidden}
         <div class="photo-ring-1"></div>
         <div class="photo-ring-2"></div>
         <img
-          src="Profileimage.png"
+          src="ProfileImg.png"
           alt="Portrait of Kaisos, lo-fi producer from Munich."
           class="hero-img"
           width="380"
@@ -872,6 +882,15 @@ iframe:not([src]){display:block;height:0!important;visibility:hidden}
         <div class="gear-link" data-i18n="gear-amazon">View on Amazon →</div>
       </a>
     </div>
+    <a class="gear-featured reveal" href="https://go.image-line.com/c/7251968/3088747/38091" target="_blank" rel="noopener sponsored">
+      <div class="gear-featured-body">
+        <div class="gear-num">DAW</div>
+        <h3>FL Studio — Where every track starts</h3>
+        <p>Every beat, melody, and mix on this site was built in FL Studio. The workflow just clicks — fast enough to keep up with ideas, deep enough to finish them. Industry standard for a reason.</p>
+        <div class="gear-link">Get FL Studio →</div>
+      </div>
+      <div class="gear-featured-cta">Try FL Studio</div>
+    </a>
   </div>
 </section>
 
