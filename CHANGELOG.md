@@ -2,6 +2,58 @@
 
 ---
 
+## Session 10 — Full redesign: platform toggle, mood cards, brand world, all embeds wired
+
+### Added
+- 3-way platform toggle (Spotify / Apple Music / YouTube) in nav and mobile drawer — preference saved to localStorage, UA-detected on first visit
+- Apple Music embeds for Special Release, Vol. 1–4 (Vol. 5 not on Apple Music — falls back to direct link)
+- YouTube embeds for all 6 albums
+- "Choose Your Mood" section with 3 cards: Focus, Night, Escape
+- "Not just tracks. A quiet world." brand section between bio and music
+- Section CTAs after Story, Music, Gear, and a platform picker before footer
+- Merch card rewrite: "Minimal pieces for quiet creators"
+- Hero rewrite: new headline, subheadline, trust line, gold outline secondary CTA
+
+### Changed
+- Hero headline → "Kaisos turns quiet moments into lo-fi worlds."
+- Latest release copy → more emotional and specific
+- Album cards now show mood labels (Late-night focus, Calm study beats, etc.)
+- Removed "Start here" section — replaced by "Choose Your Mood"
+- Removed fake listener counter and toast popup
+- Platform colors only affect buttons/CTAs — purple/gold identity kept for all atmosphere
+- Twitter meta tags now match OG title/description
+- Iframe attributes swap correctly per platform (allow, sandbox, referrerpolicy, height)
+
+---
+
+## Session 9 — Smart platform detection for Listen button
+
+### Added
+- Platform auto-detection: iOS/macOS visitors default to Apple Music, others default to Spotify
+- "Switch to Apple Music / Switch to Spotify" link below hero CTAs so users can override
+- Preference saved to localStorage — persists on return visits
+- Apple Music i18n strings (`btn-play-apple`) for EN and DE
+
+### Changed
+- Hero listen button and mobile sticky CTA now update dynamically based on detected platform
+
+---
+
+## Session 8 — Mobile performance + live social proof
+
+### Changed
+- Removed `saturate()` from all `backdrop-filter` rules (nav, drawer, mobile CTA) — was the main compositor cost on mobile
+- Added `will-change: transform` to blobs, rings, and hero image — triggers GPU layer promotion
+- Reduced blob sizes on mobile: blob-1 700px→380px, blob-2 500px→280px, blur 90px→55px
+- Disabled blob-3 entirely on mobile (`display:none`)
+- Disabled `ring-spin` and `glow-pulse` animations on mobile — both are decorative and expensive (glow-pulse uses `filter:blur`)
+
+### Added
+- **Listening toast** (bottom-left): pops up every ~16–26s showing a fake user + city listening to a specific album. First fires at 5s. Slides in with spring animation. Matches site design system (purple/gold, Inter).
+- **Live listener counter** (bottom-right, above back-to-top): shows "X listening now" with a green pulse dot. Starts at a random number between 90–180, fluctuates ±4 every 5–9s. Hidden on mobile (conflicts with Spotify CTA bar).
+
+---
+
 ## Session 7 — FL Studio affiliate card
 
 ### Added
