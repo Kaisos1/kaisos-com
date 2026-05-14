@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <meta name="description" content="Kaisos turns quiet moments into lo-fi worlds. Six self-released albums of ambient beats, soft melancholy, and chill hip-hop — from Munich, available on Spotify, Apple Music, and YouTube."/>
 <meta property="og:title" content="Kaisos — Lo-fi Worlds from Munich"/>
-<meta property="og:description" content="Ambient beats, soft melancholy, and chill hip-hop made for late nights, focus, and escape. Six albums, self-released from Munich."/>
-<meta property="og:image" content="https://kaisos.com/ProfileImg.png"/>
+<meta property="og:description" content="Six self-released lo-fi albums from Munich. 55K+ YouTube subscribers. Ambient beats and chill hip-hop — music for the quiet hours."/>
+<meta property="og:image" content="https://kaisos.com/og-image.svg"/>
 <meta property="og:image:alt" content="Kaisos — Lo-Fi Music Producer from Munich"/>
-<meta property="og:image:type" content="image/png"/>
+<meta property="og:image:type" content="image/svg+xml"/>
 <meta property="og:url" content="https://kaisos.com"/>
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="Kaisos"/>
 <meta property="og:locale" content="en_US"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Kaisos — Lo-fi Worlds from Munich"/>
-<meta name="twitter:description" content="Ambient beats, soft melancholy, and chill hip-hop made for late nights, focus, and escape. Six albums, self-released from Munich."/>
+<meta name="twitter:description" content="Six self-released lo-fi albums from Munich. 55K+ YouTube subscribers. Ambient beats and chill hip-hop — music for the quiet hours."/>
 <meta name="twitter:image" content="https://kaisos.com/ProfileImg.png"/>
 <meta name="twitter:image:alt" content="Kaisos — Lo-Fi Music Producer from Munich"/>
 <!-- SOCIAL METADATA — When the site focus or latest release changes, update:
@@ -31,6 +31,7 @@
 <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='40' fill='%2307070f'/><text x='88' y='138' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='130' font-weight='400' fill='%23d4a017'>K</text><circle cx='148' cy='32' r='20' fill='%235b2a86'/></svg>"/>
 <link rel="canonical" href="https://kaisos.com"/>
 <link rel="preload" as="image" href="ProfileImg.png"/>
+<link rel="preload" as="image" href="KaisosPurpleGold.png"/>
 <meta name="author" content="Adnan Cengiz"/>
 <link rel="dns-prefetch" href="https://open.spotify.com"/>
 <link rel="dns-prefetch" href="https://ko-fi.com"/>
@@ -252,14 +253,23 @@ nav.scrolled{border-bottom-color:var(--border)}
 .kofi-note{margin-top:1rem;font-size:0.73rem;color:var(--muted);text-align:center;line-height:1.6}
 
 /* FOOTER */
-footer{border-top:1px solid var(--border);padding:2.25rem var(--pad);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.25rem}
-.footer-left{display:flex;flex-direction:column;gap:0.35rem}
-.footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold)}
-.footer-tagline{font-size:0.72rem;color:var(--muted);line-height:1.5;max-width:260px}
-.footer-links{display:flex;gap:1.75rem}
-.footer-links a{color:var(--muted);text-decoration:none;font-size:0.73rem;letter-spacing:0.09em;text-transform:uppercase;transition:color 0.2s}
-.footer-links a:hover{color:var(--accent)}
+footer{border-top:1px solid var(--border);padding:3.5rem var(--pad) 0}
+.footer-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 130px 130px;gap:4rem;padding-bottom:3rem;border-bottom:1px solid var(--border)}
+.footer-brand{display:flex;flex-direction:column}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold);margin-bottom:0.5rem}
+.footer-tagline{font-size:0.72rem;color:var(--muted);line-height:1.6;max-width:240px}
+.footer-socials{display:flex;gap:0.4rem;margin-top:1.5rem}
+.footer-nav-col{display:flex;flex-direction:column;gap:0.65rem}
+.footer-nav-label{font-size:0.64rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:0.35rem}
+.footer-nav-col a{color:var(--muted);text-decoration:none;font-size:0.82rem;transition:color 0.2s}
+.footer-nav-col a:hover{color:var(--text)}
+.footer-base{max-width:var(--max);margin:0 auto;padding:1.25rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-legal{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
 .footer-copy{font-size:0.73rem;color:var(--muted);opacity:0.5}
+@media(max-width:700px){
+  .footer-inner{grid-template-columns:1fr;gap:2rem}
+  .footer-base{flex-direction:column;align-items:flex-start;gap:0.75rem}
+}
 
 /* SCROLL REVEAL */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease}
@@ -285,6 +295,7 @@ footer{border-top:1px solid var(--border);padding:2.25rem var(--pad);display:fle
   .gear-grid{grid-template-columns:1fr}
   .albums-grid{grid-template-columns:1fr}
   .nav-center,.nav-icons,.platform-toggle{display:none}
+  nav .btn-kofi,#lang-toggle-desktop{display:none}
   .hamburger{display:flex}
   /* ── Mobile perf: shrink & soften blobs ── */
   .blob{filter:blur(55px)}
@@ -298,8 +309,6 @@ footer{border-top:1px solid var(--border);padding:2.25rem var(--pad);display:fle
 @media(max-width:600px){
   .section{padding:4rem var(--pad)}
   .hero{padding:80px var(--pad) 60px}
-  footer{flex-direction:column;text-align:center}
-  .footer-links{justify-content:center}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -328,6 +337,9 @@ body.light .gear-card:hover{background:var(--surface)}
 .theme-toggle svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
 .theme-toggle:hover{border-color:var(--accent);color:var(--accent)}
 
+/* ── DRAWER CONTROLS ── */
+.drawer-controls{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
+
 /* ── LANG TOGGLE ── */
 .lang-toggle{display:inline-flex;align-items:center;border:1px solid var(--border2);border-radius:3px;overflow:hidden;flex-shrink:0}
 .lang-btn{background:none;border:none;border-right:1px solid var(--border2);cursor:pointer;padding:0.28rem 0.55rem;font-size:0.68rem;font-weight:600;letter-spacing:0.08em;color:var(--muted);font-family:'Inter',sans-serif;transition:all 0.2s}
@@ -351,8 +363,6 @@ body.light .gear-card:hover{background:var(--surface)}
 .footer-link-btn{background:none;border:none;cursor:pointer;color:var(--muted);font-size:0.73rem;letter-spacing:0.09em;text-transform:uppercase;font-family:'Inter',sans-serif;transition:color 0.2s;padding:0}
 .footer-link-btn:hover{color:var(--accent)}
 
-/* hide lang toggle on very small screens */
-@media(max-width:380px){.lang-toggle{display:none}}
 
 /* ── BACK TO TOP ── */
 .back-top{
@@ -423,8 +433,6 @@ iframe:not([src]){display:block;height:0!important;visibility:hidden}
 .embed-ph.declined .ph-links a:hover{color:var(--text);border-color:var(--accent)}
 .featured-embed .embed-ph{min-height:352px}
 
-/* ── HERO AVAILABILITY LINE ── */
-.hero-availability{font-size:0.71rem;color:var(--muted);letter-spacing:0.05em;margin-top:1.1rem;opacity:0.65}
 /* ══ PLATFORM THEMING ══ */
 :root{--platform-primary:#1DB954;--platform-primary-dim:rgba(29,185,84,0.1);--platform-primary-glow:rgba(29,185,84,0.22)}
 body[data-platform="spotify"]{--platform-primary:#1DB954;--platform-primary-dim:rgba(29,185,84,0.1);--platform-primary-glow:rgba(29,185,84,0.22)}
@@ -528,12 +536,15 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 @media(max-width:700px){.section-cta-bar{flex-direction:column;align-items:flex-start;gap:1.25rem}}
 
 /* ── Brand world section ── */
-.world-section{padding:5.5rem var(--pad);border-top:1px solid var(--border);position:relative;overflow:hidden;text-align:center}
+.world-section{padding:5.5rem var(--pad);border-top:1px solid var(--border);position:relative;overflow:hidden}
 .world-section::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--accent) 50%,transparent);opacity:0.35}
-.world-inner{max-width:640px;margin:0 auto}
-.world-inner h2{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3.5vw,3rem);font-weight:400;color:var(--white);margin-bottom:1.25rem;line-height:1.15}
-.world-inner h2 em{font-style:italic;color:var(--muted2)}
-.world-inner p{font-size:1rem;color:var(--muted2);line-height:1.9;margin-bottom:2.5rem;max-width:500px;margin-left:auto;margin-right:auto}
+.world-inner{max-width:var(--max);margin:0 auto}
+.world-split{display:flex;align-items:center;gap:5rem}
+.world-logo{width:180px;height:180px;object-fit:contain;flex-shrink:0;opacity:0.9;filter:drop-shadow(0 0 40px rgba(91,42,134,0.5))}
+.world-split-text h2{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3.5vw,3rem);font-weight:400;color:var(--white);margin-bottom:1.25rem;line-height:1.15}
+.world-split-text h2 em{font-style:italic;color:var(--muted2)}
+.world-split-text p{font-size:1rem;color:var(--muted2);line-height:1.9;margin-bottom:2.5rem;max-width:500px}
+@media(max-width:700px){.world-split{flex-direction:column;gap:2rem;align-items:center;text-align:center}.world-logo{width:100px;height:100px}.world-split-text p{max-width:100%;margin-left:auto;margin-right:auto}}
 
 /* ── Choose Your Mood ── */
 .mood-section{margin-top:3.5rem;padding-top:3.5rem;border-top:1px solid var(--border)}
@@ -541,7 +552,7 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 .mood-section-eyebrow::before{content:'';display:block;width:20px;height:1px;background:var(--accent)}
 .mood-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden}
 .mood-card{background:var(--bg);padding:2.25rem 2rem;display:flex;flex-direction:column;text-decoration:none;transition:background 0.2s;position:relative;overflow:hidden}
-.mood-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;opacity:0;transition:opacity 0.3s}
+.mood-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;opacity:0.35;transition:opacity 0.3s}
 .mood-card:nth-child(1)::before{background:linear-gradient(to right,var(--accent),transparent)}
 .mood-card:nth-child(2)::before{background:linear-gradient(to right,var(--gold),transparent)}
 .mood-card:nth-child(3)::before{background:linear-gradient(to right,rgba(180,130,255,0.7),transparent)}
@@ -554,8 +565,21 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 .mood-card:hover .mood-card-cta{gap:0.7rem}
 @media(max-width:900px){.mood-grid{grid-template-columns:1fr}}
 
+/* ── Apple Music unavailable tag ── */
+.album-apple-na{display:none;font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);padding:0.15rem 0.5rem;border:1px solid var(--border);border-radius:3px;margin-left:auto;flex-shrink:0}
+body[data-platform="apple"] .album-apple-na{display:inline-block}
+
 /* ── Album card mood label ── */
+.album-card-mood-row{padding:0.4rem 0.9rem 0;border-bottom:1px solid var(--border)}
 .album-card-mood{font-size:0.67rem;color:var(--muted);font-style:italic;opacity:0.8}
+
+/* ── Mobile album show-more ── */
+@media(max-width:900px){
+  .album-card.mob-hide{display:none}
+  .albums-show-more{display:flex;align-items:center;justify-content:center;gap:0.5rem;width:100%;padding:1.1rem;background:var(--surface);border:1px solid var(--border);border-radius:10px;cursor:pointer;color:var(--muted2);font-size:0.8rem;letter-spacing:0.09em;text-transform:uppercase;font-family:'Inter',sans-serif;transition:all 0.2s;margin-top:0}
+  .albums-show-more:hover{color:var(--text);border-color:var(--accent)}
+}
+@media(min-width:901px){.albums-show-more{display:none}}
 
 /* ── Merch teaser card ── */
 .merch-card{background:var(--surface);border:1px solid var(--border2);border-radius:8px;padding:2.5rem;position:relative;overflow:hidden;margin-bottom:1.5rem}
@@ -570,6 +594,15 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 </style>
 </head>
 <body>
+<svg style="display:none" aria-hidden="true"><defs>
+  <path id="ico-spotify" d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+  <path id="ico-youtube" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+  <path id="ico-tiktok" d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/>
+  <path id="ico-instagram" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+  <path id="ico-apple" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/>
+  <path id="ico-apple-note" d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/>
+  <path id="ico-kofi" d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/>
+</defs></svg>
 
 <div id="progress"></div>
 
@@ -586,40 +619,40 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
   <div class="nav-right">
     <div class="nav-icons">
       <a class="nav-icon" href="https://www.instagram.com/lofikaisos/" target="_blank" rel="me noopener" aria-label="Instagram">
-        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        <svg viewBox="0 0 24 24"><use href="#ico-instagram"/></svg>
       </a>
       <a class="nav-icon" href="https://youtube.com/@LofiKaisos" target="_blank" rel="me noopener" aria-label="YouTube">
-        <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        <svg viewBox="0 0 24 24"><use href="#ico-youtube"/></svg>
       </a>
       <a class="nav-icon" href="https://www.tiktok.com/@lofikaisos" target="_blank" rel="me noopener" aria-label="TikTok">
-        <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
+        <svg viewBox="0 0 24 24"><use href="#ico-tiktok"/></svg>
       </a>
       <a class="nav-icon" href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="me noopener" aria-label="Spotify">
-        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+        <svg viewBox="0 0 24 24"><use href="#ico-spotify"/></svg>
       </a>
     </div>
     <a class="btn-kofi" href="https://ko-fi.com/I3I41YQ1DA" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><use href="#ico-kofi"/></svg>
       <span data-i18n="nav-support">Support</span>
     </a>
     <div class="platform-toggle" id="platform-toggle" role="group" aria-label="Choose streaming platform">
       <button type="button" class="ptog-btn active" data-p="spotify" aria-label="Spotify" title="Spotify">
-        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+        <svg viewBox="0 0 24 24"><use href="#ico-spotify"/></svg>
       </button>
       <button type="button" class="ptog-btn" data-p="apple" aria-label="Apple Music" title="Apple Music">
-        <svg viewBox="0 0 24 24"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
+        <svg viewBox="0 0 24 24"><use href="#ico-apple-note"/></svg>
       </button>
       <button type="button" class="ptog-btn" data-p="youtube" aria-label="YouTube" title="YouTube">
-        <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        <svg viewBox="0 0 24 24"><use href="#ico-youtube"/></svg>
       </button>
     </div>
     <div class="lang-toggle" id="lang-toggle-desktop">
       <button type="button" class="lang-btn active" data-lang="en">EN</button>
       <button type="button" class="lang-btn" data-lang="de">DE</button>
     </div>
-    <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-      <svg id="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      <svg id="icon-sun" viewBox="0 0 24 24" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    <button type="button" class="theme-toggle js-theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+      <svg class="icon-moon-svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun-svg" viewBox="0 0 24 24" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
     </button>
     <button type="button" class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-drawer">
       <span></span><span></span><span></span>
@@ -638,34 +671,40 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
   </ul>
   <div class="drawer-platform-toggle" role="group" aria-label="Choose streaming platform">
     <button type="button" class="ptog-btn active" data-p="spotify" aria-label="Spotify" title="Spotify">
-      <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+      <svg viewBox="0 0 24 24"><use href="#ico-spotify"/></svg>
     </button>
     <button type="button" class="ptog-btn" data-p="apple" aria-label="Apple Music" title="Apple Music">
-      <svg viewBox="0 0 24 24"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
+      <svg viewBox="0 0 24 24"><use href="#ico-apple-note"/></svg>
     </button>
     <button type="button" class="ptog-btn" data-p="youtube" aria-label="YouTube" title="YouTube">
-      <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      <svg viewBox="0 0 24 24"><use href="#ico-youtube"/></svg>
     </button>
   </div>
-  <div class="lang-toggle" id="lang-toggle-mobile" style="margin-bottom:1.5rem">
-    <button type="button" class="lang-btn active" data-lang="en">EN</button>
-    <button type="button" class="lang-btn" data-lang="de">DE</button>
+  <div class="drawer-controls">
+    <div class="lang-toggle" id="lang-toggle-mobile">
+      <button type="button" class="lang-btn active" data-lang="en">EN</button>
+      <button type="button" class="lang-btn" data-lang="de">DE</button>
+    </div>
+    <button type="button" class="theme-toggle js-theme-toggle" aria-label="Toggle theme">
+      <svg class="icon-moon-svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun-svg" viewBox="0 0 24 24" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
   </div>
   <div class="nav-drawer-socials">
     <a class="nav-icon" href="https://www.instagram.com/lofikaisos/" target="_blank" rel="me noopener" aria-label="Instagram">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><use href="#ico-instagram"/></svg>
     </a>
     <a class="nav-icon" href="https://youtube.com/@LofiKaisos" target="_blank" rel="me noopener" aria-label="YouTube">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><use href="#ico-youtube"/></svg>
     </a>
     <a class="nav-icon" href="https://www.tiktok.com/@lofikaisos" target="_blank" rel="me noopener" aria-label="TikTok">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><use href="#ico-tiktok"/></svg>
     </a>
     <a class="nav-icon" href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="me noopener" aria-label="Spotify">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><use href="#ico-spotify"/></svg>
     </a>
     <a class="btn-kofi" href="https://ko-fi.com/I3I41YQ1DA" target="_blank" rel="noopener" style="margin-left:auto">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><use href="#ico-kofi"/></svg>
       Support
     </a>
   </div>
@@ -687,17 +726,17 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
         <div class="badge-dot"></div>
         <span>Self-released · Munich · Lo-fi</span>
       </div>
-      <h1 class="reveal d1" data-i18n-html>Kaisos turns quiet moments into <em>lo-fi worlds.</em></h1>
-      <p class="hero-tagline reveal d1">Ambient beats, soft melancholy, and chill hip-hop.</p>
-      <p class="hero-sub reveal d2">Made for late nights, focus, and escape.</p>
+      <h1 class="reveal d1" data-i18n="hero-h1" data-i18n-html>Kaisos turns quiet moments into <em>lo-fi worlds.</em></h1>
+      <p class="hero-tagline reveal d1" data-i18n="hero-tagline">Slow tempos, warm imperfection — six albums of honest lo-fi.</p>
+      <p class="hero-sub reveal d2" data-i18n="hero-sub">Six self-released albums from Munich — made in private, for the hours when everything else gets too loud.</p>
       <div class="hero-ctas reveal d3">
         <a href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" class="btn-primary" id="hero-listen-btn" target="_blank" rel="noopener" aria-label="Listen now on Spotify">
-          <svg id="hero-listen-icon" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+          <svg id="hero-listen-icon" viewBox="0 0 24 24"><use href="#ico-spotify"/></svg>
           <span id="hero-listen-label">Listen Now</span>
         </a>
         <a href="#music" class="btn-outline-gold">Enter the World →</a>
       </div>
-      <p class="hero-trust">Self-released from Munich · <span>6 albums out now</span></p>
+      <p class="hero-trust">Self-released from Munich · <span>6 albums</span> · <span>55K+ YouTube subscribers</span></p>
     </div>
     <div class="hero-photo-wrap reveal d2">
       <div class="hero-photo-outer">
@@ -724,11 +763,15 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
   <div class="lr-wrap">
     <div class="reveal">
       <div class="lr-badge"><span class="badge-dot"></span> Latest Release</div>
-      <p class="updated-line">Updated 2026</p>
       <h2 class="lr-title">Special Release</h2>
       <p class="lr-sub">After the first volumes, this one moves slower — more space, more feeling, less noise. The most personal release yet.</p>
-      <a href="https://open.spotify.com/album/67OMy0DOFbt4Y5iTbL4lnE" class="btn-primary" target="_blank" rel="noopener" aria-label="Listen to Special Release">
-        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+      <a href="https://open.spotify.com/album/67OMy0DOFbt4Y5iTbL4lnE"
+         id="lr-listen-btn"
+         data-spotify="https://open.spotify.com/album/67OMy0DOFbt4Y5iTbL4lnE"
+         data-apple="https://music.apple.com/us/album/lofi-kaisos-special/1768802069"
+         data-youtube="https://www.youtube.com/watch?v=Yjr_UgeBxWE"
+         class="btn-primary" target="_blank" rel="noopener" aria-label="Listen to Special Release">
+        <svg viewBox="0 0 24 24" id="lr-listen-icon"><use href="#ico-spotify"/></svg>
         Listen Now
       </a>
     </div>
@@ -741,8 +784,8 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 <!-- STATS STRIP -->
 <div class="stats-strip">
   <div class="stat-item reveal">
-    <div class="stat-value">Lo-fi</div>
-    <div class="stat-label" data-i18n="stat-genre">Genre</div>
+    <div class="stat-value" id="yt-count" data-target="55">0K</div>
+    <div class="stat-label">YouTube Subscribers</div>
   </div>
   <div class="stat-item reveal d1">
     <div class="stat-value">2024</div>
@@ -763,7 +806,7 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
   <div class="inner">
     <div class="eyebrow reveal" data-i18n="bio-eyebrow">About</div>
     <div class="bio-grid">
-      <p class="artist-bio reveal">Munich-based lo-fi producer. Six self-released albums of ambient beats, chill hip-hop, and soft sound — made in FL Studio, streamed everywhere. Slow tempos, warm imperfection, music for the quiet hours.</p>
+      <p class="artist-bio reveal">Started with a keyboard and too much impatience. Walked away twice, came back quietly — and stayed. Six self-released albums of ambient beats and chill hip-hop, all made in FL Studio between Munich and whatever late-night mood took over. The sound is slow by design: warm, imperfect, and built for the hours when everything else gets too loud.</p>
       <div class="bio-facts reveal d1">
         <div class="bio-fact">
           <span class="bio-fact-label" data-i18n="bio-based">Based in</span>
@@ -793,9 +836,14 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 <!-- BRAND WORLD -->
 <section class="world-section">
   <div class="world-inner reveal">
-    <h2>Not just tracks. <em>A quiet world.</em></h2>
-    <p>Kaisos is built around soft sound, emotional atmosphere, and visual calm — music for people who need a place to breathe.</p>
-    <a href="#music" class="btn-outline-gold">Step inside →</a>
+    <div class="world-split">
+      <img src="KaisosPurpleGold.png" alt="Kaisos" class="world-logo" width="180" height="180" loading="lazy"/>
+      <div class="world-split-text">
+        <h2>Not just tracks. <em>A quiet world.</em></h2>
+        <p>Six albums of ambient lo-fi made for the hours when noise stops making sense. No labels, no team — just one producer in Munich, building sounds for people who need somewhere to be.</p>
+        <a href="#music" class="btn-outline-gold">Explore the discography →</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -811,11 +859,13 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
       <iframe
         data-src="https://open.spotify.com/embed/artist/5luMo1wzJV2T84LVD8g66M?utm_source=generator&theme=0"
         data-spotify="https://open.spotify.com/embed/artist/5luMo1wzJV2T84LVD8g66M?utm_source=generator&theme=0"
+        data-apple="https://embed.music.apple.com/us/artist/kaisos/1735054792"
+        data-youtube="https://www.youtube.com/embed/Yjr_UgeBxWE"
         height="352"
         frameborder="0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
-        title="Kaisos on Spotify"
+        title="Kaisos music"
       ></iframe>
     </div>
     <div class="albums-grid">
@@ -824,15 +874,16 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
           <span class="album-card-label">Latest</span>
           <span class="album-card-name">Special Release</span>
         </div>
-        <div style="padding:0.4rem 0.9rem 0;border-bottom:1px solid var(--border)"><span class="album-card-mood">Late-night focus</span></div>
+        <div class="album-card-mood-row"><span class="album-card-mood">Late-night focus</span></div>
         <iframe data-src="https://open.spotify.com/embed/album/67OMy0DOFbt4Y5iTbL4lnE?utm_source=generator&theme=0" data-spotify="https://open.spotify.com/embed/album/67OMy0DOFbt4Y5iTbL4lnE?utm_source=generator&theme=0" data-apple="https://embed.music.apple.com/us/album/lofi-kaisos-special/1768802069" data-youtube="https://www.youtube.com/embed/Yjr_UgeBxWE" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Special Release"></iframe>
       </div>
       <div class="album-card reveal d1">
         <div class="album-card-header">
           <span class="album-card-label">Vol. 5</span>
           <span class="album-card-name">Lofi Kaisos Vol. 5</span>
+          <span class="album-apple-na">Not on Apple Music</span>
         </div>
-        <div style="padding:0.4rem 0.9rem 0;border-bottom:1px solid var(--border)"><span class="album-card-mood">Calm study beats</span></div>
+        <div class="album-card-mood-row"><span class="album-card-mood">Calm study beats</span></div>
         <iframe data-src="https://open.spotify.com/embed/album/0sm4rH9Bv1VJ5r8hTaFDfz?utm_source=generator&theme=0" data-spotify="https://open.spotify.com/embed/album/0sm4rH9Bv1VJ5r8hTaFDfz?utm_source=generator&theme=0" data-youtube="https://www.youtube.com/embed/N02MDMs_q0Y" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Lofi Kaisos Vol. 5"></iframe>
       </div>
       <div class="album-card reveal d2">
@@ -840,51 +891,52 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
           <span class="album-card-label">Vol. 4</span>
           <span class="album-card-name">Lofi Kaisos Vol. 4</span>
         </div>
-        <div style="padding:0.4rem 0.9rem 0;border-bottom:1px solid var(--border)"><span class="album-card-mood">Dreamy textures</span></div>
+        <div class="album-card-mood-row"><span class="album-card-mood">Dreamy textures</span></div>
         <iframe data-src="https://open.spotify.com/embed/album/49c8g3dFdDOS8aezK0ltDb?utm_source=generator&theme=0" data-spotify="https://open.spotify.com/embed/album/49c8g3dFdDOS8aezK0ltDb?utm_source=generator&theme=0" data-apple="https://embed.music.apple.com/us/album/lofi-kaisos-vol-4/1756205758" data-youtube="https://www.youtube.com/embed/FoTLqmSQ6rU" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Lofi Kaisos Vol. 4"></iframe>
       </div>
-      <div class="album-card reveal">
+      <div class="album-card reveal mob-hide">
         <div class="album-card-header">
           <span class="album-card-label">Vol. 3</span>
           <span class="album-card-name">Lofi Kaisos Vol. 3</span>
         </div>
-        <div style="padding:0.4rem 0.9rem 0;border-bottom:1px solid var(--border)"><span class="album-card-mood">Soft melancholy</span></div>
+        <div class="album-card-mood-row"><span class="album-card-mood">Soft melancholy</span></div>
         <iframe data-src="https://open.spotify.com/embed/album/3bcGnK12xEytemEmjFGH86?utm_source=generator&theme=0" data-spotify="https://open.spotify.com/embed/album/3bcGnK12xEytemEmjFGH86?utm_source=generator&theme=0" data-apple="https://embed.music.apple.com/us/album/lofi-kaisos-vol-3/1738116842" data-youtube="https://www.youtube.com/embed/-9b__6G67_c" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Lofi Kaisos Vol. 3"></iframe>
       </div>
-      <div class="album-card reveal d1">
+      <div class="album-card reveal d1 mob-hide">
         <div class="album-card-header">
           <span class="album-card-label">Vol. 2</span>
           <span class="album-card-name">Lofi Kaisos Vol. 2</span>
         </div>
-        <div style="padding:0.4rem 0.9rem 0;border-bottom:1px solid var(--border)"><span class="album-card-mood">Quiet focus</span></div>
+        <div class="album-card-mood-row"><span class="album-card-mood">Quiet focus</span></div>
         <iframe data-src="https://open.spotify.com/embed/album/1G9pQYYIS1hZEqu0hieCyE?utm_source=generator&theme=0" data-spotify="https://open.spotify.com/embed/album/1G9pQYYIS1hZEqu0hieCyE?utm_source=generator&theme=0" data-apple="https://embed.music.apple.com/us/album/lofi-kaisos-vol-2/1735069982" data-youtube="https://www.youtube.com/embed/LE8U85EA7G4" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Lofi Kaisos Vol. 2"></iframe>
       </div>
-      <div class="album-card reveal d2">
+      <div class="album-card reveal d2 mob-hide">
         <div class="album-card-header">
           <span class="album-card-label">Vol. 1</span>
           <span class="album-card-name">Lofi Kaisos Vol. 1</span>
         </div>
-        <div style="padding:0.4rem 0.9rem 0;border-bottom:1px solid var(--border)"><span class="album-card-mood">Where it began</span></div>
+        <div class="album-card-mood-row"><span class="album-card-mood">Where it began</span></div>
         <iframe data-src="https://open.spotify.com/embed/album/0EQS01PkeiRoi9zaeVDtt7?utm_source=generator&theme=0" data-spotify="https://open.spotify.com/embed/album/0EQS01PkeiRoi9zaeVDtt7?utm_source=generator&theme=0" data-apple="https://embed.music.apple.com/us/album/lofi-kaisos-vol-1/1735055810" data-youtube="https://www.youtube.com/embed/qZ1g6cxGZRw" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Lofi Kaisos Vol. 1"></iframe>
       </div>
     </div>
+    <button type="button" class="albums-show-more" id="albums-show-more">Show all 6 albums ↓</button>
     <!-- CHOOSE YOUR MOOD -->
     <div class="mood-section reveal">
       <div class="mood-section-eyebrow">Choose your mood</div>
       <div class="mood-grid">
-        <a href="https://open.spotify.com/album/0EQS01PkeiRoi9zaeVDtt7" class="mood-card" target="_blank" rel="noopener">
+        <a href="https://open.spotify.com/album/0EQS01PkeiRoi9zaeVDtt7" class="mood-card js-mood-card" data-spotify="https://open.spotify.com/album/0EQS01PkeiRoi9zaeVDtt7" data-apple="https://music.apple.com/us/album/lofi-kaisos-vol-1/1735055810" data-youtube="https://www.youtube.com/watch?v=qZ1g6cxGZRw" target="_blank" rel="noopener">
           <div class="mood-card-num">01 · Focus</div>
           <h3 class="mood-card-title">Deep Work</h3>
           <p class="mood-card-desc">Soft loops for work, study, and deep concentration. No words, no noise — just the zone.</p>
           <span class="mood-card-cta">Play Focus Beats →</span>
         </a>
-        <a href="https://open.spotify.com/album/67OMy0DOFbt4Y5iTbL4lnE" class="mood-card" target="_blank" rel="noopener">
+        <a href="https://open.spotify.com/album/67OMy0DOFbt4Y5iTbL4lnE" class="mood-card js-mood-card" data-spotify="https://open.spotify.com/album/67OMy0DOFbt4Y5iTbL4lnE" data-apple="https://music.apple.com/us/album/lofi-kaisos-special/1768802069" data-youtube="https://www.youtube.com/watch?v=Yjr_UgeBxWE" target="_blank" rel="noopener">
           <div class="mood-card-num">02 · Night</div>
           <h3 class="mood-card-title">Late Hours</h3>
           <p class="mood-card-desc">Melancholic lo-fi for late hours and quiet thoughts. When the world goes dark and you stay in it.</p>
           <span class="mood-card-cta">Enter Night Mode →</span>
         </a>
-        <a href="https://open.spotify.com/album/0sm4rH9Bv1VJ5r8hTaFDfz" class="mood-card" target="_blank" rel="noopener">
+        <a href="https://open.spotify.com/album/0sm4rH9Bv1VJ5r8hTaFDfz" class="mood-card js-mood-card" data-spotify="https://open.spotify.com/album/0sm4rH9Bv1VJ5r8hTaFDfz" data-apple="https://music.apple.com/us/artist/kaisos/1735054792" data-youtube="https://www.youtube.com/watch?v=N02MDMs_q0Y" target="_blank" rel="noopener">
           <div class="mood-card-num">03 · Escape</div>
           <h3 class="mood-card-title">Drift Away</h3>
           <p class="mood-card-desc">Ambient textures for drifting, walking, and zoning out. A world slightly removed from this one.</p>
@@ -896,19 +948,19 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
     <div class="platforms-row reveal">
       <span class="label" data-i18n="stream-label">Stream on</span>
       <a class="platform-btn" href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+        <svg viewBox="0 0 24 24"><use href="#ico-spotify"/></svg>
         Spotify
       </a>
       <a class="platform-btn" href="https://youtube.com/@LofiKaisos" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        <svg viewBox="0 0 24 24"><use href="#ico-youtube"/></svg>
         YouTube
       </a>
       <a class="platform-btn" href="https://music.apple.com/us/artist/kaisos/1735054792" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+        <svg viewBox="0 0 24 24"><use href="#ico-apple"/></svg>
         Apple Music
       </a>
       <a class="platform-btn" href="https://www.tiktok.com/@lofikaisos" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
+        <svg viewBox="0 0 24 24"><use href="#ico-tiktok"/></svg>
         TikTok
       </a>
     </div>
@@ -919,7 +971,7 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 <!-- CTA: FOLLOW -->
 <div class="section-cta-bar">
   <p class="section-cta-bar-text"><em>The sound keeps growing.</em> Follow to hear what comes next.</p>
-  <a href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" class="btn-primary" target="_blank" rel="noopener">Follow Kaisos on Spotify</a>
+  <a href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" id="follow-cta-btn" class="btn-primary" target="_blank" rel="noopener">Follow Kaisos on Spotify</a>
 </div>
 
 <!-- WAVEFORM DIVIDER -->
@@ -992,19 +1044,19 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
       <a class="gear-card reveal" href="https://amzn.to/4t59kTK" target="_blank" rel="noopener">
         <div class="gear-num">Gear 01</div>
         <h3>Beyerdynamic DT 900 Pro X</h3>
-        <p>Open-back studio headphones built for critical listening. The detail that helps get the mix right.</p>
+        <p>Every mix decision on every Kaisos track happened through these. Open-back means the sound breathes — which is exactly what lo-fi needs.</p>
         <div class="gear-link" data-i18n="gear-amazon">View on Amazon →</div>
       </a>
       <a class="gear-card reveal d1" href="https://amzn.to/4w3IrCj" target="_blank" rel="noopener">
         <div class="gear-num">Gear 02</div>
         <h3>Akai MPK Mini MKIII</h3>
-        <p>25-key USB MIDI controller with drum pads. Compact enough to stay on the desk, expressive enough to matter.</p>
+        <p>Where the melodies actually start. It sits on the desk permanently — small enough to never get in the way, used on every single track.</p>
         <div class="gear-link" data-i18n="gear-amazon">View on Amazon →</div>
       </a>
       <a class="gear-card reveal d2" href="https://amzn.to/422Fqoh" target="_blank" rel="noopener">
         <div class="gear-num">Gear 03</div>
         <h3>KLIM Esports Gaming Chair</h3>
-        <p>Where the long sessions happen. Comfortable enough to lose track of time — which is exactly the goal.</p>
+        <p>Three-hour sessions where an album slowly becomes something. Not glamorous, but it's where most of the real work happens.</p>
         <div class="gear-link" data-i18n="gear-amazon">View on Amazon →</div>
       </a>
     </div>
@@ -1012,7 +1064,7 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
       <div class="gear-featured-body">
         <div class="gear-num">DAW</div>
         <h3>FL Studio — Where every track starts</h3>
-        <p>Every beat, melody, and mix on this site was built in FL Studio. The workflow just clicks — fast enough to keep up with ideas, deep enough to finish them. Industry standard for a reason.</p>
+        <p>Every beat, melody, and mix on this site was built here. The workflow moves fast enough to catch an idea before it disappears — and deep enough to actually finish it.</p>
         <div class="gear-link">Get FL Studio →</div>
       </div>
       <div class="gear-featured-cta">Try FL Studio</div>
@@ -1075,7 +1127,7 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
           <h3 data-i18n="kofi-h3">Support the music.</h3>
           <p data-i18n="kofi-p">Every track takes time — time away from everything else. If Kaisos has ever made your study session better, your commute easier, or your late night feel less lonely, a coffee goes a long way.</p>
           <a class="kofi-btn" href="https://ko-fi.com/I3I41YQ1DA" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><use href="#ico-kofi"/></svg>
             <span data-i18n="kofi-btn">Buy me a coffee</span>
           </a>
           <p class="kofi-note" data-i18n="kofi-note">No pressure. The music stays free either way.</p>
@@ -1093,15 +1145,15 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
   <p class="section-cta-bar-text" style="font-size:clamp(1.1rem,2.2vw,1.6rem)"><em>Choose where you want to listen.</em></p>
   <div style="display:flex;gap:0.75rem;flex-wrap:wrap;justify-content:center">
     <a href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" class="platform-btn" target="_blank" rel="noopener" style="padding:0.65rem 1.4rem">
-      <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+      <svg viewBox="0 0 24 24"><use href="#ico-spotify"/></svg>
       Spotify
     </a>
     <a href="https://music.apple.com/us/artist/kaisos/1735054792" class="platform-btn" target="_blank" rel="noopener" style="padding:0.65rem 1.4rem">
-      <svg viewBox="0 0 24 24"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
+      <svg viewBox="0 0 24 24"><use href="#ico-apple"/></svg>
       Apple Music
     </a>
     <a href="https://youtube.com/@LofiKaisos" class="platform-btn" target="_blank" rel="noopener" style="padding:0.65rem 1.4rem">
-      <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      <svg viewBox="0 0 24 24"><use href="#ico-youtube"/></svg>
       YouTube
     </a>
   </div>
@@ -1109,18 +1161,47 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-left">
-    <div class="footer-logo">Kaisos</div>
-    <p class="footer-tagline" data-i18n="footer-tagline">Lo-fi, ambient beats, and chill study music from Munich.</p>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Kaisos</div>
+      <p class="footer-tagline" data-i18n="footer-tagline">Lo-fi, ambient beats, and chill study music from Munich.</p>
+      <div class="footer-socials">
+        <a class="nav-icon" href="https://www.instagram.com/lofikaisos/" target="_blank" rel="me noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><use href="#ico-instagram"/></svg>
+        </a>
+        <a class="nav-icon" href="https://youtube.com/@LofiKaisos" target="_blank" rel="me noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24"><use href="#ico-youtube"/></svg>
+        </a>
+        <a class="nav-icon" href="https://www.tiktok.com/@lofikaisos" target="_blank" rel="me noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24"><use href="#ico-tiktok"/></svg>
+        </a>
+        <a class="nav-icon" href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="me noopener" aria-label="Spotify">
+          <svg viewBox="0 0 24 24"><use href="#ico-spotify"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-nav-col">
+      <div class="footer-nav-label">Listen</div>
+      <a href="#music">All Music</a>
+      <a href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="noopener">Spotify</a>
+      <a href="https://music.apple.com/us/artist/kaisos/1735054792" target="_blank" rel="noopener">Apple Music</a>
+      <a href="https://youtube.com/@LofiKaisos" target="_blank" rel="noopener">YouTube</a>
+    </div>
+    <div class="footer-nav-col">
+      <div class="footer-nav-label">Explore</div>
+      <a href="#story">Story</a>
+      <a href="#gear">Gear</a>
+      <a href="#connect">Connect</a>
+      <a href="https://kaisos-shop.fourthwall.com/en-eur" target="_blank" rel="noopener" data-i18n="footer-merch">Merch</a>
+    </div>
   </div>
-  <div class="footer-links">
-    <a href="https://kaisos-shop.fourthwall.com/en-eur" target="_blank" rel="noopener" data-i18n="footer-merch">Merch</a>
-    <button type="button" class="footer-link-btn" onclick="openModal('privacy')" data-i18n="footer-privacy">Privacy Policy</button>
-    <button type="button" class="footer-link-btn" onclick="openModal('impressum')" data-i18n="footer-impressum">Impressum</button>
-  </div>
-  <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
+  <div class="footer-base">
     <div class="footer-copy" data-i18n="footer-copy">© 2026 Kaisos. All rights reserved.</div>
-    <button type="button" class="copy-link-btn" id="copy-link-btn">Copy artist link</button>
+    <div class="footer-legal">
+      <button type="button" class="footer-link-btn" onclick="openModal('privacy')" data-i18n="footer-privacy">Privacy Policy</button>
+      <button type="button" class="footer-link-btn" onclick="openModal('impressum')" data-i18n="footer-impressum">Impressum</button>
+      <button type="button" class="copy-link-btn" id="copy-link-btn" data-i18n="copy-link">Copy artist link</button>
+    </div>
   </div>
 </footer>
 
@@ -1133,7 +1214,7 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 <!-- MOBILE STICKY CTA -->
 <div class="mobile-spotify-cta" id="mobile-spotify-cta" role="complementary" aria-label="Spotify shortcut">
   <a href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" id="mobile-listen-btn" target="_blank" rel="noopener" aria-label="Listen on Spotify">
-    <svg id="mobile-listen-icon" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+    <svg id="mobile-listen-icon" viewBox="0 0 24 24"><use href="#ico-spotify"/></svg>
     <span id="mobile-listen-label">Listen on Spotify</span>
   </a>
 </div>
@@ -1215,6 +1296,7 @@ hamburger.addEventListener('click', () => {
   const open = hamburger.classList.toggle('open');
   drawer.classList.toggle('open', open);
   document.body.style.overflow = open ? 'hidden' : '';
+  hamburger.setAttribute('aria-expanded', String(open));
 });
 document.querySelectorAll('.drawer-link').forEach(link => {
   link.addEventListener('click', () => {
@@ -1268,6 +1350,37 @@ window.addEventListener('resize', () => {
   wfTimer = setTimeout(buildWaveform, 200);
 }, { passive: true });
 
+// ── YOUTUBE SUBSCRIBER COUNT-UP ──
+const ytCount = document.getElementById('yt-count');
+if (ytCount && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const target = parseInt(ytCount.dataset.target, 10);
+  const duration = 1800;
+  new IntersectionObserver(([entry], obs) => {
+    if (!entry.isIntersecting) return;
+    obs.disconnect();
+    const start = performance.now();
+    function tick(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      ytCount.textContent = Math.floor(ease * target) + 'K';
+      if (progress < 1) requestAnimationFrame(tick);
+      else ytCount.textContent = target + 'K+';
+    }
+    requestAnimationFrame(tick);
+  }, { threshold: 0.5 }).observe(ytCount);
+} else if (ytCount) {
+  ytCount.textContent = ytCount.dataset.target + 'K+';
+}
+
+// ── MOBILE ALBUM SHOW ALL ──
+const showMoreBtn = document.getElementById('albums-show-more');
+if (showMoreBtn) {
+  showMoreBtn.addEventListener('click', () => {
+    document.querySelectorAll('.album-card.mob-hide').forEach(el => el.classList.remove('mob-hide'));
+    showMoreBtn.remove();
+  });
+}
+
 // ── SAFE LOCALSTORAGE ──
 function lsGet(k){try{return localStorage.getItem(k)}catch(e){return null}}
 function lsSet(k,v){try{localStorage.setItem(k,v)}catch(e){}}
@@ -1302,39 +1415,33 @@ function loadEmbeds() {
 }
 
 // ── THEME TOGGLE ──
-const themeToggle = document.getElementById('theme-toggle');
-const iconMoon = document.getElementById('icon-moon');
-const iconSun  = document.getElementById('icon-sun');
 const themeColorMeta = document.querySelector('meta[name="theme-color"]');
 function applyTheme(t) {
   document.body.classList.toggle('light', t === 'light');
-  iconMoon.style.display = t === 'light' ? 'none' : 'block';
-  iconSun.style.display  = t === 'light' ? 'block' : 'none';
+  document.querySelectorAll('.icon-moon-svg').forEach(el => el.style.display = t === 'light' ? 'none' : 'block');
+  document.querySelectorAll('.icon-sun-svg').forEach(el => el.style.display = t === 'light' ? 'block' : 'none');
   if (themeColorMeta) themeColorMeta.content = t === 'light' ? '#f5f3ff' : '#07070f';
   lsSet('theme', t);
 }
-themeToggle.addEventListener('click', () =>
-  applyTheme(document.body.classList.contains('light') ? 'dark' : 'light')
+document.querySelectorAll('.js-theme-toggle').forEach(btn =>
+  btn.addEventListener('click', () =>
+    applyTheme(document.body.classList.contains('light') ? 'dark' : 'light')
+  )
 );
 applyTheme(lsGet('theme') || 'dark');
 
 // ── LANGUAGE TOGGLE ──
 const T = {
-  'hero-badge':       { en:'Kaisos · Lo-fi · Producer · Munich', de:'Kaisos · Lo-fi · Produzent · München' },
-  'hero-h1':         { en:'Lo-fi beats for <em>quiet focus.</em>', de:'Lo-fi Beats für <em>stille Konzentration.</em>' },
-  'hero-tagline':    { en:'Creating from feeling, not perfection.', de:'Erschaffen aus dem Gefühl, nicht der Perfektion.' },
-  'hero-sub':        { en:'Music born from curiosity, frustration, and the courage to keep going. Lo-fi sounds for real life — imperfect, honest, evolving.', de:'Musik geboren aus Neugier, Frustration und dem Mut weiterzumachen. Lo-fi Klänge für das echte Leben — unvollkommen, ehrlich, im Wandel.' },
+  'hero-h1':         { en:'Kaisos turns quiet moments into <em>lo-fi worlds.</em>', de:'Kaisos verwandelt stille Momente in <em>Lo-fi Welten.</em>' },
+  'hero-tagline':    { en:'Slow tempos, warm imperfection — six albums of honest lo-fi.', de:'Langsame Tempos, warme Unvollkommenheit — sechs Alben ehrlichen Lo-fi.' },
+  'hero-sub':        { en:'Six self-released albums from Munich — made in private, for the hours when everything else gets too loud.', de:'Sechs selbst veröffentlichte Alben aus München — im Privaten entstanden, für die Stunden, wenn alles andere zu laut wird.' },
   'btn-play':        { en:'Listen on Spotify', de:'Auf Spotify hören' },
   'btn-play-apple':  { en:'Listen on Apple Music', de:'Auf Apple Music hören' },
   'btn-play-youtube':{ en:'Watch on YouTube', de:'Auf YouTube ansehen' },
-  'btn-youtube':     { en:'Watch on YouTube →', de:'Auf YouTube ansehen →' },
-  'btn-merch':       { en:'Shop Merch →', de:'Merch Shop →' },
-  'stat-genre':      { en:'Genre', de:'Genre' },
   'stat-since':      { en:'Since', de:'Seit' },
   'stat-home':       { en:'Home', de:'Heimat' },
   'stat-made':       { en:'Made with', de:'Gemacht mit' },
   'bio-eyebrow':     { en:'About', de:'Über mich' },
-  'bio-text':        { en:'Kaisos is a lo-fi music producer based in Munich, Germany. Since 2024, he has self-released six volumes of ambient beats, chill study music, and lo-fi hip-hop — all crafted in FL Studio and available on Spotify, Apple Music, and YouTube. His sound draws on slow tempos, mellow textures, and warm imperfection: music made for studying, unwinding, and the quiet hours in between.', de:'Kaisos ist ein Lo-fi-Musikproduzent aus München. Seit 2024 hat er sechs Alben mit Ambient-Beats, Chill-Musik und Lo-fi-Hip-Hop veröffentlicht – alles produziert in FL Studio und erhältlich auf Spotify, Apple Music und YouTube. Sein Sound lebt von langsamen Tempos, sanften Texturen und ehrlicher Unvollkommenheit: Musik zum Lernen, Abschalten und für die stillen Stunden dazwischen.' },
   'bio-based':       { en:'Based in', de:'Heimat' },
   'bio-active':      { en:'Active since', de:'Aktiv seit' },
   'bio-genre':       { en:'Genre', de:'Genre' },
@@ -1380,6 +1487,8 @@ const T = {
   'footer-privacy':  { en:'Privacy Policy', de:'Datenschutz' },
   'footer-impressum':{ en:'Impressum', de:'Impressum' },
   'footer-copy':     { en:'© 2026 Kaisos. All rights reserved.', de:'© 2026 Kaisos. Alle Rechte vorbehalten.' },
+  'copy-link':       { en:'Copy artist link', de:'Link kopieren' },
+  'copy-link-done':  { en:'Copied.', de:'Kopiert.' },
 };
 
 function applyLang(lang) {
@@ -1409,19 +1518,19 @@ const PLATFORM_CFG = {
     artistUrl:   'https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M',
     artistEmbed: 'https://open.spotify.com/embed/artist/5luMo1wzJV2T84LVD8g66M?utm_source=generator&theme=0',
     labelKey: 'btn-play',
-    svgPath: 'M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z'
+    iconId: 'ico-spotify'
   },
   apple: {
     artistUrl:   'https://music.apple.com/us/artist/kaisos/1735054792',
     artistEmbed: '',
     labelKey: 'btn-play-apple',
-    svgPath: 'M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z'
+    iconId: 'ico-apple-note'
   },
   youtube: {
     artistUrl:   'https://youtube.com/@LofiKaisos',
     artistEmbed: '',
     labelKey: 'btn-play-youtube',
-    svgPath: 'M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z'
+    iconId: 'ico-youtube'
   }
 };
 
@@ -1476,7 +1585,7 @@ function applyPlatform(platform) {
   const heroIcon  = document.getElementById('hero-listen-icon');
   const heroLabel = document.getElementById('hero-listen-label');
   if (heroBtn)    { heroBtn.href = cfg.artistUrl; heroBtn.setAttribute('aria-label', label); }
-  if (heroIcon)   heroIcon.innerHTML = `<path d="${cfg.svgPath}"/>`;
+  if (heroIcon)   heroIcon.innerHTML = `<use href="#${cfg.iconId}"/>`;
   if (heroLabel)  { heroLabel.textContent = label; heroLabel.removeAttribute('data-i18n'); }
 
   // Mobile sticky CTA
@@ -1484,7 +1593,7 @@ function applyPlatform(platform) {
   const mobileIcon  = document.getElementById('mobile-listen-icon');
   const mobileLabel = document.getElementById('mobile-listen-label');
   if (mobileBtn)   { mobileBtn.href = cfg.artistUrl; mobileBtn.setAttribute('aria-label', label); }
-  if (mobileIcon)  mobileIcon.innerHTML = `<path d="${cfg.svgPath}"/>`;
+  if (mobileIcon)  mobileIcon.innerHTML = `<use href="#${cfg.iconId}"/>`;
   if (mobileLabel) mobileLabel.textContent = label;
 
   // "View all" link in music section
@@ -1497,6 +1606,29 @@ function applyPlatform(platform) {
       youtube: { en: 'View all on YouTube →', de: 'Alle auf YouTube →' }
     };
     viewAllLink.textContent = viewAllLabels[platform][lang];
+  }
+
+  // Latest release listen button
+  const lrBtn  = document.getElementById('lr-listen-btn');
+  const lrIcon = document.getElementById('lr-listen-icon');
+  if (lrBtn)  lrBtn.href = lrBtn.dataset[platform] || cfg.artistUrl;
+  if (lrIcon) lrIcon.innerHTML = `<use href="#${cfg.iconId}"/>`;
+
+  // Mood cards
+  document.querySelectorAll('.js-mood-card').forEach(card => {
+    card.href = card.dataset[platform] || cfg.artistUrl;
+  });
+
+  // Section CTA follow button
+  const followBtn = document.getElementById('follow-cta-btn');
+  if (followBtn) {
+    followBtn.href = cfg.artistUrl;
+    const followLabels = {
+      spotify: { en: 'Follow Kaisos on Spotify', de: 'Kaisos auf Spotify folgen' },
+      apple:   { en: 'Listen on Apple Music',    de: 'Auf Apple Music hören' },
+      youtube: { en: 'Watch on YouTube',         de: 'Auf YouTube ansehen' }
+    };
+    followBtn.textContent = followLabels[platform][lang];
   }
 
   // All iframes — swap based on platform data attribute
@@ -1538,12 +1670,6 @@ document.querySelectorAll('.ptog-btn').forEach(btn =>
 );
 
 applyPlatform(detectPlatform());
-
-// ── HAMBURGER ARIA ──
-hamburger.addEventListener('click', () => {
-  const isOpen = hamburger.classList.contains('open');
-  hamburger.setAttribute('aria-expanded', String(!isOpen));
-}, { capture: true });
 
 // ── MODALS ──
 function openModal(id) {
@@ -1615,16 +1741,16 @@ cookieDecline.addEventListener('click', () => {
 const copyLinkBtn = document.getElementById('copy-link-btn');
 if (copyLinkBtn) {
   copyLinkBtn.addEventListener('click', () => {
+    const lang = lsGet('lang') || 'en';
+    const label = T['copy-link'][lang];
+    const done  = T['copy-link-done'][lang];
     navigator.clipboard.writeText('https://kaisos.com').then(() => {
-      copyLinkBtn.textContent = 'Copied.';
+      copyLinkBtn.textContent = done;
       copyLinkBtn.classList.add('copied');
-      setTimeout(() => {
-        copyLinkBtn.textContent = 'Copy artist link';
-        copyLinkBtn.classList.remove('copied');
-      }, 2000);
+      setTimeout(() => { copyLinkBtn.textContent = label; copyLinkBtn.classList.remove('copied'); }, 2000);
     }).catch(() => {
       copyLinkBtn.textContent = 'kaisos.com';
-      setTimeout(() => { copyLinkBtn.textContent = 'Copy artist link'; }, 2000);
+      setTimeout(() => { copyLinkBtn.textContent = label; }, 2000);
     });
   });
 }

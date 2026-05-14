@@ -2,6 +2,149 @@
 
 ---
 
+## Session 21 — Stock photo for gear section via Unsplash CDN
+
+### Added
+- Gear section photo: headphones + MIDI keyboard + speaker flat-lay (James Stamler / Unsplash) loaded directly from Unsplash CDN — no file to download or host
+- Photo credit line below image (Unsplash license requirement)
+
+### Changed
+- `gear-setup.jpg` placeholder replaced with real CDN URL; `onerror` handler removed
+- Gear photo wrapped in `<figure>` with `<figcaption>` for semantic correctness
+
+---
+
+## Session 20 — Mobile brand world centering + OG description update
+
+### Fixed
+- Brand world section on mobile: logo now centered, text centered, logo shrinks to 100px — previously left-aligned and looked off
+- Item 8 (gear-intro i18n drift) was a false alarm — HTML and T key were already identical, no change needed
+
+### Changed
+- `og:description` and `twitter:description` updated: replaced generic lo-fi boilerplate with "Six self-released lo-fi albums from Munich. 55K+ YouTube subscribers." — credential now appears in link previews on Discord, LinkedIn, Slack, WhatsApp
+
+---
+
+## Session 19 — Gear spacing fix + preload KaisosPurpleGold
+
+### Fixed
+- `.gear-intro` margin-bottom restored to `3rem` — was incorrectly reduced to `2rem` last session; spacing is now correct whether `gear-setup.jpg` is present or absent
+- Items 7/8 (album-card-header align-items) were already correct — no change needed
+
+### Changed
+- Added `<link rel="preload">` for `KaisosPurpleGold.png` — now used above the fold in the brand world section
+
+---
+
+## Session 18 — 7 improvements: brand world visual, gear photo, hero tagline, i18n fixes, OG image, Vol.5 label, copy button
+
+### Added
+- `og-image.svg` — branded 1200×630 OG card with dark background, purple blobs, Kaisos headline, tagline, stats line (55K+ · 6 albums)
+- Gear photo slot: `<img src="gear-setup.jpg" onerror="this.style.display='none'"/>` — drop the file in the folder to activate; silently hidden if not present
+- Vol. 5 "Not on Apple Music" badge — appears only when Apple Music is selected (`body[data-platform="apple"]`), invisible otherwise
+- `hero-tagline`, `copy-link`, `copy-link-done` i18n keys added to T with EN/DE
+
+### Changed
+- Brand world section: now a split layout with `KaisosPurpleGold.png` logo left and text right — no longer a floating text block
+- Hero tagline rewritten: "Ambient beats, soft melancholy, and chill hip-hop." → "Slow tempos, warm imperfection — six albums of honest lo-fi."
+- Hero tagline now wired to i18n system (`data-i18n="hero-tagline"`)
+- Copy-link button now wired to i18n + handler uses translated "Copied." / "Kopiert."
+- OG image updated to `og-image.svg`; `twitter:image` kept as `ProfileImg.png` (Twitter doesn't support SVG)
+
+---
+
+## Session 17 — Fix German h1 translation, rewrite hero subtext
+
+### Fixed
+- H1 German translation was silently broken — had `data-i18n-html` but no `data-i18n` key, so switching to DE left the headline in English. Added `data-i18n="hero-h1"` and the key to T with proper DE translation
+
+### Changed
+- Hero subtext rewritten: "Made for late nights, focus, and escape." → "Six self-released albums from Munich — made in private, for the hours when everything else gets too loud." — specific, personal, not generic lo-fi boilerplate
+- Both `hero-h1` and `hero-sub` now fully wired to the i18n system with EN/DE translations
+
+---
+
+## Session 16 — Hero credential, featured embed fix, gear copy rewrite
+
+### Added
+- 55K+ YouTube subscribers added to hero trust line — credential now visible above the fold on first impression
+
+### Fixed
+- Featured embed (music section) now has `data-apple` and `data-youtube` — no longer shows a dead empty zone when Apple Music or YouTube is selected
+
+### Changed
+- All 4 gear card descriptions rewritten from Amazon-copy language to first-person specific sentences
+
+---
+
+## Session 15 — YouTube subscriber count-up in stats strip
+
+### Added
+- Animated count-up counter in stats strip: counts from 0 → 55K+ when the element scrolls into view (cubic ease-out, 1.8s, respects prefers-reduced-motion)
+
+### Changed
+- Replaced generic "Lo-fi / Genre" stat with "55K+ / YouTube Subscribers"
+- Removed orphaned `stat-genre` i18n key
+
+---
+
+## Session 14 — Footer redesign + mood card visual fix
+
+### Changed
+- Footer completely rebuilt: now has 3-column grid (brand/socials | Listen nav | Explore nav), with a clean base strip for copyright and legal — replaced the sparse single-row layout
+- Footer social icons row added (Instagram, YouTube, TikTok, Spotify) using the shared `<defs>` icon system
+- Mood card top-border gradients now always visible at 0.35 opacity (up from 0 — invisible) — each card now has a distinct colour identity at rest, brightens on hover
+- Removed dead `.footer-left` and `.footer-links` CSS classes
+
+---
+
+## Session 13 — Platform toggle audit: fix all hardcoded Spotify links
+
+### Fixed
+- Latest Release "Listen Now" button now updates to the correct Apple Music / YouTube album link when platform is switched
+- All 3 Mood cards (Focus, Night, Escape) now update their href on platform switch — Vol. 5 (Escape) falls back to Apple Music artist page since it has no Apple album
+- Section CTA button ("Follow Kaisos on Spotify") now updates text AND href on platform switch: "Listen on Apple Music" / "Watch on YouTube"
+- Latest Release button icon now also swaps with platform (Spotify → Apple note → YouTube)
+
+---
+
+## Session 12 — Full improvement pass: SVG dedup, mobile album grid, bio rewrite, brand world
+
+### Added
+- SVG `<defs>` block: all 7 icon paths (Spotify, YouTube, TikTok, Instagram, Apple, Apple note, Ko-fi) defined once and referenced via `<use href="#ico-..."/>` — removed ~250 lines of repeated markup
+- Mobile album grid: Vol. 3–1 hidden by default, "Show all 6 albums" button reveals them — eliminates the wall of 6 stacked iframes on phones
+- `.album-card-mood-row` CSS class replaces 6 identical inline `style=""` attributes
+
+### Changed
+- Artist bio: rewritten from a generic spec line to a personal 3-sentence narrative
+- Brand World section: copy is now specific ("No labels, no team — just one producer in Munich…"), CTA updated to "Explore the discography →"
+- `PLATFORM_CFG.svgPath` replaced by `iconId` — hero and mobile sticky CTA icons now use `<use href>` in sync with defs
+- Removed hardcoded `<p class="updated-line">Updated 2026</p>` from the latest release strip
+
+### Fixed
+- Pre-footer platform picker and all platform toggle buttons now pull from defs instead of repeating full path strings
+
+---
+
+## Session 11 — Theme toggle in burger menu, mobile nav cleanup, dead code removal
+
+### Added
+- Theme toggle (dark/light) inside the mobile burger drawer, grouped with the EN/DE language toggle in a `drawer-controls` row
+
+### Changed
+- Mobile nav-right: hid `btn-kofi` and `#lang-toggle-desktop` at ≤900px — both were redundant with drawer versions and cluttering the mobile header
+- Theme toggle now uses class-based icon selectors (`.icon-moon-svg` / `.icon-sun-svg`) so desktop and drawer toggles always stay in sync
+
+### Fixed
+- Merged duplicate hamburger `aria-expanded` listener — was wired twice, with the capture-phase one reading stale class state
+
+### Removed
+- Dead T keys with no matching `data-i18n` elements: `hero-badge`, `hero-h1`, `hero-tagline`, `hero-sub`, `btn-youtube`, `btn-merch`, `bio-text`
+- Dead CSS rule `.hero-availability` (no element ever used this class)
+- Stale `@media(max-width:380px){.lang-toggle{display:none}}` rule — desktop lang toggle already hidden at 900px; hiding the drawer one at 380px was wrong
+
+---
+
 ## Session 10 — Full redesign: platform toggle, mood cards, brand world, all embeds wired
 
 ### Added

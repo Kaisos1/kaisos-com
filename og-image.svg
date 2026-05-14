@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <filter id="b" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="80"/>
+    </filter>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#5b2a86" stroke-width="0.8" opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#07070f"/>
+
+  <!-- Grid -->
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Purple blobs -->
+  <circle cx="1020" cy="160" r="340" fill="#5b2a86" opacity="0.17" filter="url(#b)"/>
+  <circle cx="160" cy="510" r="260" fill="#2d0f50" opacity="0.14" filter="url(#b)"/>
+
+  <!-- Top accent line -->
+  <rect x="80" y="100" width="56" height="1" fill="#d4a017" opacity="0.7"/>
+
+  <!-- Badge -->
+  <rect x="80" y="118" width="310" height="26" rx="13" fill="none" stroke="#5b2a86" stroke-width="1" opacity="0.5"/>
+  <circle cx="98" cy="131" r="4" fill="#5b2a86"/>
+  <text x="112" y="136" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#5b2a86" letter-spacing="2.5">SELF-RELEASED · MUNICH · LO-FI</text>
+
+  <!-- Main heading -->
+  <text x="78" y="310" font-family="Georgia, 'Times New Roman', serif" font-size="116" font-style="italic" font-weight="400" fill="#f5f2ff">Kaisos</text>
+
+  <!-- Gold dot after heading -->
+  <circle cx="1105" cy="90" r="22" fill="#5b2a86" opacity="0.35"/>
+  <circle cx="1105" cy="90" r="10" fill="#d4a017" opacity="0.5"/>
+
+  <!-- Tagline -->
+  <text x="80" y="372" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-style="italic" fill="#9590a8">Lo-fi Worlds from Munich</text>
+
+  <!-- Divider -->
+  <rect x="80" y="406" width="480" height="1" fill="#1c1a2e"/>
+
+  <!-- Stats line -->
+  <text x="80" y="432" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#6b647e" letter-spacing="2">55K+ YOUTUBE  ·  6 ALBUMS  ·  AMBIENT  ·  CHILL HIP-HOP</text>
+
+  <!-- Bottom URL -->
+  <text x="80" y="555" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#3a3550" letter-spacing="1">kaisos.com</text>
+
+  <!-- Bottom accent -->
+  <rect x="80" y="572" width="80" height="1" fill="#d4a017" opacity="0.4"/>
+</svg>
