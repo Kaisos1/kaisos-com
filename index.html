@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Kaisos — Lo-fi Worlds from Munich"/>
 <meta name="twitter:description" content="Six self-released lo-fi albums from Munich. 55K+ YouTube subscribers. Ambient beats and chill hip-hop — music for the quiet hours."/>
-<meta name="twitter:image" content="https://kaisos.com/ProfileImg.png"/>
+<meta name="twitter:image" content="https://kaisos.com/og-image.svg"/>
 <meta name="twitter:image:alt" content="Kaisos — Lo-Fi Music Producer from Munich"/>
 <!-- SOCIAL METADATA — When the site focus or latest release changes, update:
      og:title, og:description, twitter:title, twitter:description,
@@ -27,11 +27,11 @@
 <meta name="color-scheme" content="dark light"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2307070f'/><text x='15' y='25' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='23' font-weight='400' fill='%23d4a017'>K</text><circle cx='26' cy='6' r='3.5' fill='%235b2a86'/></svg>"/>
-<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='40' fill='%2307070f'/><text x='88' y='138' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='130' font-weight='400' fill='%23d4a017'>K</text><circle cx='148' cy='32' r='20' fill='%235b2a86'/></svg>"/>
+<link rel="icon" type="image/png" href="Logo.png"/>
+<link rel="apple-touch-icon" href="Logo.png"/>
 <link rel="canonical" href="https://kaisos.com"/>
 <link rel="preload" as="image" href="ProfileImg.png"/>
-<link rel="preload" as="image" href="KaisosPurpleGold.png"/>
+<link rel="preload" as="image" href="Logo.png"/>
 <meta name="author" content="Adnan Cengiz"/>
 <link rel="dns-prefetch" href="https://open.spotify.com"/>
 <link rel="dns-prefetch" href="https://ko-fi.com"/>
@@ -61,7 +61,7 @@
 <title>Kaisos — Lo-Fi Music Producer from Munich | Ambient Beats &amp; Chill Hip-Hop</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -72,11 +72,11 @@
   --text:#e8e3f5;
   --muted:#6b647e;
   --muted2:#9590a8;
-  --accent:#5b2a86;
-  --accent-dim:rgba(91,42,134,0.12);
+  --accent:#8b3fc9;
+  --accent-dim:rgba(139,63,201,0.12);
   --white:#f5f2ff;
-  --gold:#d4a017;
-  --gold-dim:rgba(212,160,23,0.1);
+  --gold:#c8850f;
+  --gold-dim:rgba(200,133,15,0.1);
   --max:1140px;
   --pad:clamp(1.5rem,4vw,3rem);
 }
@@ -89,7 +89,7 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:500;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);background:rgba(7,7,15,0.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid transparent;transition:border-color 0.3s}
 nav.scrolled{border-bottom-color:var(--border)}
-.nav-logo{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:400;color:var(--gold);text-decoration:none;letter-spacing:0.03em;flex-shrink:0;transition:opacity 0.2s}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:var(--gold);text-decoration:none;letter-spacing:0.03em;flex-shrink:0;transition:opacity 0.2s}
 .nav-logo:hover{opacity:0.8}
 .nav-center{display:flex;gap:2.25rem;list-style:none}
 .nav-center a{color:var(--muted);text-decoration:none;font-size:0.76rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:500;transition:color 0.2s}
@@ -103,7 +103,7 @@ nav.scrolled{border-bottom-color:var(--border)}
 .nav-icon:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-dim)}
 .btn-kofi{display:inline-flex;align-items:center;gap:0.4rem;padding:0.45rem 1rem;background:var(--accent);color:var(--gold);font-size:0.73rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;text-decoration:none;border-radius:3px;border:1px solid transparent;transition:all 0.25s;white-space:nowrap}
 .btn-kofi svg{width:14px;height:14px;flex-shrink:0}
-.btn-kofi:hover{opacity:1;border-color:var(--gold);box-shadow:0 4px 20px rgba(212,160,23,0.2)}
+.btn-kofi:hover{opacity:1;border-color:var(--gold);box-shadow:0 4px 20px rgba(200,133,15,0.2)}
 .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:600}
 .hamburger span{display:block;width:22px;height:1.5px;background:var(--text);transition:transform 0.3s,opacity 0.3s;border-radius:2px}
 .hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
@@ -122,24 +122,24 @@ nav.scrolled{border-bottom-color:var(--border)}
 .hero{min-height:100vh;display:flex;align-items:center;padding:100px var(--pad) 80px;position:relative;overflow:hidden}
 .hero-bg{position:absolute;inset:0;pointer-events:none}
 .blob{position:absolute;border-radius:50%;filter:blur(90px);animation:blob-drift 10s ease-in-out infinite alternate;will-change:transform}
-.blob-1{width:700px;height:700px;background:radial-gradient(circle,rgba(91,42,134,0.22) 0%,transparent 70%);top:-200px;right:-150px;animation-duration:12s}
+.blob-1{width:700px;height:700px;background:radial-gradient(circle,rgba(139,63,201,0.22) 0%,transparent 70%);top:-200px;right:-150px;animation-duration:12s}
 .blob-2{width:500px;height:500px;background:radial-gradient(circle,rgba(45,15,80,0.16) 0%,transparent 70%);bottom:-100px;left:-50px;animation-duration:9s;animation-delay:-3s}
 .blob-3{width:300px;height:300px;background:radial-gradient(circle,rgba(140,80,180,0.1) 0%,transparent 70%);top:30%;left:40%;animation-duration:15s;animation-delay:-6s}
 @keyframes blob-drift{from{transform:translate(0,0) scale(1)}to{transform:translate(40px,-30px) scale(1.08)}}
 .hero-noise{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");opacity:0.5;pointer-events:none}
-.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(91,42,134,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(91,42,134,0.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;mask-image:radial-gradient(ellipse at 50% 50%,black 20%,transparent 80%)}
+.hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(139,63,201,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(139,63,201,0.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;mask-image:radial-gradient(ellipse at 50% 50%,black 20%,transparent 80%)}
 .hero-inner{position:relative;z-index:1;max-width:var(--max);width:100%;margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:5rem;align-items:center}
-.hero-badge{display:inline-flex;align-items:center;gap:0.6rem;padding:0.3rem 0.85rem;border:1px solid rgba(91,42,134,0.3);border-radius:100px;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1.75rem}
+.hero-badge{display:inline-flex;align-items:center;gap:0.6rem;padding:0.3rem 0.85rem;border:1px solid rgba(139,63,201,0.3);border-radius:100px;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1.75rem}
 .badge-dot{width:5px;height:5px;border-radius:50%;background:var(--accent);animation:pulse-dot 2s infinite;flex-shrink:0}
 @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.7)}}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5.5vw,5.5rem);font-weight:400;line-height:1.05;color:var(--white);margin-bottom:1.5rem;letter-spacing:-0.01em}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.2rem,6.2vw,6.2rem);font-weight:400;line-height:1.05;color:var(--white);margin-bottom:1.5rem;letter-spacing:-0.01em}
 .hero h1 em{font-style:italic;color:var(--accent)}
 .hero-sub{color:var(--muted2);font-size:1.05rem;line-height:1.85;max-width:440px;margin-bottom:2.5rem;font-weight:300}
 .hero-ctas{display:flex;gap:0.85rem;flex-wrap:wrap;align-items:center}
 .btn-primary{display:inline-flex;align-items:center;gap:0.5rem;padding:0.8rem 1.75rem;background:var(--platform-primary);color:#fff;border:1px solid transparent;font-size:0.78rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:3px;transition:all 0.25s}
 .btn-primary svg{width:14px;height:14px;fill:currentColor;flex-shrink:0}
-.btn-primary:hover{background:#7b3ab6;border-color:var(--gold);transform:translateY(-1px);box-shadow:0 8px 30px rgba(91,42,134,0.3),0 0 16px rgba(212,160,23,0.15)}
-.btn-ghost{display:inline-flex;align-items:center;gap:0.5rem;padding:0.8rem 1.75rem;border:1px solid rgba(91,42,134,0.4);color:var(--muted2);font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:3px;transition:all 0.2s;opacity:0.8}
+.btn-primary:hover{background:#a050d8;border-color:var(--gold);transform:translateY(-1px);box-shadow:0 8px 30px rgba(139,63,201,0.3),0 0 16px rgba(200,133,15,0.15)}
+.btn-ghost{display:inline-flex;align-items:center;gap:0.5rem;padding:0.8rem 1.75rem;border:1px solid rgba(139,63,201,0.4);color:var(--muted2);font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:3px;transition:all 0.2s;opacity:0.8}
 .btn-ghost:hover{border-color:var(--accent);color:var(--text);opacity:1;background:var(--accent-dim)}
 
 /* HERO PHOTO */
@@ -150,16 +150,16 @@ nav.scrolled{border-bottom-color:var(--border)}
 .photo-ring-2{position:absolute;inset:-48px;border-radius:50%;animation:ring-spin 40s linear infinite reverse;will-change:transform}
 .photo-ring-2::before{content:'';position:absolute;bottom:-3px;left:30%;width:6px;height:6px;border-radius:50%;background:var(--accent);transform:translateX(-50%);box-shadow:0 0 10px var(--accent)}
 @keyframes ring-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-.photo-glow{position:absolute;inset:-60px;border-radius:50%;background:radial-gradient(circle at 45% 55%,rgba(91,42,134,0.22) 0%,rgba(91,42,134,0.06) 55%,transparent 72%);filter:blur(20px);animation:glow-pulse 4s ease-in-out infinite}
+.photo-glow{position:absolute;inset:-60px;border-radius:50%;background:radial-gradient(circle at 45% 55%,rgba(139,63,201,0.22) 0%,rgba(139,63,201,0.06) 55%,transparent 72%);filter:blur(20px);animation:glow-pulse 4s ease-in-out infinite}
 @keyframes glow-pulse{0%,100%{opacity:0.6;transform:scale(1)}50%{opacity:1;transform:scale(1.05)}}
-.hero-img{width:380px;height:380px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid rgba(91,42,134,0.3);display:block;position:relative;z-index:1;animation:float 6s ease-in-out infinite;will-change:transform}
+.hero-img{width:380px;height:380px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid rgba(139,63,201,0.3);display:block;position:relative;z-index:1;animation:float 6s ease-in-out infinite;will-change:transform}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 
 /* STATS STRIP */
 .stats-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.5rem var(--pad);display:flex;align-items:center;justify-content:center}
 .stat-item{flex:1;text-align:center;padding:0 2rem;position:relative}
 .stat-item+.stat-item::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:30px;background:var(--border)}
-.stat-value{font-family:'Playfair Display',serif;font-size:1.9rem;color:var(--white);line-height:1;margin-bottom:0.3rem}
+.stat-value{font-family:'Cormorant Garamond',serif;font-size:1.9rem;color:var(--white);line-height:1;margin-bottom:0.3rem}
 .stat-label{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted)}
 
 /* SECTIONS */
@@ -170,7 +170,7 @@ nav.scrolled{border-bottom-color:var(--border)}
 
 /* MUSIC */
 .listen-intro{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem}
-.listen-intro h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:400;color:var(--white);line-height:1.15}
+.listen-intro h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:400;color:var(--white);line-height:1.15}
 .link-arrow{font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;flex-shrink:0;transition:all 0.2s;opacity:0.8}
 .link-arrow:hover{opacity:1;gap:0.65rem}
 .featured-embed{border-radius:12px;overflow:hidden;margin-bottom:2rem;border:1px solid var(--border)}
@@ -184,32 +184,24 @@ nav.scrolled{border-bottom-color:var(--border)}
 
 /* STORY */
 .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
-.story-left h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,2.8vw,2.6rem);font-weight:400;color:var(--white);margin-bottom:1.5rem;line-height:1.2}
+.story-left h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,2.8vw,2.6rem);font-weight:400;color:var(--white);margin-bottom:1.5rem;line-height:1.2}
 .story-left p{color:var(--muted2);line-height:1.95;margin-bottom:1.1rem;font-size:0.97rem}
 .quote-block{margin-top:2.5rem;padding:1.75rem 1.75rem 1.75rem 2rem;background:var(--surface);border:1px solid var(--border);border-left:2px solid var(--accent);border-radius:0 4px 4px 0}
-.quote-block blockquote{font-family:'Playfair Display',serif;font-size:1.05rem;font-style:italic;color:var(--muted2);line-height:1.8;margin-bottom:0.75rem}
+.quote-block blockquote{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--muted2);line-height:1.8;margin-bottom:0.75rem}
 .quote-block cite{font-size:0.73rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
 .chapters{display:flex;flex-direction:column}
 .chapter{padding:1.5rem 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:2.5rem 1fr;gap:1rem;align-items:start}
 .chapter:first-child{border-top:1px solid var(--border)}
 .chapter:hover .chapter-body{padding-left:0.35rem}
-.chapter-num{font-family:'Playfair Display',serif;font-size:0.72rem;color:var(--accent);margin-top:0.2rem;opacity:0.8}
+.chapter-num{font-family:'Cormorant Garamond',serif;font-size:0.72rem;color:var(--accent);margin-top:0.2rem;opacity:0.8}
 .chapter-body{transition:padding 0.2s}
 .chapter h3{font-size:0.88rem;font-weight:600;color:var(--white);margin-bottom:0.4rem}
 .chapter p{font-size:0.84rem;color:var(--muted);line-height:1.75}
 
-/* WAVEFORM BAR */
-.waveform-bar{padding:3rem var(--pad);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;overflow:hidden}
-.waveform{display:flex;align-items:center;gap:3px;height:64px;flex:1;overflow:hidden}
-.waveform span{display:block;width:3px;border-radius:3px;background:var(--border2);animation:wave-anim 1.4s ease-in-out infinite;flex-shrink:0}
-.waveform span.lit{background:var(--accent);opacity:0.6}
-.waveform span.gold{background:var(--accent);opacity:0.35}
-@keyframes wave-anim{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.5)}}
-.waveform-text{font-family:'Playfair Display',serif;font-style:italic;color:var(--muted);font-size:0.85rem;flex-shrink:0;margin-left:2rem;opacity:0.7}
 
 /* GEAR */
 .gear-intro{max-width:520px;color:var(--muted2);font-size:0.97rem;line-height:1.9;margin-bottom:3rem}
-.gear-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.gear-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:4px;overflow:hidden}
 .gear-card{background:var(--bg);padding:2.25rem;text-decoration:none;display:block;transition:background 0.2s;position:relative;overflow:hidden}
 .gear-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--accent),transparent);opacity:0;transition:opacity 0.3s}
 .gear-card:hover{background:var(--surface)}
@@ -232,7 +224,7 @@ nav.scrolled{border-bottom-color:var(--border)}
 
 /* CONNECT */
 .connect-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
-.connect-left h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,2.8vw,2.5rem);font-weight:400;color:var(--white);margin-bottom:1rem;line-height:1.2}
+.connect-left h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,2.8vw,2.5rem);font-weight:400;color:var(--white);margin-bottom:1rem;line-height:1.2}
 .connect-left>p{color:var(--muted2);font-size:0.97rem;line-height:1.9;margin-bottom:2.5rem}
 .social-list{display:flex;flex-direction:column}
 .social-link{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:all 0.2s}
@@ -245,10 +237,10 @@ nav.scrolled{border-bottom-color:var(--border)}
 .social-arrow{color:var(--muted);font-size:1rem;transition:color 0.2s,transform 0.2s;flex-shrink:0}
 .kofi-card{background:var(--surface);border:1px solid var(--border2);border-radius:8px;padding:2.5rem;position:relative;overflow:hidden}
 .kofi-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--accent) 50%,transparent)}
-.kofi-card h3{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:400;color:var(--white);margin-bottom:0.75rem;line-height:1.3}
+.kofi-card h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--white);margin-bottom:0.75rem;line-height:1.3}
 .kofi-card p{font-size:0.88rem;color:var(--muted2);line-height:1.85;margin-bottom:2rem}
 .kofi-btn{display:flex;align-items:center;justify-content:center;gap:0.6rem;width:100%;padding:0.9rem 1.75rem;background:var(--accent);color:var(--gold);font-size:0.8rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;text-decoration:none;border-radius:4px;border:1px solid transparent;transition:all 0.25s}
-.kofi-btn:hover{background:#7b3ab6;border-color:var(--gold);box-shadow:0 8px 30px rgba(91,42,134,0.3),0 0 20px rgba(212,160,23,0.15);transform:translateY(-1px)}
+.kofi-btn:hover{background:#a050d8;border-color:var(--gold);box-shadow:0 8px 30px rgba(139,63,201,0.3),0 0 20px rgba(200,133,15,0.15);transform:translateY(-1px)}
 .kofi-btn svg{width:16px;height:16px;flex-shrink:0}
 .kofi-note{margin-top:1rem;font-size:0.73rem;color:var(--muted);text-align:center;line-height:1.6}
 
@@ -256,7 +248,7 @@ nav.scrolled{border-bottom-color:var(--border)}
 footer{border-top:1px solid var(--border);padding:3.5rem var(--pad) 0}
 .footer-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 130px 130px;gap:4rem;padding-bottom:3rem;border-bottom:1px solid var(--border)}
 .footer-brand{display:flex;flex-direction:column}
-.footer-logo{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold);margin-bottom:0.5rem}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold);margin-bottom:0.5rem}
 .footer-tagline{font-size:0.72rem;color:var(--muted);line-height:1.6;max-width:240px}
 .footer-socials{display:flex;gap:0.4rem;margin-top:1.5rem}
 .footer-nav-col{display:flex;flex-direction:column;gap:0.65rem}
@@ -294,8 +286,8 @@ footer{border-top:1px solid var(--border);padding:3.5rem var(--pad) 0}
   .story-grid,.connect-grid{grid-template-columns:1fr;gap:3rem}
   .gear-grid{grid-template-columns:1fr}
   .albums-grid{grid-template-columns:1fr}
-  .nav-center,.nav-icons,.platform-toggle{display:none}
-  nav .btn-kofi,#lang-toggle-desktop{display:none}
+  .nav-center,.nav-icons{display:none}
+  nav .btn-kofi{display:none}
   .hamburger{display:flex}
   /* ── Mobile perf: shrink & soften blobs ── */
   .blob{filter:blur(55px)}
@@ -312,40 +304,15 @@ footer{border-top:1px solid var(--border);padding:3.5rem var(--pad) 0}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .blob,.hero-img,.photo-ring-1,.photo-ring-2,.photo-glow,.badge-dot,.waveform span{animation:none}
+  .blob,.hero-img,.photo-ring-1,.photo-ring-2,.photo-glow,.badge-dot{animation:none}
   .reveal{opacity:1;transform:none;transition:none}
   .mobile-spotify-cta{transition:none}
 }
 
-/* ── LIGHT MODE ── */
-body.light{
-  --bg:#f5f3ff;--surface:#ede9fb;--border:#d8d2f0;--border2:#cbc4e8;
-  --text:#1a1628;--muted:#7a728a;--muted2:#4a4260;--white:#0e0b1a;
-  --gold:#9a7608;--accent:#5b2a86;
-  --accent-dim:rgba(91,42,134,0.1);--gold-dim:rgba(160,120,10,0.1);
-}
-body.light nav{background:rgba(245,243,255,0.92)}
-body.light .nav-drawer{background:rgba(245,243,255,0.98)}
-body.light .blob-1{background:radial-gradient(circle,rgba(91,42,134,0.15) 0%,transparent 70%)}
-body.light .blob-2{background:radial-gradient(circle,rgba(160,120,10,0.1) 0%,transparent 70%)}
-body.light .blob-3{background:radial-gradient(circle,rgba(90,50,200,0.1) 0%,transparent 70%)}
-body.light .gear-card{background:var(--bg)}
-body.light .gear-card:hover{background:var(--surface)}
-
-/* ── THEME TOGGLE ── */
-.theme-toggle{width:34px;height:34px;border-radius:50%;border:1px solid var(--border2);background:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;color:var(--muted);transition:all 0.2s;flex-shrink:0}
-.theme-toggle svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
-.theme-toggle:hover{border-color:var(--accent);color:var(--accent)}
 
 /* ── DRAWER CONTROLS ── */
 .drawer-controls{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem}
 
-/* ── LANG TOGGLE ── */
-.lang-toggle{display:inline-flex;align-items:center;border:1px solid var(--border2);border-radius:3px;overflow:hidden;flex-shrink:0}
-.lang-btn{background:none;border:none;border-right:1px solid var(--border2);cursor:pointer;padding:0.28rem 0.55rem;font-size:0.68rem;font-weight:600;letter-spacing:0.08em;color:var(--muted);font-family:'Inter',sans-serif;transition:all 0.2s}
-.lang-btn:last-child{border-right:none}
-.lang-btn.active{color:var(--text);background:var(--border)}
-.lang-btn:hover:not(.active){color:var(--text)}
 
 /* ── MODALS ── */
 .modal-overlay{position:fixed;inset:0;z-index:900;background:rgba(0,0,0,0.75);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;pointer-events:none;transition:opacity 0.3s}
@@ -354,7 +321,7 @@ body.light .gear-card:hover{background:var(--surface)}
 .modal-overlay.open .modal-panel{transform:translateY(0)}
 .modal-close{position:absolute;top:1rem;right:1rem;width:32px;height:32px;border-radius:50%;border:1px solid var(--border2);background:none;cursor:pointer;color:var(--muted);display:flex;align-items:center;justify-content:center;font-size:1.1rem;line-height:1;transition:all 0.2s}
 .modal-close:hover{border-color:var(--accent);color:var(--accent)}
-.modal-panel h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:400;color:var(--white);margin-bottom:2rem}
+.modal-panel h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--white);margin-bottom:2rem}
 .modal-panel h3{font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin:1.5rem 0 0.4rem}
 .modal-panel p{font-size:0.9rem;color:var(--muted2);line-height:1.85;margin-bottom:0.75rem}
 .modal-panel a{color:var(--accent)}
@@ -409,7 +376,7 @@ body.light .gear-card:hover{background:var(--surface)}
 .kofi-btn:focus-visible,
 .mobile-spotify-cta a:focus-visible,
 .platform-btn:focus-visible,
-.copy-link-btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px;box-shadow:0 0 0 5px rgba(91,42,134,0.22)}
+.copy-link-btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px;box-shadow:0 0 0 5px rgba(139,63,201,0.22)}
 
 /* ── ARTIST BIO ── */
 .bio-grid{display:grid;grid-template-columns:1fr 260px;gap:4rem;align-items:start}
@@ -429,7 +396,7 @@ iframe:not([src]){display:block;height:0!important;visibility:hidden}
 .embed-ph.declined{gap:0.75rem}
 .embed-ph.declined .ph-label{font-size:0.67rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
 .embed-ph.declined .ph-links{display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center}
-.embed-ph.declined .ph-links a{font-size:0.73rem;color:var(--accent);text-decoration:none;padding:0.28rem 0.65rem;border:1px solid rgba(91,42,134,0.3);border-radius:3px;transition:all 0.2s}
+.embed-ph.declined .ph-links a{font-size:0.73rem;color:var(--accent);text-decoration:none;padding:0.28rem 0.65rem;border:1px solid rgba(139,63,201,0.3);border-radius:3px;transition:all 0.2s}
 .embed-ph.declined .ph-links a:hover{color:var(--text);border-color:var(--accent)}
 .featured-embed .embed-ph{min-height:352px}
 
@@ -439,6 +406,8 @@ body[data-platform="spotify"]{--platform-primary:#1DB954;--platform-primary-dim:
 body[data-platform="apple"]{--platform-primary:#FA2C55;--platform-primary-dim:rgba(250,44,85,0.1);--platform-primary-glow:rgba(250,44,85,0.24)}
 body[data-platform="youtube"]{--platform-primary:#CC0000;--platform-primary-dim:rgba(204,0,0,0.1);--platform-primary-glow:rgba(204,0,0,0.22)}
 /* ── Platform toggle control ── */
+.music-platform-toggle{display:flex;align-items:center;gap:0.65rem}
+.music-platform-label{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
 .platform-toggle{display:flex;background:var(--surface);border:1px solid var(--border2);border-radius:22px;padding:3px;gap:2px}
 .ptog-btn{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;border:none;background:transparent;color:var(--muted);cursor:pointer;transition:all 0.2s;flex-shrink:0}
 .ptog-btn svg{width:13px;height:13px;fill:currentColor}
@@ -446,9 +415,6 @@ body[data-platform="youtube"]{--platform-primary:#CC0000;--platform-primary-dim:
 body[data-platform="spotify"] .ptog-btn[data-p="spotify"]{background:#1DB954;color:#fff}
 body[data-platform="apple"]   .ptog-btn[data-p="apple"]{background:#FA2C55;color:#fff}
 body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;color:#fff}
-.drawer-platform-toggle{display:flex;gap:0.5rem;align-items:center;margin-bottom:1.5rem}
-.drawer-platform-toggle .ptog-btn{width:38px;height:38px;border:1px solid var(--border2)}
-.drawer-platform-toggle .ptog-btn svg{width:16px;height:16px}
 /* ── Embed pending placeholder ── */
 .embed-pending{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;min-height:152px;background:var(--surface);border-radius:8px;border:1px dashed var(--border2)}
 .embed-pending svg{width:22px;height:22px;fill:none;stroke:var(--platform-primary);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;opacity:0.35}
@@ -475,7 +441,7 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 /* ── COPY LINK BUTTON ── */
 .copy-link-btn{background:none;border:1px solid var(--border2);border-radius:3px;color:var(--muted);font-size:0.68rem;letter-spacing:0.09em;text-transform:uppercase;font-family:'Inter',sans-serif;cursor:pointer;padding:0.3rem 0.75rem;transition:all 0.2s;white-space:nowrap}
 .copy-link-btn:hover{color:var(--text);border-color:var(--muted2)}
-.copy-link-btn.copied{color:var(--accent);border-color:rgba(91,42,134,0.4)}
+.copy-link-btn.copied{color:var(--accent);border-color:rgba(139,63,201,0.4)}
 
 /* ── UPDATED LINE ── */
 .updated-line{font-size:0.64rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--muted);opacity:0.5;margin-top:0.5rem}
@@ -489,15 +455,15 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 .lr-strip{padding:2.5rem var(--pad);border-top:1px solid var(--border);background:linear-gradient(to bottom,var(--surface),var(--bg));position:relative}
 .lr-strip::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--gold) 40%,var(--gold) 60%,transparent);opacity:0.5}
 .lr-wrap{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
-.lr-badge{display:inline-flex;align-items:center;gap:0.55rem;padding:0.28rem 0.8rem;border:1px solid rgba(212,160,23,0.4);border-radius:100px;font-size:0.68rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
-.lr-title{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,2.5vw,1.9rem);color:var(--white);margin-bottom:0.5rem;font-weight:400;line-height:1.2}
+.lr-badge{display:inline-flex;align-items:center;gap:0.55rem;padding:0.28rem 0.8rem;border:1px solid rgba(200,133,15,0.4);border-radius:100px;font-size:0.68rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.lr-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,2.5vw,1.9rem);color:var(--white);margin-bottom:0.5rem;font-weight:400;line-height:1.2}
 .lr-sub{font-size:0.87rem;color:var(--muted2);line-height:1.7;margin-bottom:1.5rem}
 .lr-embed{border-radius:10px;overflow:hidden;border:1px solid var(--border2)}
 .lr-embed iframe{display:block;width:100%}
 
 /* ALBUM CARDS */
 .album-card{border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--surface);transition:border-color 0.2s,transform 0.2s}
-.album-card:hover{border-color:rgba(91,42,134,0.5);transform:translateY(-2px)}
+.album-card:hover{border-color:rgba(139,63,201,0.5);transform:translateY(-2px)}
 .album-card-header{padding:0.65rem 0.9rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
 .album-card-label{font-size:0.62rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--accent);font-weight:600}
 .album-card-name{font-size:0.78rem;color:var(--muted2)}
@@ -509,7 +475,7 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 @media(max-width:900px){.lr-wrap{grid-template-columns:1fr;gap:2rem}}
 
 /* HERO TAGLINE */
-.hero-tagline{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1rem,1.8vw,1.25rem);color:var(--muted2);margin-bottom:1.25rem;font-weight:400;max-width:440px}
+.hero-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(1rem,1.8vw,1.25rem);color:var(--muted2);margin-bottom:1.25rem;font-weight:400;max-width:440px}
 .hero-text h1+.hero-tagline{margin-top:-0.5rem}
 
 
@@ -517,7 +483,7 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 .mobile-spotify-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:199;background:rgba(7,7,15,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--border);padding:0.75rem var(--pad) calc(0.75rem + env(safe-area-inset-bottom,0px));transform:translateY(100%);opacity:0;transition:transform 0.35s cubic-bezier(0.4,0,0.2,1),opacity 0.35s,bottom 0.25s ease}
 .mobile-spotify-cta.visible{transform:translateY(0);opacity:1}
 .mobile-spotify-cta a{display:flex;align-items:center;justify-content:center;gap:0.6rem;padding:0.9rem;background:var(--platform-primary);color:#fff;text-decoration:none;border-radius:4px;font-size:0.82rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;border:1px solid transparent;box-shadow:0 2px 16px var(--platform-primary-glow);transition:all 0.25s}
-.mobile-spotify-cta a:hover{background:#7b3ab6;border-color:var(--gold);box-shadow:0 4px 24px rgba(91,42,134,0.4),0 0 14px rgba(212,160,23,0.18)}
+.mobile-spotify-cta a:hover{background:#a050d8;border-color:var(--gold);box-shadow:0 4px 24px rgba(139,63,201,0.4),0 0 14px rgba(200,133,15,0.18)}
 .mobile-spotify-cta a svg{width:15px;height:15px;fill:currentColor;flex-shrink:0}
 @media(max-width:900px){.mobile-spotify-cta{display:block}}
 @media(min-width:901px){.mobile-spotify-cta{display:none!important}}
@@ -525,13 +491,13 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 /* ══ NEW SECTIONS & IMPROVEMENTS ══ */
 
 /* ── Gold outline button ── */
-.btn-outline-gold{display:inline-flex;align-items:center;gap:0.5rem;padding:0.8rem 1.75rem;border:1px solid rgba(212,160,23,0.38);color:var(--gold);background:rgba(212,160,23,0.04);font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:3px;transition:all 0.25s;opacity:0.9}
-.btn-outline-gold:hover{border-color:var(--gold);background:rgba(212,160,23,0.1);opacity:1;box-shadow:0 4px 16px rgba(212,160,23,0.15)}
+.btn-outline-gold{display:inline-flex;align-items:center;gap:0.5rem;padding:0.8rem 1.75rem;border:1px solid rgba(200,133,15,0.38);color:var(--gold);background:rgba(200,133,15,0.04);font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:3px;transition:all 0.25s;opacity:0.9}
+.btn-outline-gold:hover{border-color:var(--gold);background:rgba(200,133,15,0.1);opacity:1;box-shadow:0 4px 16px rgba(200,133,15,0.15)}
 .hero-ctas .btn-outline-gold{padding:0.95rem 2.25rem;font-size:0.82rem}
 
 /* ── Section CTA bar ── */
-.section-cta-bar{padding:3.5rem var(--pad);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;background:linear-gradient(to right,rgba(91,42,134,0.04),transparent)}
-.section-cta-bar-text{font-family:'Playfair Display',serif;font-size:clamp(1.05rem,2vw,1.35rem);color:var(--muted2);font-style:italic;line-height:1.4}
+.section-cta-bar{padding:3.5rem var(--pad);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;background:linear-gradient(to right,rgba(139,63,201,0.04),transparent)}
+.section-cta-bar-text{font-family:'Cormorant Garamond',serif;font-size:clamp(1.05rem,2vw,1.35rem);color:var(--muted2);font-style:italic;line-height:1.4}
 .section-cta-bar-text em{color:var(--white);font-style:italic}
 @media(max-width:700px){.section-cta-bar{flex-direction:column;align-items:flex-start;gap:1.25rem}}
 
@@ -540,8 +506,8 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 .world-section::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--accent) 50%,transparent);opacity:0.35}
 .world-inner{max-width:var(--max);margin:0 auto}
 .world-split{display:flex;align-items:center;gap:5rem}
-.world-logo{width:180px;height:180px;object-fit:contain;flex-shrink:0;opacity:0.9;filter:drop-shadow(0 0 40px rgba(91,42,134,0.5))}
-.world-split-text h2{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3.5vw,3rem);font-weight:400;color:var(--white);margin-bottom:1.25rem;line-height:1.15}
+.world-logo{width:180px;height:180px;object-fit:contain;flex-shrink:0;background:radial-gradient(circle at center,#252040 25%,#1a1530 55%,transparent 78%);border-radius:50%;padding:20px;filter:drop-shadow(0 0 30px rgba(139,63,201,0.4))}
+.world-split-text h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,3.5vw,3rem);font-weight:400;color:var(--white);margin-bottom:1.25rem;line-height:1.15}
 .world-split-text h2 em{font-style:italic;color:var(--muted2)}
 .world-split-text p{font-size:1rem;color:var(--muted2);line-height:1.9;margin-bottom:2.5rem;max-width:500px}
 @media(max-width:700px){.world-split{flex-direction:column;gap:2rem;align-items:center;text-align:center}.world-logo{width:100px;height:100px}.world-split-text p{max-width:100%;margin-left:auto;margin-right:auto}}
@@ -559,7 +525,7 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 .mood-card:hover{background:var(--surface)}
 .mood-card:hover::before{opacity:1}
 .mood-card-num{font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:1.1rem}
-.mood-card-title{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:400;color:var(--white);margin-bottom:0.6rem;line-height:1.2}
+.mood-card-title{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--white);margin-bottom:0.6rem;line-height:1.2}
 .mood-card-desc{font-size:0.83rem;color:var(--muted);line-height:1.75;flex:1;margin-bottom:1.5rem}
 .mood-card-cta{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:0.4rem;transition:gap 0.2s}
 .mood-card:hover .mood-card-cta{gap:0.7rem}
@@ -585,7 +551,7 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
 .merch-card{background:var(--surface);border:1px solid var(--border2);border-radius:8px;padding:2.5rem;position:relative;overflow:hidden;margin-bottom:1.5rem}
 .merch-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--gold) 50%,transparent);opacity:0.6}
 .merch-card-eyebrow{font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;opacity:0.8}
-.merch-card h3{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:400;color:var(--white);margin-bottom:0.65rem;line-height:1.3}
+.merch-card h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--white);margin-bottom:0.65rem;line-height:1.3}
 .merch-card p{font-size:0.85rem;color:var(--muted2);line-height:1.85;margin-bottom:1.75rem}
 
 /* ── Hero trust line ── */
@@ -610,11 +576,11 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
 <nav id="nav">
   <a href="#home" class="nav-logo">Kaisos</a>
   <ul class="nav-center">
-    <li><a href="#music" data-i18n="nav-music">Music</a></li>
-    <li><a href="#story" data-i18n="nav-story">Story</a></li>
-    <li><a href="#gear" data-i18n="nav-gear">Gear</a></li>
-    <li><a href="#connect" data-i18n="nav-connect">Connect</a></li>
-    <li><a href="https://kaisos-shop.fourthwall.com/en-eur" class="nav-merch-link" target="_blank" rel="noopener" data-i18n="nav-merch">Merch</a></li>
+    <li><a href="#music">Music</a></li>
+    <li><a href="#story">Story</a></li>
+    <li><a href="#gear">Gear</a></li>
+    <li><a href="#connect">Connect</a></li>
+    <li><a href="https://kaisos-shop.fourthwall.com/en-eur" class="nav-merch-link" target="_blank" rel="noopener">Merch</a></li>
   </ul>
   <div class="nav-right">
     <div class="nav-icons">
@@ -633,27 +599,8 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
     </div>
     <a class="btn-kofi" href="https://ko-fi.com/I3I41YQ1DA" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor"><use href="#ico-kofi"/></svg>
-      <span data-i18n="nav-support">Support</span>
+      <span>Support</span>
     </a>
-    <div class="platform-toggle" id="platform-toggle" role="group" aria-label="Choose streaming platform">
-      <button type="button" class="ptog-btn active" data-p="spotify" aria-label="Spotify" title="Spotify">
-        <svg viewBox="0 0 24 24"><use href="#ico-spotify"/></svg>
-      </button>
-      <button type="button" class="ptog-btn" data-p="apple" aria-label="Apple Music" title="Apple Music">
-        <svg viewBox="0 0 24 24"><use href="#ico-apple-note"/></svg>
-      </button>
-      <button type="button" class="ptog-btn" data-p="youtube" aria-label="YouTube" title="YouTube">
-        <svg viewBox="0 0 24 24"><use href="#ico-youtube"/></svg>
-      </button>
-    </div>
-    <div class="lang-toggle" id="lang-toggle-desktop">
-      <button type="button" class="lang-btn active" data-lang="en">EN</button>
-      <button type="button" class="lang-btn" data-lang="de">DE</button>
-    </div>
-    <button type="button" class="theme-toggle js-theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-      <svg class="icon-moon-svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      <svg class="icon-sun-svg" viewBox="0 0 24 24" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-    </button>
     <button type="button" class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-drawer">
       <span></span><span></span><span></span>
     </button>
@@ -663,32 +610,13 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
 <!-- MOBILE DRAWER -->
 <div class="nav-drawer" id="nav-drawer">
   <ul>
-    <li><a href="#music" class="drawer-link" data-i18n="nav-music">Music</a></li>
-    <li><a href="#story" class="drawer-link" data-i18n="nav-story">Story</a></li>
-    <li><a href="#gear" class="drawer-link" data-i18n="nav-gear">Gear</a></li>
-    <li><a href="#connect" class="drawer-link" data-i18n="nav-connect">Connect</a></li>
-    <li><a href="https://kaisos-shop.fourthwall.com/en-eur" class="drawer-link" target="_blank" rel="noopener" data-i18n="nav-merch">Merch</a></li>
+    <li><a href="#music" class="drawer-link">Music</a></li>
+    <li><a href="#story" class="drawer-link">Story</a></li>
+    <li><a href="#gear" class="drawer-link">Gear</a></li>
+    <li><a href="#connect" class="drawer-link">Connect</a></li>
+    <li><a href="https://kaisos-shop.fourthwall.com/en-eur" class="drawer-link" target="_blank" rel="noopener">Merch</a></li>
   </ul>
-  <div class="drawer-platform-toggle" role="group" aria-label="Choose streaming platform">
-    <button type="button" class="ptog-btn active" data-p="spotify" aria-label="Spotify" title="Spotify">
-      <svg viewBox="0 0 24 24"><use href="#ico-spotify"/></svg>
-    </button>
-    <button type="button" class="ptog-btn" data-p="apple" aria-label="Apple Music" title="Apple Music">
-      <svg viewBox="0 0 24 24"><use href="#ico-apple-note"/></svg>
-    </button>
-    <button type="button" class="ptog-btn" data-p="youtube" aria-label="YouTube" title="YouTube">
-      <svg viewBox="0 0 24 24"><use href="#ico-youtube"/></svg>
-    </button>
-  </div>
   <div class="drawer-controls">
-    <div class="lang-toggle" id="lang-toggle-mobile">
-      <button type="button" class="lang-btn active" data-lang="en">EN</button>
-      <button type="button" class="lang-btn" data-lang="de">DE</button>
-    </div>
-    <button type="button" class="theme-toggle js-theme-toggle" aria-label="Toggle theme">
-      <svg class="icon-moon-svg" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      <svg class="icon-sun-svg" viewBox="0 0 24 24" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-    </button>
   </div>
   <div class="nav-drawer-socials">
     <a class="nav-icon" href="https://www.instagram.com/lofikaisos/" target="_blank" rel="me noopener" aria-label="Instagram">
@@ -726,9 +654,9 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
         <div class="badge-dot"></div>
         <span>Self-released · Munich · Lo-fi</span>
       </div>
-      <h1 class="reveal d1" data-i18n="hero-h1" data-i18n-html>Kaisos turns quiet moments into <em>lo-fi worlds.</em></h1>
-      <p class="hero-tagline reveal d1" data-i18n="hero-tagline">Slow tempos, warm imperfection — six albums of honest lo-fi.</p>
-      <p class="hero-sub reveal d2" data-i18n="hero-sub">Six self-released albums from Munich — made in private, for the hours when everything else gets too loud.</p>
+      <h1 class="reveal d1">Kaisos turns quiet moments into <em>lo-fi worlds.</em></h1>
+      <p class="hero-tagline reveal d1">Slow tempos, warm imperfection — six albums of honest lo-fi.</p>
+      <p class="hero-sub reveal d2">Six self-released albums from Munich — made in private, for the hours when everything else gets too loud.</p>
       <div class="hero-ctas reveal d3">
         <a href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" class="btn-primary" id="hero-listen-btn" target="_blank" rel="noopener" aria-label="Listen now on Spotify">
           <svg id="hero-listen-icon" viewBox="0 0 24 24"><use href="#ico-spotify"/></svg>
@@ -784,48 +712,44 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
 <!-- STATS STRIP -->
 <div class="stats-strip">
   <div class="stat-item reveal">
-    <div class="stat-value" id="yt-count" data-target="55">0K</div>
+    <div class="stat-value" id="yt-count" data-target="55">0K+</div>
     <div class="stat-label">YouTube Subscribers</div>
   </div>
   <div class="stat-item reveal d1">
-    <div class="stat-value">2024</div>
-    <div class="stat-label" data-i18n="stat-since">Since</div>
+    <div class="stat-value">6</div>
+    <div class="stat-label">Self-Released Albums</div>
   </div>
   <div class="stat-item reveal d2">
-    <div class="stat-value">Munich</div>
-    <div class="stat-label" data-i18n="stat-home">Home</div>
-  </div>
-  <div class="stat-item reveal d3">
-    <div class="stat-value">FL Studio</div>
-    <div class="stat-label" data-i18n="stat-made">Made with</div>
+    <div class="stat-value">100%</div>
+    <div class="stat-label">Independent</div>
   </div>
 </div>
 
 <!-- ARTIST BIO -->
 <section class="section" id="about">
   <div class="inner">
-    <div class="eyebrow reveal" data-i18n="bio-eyebrow">About</div>
+    <div class="eyebrow reveal">About</div>
     <div class="bio-grid">
       <p class="artist-bio reveal">Started with a keyboard and too much impatience. Walked away twice, came back quietly — and stayed. Six self-released albums of ambient beats and chill hip-hop, all made in FL Studio between Munich and whatever late-night mood took over. The sound is slow by design: warm, imperfect, and built for the hours when everything else gets too loud.</p>
       <div class="bio-facts reveal d1">
         <div class="bio-fact">
-          <span class="bio-fact-label" data-i18n="bio-based">Based in</span>
+          <span class="bio-fact-label">Based in</span>
           <span class="bio-fact-value">Munich, Germany</span>
         </div>
         <div class="bio-fact">
-          <span class="bio-fact-label" data-i18n="bio-active">Active since</span>
+          <span class="bio-fact-label">Active since</span>
           <span class="bio-fact-value">2024</span>
         </div>
         <div class="bio-fact">
-          <span class="bio-fact-label" data-i18n="bio-genre">Genre</span>
+          <span class="bio-fact-label">Genre</span>
           <span class="bio-fact-value">Lo-fi · Chillhop · Ambient</span>
         </div>
         <div class="bio-fact">
-          <span class="bio-fact-label" data-i18n="bio-releases">Releases</span>
-          <span class="bio-fact-value" data-i18n="bio-releases-val">6 albums</span>
+          <span class="bio-fact-label">Releases</span>
+          <span class="bio-fact-value">6 albums</span>
         </div>
         <div class="bio-fact">
-          <span class="bio-fact-label" data-i18n="bio-tools">Tools</span>
+          <span class="bio-fact-label">Tools</span>
           <span class="bio-fact-value">FL Studio</span>
         </div>
       </div>
@@ -837,10 +761,10 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
 <section class="world-section">
   <div class="world-inner reveal">
     <div class="world-split">
-      <img src="KaisosPurpleGold.png" alt="Kaisos" class="world-logo" width="180" height="180" loading="lazy"/>
+      <img src="Logo.png" alt="Kaisos" class="world-logo" width="180" height="180" loading="lazy"/>
       <div class="world-split-text">
         <h2>Not just tracks. <em>A quiet world.</em></h2>
-        <p>Six albums of ambient lo-fi made for the hours when noise stops making sense. No labels, no team — just one producer in Munich, building sounds for people who need somewhere to be.</p>
+        <p>Every release is built for a specific kind of stillness — after a long day, before a hard conversation, or when the city gets too loud and you need somewhere to disappear. The same warmth, the same imperfect textures, the same late-night calm. Every album adds another room to the same world.</p>
         <a href="#music" class="btn-outline-gold">Explore the discography →</a>
       </div>
     </div>
@@ -850,10 +774,23 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
 <!-- MUSIC -->
 <section class="section" id="music">
   <div class="inner">
-    <div class="eyebrow reveal" data-i18n="music-eyebrow">Music</div>
+    <div class="eyebrow reveal">Music</div>
     <div class="listen-intro reveal">
-      <h2 data-i18n="music-h2">Six volumes of lo-fi.</h2>
-      <a class="link-arrow" href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="noopener" data-i18n="music-viewall">View all on Spotify →</a>
+      <h2>Six volumes of lo-fi.</h2>
+      <div class="music-platform-toggle">
+        <span class="music-platform-label">Stream on</span>
+        <div class="platform-toggle" id="platform-toggle" role="group" aria-label="Choose streaming platform">
+          <button type="button" class="ptog-btn active" data-p="spotify" aria-label="Spotify" title="Spotify">
+            <svg viewBox="0 0 24 24"><use href="#ico-spotify"/></svg>
+          </button>
+          <button type="button" class="ptog-btn" data-p="apple" aria-label="Apple Music" title="Apple Music">
+            <svg viewBox="0 0 24 24"><use href="#ico-apple-note"/></svg>
+          </button>
+          <button type="button" class="ptog-btn" data-p="youtube" aria-label="YouTube" title="YouTube">
+            <svg viewBox="0 0 24 24"><use href="#ico-youtube"/></svg>
+          </button>
+        </div>
+      </div>
     </div>
     <div class="featured-embed reveal">
       <iframe
@@ -946,7 +883,7 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
     </div>
 
     <div class="platforms-row reveal">
-      <span class="label" data-i18n="stream-label">Stream on</span>
+      <span class="label">Stream on</span>
       <a class="platform-btn" href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24"><use href="#ico-spotify"/></svg>
         Spotify
@@ -974,24 +911,19 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
   <a href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" id="follow-cta-btn" class="btn-primary" target="_blank" rel="noopener">Follow Kaisos on Spotify</a>
 </div>
 
-<!-- WAVEFORM DIVIDER -->
-<div class="waveform-bar">
-  <div class="waveform" id="waveform"></div>
-  <div class="waveform-text">Lo-fi · Ambient · Chill</div>
-</div>
 
 <!-- STORY -->
 <section class="section" id="story">
   <div class="inner">
-    <div class="eyebrow reveal" data-i18n="story-eyebrow">The story</div>
+    <div class="eyebrow reveal">The story</div>
     <div class="story-grid">
       <div class="story-left reveal">
-        <h2 data-i18n="story-h2">Built on honest restarts.</h2>
-        <p data-i18n="story-p1">It didn't start with gear or talent. It started with a keyboard, impatience, and eventually silence. Twice, I walked away. Twice, something pulled me back.</p>
-        <p data-i18n="story-p2">The shift wasn't dramatic — it was a decision to slow down. To make something for myself before worrying about what anyone else might think. Lo-fi gave me that space. A genre that doesn't demand perfection, just presence.</p>
-        <p data-i18n="story-p3">When I uploaded the first track, I almost deleted it. I left it up. That was the beginning.</p>
+        <h2>Built on honest restarts.</h2>
+        <p>It didn't start with gear or talent. It started with a keyboard, impatience, and eventually silence. Twice, I walked away. Twice, something pulled me back.</p>
+        <p>The shift wasn't dramatic — it was a decision to slow down. To make something for myself before worrying about what anyone else might think. Lo-fi gave me that space. A genre that doesn't demand perfection, just presence.</p>
+        <p>When I uploaded the first track, I almost deleted it. I left it up. That was the beginning.</p>
         <div class="quote-block">
-          <blockquote data-i18n="story-quote">"Progress, not perfection. And this time, I'm not starting over — I'm continuing."</blockquote>
+          <blockquote>"Progress, not perfection. And this time, I'm not starting over — I'm continuing."</blockquote>
           <cite>— Kaisos</cite>
         </div>
       </div>
@@ -999,29 +931,29 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
         <div class="chapter">
           <div class="chapter-num">01</div>
           <div class="chapter-body">
-            <h3 data-i18n="ch1-title">Where it started</h3>
-            <p data-i18n="ch1-text">A keyboard. High expectations. No patience. The instrument sat untouched for months before I tried again with FL Studio.</p>
+            <h3>Where it started</h3>
+            <p>A keyboard. High expectations. No patience. The instrument sat untouched for months before I tried again with FL Studio.</p>
           </div>
         </div>
         <div class="chapter">
           <div class="chapter-num">02</div>
           <div class="chapter-body">
-            <h3 data-i18n="ch2-title">What went wrong</h3>
-            <p data-i18n="ch2-text">Creating for judgment before a single note existed. I was focused on how things would be perceived — and that made everything feel wrong from the start.</p>
+            <h3>What went wrong</h3>
+            <p>Creating for judgment before a single note existed. I was focused on how things would be perceived — and that made everything feel wrong from the start.</p>
           </div>
         </div>
         <div class="chapter">
           <div class="chapter-num">03</div>
           <div class="chapter-body">
-            <h3 data-i18n="ch3-title">Why I came back</h3>
-            <p data-i18n="ch3-text">Slower. Simpler. More honest. Lo-fi asked nothing of me except to show up. No pressure, no comparison — just the sound and the feeling.</p>
+            <h3>Why I came back</h3>
+            <p>Slower. Simpler. More honest. Lo-fi asked nothing of me except to show up. No pressure, no comparison — just the sound and the feeling.</p>
           </div>
         </div>
         <div class="chapter">
           <div class="chapter-num">04</div>
           <div class="chapter-body">
-            <h3 data-i18n="ch4-title">Now</h3>
-            <p data-i18n="ch4-text">Making music at the pace of real life. Imperfect, evolving, and entirely my own. Six volumes in — and this is only the beginning.</p>
+            <h3>Now</h3>
+            <p>Making music at the pace of real life. Imperfect, evolving, and entirely my own. Six volumes in — and this is only the beginning.</p>
           </div>
         </div>
       </div>
@@ -1038,26 +970,20 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
 <!-- GEAR -->
 <section class="section" id="gear">
   <div class="inner">
-    <div class="eyebrow reveal" data-i18n="gear-eyebrow">The setup</div>
-    <p class="gear-intro reveal" data-i18n="gear-intro">Simple, purposeful tools chosen for feel over spec. Everything here contributes to the sound — nothing more.</p>
+    <div class="eyebrow reveal">The setup</div>
+    <p class="gear-intro reveal">Simple, purposeful tools chosen for feel over spec. Everything here contributes to the sound — nothing more.</p>
     <div class="gear-grid">
       <a class="gear-card reveal" href="https://amzn.to/4t59kTK" target="_blank" rel="noopener">
         <div class="gear-num">Gear 01</div>
         <h3>Beyerdynamic DT 900 Pro X</h3>
         <p>Every mix decision on every Kaisos track happened through these. Open-back means the sound breathes — which is exactly what lo-fi needs.</p>
-        <div class="gear-link" data-i18n="gear-amazon">View on Amazon →</div>
+        <div class="gear-link">View on Amazon →</div>
       </a>
       <a class="gear-card reveal d1" href="https://amzn.to/4w3IrCj" target="_blank" rel="noopener">
         <div class="gear-num">Gear 02</div>
         <h3>Akai MPK Mini MKIII</h3>
         <p>Where the melodies actually start. It sits on the desk permanently — small enough to never get in the way, used on every single track.</p>
-        <div class="gear-link" data-i18n="gear-amazon">View on Amazon →</div>
-      </a>
-      <a class="gear-card reveal d2" href="https://amzn.to/422Fqoh" target="_blank" rel="noopener">
-        <div class="gear-num">Gear 03</div>
-        <h3>KLIM Esports Gaming Chair</h3>
-        <p>Three-hour sessions where an album slowly becomes something. Not glamorous, but it's where most of the real work happens.</p>
-        <div class="gear-link" data-i18n="gear-amazon">View on Amazon →</div>
+        <div class="gear-link">View on Amazon →</div>
       </a>
     </div>
     <a class="gear-featured reveal" href="https://go.image-line.com/c/7251968/3088747/38091" target="_blank" rel="noopener sponsored">
@@ -1081,11 +1007,11 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
 <!-- CONNECT -->
 <section class="section" id="connect">
   <div class="inner">
-    <div class="eyebrow reveal" data-i18n="connect-eyebrow">Connect</div>
+    <div class="eyebrow reveal">Connect</div>
     <div class="connect-grid">
       <div class="connect-left reveal">
-        <h2 data-i18n="connect-h2">Follow the journey.</h2>
-        <p data-i18n="connect-p">The music is made in private. The story is shared in public. Join wherever you listen, watch, or create.</p>
+        <h2>Follow the journey.</h2>
+        <p>The music is made in private. The story is shared in public. Join wherever you listen, watch, or create.</p>
         <div class="social-list">
           <a class="social-link" href="https://www.instagram.com/lofikaisos/" target="_blank" rel="me noopener">
             <div class="social-info"><div class="social-name">Instagram</div><div class="social-handle">@lofikaisos</div><div class="social-sub">Visual updates</div></div>
@@ -1124,13 +1050,13 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
           </a>
         </div>
         <div class="kofi-card">
-          <h3 data-i18n="kofi-h3">Support the music.</h3>
-          <p data-i18n="kofi-p">Every track takes time — time away from everything else. If Kaisos has ever made your study session better, your commute easier, or your late night feel less lonely, a coffee goes a long way.</p>
+          <h3>Support the music.</h3>
+          <p>Every track takes time — time away from everything else. If Kaisos has ever made your study session better, your commute easier, or your late night feel less lonely, a coffee goes a long way.</p>
           <a class="kofi-btn" href="https://ko-fi.com/I3I41YQ1DA" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor"><use href="#ico-kofi"/></svg>
-            <span data-i18n="kofi-btn">Buy me a coffee</span>
+            <span>Buy me a coffee</span>
           </a>
-          <p class="kofi-note" data-i18n="kofi-note">No pressure. The music stays free either way.</p>
+          <p class="kofi-note">No pressure. The music stays free either way.</p>
           <p class="free-support-note">You can also support by saving a track, following on Spotify, or sharing the music — every listen helps.</p>
         </div>
       </div>
@@ -1164,7 +1090,7 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="footer-logo">Kaisos</div>
-      <p class="footer-tagline" data-i18n="footer-tagline">Lo-fi, ambient beats, and chill study music from Munich.</p>
+      <p class="footer-tagline">Lo-fi, ambient beats, and chill study music from Munich.</p>
       <div class="footer-socials">
         <a class="nav-icon" href="https://www.instagram.com/lofikaisos/" target="_blank" rel="me noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24"><use href="#ico-instagram"/></svg>
@@ -1192,15 +1118,15 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
       <a href="#story">Story</a>
       <a href="#gear">Gear</a>
       <a href="#connect">Connect</a>
-      <a href="https://kaisos-shop.fourthwall.com/en-eur" target="_blank" rel="noopener" data-i18n="footer-merch">Merch</a>
+      <a href="https://kaisos-shop.fourthwall.com/en-eur" target="_blank" rel="noopener">Merch</a>
     </div>
   </div>
   <div class="footer-base">
-    <div class="footer-copy" data-i18n="footer-copy">© 2026 Kaisos. All rights reserved.</div>
+    <div class="footer-copy">© 2026 Kaisos. All rights reserved.</div>
     <div class="footer-legal">
-      <button type="button" class="footer-link-btn" onclick="openModal('privacy')" data-i18n="footer-privacy">Privacy Policy</button>
-      <button type="button" class="footer-link-btn" onclick="openModal('impressum')" data-i18n="footer-impressum">Impressum</button>
-      <button type="button" class="copy-link-btn" id="copy-link-btn" data-i18n="copy-link">Copy artist link</button>
+      <button type="button" class="footer-link-btn" onclick="openModal('privacy')">Privacy Policy</button>
+      <button type="button" class="footer-link-btn" onclick="openModal('impressum')">Impressum</button>
+      <button type="button" class="copy-link-btn" id="copy-link-btn">Copy artist link</button>
     </div>
   </div>
 </footer>
@@ -1252,8 +1178,7 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
     <h3>Verantwortlicher / Controller</h3>
     <p>Adnan Cengiz, Landshuter Allee 138, 80637 München<br>E-Mail: <a href="mailto:cengiz.adnan93@gmail.com">cengiz.adnan93@gmail.com</a></p>
     <h3>Datenerhebung / Data Collection</h3>
-    <p>Diese Website erhebt keine personenbezogenen Daten. Es werden keine eigenen Cookies gesetzt. Für Spracheinstellungen und Theme-Präferenzen wird ausschließlich localStorage des Browsers verwendet.</p>
-    <p>This website does not collect personal data. No first-party cookies are set. Language and theme preferences are stored in browser localStorage only.</p>
+    <p>This website does not collect personal data. No first-party cookies are set. Your streaming platform preference is stored in browser localStorage only.</p>
     <h3>Drittanbieter / Third-party Services</h3>
     <p>Spotify-Player werden erst nach Ihrer Einwilligung (über den Hinweis am Seitenende) geladen. Erst nach Zustimmung können Spotify und Ko-fi eigene Daten erheben. Bitte beachten Sie die Datenschutzerklärungen dieser Anbieter: <a href="https://www.spotify.com/legal/privacy-policy/" target="_blank" rel="noopener">Spotify</a>, <a href="https://more.ko-fi.com/privacy" target="_blank" rel="noopener">Ko-fi</a>.</p>
     <p>Spotify players only load after you accept via the consent notice at the bottom of the page. Once loaded, Spotify and Ko-fi may set their own cookies. Please refer to their privacy policies: <a href="https://www.spotify.com/legal/privacy-policy/" target="_blank" rel="noopener">Spotify</a>, <a href="https://more.ko-fi.com/privacy" target="_blank" rel="noopener">Ko-fi</a>.</p>
@@ -1322,33 +1247,6 @@ function updateActiveNav() {
 window.addEventListener('scroll', updateActiveNav, { passive: true });
 updateActiveNav();
 
-// Animated waveform — fills full container width
-const wf = document.getElementById('waveform');
-const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-function buildWaveform() {
-  if (reducedMotion) return;
-  wf.innerHTML = '';
-  const count = Math.ceil(wf.offsetWidth / 6) + 10;
-  for (let i = 0; i < count; i++) {
-    const h = 20 + Math.round(
-      Math.abs(Math.sin(i * 0.38) * 55) +
-      Math.abs(Math.sin(i * 0.14) * 25) +
-      Math.abs(Math.sin(i * 0.07) * 15)
-    );
-    const s = document.createElement('span');
-    s.style.height = Math.min(h, 94) + '%';
-    if (i % 4 === 0) s.classList.add('lit');
-    else if (i % 7 === 0) s.classList.add('gold');
-    s.style.animationDelay = (i * 0.04) + 's';
-    wf.appendChild(s);
-  }
-}
-buildWaveform();
-let wfTimer;
-window.addEventListener('resize', () => {
-  clearTimeout(wfTimer);
-  wfTimer = setTimeout(buildWaveform, 200);
-}, { passive: true });
 
 // ── YOUTUBE SUBSCRIBER COUNT-UP ──
 const ytCount = document.getElementById('yt-count');
@@ -1414,122 +1312,25 @@ function loadEmbeds() {
   });
 }
 
-// ── THEME TOGGLE ──
-const themeColorMeta = document.querySelector('meta[name="theme-color"]');
-function applyTheme(t) {
-  document.body.classList.toggle('light', t === 'light');
-  document.querySelectorAll('.icon-moon-svg').forEach(el => el.style.display = t === 'light' ? 'none' : 'block');
-  document.querySelectorAll('.icon-sun-svg').forEach(el => el.style.display = t === 'light' ? 'block' : 'none');
-  if (themeColorMeta) themeColorMeta.content = t === 'light' ? '#f5f3ff' : '#07070f';
-  lsSet('theme', t);
-}
-document.querySelectorAll('.js-theme-toggle').forEach(btn =>
-  btn.addEventListener('click', () =>
-    applyTheme(document.body.classList.contains('light') ? 'dark' : 'light')
-  )
-);
-applyTheme(lsGet('theme') || 'dark');
-
-// ── LANGUAGE TOGGLE ──
-const T = {
-  'hero-h1':         { en:'Kaisos turns quiet moments into <em>lo-fi worlds.</em>', de:'Kaisos verwandelt stille Momente in <em>Lo-fi Welten.</em>' },
-  'hero-tagline':    { en:'Slow tempos, warm imperfection — six albums of honest lo-fi.', de:'Langsame Tempos, warme Unvollkommenheit — sechs Alben ehrlichen Lo-fi.' },
-  'hero-sub':        { en:'Six self-released albums from Munich — made in private, for the hours when everything else gets too loud.', de:'Sechs selbst veröffentlichte Alben aus München — im Privaten entstanden, für die Stunden, wenn alles andere zu laut wird.' },
-  'btn-play':        { en:'Listen on Spotify', de:'Auf Spotify hören' },
-  'btn-play-apple':  { en:'Listen on Apple Music', de:'Auf Apple Music hören' },
-  'btn-play-youtube':{ en:'Watch on YouTube', de:'Auf YouTube ansehen' },
-  'stat-since':      { en:'Since', de:'Seit' },
-  'stat-home':       { en:'Home', de:'Heimat' },
-  'stat-made':       { en:'Made with', de:'Gemacht mit' },
-  'bio-eyebrow':     { en:'About', de:'Über mich' },
-  'bio-based':       { en:'Based in', de:'Heimat' },
-  'bio-active':      { en:'Active since', de:'Aktiv seit' },
-  'bio-genre':       { en:'Genre', de:'Genre' },
-  'bio-releases':    { en:'Releases', de:'Veröffentlichungen' },
-  'bio-releases-val':{ en:'6 albums', de:'6 Alben' },
-  'bio-tools':       { en:'Tools', de:'Tools' },
-  'music-eyebrow':   { en:'Music', de:'Musik' },
-  'music-h2':        { en:'Six volumes of lo-fi.', de:'Sechs Alben Lo-fi.' },
-  'music-viewall':   { en:'View all on Spotify →', de:'Alle auf Spotify →' },
-  'stream-label':    { en:'Stream on', de:'Streamen auf' },
-  'story-eyebrow':   { en:'The story', de:'Die Geschichte' },
-  'story-h2':        { en:'Built on honest restarts.', de:'Aufgebaut auf ehrlichen Neuanfängen.' },
-  'story-p1':        { en:"It didn't start with gear or talent. It started with a keyboard, impatience, and eventually silence. Twice, I walked away. Twice, something pulled me back.", de:'Es begann nicht mit Equipment oder Talent. Es begann mit einer Tastatur, Ungeduld und schließlich Stille. Zweimal hörte ich auf. Zweimal zog mich etwas zurück.' },
-  'story-p2':        { en:"The shift wasn't dramatic — it was a decision to slow down. To make something for myself before worrying about what anyone else might think. Lo-fi gave me that space. A genre that doesn't demand perfection, just presence.", de:'Die Wende war nicht dramatisch — es war die Entscheidung, langsamer zu werden. Etwas für mich selbst zu schaffen, bevor ich mir Gedanken machte, was andere denken. Lo-fi gab mir diesen Raum. Ein Genre, das keine Perfektion verlangt, nur Präsenz.' },
-  'story-p3':        { en:'When I uploaded the first track, I almost deleted it. I left it up. That was the beginning.', de:'Als ich den ersten Track hochlud, wollte ich ihn fast löschen. Ich ließ ihn online. Das war der Anfang.' },
-  'story-quote':     { en:'"Progress, not perfection. And this time, I\'m not starting over — I\'m continuing."', de:'„Fortschritt, nicht Perfektion. Und diesmal fange ich nicht neu an — ich mache weiter."' },
-  'ch1-title':       { en:'Where it started', de:'Wo es begann' },
-  'ch1-text':        { en:'A keyboard. High expectations. No patience. The instrument sat untouched for months before I tried again with FL Studio.', de:'Eine Tastatur. Hohe Erwartungen. Keine Geduld. Das Instrument blieb monatelang unberührt, bevor ich es mit FL Studio erneut versuchte.' },
-  'ch2-title':       { en:'What went wrong', de:'Was schiefging' },
-  'ch2-text':        { en:'Creating for judgment before a single note existed. I was focused on how things would be perceived — and that made everything feel wrong from the start.', de:'Für die Beurteilung erschaffen, bevor eine einzige Note existierte. Ich konzentrierte mich darauf, wie Dinge wahrgenommen würden — und das ließ alles von Anfang an falsch anfühlen.' },
-  'ch3-title':       { en:'Why I came back', de:'Warum ich zurückkam' },
-  'ch3-text':        { en:'Slower. Simpler. More honest. Lo-fi asked nothing of me except to show up. No pressure, no comparison — just the sound and the feeling.', de:'Langsamer. Einfacher. Ehrlicher. Lo-fi verlangte nichts von mir außer anzutreten. Kein Druck, kein Vergleich — nur der Klang und das Gefühl.' },
-  'ch4-title':       { en:'Now', de:'Jetzt' },
-  'ch4-text':        { en:'Making music at the pace of real life. Imperfect, evolving, and entirely my own. Six volumes in — and this is only the beginning.', de:'Musik im Rhythmus des echten Lebens machen. Unvollkommen, im Wandel und ganz mein eigenes. Sechs Alben — und das ist erst der Anfang.' },
-  'gear-eyebrow':    { en:'The setup', de:'Das Setup' },
-  'gear-intro':      { en:'Simple, purposeful tools chosen for feel over spec. Everything here contributes to the sound — nothing more.', de:'Einfache, zweckmäßige Werkzeuge, gewählt nach Gefühl statt Spezifikation. Alles hier trägt zum Klang bei — nicht mehr.' },
-  'gear-amazon':     { en:'View on Amazon →', de:'Auf Amazon ansehen →' },
-  'connect-eyebrow': { en:'Connect', de:'Kontakt' },
-  'connect-h2':      { en:'Follow the journey.', de:'Folge der Reise.' },
-  'connect-p':       { en:'The music is made in private. The story is shared in public. Join wherever you listen, watch, or create.', de:'Die Musik entsteht im Privaten. Die Geschichte wird öffentlich geteilt. Komm dazu, wo du hörst, schaust oder erschaffst.' },
-  'kofi-h3':         { en:'Support the music.', de:'Unterstütze die Musik.' },
-  'kofi-p':          { en:"Every track takes time — time away from everything else. If Kaisos has ever made your study session better, your commute easier, or your late night feel less lonely, a coffee goes a long way.", de:'Jeder Track braucht Zeit — Zeit abseits von allem anderen. Wenn Kaisos jemals deine Lernsession besser, deinen Weg zur Arbeit leichter oder deine späten Nächte weniger einsam gemacht hat, geht ein Kaffee weit.' },
-  'kofi-btn':        { en:'Buy me a coffee', de:'Kauf mir einen Kaffee' },
-  'kofi-note':       { en:'No pressure. The music stays free either way.', de:'Kein Druck. Die Musik bleibt so oder so kostenlos.' },
-  'nav-music':       { en:'Music', de:'Musik' },
-  'nav-story':       { en:'Story', de:'Story' },
-  'nav-gear':        { en:'Gear', de:'Setup' },
-  'nav-connect':     { en:'Connect', de:'Kontakt' },
-  'nav-support':     { en:'Support', de:'Unterstützen' },
-  'nav-merch':       { en:'Merch', de:'Merch' },
-  'footer-tagline':  { en:'Lo-fi, ambient beats, and chill study music from Munich.', de:'Lo-fi, Ambient-Beats und entspannte Lernmusik aus München.' },
-  'footer-merch':    { en:'Merch', de:'Merch' },
-  'footer-privacy':  { en:'Privacy Policy', de:'Datenschutz' },
-  'footer-impressum':{ en:'Impressum', de:'Impressum' },
-  'footer-copy':     { en:'© 2026 Kaisos. All rights reserved.', de:'© 2026 Kaisos. Alle Rechte vorbehalten.' },
-  'copy-link':       { en:'Copy artist link', de:'Link kopieren' },
-  'copy-link-done':  { en:'Copied.', de:'Kopiert.' },
-};
-
-function applyLang(lang) {
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (!T[key]) return;
-    if (el.hasAttribute('data-i18n-html')) el.innerHTML = T[key][lang];
-    else el.textContent = T[key][lang];
-  });
-  document.querySelectorAll('.lang-btn').forEach(b =>
-    b.classList.toggle('active', b.dataset.lang === lang)
-  );
-  document.documentElement.lang = lang;
-  document.title = lang === 'de'
-    ? 'Kaisos — Lo-Fi-Musikproduzent aus München | Ambient Beats & Chill Hip-Hop'
-    : 'Kaisos — Lo-Fi Music Producer from Munich | Ambient Beats & Chill Hip-Hop';
-  lsSet('lang', lang);
-}
-document.querySelectorAll('.lang-btn').forEach(b =>
-  b.addEventListener('click', () => applyLang(b.dataset.lang))
-);
-applyLang(lsGet('lang') || 'en');
 
 // ══ PLATFORM SYSTEM ══
 const PLATFORM_CFG = {
   spotify: {
     artistUrl:   'https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M',
     artistEmbed: 'https://open.spotify.com/embed/artist/5luMo1wzJV2T84LVD8g66M?utm_source=generator&theme=0',
-    labelKey: 'btn-play',
+    label: 'Listen on Spotify',
     iconId: 'ico-spotify'
   },
   apple: {
     artistUrl:   'https://music.apple.com/us/artist/kaisos/1735054792',
     artistEmbed: '',
-    labelKey: 'btn-play-apple',
+    label: 'Listen on Apple Music',
     iconId: 'ico-apple-note'
   },
   youtube: {
     artistUrl:   'https://youtube.com/@LofiKaisos',
     artistEmbed: '',
-    labelKey: 'btn-play-youtube',
+    label: 'Watch on YouTube',
     iconId: 'ico-youtube'
   }
 };
@@ -1569,8 +1370,7 @@ function applyPlatform(platform) {
   if (!(platform in PLATFORM_CFG)) platform = 'spotify';
   lsSet('kaisos-platform', platform);
   const cfg   = PLATFORM_CFG[platform];
-  const lang  = lsGet('lang') || 'en';
-  const label = T[cfg.labelKey] ? T[cfg.labelKey][lang] : platform;
+  const label = cfg.label || platform;
 
   // Body attribute drives all CSS theming
   document.body.dataset.platform = platform;
@@ -1586,7 +1386,7 @@ function applyPlatform(platform) {
   const heroLabel = document.getElementById('hero-listen-label');
   if (heroBtn)    { heroBtn.href = cfg.artistUrl; heroBtn.setAttribute('aria-label', label); }
   if (heroIcon)   heroIcon.innerHTML = `<use href="#${cfg.iconId}"/>`;
-  if (heroLabel)  { heroLabel.textContent = label; heroLabel.removeAttribute('data-i18n'); }
+  if (heroLabel)  { heroLabel.textContent = label; }
 
   // Mobile sticky CTA
   const mobileBtn   = document.getElementById('mobile-listen-btn');
@@ -1601,11 +1401,11 @@ function applyPlatform(platform) {
   if (viewAllLink) {
     viewAllLink.href = cfg.artistUrl;
     const viewAllLabels = {
-      spotify: { en: 'View all on Spotify →', de: 'Alle auf Spotify →' },
-      apple:   { en: 'View all on Apple Music →', de: 'Alle auf Apple Music →' },
-      youtube: { en: 'View all on YouTube →', de: 'Alle auf YouTube →' }
+      spotify: 'View all on Spotify →',
+      apple:   'View all on Apple Music →',
+      youtube: 'View all on YouTube →'
     };
-    viewAllLink.textContent = viewAllLabels[platform][lang];
+    viewAllLink.textContent = viewAllLabels[platform];
   }
 
   // Latest release listen button
@@ -1624,11 +1424,11 @@ function applyPlatform(platform) {
   if (followBtn) {
     followBtn.href = cfg.artistUrl;
     const followLabels = {
-      spotify: { en: 'Follow Kaisos on Spotify', de: 'Kaisos auf Spotify folgen' },
-      apple:   { en: 'Listen on Apple Music',    de: 'Auf Apple Music hören' },
-      youtube: { en: 'Watch on YouTube',         de: 'Auf YouTube ansehen' }
+      spotify: 'Follow Kaisos on Spotify',
+      apple:   'Listen on Apple Music',
+      youtube: 'Watch on YouTube'
     };
-    followBtn.textContent = followLabels[platform][lang];
+    followBtn.textContent = followLabels[platform];
   }
 
   // All iframes — swap based on platform data attribute
@@ -1741,13 +1541,10 @@ cookieDecline.addEventListener('click', () => {
 const copyLinkBtn = document.getElementById('copy-link-btn');
 if (copyLinkBtn) {
   copyLinkBtn.addEventListener('click', () => {
-    const lang = lsGet('lang') || 'en';
-    const label = T['copy-link'][lang];
-    const done  = T['copy-link-done'][lang];
     navigator.clipboard.writeText('https://kaisos.com').then(() => {
-      copyLinkBtn.textContent = done;
+      copyLinkBtn.textContent = 'Copied.';
       copyLinkBtn.classList.add('copied');
-      setTimeout(() => { copyLinkBtn.textContent = label; copyLinkBtn.classList.remove('copied'); }, 2000);
+      setTimeout(() => { copyLinkBtn.textContent = 'Copy artist link'; copyLinkBtn.classList.remove('copied'); }, 2000);
     }).catch(() => {
       copyLinkBtn.textContent = 'kaisos.com';
       setTimeout(() => { copyLinkBtn.textContent = label; }, 2000);
