@@ -2,7 +2,23 @@
 
 ---
 
-## Session 22 — Netlify config hardening
+## Session 22 — Netlify hardening + GitHub cleanup
+
+### Added
+- `netlify.toml` with security headers (`X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`) on all routes
+- Long-term cache headers (`max-age=31536000, immutable`) for `.png`, `.svg`, `.jpg` assets
+- Explicit `publish = "."` so Netlify correctly identifies the static root
+
+### Changed
+- Site renamed from `celebrated-dragon-2aff3e` to `kaisos-com` — preview URL is now `main--kaisos-com.netlify.app`
+- `merch.html` OG image fixed — was pointing to deleted `KaisosGold.png`, now uses `og-image.svg`
+
+### Removed
+- `KaisosGold.png`, `KaisosGold.bak.png`, `KaisosPurpleGold.png`, `KaisosWhite.png`, `Kaisoslack.png` — unused old logo variants
+
+---
+
+## Session 21 — Stock photo for gear section via Unsplash CDN
 
 ### Added
 - `netlify.toml` with security headers (`X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`) on all routes
