@@ -27,6 +27,9 @@
 <link rel="icon" type="image/png" href="favicon.png"/>
 <link rel="apple-touch-icon" href="Logo.png"/>
 <title>Press — Kaisos</title>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/inter-latin.woff2" crossorigin/>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/cg-normal-latin.woff2" crossorigin/>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/cg-italic-latin.woff2" crossorigin/>
 <link rel="stylesheet" href="/fonts.css"/>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -123,7 +126,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;height:68px;display:flex;ali
 .photo-dl{display:inline-flex;align-items:center;gap:0.5rem;margin-top:1.25rem;padding:0.6rem 1.25rem;border:1px solid var(--border2);border-radius:3px;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted2);transition:all 0.2s}
 .photo-dl:hover{border-color:var(--accent);color:var(--accent)}
 
-/* ── Contact ── */
+.photo-logo-img{object-fit:contain;padding:2rem;background:#0a0914}
 
 /* ══ FOOTER ══ */
 footer{border-top:1px solid var(--border);padding:2.5rem var(--pad);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
@@ -326,7 +329,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem var(--pad);display:flex
       <div class="photo-card">
         <picture>
           <source srcset="Logo.webp" type="image/webp"/>
-          <img src="Logo.png" alt="Kaisos logo" loading="lazy" style="object-fit:contain;padding:2rem;background:#0a0914"/>
+          <img src="Logo.png" alt="Kaisos logo" loading="lazy" class="photo-logo-img"/>
         </picture>
         <div class="photo-card-label">Official logo · transparent background</div>
       </div>
