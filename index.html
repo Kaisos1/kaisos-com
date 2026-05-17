@@ -63,29 +63,8 @@
 <link rel="preload" as="font" type="font/woff2" href="/fonts/cg-normal-latin.woff2" crossorigin/>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/cg-italic-latin.woff2" crossorigin/>
 <link rel="stylesheet" href="/fonts.css"/>
+<link rel="stylesheet" href="/site.css"/>
 <style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#07070f;
-  --surface:#0d0c1a;
-  --border:#1c1a2e;
-  --border2:#252235;
-  --text:#e8e3f5;
-  --muted:#6b647e;
-  --muted2:#9590a8;
-  --accent:#8b3fc9;
-  --accent-dim:rgba(139,63,201,0.12);
-  --white:#f5f2ff;
-  --gold:#c8850f;
-  --gold-dim:rgba(200,133,15,0.1);
-  --max:1140px;
-  --pad:clamp(1.5rem,4vw,3rem);
-}
-html{scroll-behavior:smooth;scroll-padding-top:74px}
-body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-
-/* PROGRESS */
-#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(to right,var(--accent),var(--gold));z-index:1000;transition:width 0.1s linear;pointer-events:none}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:500;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);background:rgba(7,7,15,0.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid transparent;transition:border-color 0.3s}
@@ -264,14 +243,6 @@ footer{border-top:1px solid var(--border);padding:3.5rem var(--pad) 0}
   .footer-base{flex-direction:column;align-items:flex-start;gap:0.75rem}
 }
 
-/* SCROLL REVEAL */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-.d1{transition-delay:0.1s}
-.d2{transition-delay:0.2s}
-.d3{transition-delay:0.3s}
-.d4{transition-delay:0.4s}
-
 /* MOBILE */
 @media(max-width:900px){
   .hero-inner{grid-template-columns:1fr;gap:3rem;text-align:center}
@@ -306,7 +277,6 @@ footer{border-top:1px solid var(--border);padding:3.5rem var(--pad) 0}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .blob,.hero-img,.photo-ring-1,.photo-ring-2,.photo-glow,.badge-dot{animation:none}
-  .reveal{opacity:1;transform:none;transition:none}
   .mobile-spotify-cta{transition:none}
 }
 
