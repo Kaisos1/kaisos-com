@@ -18,6 +18,6 @@ Single-page static site for Kaisos (lo-fi music producer from Munich).
 - No comments unless asked
 - No new files unless necessary
 - Canonical URL: `https://kaisos.com` (no www, no trailing slash)
-- Colors: gold `#d4a017`, accent purple `#5b2a86`, bg `#07070f`
+- Colors: gold `#c8850f`, accent purple `#8b3fc9`, bg `#07070f`
 - Nav height: 68px
-- Fonts: Inter (body), Playfair Display (logo/headings)
+- Fonts: Inter (body), Cormorant Garamond (logo/headings)

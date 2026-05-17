@@ -2,6 +2,122 @@
 
 ---
 
+## Session 28 — Analytics, link-in-bio, cookie UX
+
+### Added
+- Plausible analytics script (`data-domain="kaisos.com"`) added to all 4 pages — sign up at plausible.io and add kaisos.com to activate
+- `links.html` — link-in-bio page at `/links`; Spotify, YouTube, Apple Music, Instagram, TikTok, Merch (gold), Ko-fi; mobile-first, noindex, branded
+- `/links.html → /links 301!` redirect in `_redirects`
+- `.embed-ph-btn` CSS — "Load player →" button on every Spotify placeholder
+
+### Changed
+- `initPlaceholders()` — each placeholder now has an inline "Load player →" button; clicking it accepts consent + loads all embeds immediately (no need to find the bottom bar)
+- Cookie notice: smaller, less prominent; text simplified from alarming to factual
+- Cookie notice text: "We embed Spotify players for your music experience. Accepting loads Spotify and may set third-party cookies." → "This site embeds Spotify players. Loading them may set third-party cookies."
+
+---
+
+## Session 27 — Polish pass + 404 page
+
+### Added
+- `404.html` — branded 404 page ("Lost in the lo-fi world") with back-to-home and browse-music CTAs; Netlify serves it automatically
+- `Logo.webp` — 285KB → 27KB (91% smaller); used via `<picture>` in world-logo and merch brand-strip
+- `og:site_name` and `og:locale` added to merch.html and music.html
+- `fonts.css` immutable cache header added to netlify.toml
+
+### Changed
+- `href="index.html"` → `href="/"` on all back links in merch.html and music.html (6 occurrences)
+- Logo preload in index.html updated to prefer Logo.webp
+- Both `<img src="Logo.png">` content usages wrapped in `<picture>` with WebP source
+
+---
+
+## Session 26 — Performance, SEO, new discography page
+
+### Added
+- `fonts.css` — self-hosted Cormorant Garamond + Inter (6 WOFF2 files, latin + latin-ext only); removes Google Fonts external request (GDPR + performance)
+- `fonts/` directory with 6 WOFF2 files (278KB total)
+- `ProfileImg.webp` — WebP version of hero image (2.2MB → 189KB, 91% smaller); `<picture>` element with PNG fallback
+- `music.html` — dedicated discography page at `/music`; all 6 albums, platform toggle (Spotify/Apple/YouTube), scroll reveal, progress bar, JSON-LD MusicArtist schema
+- `music.html` linked in footer Explore nav on `index.html`
+- `/music` added to `sitemap.xml` (priority 0.8)
+- `/music.html → /music 301!` redirect in `_redirects`
+- `merch.html` Twitter card meta tags + `<meta name="author">`
+- `merch.html` JSON-LD `CollectionPage` + `ItemList`/`Product` schema for all 6 products
+- TikTok icon added to merch footer social links
+- Progress bar (`#progress`) added to merch.html
+- Mobile sticky "Shop Now" CTA added to merch.html (appears after scrolling past hero on mobile)
+- `.woff2` and `.webp` cache headers added to `netlify.toml`
+
+### Changed
+- Both HTML files now load fonts via `<link rel="stylesheet" href="/fonts.css"/>` instead of Google Fonts
+- `sitemap.xml` main page `lastmod` updated to `2026-05-17`
+
+---
+
+## Session 25 — 10-point audit fixes
+
+### Fixed
+- Copy link button fallback referenced undefined `label` variable — replaced with literal `'Copy artist link'`
+- `'about'` removed from nav sections array (no corresponding nav link caused blank active state while scrolling bio)
+- OG + Twitter image changed from `og-image.svg` to `og-image.png` (generated PNG via rsvg-convert — SVG has poor Twitter/LinkedIn support)
+- Brand World section given `id="world"` — hero "Enter the World →" CTA now correctly targets it instead of `#music`
+- Both Amazon affiliate links given `rel="noopener sponsored"` (only FL Studio had `sponsored` before)
+- Merch card CTA replaced inline `style="background:var(--gold)"` with `.kofi-btn--gold` CSS class
+- Latest Release title corrected: "Special Release" → "Lofi Kaisos Special" (matches actual album name)
+- Pre-footer inner platform buttons div inline style replaced with `.platform-btns-row` class
+
+### Removed
+- `.drawer-controls` CSS rule (orphaned after HTML removal in Session 24)
+- YouTube subscriber count-up animation — replaced with static render; hardcoded `data-target` value will be easier to update manually
+
+---
+
+## Session 24 — Main site cleanup + fixes
+
+### Fixed
+- Broken `#listen` anchor in merch.html → corrected to `#music`
+- All `merch.html` hrefs in nav, drawer, and footer → canonical `/merch`
+- Removed empty `<div class="drawer-controls">` (dead code)
+
+### Changed
+- Stats strip: "100% Independent" → "Munich / Based in Germany" (more brand-specific)
+- Removed redundant `.hero-tagline` element (duplicated `.hero-sub` content)
+- Removed redundant artist bio prose from `#about` section (repeated the Story section verbatim)
+- Pre-footer CTA inline styles extracted to `.section-cta-bar--center` CSS class
+
+### Removed
+- `.hero-tagline` and `.hero-text h1+.hero-tagline` CSS rules (dead after HTML removal)
+- `.bio-grid` and `.artist-bio` CSS rules (dead after HTML removal)
+
+---
+
+## Session 23 — Merch page improvements (two passes)
+
+### Added
+- `<link rel="canonical" href="https://kaisos.com/merch"/>` in merch.html head
+- `/merch.html → /merch 301!` redirect in `_redirects`
+- `https://kaisos.com/merch` entry in `sitemap.xml`
+- Instagram, YouTube, Spotify icon links in merch footer
+- "Signature" badge on Lofi Hoodie Vol. 1 (featured card, gold border + gold buy button)
+- Pulsing dot on hero eyebrow (matches main site badge style)
+- Image scale-up on product card hover (`scale(1.05)`)
+- Music connection link ("stream now →") in brand strip section
+
+### Changed
+- `merch.html` `og:url` corrected to canonical `/merch` (was `merch.html`)
+- Ticker: replaced "Print on Demand" with "Independent Label"
+- Hoodie Vol. 1 description: "Loft" → "Lofi" (typo fix)
+- Hoodie Vol. 2 + Vol. 3 descriptions rewritten to differentiate them clearly
+- Mug description reframed (removed "white glossy", leaned into ritual angle)
+- Mug price: "From $14" → "$14"
+- Footer restructured: socials + back link grouped on right side
+
+### Fixed
+- `CLAUDE.md` font and color values updated to match actual codebase (Cormorant Garamond, `#c8850f`, `#8b3fc9`)
+
+---
+
 ## Session 22 — Netlify hardening + GitHub cleanup
 
 ### Added
