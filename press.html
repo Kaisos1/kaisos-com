@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="Kaisos press kit — bio, photos, discography, and contact for playlist curators, music blogs, and media."/>
+<meta property="og:title" content="Press — Kaisos"/>
+<meta property="og:description" content="Official press kit for Kaisos. Lo-fi music producer from Munich. Bio, discography, streaming stats, and contact."/>
+<meta property="og:image" content="https://kaisos.com/og-image.png"/>
+<meta property="og:image:alt" content="Kaisos — Lo-Fi Music Producer from Munich"/>
+<meta property="og:image:type" content="image/png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:url" content="https://kaisos.com/press"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Kaisos"/>
+<meta property="og:locale" content="en_US"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Press — Kaisos"/>
+<meta name="twitter:description" content="Official press kit for Kaisos. Lo-fi music producer from Munich."/>
+<meta name="twitter:image" content="https://kaisos.com/og-image.png"/>
+<meta name="author" content="Adnan Cengiz"/>
+<meta name="robots" content="index, follow"/>
+<meta name="theme-color" content="#07070f"/>
+<link rel="canonical" href="https://kaisos.com/press"/>
+<link rel="icon" type="image/png" href="Logo.png"/>
+<link rel="apple-touch-icon" href="Logo.png"/>
+<title>Press — Kaisos</title>
+<link rel="stylesheet" href="/fonts.css"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#07070f;
+  --surface:#0d0c1a;
+  --border:#1c1a2e;
+  --border2:#252235;
+  --text:#e8e3f5;
+  --muted:#6b647e;
+  --muted2:#9590a8;
+  --accent:#8b3fc9;
+  --white:#f5f2ff;
+  --gold:#c8850f;
+  --max:1140px;
+  --pad:clamp(1.5rem,4vw,3rem);
+}
+html{scroll-behavior:smooth;scroll-padding-top:74px}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+/* ══ PROGRESS ══ */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(to right,var(--accent),var(--gold));z-index:1000;transition:width 0.1s linear;pointer-events:none}
+
+/* ══ NAV ══ */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);background:rgba(7,7,15,0.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:400;color:var(--gold);letter-spacing:0.03em;transition:opacity 0.2s}
+.nav-logo:hover{opacity:0.8}
+.nav-back{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);transition:color 0.2s}
+.nav-back:hover{color:var(--text)}
+.nav-contact-btn{display:inline-flex;align-items:center;gap:0.4rem;padding:0.45rem 1.1rem;background:var(--accent);color:#fff;font-size:0.73rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;border-radius:3px;transition:opacity 0.2s}
+.nav-contact-btn:hover{opacity:0.85}
+
+/* ══ HERO ══ */
+.press-hero{min-height:44vh;display:flex;align-items:center;padding:100px var(--pad) 5rem;position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
+.hero-bg{position:absolute;inset:0;pointer-events:none}
+.blob{position:absolute;border-radius:50%;filter:blur(80px)}
+.blob-1{width:600px;height:600px;background:radial-gradient(circle,rgba(139,63,201,0.18) 0%,transparent 70%);top:-150px;right:-100px}
+.blob-2{width:350px;height:350px;background:radial-gradient(circle,rgba(200,133,15,0.07) 0%,transparent 70%);bottom:-50px;left:-50px}
+.hero-inner{position:relative;z-index:1;max-width:var(--max);width:100%;margin:0 auto;display:grid;grid-template-columns:1fr 340px;gap:5rem;align-items:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:0.6rem;padding:0.3rem 0.85rem;border:1px solid rgba(139,63,201,0.3);border-radius:100px;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem}
+.press-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5vw,4.5rem);font-weight:400;line-height:1.05;color:var(--white);margin-bottom:1.25rem}
+.press-hero h1 em{font-style:italic;color:var(--accent)}
+.press-hero p{color:var(--muted2);font-size:1rem;max-width:480px;line-height:1.85;margin-bottom:2rem}
+.hero-ctas{display:flex;gap:0.75rem;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:0.5rem;padding:0.8rem 1.75rem;background:var(--accent);color:#fff;font-size:0.78rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border-radius:3px;transition:opacity 0.2s}
+.btn-primary:hover{opacity:0.85}
+.btn-ghost{display:inline-flex;align-items:center;gap:0.5rem;padding:0.8rem 1.75rem;border:1px solid rgba(139,63,201,0.4);color:var(--muted2);font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;border-radius:3px;transition:all 0.2s}
+.btn-ghost:hover{border-color:var(--accent);color:var(--text)}
+.hero-photo{display:flex;justify-content:center;align-items:center}
+.hero-photo-img{width:280px;height:280px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid rgba(139,63,201,0.3);filter:drop-shadow(0 0 30px rgba(139,63,201,0.25))}
+
+/* ══ STATS STRIP ══ */
+.stats-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.5rem var(--pad);display:flex;align-items:center;justify-content:center}
+.stat-item{flex:1;text-align:center;padding:0 2rem;position:relative;max-width:220px}
+.stat-item+.stat-item::before{content:'';position:absolute;left:0;top:50%;transform:translateY(-50%);width:1px;height:30px;background:var(--border)}
+.stat-value{font-family:'Cormorant Garamond',serif;font-size:1.9rem;color:var(--white);line-height:1;margin-bottom:0.3rem}
+.stat-label{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted)}
+
+/* ══ SECTIONS ══ */
+.section{padding:5rem var(--pad);border-top:1px solid var(--border)}
+.inner{max-width:var(--max);margin:0 auto}
+.eyebrow{display:flex;align-items:center;gap:0.75rem;font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:2.5rem;font-weight:600}
+.eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--accent)}
+
+/* ── Bio ── */
+.bio-grid{display:grid;grid-template-columns:1fr 260px;gap:5rem;align-items:start}
+.bio-text p{color:var(--muted2);font-size:0.97rem;line-height:1.95;margin-bottom:1.1rem}
+.bio-text p:last-child{margin-bottom:0}
+.bio-text .lead{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-style:italic;color:var(--muted2);line-height:1.8;border-left:2px solid var(--accent);padding-left:1.5rem;margin-bottom:1.5rem}
+.bio-facts{display:flex;flex-direction:column}
+.bio-fact{display:flex;justify-content:space-between;align-items:baseline;padding:0.75rem 0;border-bottom:1px solid var(--border);gap:1rem}
+.bio-fact:first-child{border-top:1px solid var(--border)}
+.bio-fact-label{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);flex-shrink:0}
+.bio-fact-value{font-size:0.85rem;color:var(--text);font-weight:500;text-align:right}
+
+/* ── Discography ── */
+.disco-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.disco-card{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:1.5rem;transition:border-color 0.2s}
+.disco-card:hover{border-color:rgba(139,63,201,0.4)}
+.disco-card.latest{border-color:rgba(200,133,15,0.25)}
+.disco-card.latest:hover{border-color:rgba(200,133,15,0.5)}
+.disco-num{font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.6rem;font-weight:600}
+.disco-card.latest .disco-num{color:var(--gold)}
+.disco-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:400;color:var(--white);margin-bottom:0.3rem;line-height:1.2}
+.disco-mood{font-size:0.78rem;color:var(--muted);font-style:italic;margin-bottom:1rem}
+.disco-links{display:flex;gap:0.4rem;flex-wrap:wrap}
+.disco-link{font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted2);padding:0.2rem 0.55rem;border:1px solid var(--border2);border-radius:3px;transition:all 0.2s}
+.disco-link:hover{color:var(--accent);border-color:rgba(139,63,201,0.4)}
+
+/* ── Photo ── */
+.photo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.photo-card{border-radius:6px;overflow:hidden;border:1px solid var(--border);position:relative;aspect-ratio:4/3;background:var(--surface);display:flex;align-items:center;justify-content:center}
+.photo-card img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.photo-card-label{position:absolute;bottom:0;left:0;right:0;padding:0.75rem 1rem;background:linear-gradient(to top,rgba(7,7,15,0.9),transparent);font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted2)}
+.photo-dl{display:inline-flex;align-items:center;gap:0.5rem;margin-top:1.25rem;padding:0.6rem 1.25rem;border:1px solid var(--border2);border-radius:3px;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted2);transition:all 0.2s}
+.photo-dl:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ── Contact ── */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.contact-text h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:400;color:var(--white);margin-bottom:1rem;line-height:1.2}
+.contact-text h2 em{font-style:italic;color:var(--accent)}
+.contact-text p{color:var(--muted2);font-size:0.97rem;line-height:1.9;margin-bottom:2rem}
+.contact-email{display:inline-flex;align-items:center;gap:0.6rem;padding:1rem 2rem;background:var(--accent);color:#fff;font-size:0.8rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border-radius:3px;transition:opacity 0.2s}
+.contact-email:hover{opacity:0.85}
+.contact-notes{display:flex;flex-direction:column;gap:1rem}
+.contact-note{padding:1.25rem 1.5rem;background:var(--surface);border:1px solid var(--border);border-radius:6px;font-size:0.88rem;color:var(--muted2);line-height:1.75}
+.contact-note strong{color:var(--text);font-weight:600;display:block;margin-bottom:0.25rem;font-size:0.8rem;letter-spacing:0.06em;text-transform:uppercase}
+
+/* ══ FOOTER ══ */
+footer{border-top:1px solid var(--border);padding:2.5rem var(--pad);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold)}
+.footer-copy{font-size:0.72rem;color:var(--muted);opacity:0.5}
+.footer-back{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);transition:color 0.2s}
+.footer-back:hover{color:var(--text)}
+
+/* ══ SCROLL REVEAL ══ */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal.visible{opacity:1;transform:none}
+.d1{transition-delay:0.1s}.d2{transition-delay:0.2s}.d3{transition-delay:0.3s}
+
+/* ══ MOBILE ══ */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:3rem}
+  .hero-photo{display:none}
+  .bio-grid{grid-template-columns:1fr;gap:3rem}
+  .disco-grid{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr;gap:2.5rem}
+  .stats-strip{flex-wrap:wrap;gap:1.5rem}
+  .stat-item{flex:0 0 calc(50% - 0.75rem)}
+  .stat-item+.stat-item::before{display:none}
+}
+@media(max-width:600px){
+  .disco-grid{grid-template-columns:1fr}
+  .photo-grid{grid-template-columns:1fr}
+  .section{padding:3.5rem var(--pad)}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">Kaisos</a>
+  <a href="/" class="nav-back">← Back to site</a>
+  <a href="mailto:cengiz.adnan93@gmail.com" class="nav-contact-btn">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section class="press-hero">
+  <div class="hero-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-eyebrow reveal">Press Kit</div>
+      <h1 class="reveal d1">Lo-fi from <em>Munich.</em></h1>
+      <p class="reveal d2">Six self-released albums of ambient beats and chill hip-hop. Made quietly, for the hours when everything else gets too loud.</p>
+      <div class="hero-ctas reveal d3">
+        <a href="mailto:cengiz.adnan93@gmail.com" class="btn-primary">Get in Touch →</a>
+        <a href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="noopener" class="btn-ghost">Spotify Profile</a>
+      </div>
+    </div>
+    <div class="hero-photo reveal d2">
+      <picture>
+        <source srcset="ProfileImg.webp" type="image/webp"/>
+        <img src="ProfileImg.png" alt="Kaisos — lo-fi producer from Munich" class="hero-photo-img" width="280" height="280" loading="eager"/>
+      </picture>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stat-item reveal">
+    <div class="stat-value">55K+</div>
+    <div class="stat-label">YouTube Subscribers</div>
+  </div>
+  <div class="stat-item reveal d1">
+    <div class="stat-value">6</div>
+    <div class="stat-label">Self-Released Albums</div>
+  </div>
+  <div class="stat-item reveal d2">
+    <div class="stat-value">Munich</div>
+    <div class="stat-label">Based in Germany</div>
+  </div>
+  <div class="stat-item reveal d3">
+    <div class="stat-value">2024</div>
+    <div class="stat-label">Active Since</div>
+  </div>
+</div>
+
+<!-- BIO -->
+<section class="section" id="bio">
+  <div class="inner">
+    <div class="eyebrow reveal">Artist Bio</div>
+    <div class="bio-grid">
+      <div class="bio-text reveal">
+        <p class="lead">Kaisos is a self-released lo-fi music producer from Munich, Germany — creating ambient beats, chill hip-hop, and slow-tempo instrumental music since 2024.</p>
+        <p>It didn't start with gear or talent. It started with a keyboard, impatience, and eventually silence. Twice, Kaisos walked away. Twice, something pulled him back. The shift was a decision to slow down — to make something honest before worrying about what anyone else might think.</p>
+        <p>Six albums in, the sound remains consistent: warm, imperfect, and built for the hours when everything else gets too loud. Every release is built for a specific kind of stillness — after a long day, before a hard conversation, or when the city gets too loud. Lo-fi gave the space to create without pressure. The music stays free.</p>
+        <p>Kaisos records and produces everything in FL Studio. All releases are fully self-released and independent — no label, no middleman.</p>
+      </div>
+      <div class="bio-facts reveal d1">
+        <div class="bio-fact"><span class="bio-fact-label">Name</span><span class="bio-fact-value">Kaisos</span></div>
+        <div class="bio-fact"><span class="bio-fact-label">Based in</span><span class="bio-fact-value">Munich, Germany</span></div>
+        <div class="bio-fact"><span class="bio-fact-label">Active since</span><span class="bio-fact-value">2024</span></div>
+        <div class="bio-fact"><span class="bio-fact-label">Genre</span><span class="bio-fact-value">Lo-fi · Chillhop · Ambient</span></div>
+        <div class="bio-fact"><span class="bio-fact-label">Releases</span><span class="bio-fact-value">6 albums</span></div>
+        <div class="bio-fact"><span class="bio-fact-label">YouTube</span><span class="bio-fact-value">55K+ subscribers</span></div>
+        <div class="bio-fact"><span class="bio-fact-label">Tools</span><span class="bio-fact-value">FL Studio</span></div>
+        <div class="bio-fact"><span class="bio-fact-label">Label</span><span class="bio-fact-value">Independent</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCOGRAPHY -->
+<section class="section" id="discography">
+  <div class="inner">
+    <div class="eyebrow reveal">Discography</div>
+    <div class="disco-grid">
+
+      <div class="disco-card latest reveal">
+        <div class="disco-num">Latest · Special</div>
+        <div class="disco-name">Lofi Kaisos Special</div>
+        <div class="disco-mood">Late-night focus</div>
+        <div class="disco-links">
+          <a class="disco-link" href="https://open.spotify.com/album/67OMy0DOFbt4Y5iTbL4lnE" target="_blank" rel="noopener">Spotify</a>
+          <a class="disco-link" href="https://music.apple.com/us/album/lofi-kaisos-special/1768802069" target="_blank" rel="noopener">Apple</a>
+          <a class="disco-link" href="https://www.youtube.com/watch?v=Yjr_UgeBxWE" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+
+      <div class="disco-card reveal d1">
+        <div class="disco-num">Vol. 5</div>
+        <div class="disco-name">Lofi Kaisos Vol. 5</div>
+        <div class="disco-mood">Calm study beats</div>
+        <div class="disco-links">
+          <a class="disco-link" href="https://open.spotify.com/album/0sm4rH9Bv1VJ5r8hTaFDfz" target="_blank" rel="noopener">Spotify</a>
+          <a class="disco-link" href="https://www.youtube.com/watch?v=N02MDMs_q0Y" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+
+      <div class="disco-card reveal d2">
+        <div class="disco-num">Vol. 4</div>
+        <div class="disco-name">Lofi Kaisos Vol. 4</div>
+        <div class="disco-mood">Dreamy textures</div>
+        <div class="disco-links">
+          <a class="disco-link" href="https://open.spotify.com/album/49c8g3dFdDOS8aezK0ltDb" target="_blank" rel="noopener">Spotify</a>
+          <a class="disco-link" href="https://music.apple.com/us/album/lofi-kaisos-vol-4/1756205758" target="_blank" rel="noopener">Apple</a>
+          <a class="disco-link" href="https://www.youtube.com/watch?v=FoTLqmSQ6rU" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+
+      <div class="disco-card reveal">
+        <div class="disco-num">Vol. 3</div>
+        <div class="disco-name">Lofi Kaisos Vol. 3</div>
+        <div class="disco-mood">Soft melancholy</div>
+        <div class="disco-links">
+          <a class="disco-link" href="https://open.spotify.com/album/3bcGnK12xEytemEmjFGH86" target="_blank" rel="noopener">Spotify</a>
+          <a class="disco-link" href="https://music.apple.com/us/album/lofi-kaisos-vol-3/1738116842" target="_blank" rel="noopener">Apple</a>
+          <a class="disco-link" href="https://www.youtube.com/watch?v=-9b__6G67_c" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+
+      <div class="disco-card reveal d1">
+        <div class="disco-num">Vol. 2</div>
+        <div class="disco-name">Lofi Kaisos Vol. 2</div>
+        <div class="disco-mood">Quiet focus</div>
+        <div class="disco-links">
+          <a class="disco-link" href="https://open.spotify.com/album/1G9pQYYIS1hZEqu0hieCyE" target="_blank" rel="noopener">Spotify</a>
+          <a class="disco-link" href="https://music.apple.com/us/album/lofi-kaisos-vol-2/1735069982" target="_blank" rel="noopener">Apple</a>
+          <a class="disco-link" href="https://www.youtube.com/watch?v=LE8U85EA7G4" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+
+      <div class="disco-card reveal d2">
+        <div class="disco-num">Vol. 1 · The beginning</div>
+        <div class="disco-name">Lofi Kaisos Vol. 1</div>
+        <div class="disco-mood">Where it started</div>
+        <div class="disco-links">
+          <a class="disco-link" href="https://open.spotify.com/album/0EQS01PkeiRoi9zaeVDtt7" target="_blank" rel="noopener">Spotify</a>
+          <a class="disco-link" href="https://music.apple.com/us/album/lofi-kaisos-vol-1/1735055810" target="_blank" rel="noopener">Apple</a>
+          <a class="disco-link" href="https://www.youtube.com/watch?v=qZ1g6cxGZRw" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRESS PHOTO -->
+<section class="section" id="photos">
+  <div class="inner">
+    <div class="eyebrow reveal">Press Photo</div>
+    <div class="photo-grid reveal d1">
+      <div class="photo-card">
+        <picture>
+          <source srcset="ProfileImg.webp" type="image/webp"/>
+          <img src="ProfileImg.png" alt="Kaisos — press photo" loading="lazy"/>
+        </picture>
+        <div class="photo-card-label">Official press photo · 2026</div>
+      </div>
+      <div class="photo-card">
+        <picture>
+          <source srcset="Logo.webp" type="image/webp"/>
+          <img src="Logo.png" alt="Kaisos logo" loading="lazy" style="object-fit:contain;padding:2rem;background:#0a0914"/>
+        </picture>
+        <div class="photo-card-label">Official logo · transparent background</div>
+      </div>
+    </div>
+    <p style="margin-top:1.25rem;font-size:0.82rem;color:var(--muted);line-height:1.7">Free to use in editorial and promotional contexts with artist credit. Contact before commercial use.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="inner">
+    <div class="eyebrow reveal">Contact</div>
+    <div class="contact-grid">
+      <div class="contact-text reveal">
+        <h2>Got a <em>playlist or feature</em> in mind?</h2>
+        <p>For playlist submissions, editorial features, sync inquiries, or collaboration requests — reach out directly. All messages are read.</p>
+        <a href="mailto:cengiz.adnan93@gmail.com" class="contact-email">cengiz.adnan93@gmail.com</a>
+      </div>
+      <div class="contact-notes reveal d1">
+        <div class="contact-note">
+          <strong>Playlist submissions</strong>
+          Include the playlist name, platform, and which album or track fits best.
+        </div>
+        <div class="contact-note">
+          <strong>Sync &amp; licensing</strong>
+          All tracks are available for licensing. Mention the project and intended use.
+        </div>
+        <div class="contact-note">
+          <strong>Press &amp; editorial</strong>
+          Bio, photos, and streaming links are all on this page — free to use with credit.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Kaisos</div>
+  <span class="footer-copy">© 2026 Kaisos. All rights reserved.</span>
+  <a href="/" class="footer-back">← kaisos.com</a>
+</footer>
+
+<script>
+const prog = document.getElementById('progress');
+window.addEventListener('scroll', () => {
+  const s = document.body.scrollHeight - window.innerHeight;
+  prog.style.width = (s > 0 ? window.scrollY / s * 100 : 0) + '%';
+}, { passive: true });
+
+const ro = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); }
+}), { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+</script>
+</body>
+</html>
