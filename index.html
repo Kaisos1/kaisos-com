@@ -414,6 +414,7 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 .lr-badge{display:inline-flex;align-items:center;gap:0.55rem;padding:0.28rem 0.8rem;border:1px solid rgba(200,133,15,0.4);border-radius:100px;font-size:0.68rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
 .lr-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,2.5vw,1.9rem);color:var(--white);margin-bottom:0.5rem;font-weight:400;line-height:1.2}
 .lr-sub{font-size:0.87rem;color:var(--muted2);line-height:1.7;margin-bottom:1.5rem}
+.lr-ptog-bar{display:flex;align-items:center;gap:0.75rem;padding:0.9rem var(--pad);border-bottom:1px solid var(--border)}
 .lr-embed{border-radius:10px;overflow:hidden;border:1px solid var(--border2)}
 .lr-embed iframe{display:block;width:100%}
 .lr-plat-row{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.75rem}
@@ -649,6 +650,22 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
     </div>
   </div>
 </section>
+
+<!-- PLATFORM SELECTOR -->
+<div class="lr-ptog-bar">
+  <span class="music-platform-label">Stream on</span>
+  <div class="platform-toggle" role="group" aria-label="Choose streaming platform">
+    <button type="button" class="ptog-btn active" data-p="spotify" aria-label="Spotify" title="Spotify">
+      <svg viewBox="0 0 24 24"><use href="#ico-spotify"/></svg>
+    </button>
+    <button type="button" class="ptog-btn" data-p="apple" aria-label="Apple Music" title="Apple Music">
+      <svg viewBox="0 0 24 24"><use href="#ico-apple-note"/></svg>
+    </button>
+    <button type="button" class="ptog-btn" data-p="youtube" aria-label="YouTube" title="YouTube">
+      <svg viewBox="0 0 24 24"><use href="#ico-youtube"/></svg>
+    </button>
+  </div>
+</div>
 
 <!-- LATEST RELEASE -->
 <div class="lr-strip">
