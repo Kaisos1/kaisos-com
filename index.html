@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<meta name="description" content="Kaisos turns quiet moments into lo-fi worlds. Six self-released albums of ambient beats, soft melancholy, and chill hip-hop — from Munich, available on Spotify, Apple Music, and YouTube."/>
+<meta name="description" content="Kaisos turns quiet moments into lo-fi worlds. Seven releases — new single Purple Gold plus six lo-fi albums — from Munich, on Spotify, Apple Music, and YouTube."/>
 <meta property="og:title" content="Kaisos — Lo-fi Worlds from Munich"/>
-<meta property="og:description" content="Six self-released lo-fi albums from Munich. 55K+ YouTube subscribers. Ambient beats and chill hip-hop — music for the quiet hours."/>
+<meta property="og:description" content="Seven releases from Munich — new single Purple Gold plus six lo-fi albums. 55K+ YouTube subscribers. Ambient beats, dark trap, and chill hip-hop."/>
 <meta property="og:image" content="https://kaisos.com/og-image.png"/>
 <meta property="og:image:alt" content="Kaisos — Lo-Fi Music Producer from Munich"/>
 <meta property="og:image:type" content="image/png"/>
@@ -15,7 +15,7 @@
 <meta property="og:locale" content="en_US"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Kaisos — Lo-fi Worlds from Munich"/>
-<meta name="twitter:description" content="Six self-released lo-fi albums from Munich. 55K+ YouTube subscribers. Ambient beats and chill hip-hop — music for the quiet hours."/>
+<meta name="twitter:description" content="Seven releases from Munich — new single Purple Gold plus six lo-fi albums. 55K+ YouTube subscribers."/>
 <meta name="twitter:image" content="https://kaisos.com/og-image.png"/>
 <meta name="twitter:image:alt" content="Kaisos — Lo-Fi Music Producer from Munich"/>
 <!-- SOCIAL METADATA — When the site focus or latest release changes, update:
@@ -43,7 +43,7 @@
   "@context":"https://schema.org",
   "@type":"MusicArtist",
   "name":"Kaisos",
-  "description":"Lo-fi music producer from Munich, Germany. Creating ambient beats, chill study music, and lo-fi hip-hop since 2024. Six self-released albums available on Spotify, Apple Music, and YouTube.",
+  "description":"Lo-fi music producer from Munich, Germany. Creating ambient beats, chill study music, and lo-fi hip-hop since 2024. Seven releases — including new single Purple Gold — available on Spotify, Apple Music, and YouTube.",
   "genre":["Lo-fi","Lo-fi Hip Hop","Chillhop","Ambient","Chill","Study Music"],
   "url":"https://kaisos.com",
   "image":"https://kaisos.com/ProfileImg.png",
@@ -261,12 +261,10 @@ footer{border-top:1px solid var(--border);padding:3.5rem var(--pad) 0}
   .nav-center,.nav-icons{display:none}
   nav .btn-kofi{display:none}
   .hamburger{display:flex}
-  /* ── Mobile perf: shrink & soften blobs ── */
   .blob{filter:blur(55px)}
   .blob-1{width:380px;height:380px}
   .blob-2{width:280px;height:280px}
   .blob-3{display:none}
-  /* Kill ring-spin + glow on mobile — purely decorative, heavy GPU cost */
   .photo-ring-1,.photo-ring-2{animation:none;opacity:0}
   .photo-glow{animation:none;opacity:0.4}
 }
@@ -347,8 +345,6 @@ footer{border-top:1px solid var(--border);padding:3.5rem var(--pad) 0}
 .platform-btn:focus-visible,
 .copy-link-btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px;box-shadow:0 0 0 5px rgba(139,63,201,0.22)}
 
-/* ── ARTIST BIO ── */
-
 /* ── EMBED CONSENT STATE ── */
 iframe:not([src]){display:block;height:0!important;visibility:hidden}
 .embed-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.6rem;min-height:152px;background:var(--surface);border-top:1px solid var(--border)}
@@ -406,9 +402,6 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 .copy-link-btn:hover{color:var(--text);border-color:var(--muted2)}
 .copy-link-btn.copied{color:var(--accent);border-color:rgba(139,63,201,0.4)}
 
-/* ── UPDATED LINE ── */
-.updated-line{font-size:0.64rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--muted);opacity:0.5;margin-top:0.5rem}
-
 /* ── COOKIE DECLINE ── */
 .cookie-btns{display:flex;gap:0.5rem;flex-shrink:0}
 .cookie-decline{background:none;color:var(--muted);border:1px solid var(--border2);border-radius:3px;padding:0.45rem 0.75rem;font-size:0.72rem;font-weight:500;cursor:pointer;white-space:nowrap;font-family:'Inter',sans-serif;transition:all 0.2s}
@@ -423,6 +416,10 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 .lr-sub{font-size:0.87rem;color:var(--muted2);line-height:1.7;margin-bottom:1.5rem}
 .lr-embed{border-radius:10px;overflow:hidden;border:1px solid var(--border2)}
 .lr-embed iframe{display:block;width:100%}
+.lr-plat-row{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.75rem}
+.lr-plat-btn{display:inline-flex;align-items:center;gap:0.35rem;padding:0.42rem 0.9rem;background:var(--surface);border:1px solid var(--border2);border-radius:3px;font-size:0.72rem;font-weight:500;color:var(--muted2);text-decoration:none;transition:all 0.2s;letter-spacing:0.04em}
+.lr-plat-btn:hover{border-color:rgba(139,63,201,0.4);color:var(--white)}
+.lr-plat-btn svg{width:13px;height:13px;fill:currentColor;flex-shrink:0}
 
 /* ALBUM CARDS */
 .album-card{border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--surface);transition:border-color 0.2s,transform 0.2s}
@@ -447,8 +444,6 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 .mobile-spotify-cta a svg{width:15px;height:15px;fill:currentColor;flex-shrink:0}
 @media(max-width:900px){.mobile-spotify-cta{display:block}}
 @media(min-width:901px){.mobile-spotify-cta{display:none!important}}
-
-/* ══ NEW SECTIONS & IMPROVEMENTS ══ */
 
 /* ── Gold outline button ── */
 .btn-outline-gold{display:inline-flex;align-items:center;gap:0.5rem;padding:0.8rem 1.75rem;border:1px solid rgba(200,133,15,0.38);color:var(--gold);background:rgba(200,133,15,0.04);font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:3px;transition:all 0.25s;opacity:0.9}
@@ -660,20 +655,34 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
   <div class="lr-wrap">
     <div class="reveal">
       <div class="lr-badge"><span class="badge-dot"></span> Latest Release</div>
-      <h2 class="lr-title">Lofi Kaisos Special</h2>
-      <p class="lr-sub">After the first volumes, this one moves slower — more space, more feeling, less noise. The most personal release yet.</p>
-      <a href="https://open.spotify.com/album/67OMy0DOFbt4Y5iTbL4lnE"
+      <h2 class="lr-title">Purple Gold</h2>
+      <p class="lr-sub">Dark energy, heavy bass, raw hip-hop. A new direction from the same world.</p>
+      <a href="https://open.spotify.com/album/0Vhoh9SYaNQ5IFcKuEj8s3"
          id="lr-listen-btn"
-         data-spotify="https://open.spotify.com/album/67OMy0DOFbt4Y5iTbL4lnE"
-         data-apple="https://music.apple.com/us/album/lofi-kaisos-special/1768802069"
-         data-youtube="https://www.youtube.com/watch?v=Yjr_UgeBxWE"
-         class="btn-primary" target="_blank" rel="noopener" aria-label="Listen to Special Release">
+         data-spotify="https://open.spotify.com/album/0Vhoh9SYaNQ5IFcKuEj8s3"
+         data-apple="https://music.apple.com/us/song/purple-gold/6772434750"
+         data-youtube="https://youtube.com/@LofiKaisos"
+         class="btn-primary" target="_blank" rel="noopener" aria-label="Listen to Purple Gold">
         <svg viewBox="0 0 24 24" id="lr-listen-icon"><use href="#ico-spotify"/></svg>
         Listen Now
       </a>
+      <div class="lr-plat-row">
+        <a class="lr-plat-btn" href="https://open.spotify.com/album/0Vhoh9SYaNQ5IFcKuEj8s3" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+          Spotify
+        </a>
+        <a class="lr-plat-btn" href="https://music.apple.com/us/song/purple-gold/6772434750" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
+          Apple Music
+        </a>
+        <a class="lr-plat-btn" href="https://youtube.com/@LofiKaisos" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          YouTube
+        </a>
+      </div>
     </div>
     <div class="lr-embed reveal d1">
-      <iframe data-src="https://open.spotify.com/embed/album/67OMy0DOFbt4Y5iTbL4lnE?utm_source=generator&theme=0" data-spotify="https://open.spotify.com/embed/album/67OMy0DOFbt4Y5iTbL4lnE?utm_source=generator&theme=0" data-apple="https://embed.music.apple.com/us/album/lofi-kaisos-special/1768802069" data-youtube="https://www.youtube.com/embed/Yjr_UgeBxWE" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Kaisos — Special Release"></iframe>
+      <iframe data-src="https://open.spotify.com/embed/album/0Vhoh9SYaNQ5IFcKuEj8s3?utm_source=generator&theme=0" data-spotify="https://open.spotify.com/embed/album/0Vhoh9SYaNQ5IFcKuEj8s3?utm_source=generator&theme=0" data-apple="https://embed.music.apple.com/us/song/purple-gold/6772434750" data-youtube="" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Kaisos — Purple Gold"></iframe>
     </div>
   </div>
 </div>
@@ -685,8 +694,8 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
     <div class="stat-label">YouTube Subscribers</div>
   </div>
   <div class="stat-item reveal d1">
-    <div class="stat-value">6</div>
-    <div class="stat-label">Self-Released Albums</div>
+    <div class="stat-value">7</div>
+    <div class="stat-label">Releases</div>
   </div>
   <div class="stat-item reveal d2">
     <div class="stat-value">Munich</div>
@@ -716,7 +725,7 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
   <div class="inner">
     <div class="eyebrow reveal">Music</div>
     <div class="listen-intro reveal">
-      <h2>Six volumes of lo-fi.</h2>
+      <h2>Seven releases of lo-fi.</h2>
       <div class="music-platform-toggle">
         <span class="music-platform-label">Stream on</span>
         <div class="platform-toggle" id="platform-toggle" role="group" aria-label="Choose streaming platform">
@@ -748,13 +757,21 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
     <div class="albums-grid">
       <div class="album-card reveal">
         <div class="album-card-header">
-          <span class="album-card-label">Latest</span>
-          <span class="album-card-name">Special Release</span>
+          <span class="album-card-label">Latest · Single</span>
+          <span class="album-card-name">Purple Gold</span>
+        </div>
+        <div class="album-card-mood-row"><span class="album-card-mood">Dark trap · hip-hop</span></div>
+        <iframe data-src="https://open.spotify.com/embed/album/0Vhoh9SYaNQ5IFcKuEj8s3?utm_source=generator&theme=0" data-spotify="https://open.spotify.com/embed/album/0Vhoh9SYaNQ5IFcKuEj8s3?utm_source=generator&theme=0" data-apple="https://embed.music.apple.com/us/song/purple-gold/6772434750" data-youtube="" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Purple Gold"></iframe>
+      </div>
+      <div class="album-card reveal d1">
+        <div class="album-card-header">
+          <span class="album-card-label">Special</span>
+          <span class="album-card-name">Lofi Kaisos Special</span>
         </div>
         <div class="album-card-mood-row"><span class="album-card-mood">Late-night focus</span></div>
         <iframe data-src="https://open.spotify.com/embed/album/67OMy0DOFbt4Y5iTbL4lnE?utm_source=generator&theme=0" data-spotify="https://open.spotify.com/embed/album/67OMy0DOFbt4Y5iTbL4lnE?utm_source=generator&theme=0" data-apple="https://embed.music.apple.com/us/album/lofi-kaisos-special/1768802069" data-youtube="https://www.youtube.com/embed/Yjr_UgeBxWE" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Special Release"></iframe>
       </div>
-      <div class="album-card reveal d1">
+      <div class="album-card reveal d2">
         <div class="album-card-header">
           <span class="album-card-label">Vol. 5</span>
           <span class="album-card-name">Lofi Kaisos Vol. 5</span>
@@ -796,7 +813,7 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
         <iframe data-src="https://open.spotify.com/embed/album/0EQS01PkeiRoi9zaeVDtt7?utm_source=generator&theme=0" data-spotify="https://open.spotify.com/embed/album/0EQS01PkeiRoi9zaeVDtt7?utm_source=generator&theme=0" data-apple="https://embed.music.apple.com/us/album/lofi-kaisos-vol-1/1735055810" data-youtube="https://www.youtube.com/embed/qZ1g6cxGZRw" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Lofi Kaisos Vol. 1"></iframe>
       </div>
     </div>
-    <button type="button" class="albums-show-more" id="albums-show-more">Show all 6 albums ↓</button>
+    <button type="button" class="albums-show-more" id="albums-show-more">Show all 7 releases ↓</button>
     <!-- CHOOSE YOUR MOOD -->
     <div class="mood-section reveal">
       <div class="mood-section-eyebrow">Choose your mood</div>

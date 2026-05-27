@@ -2,6 +2,20 @@
 
 ---
 
+## Session 29 — Purple Gold single release
+
+### Added
+- New single **Purple Gold** (Spotify `0Vhoh9SYaNQ5IFcKuEj8s3`, Apple Music `6772434750`) added to all pages
+- `index.html` LATEST RELEASE strip: updated to Purple Gold; added `.lr-plat-row` with Spotify, Apple Music, YouTube icon buttons
+- `links.html`: new featured "Purple Gold — New Single" release card at top with Spotify/Apple Music/YouTube platform icon buttons; CSS for `.link-release`, `.release-plat-btns`, `.release-plat-btn`
+
+### Changed
+- `music.html`: featured album card → Purple Gold (dark trap · hip-hop); Lofi Kaisos Special demoted to second card; delay classes shifted (d2–d5); hero "Six albums" → "Seven releases"; CTA text updated; meta/OG descriptions updated; JSON-LD album list updated
+- `index.html`: album grid card 1 → Purple Gold; Lofi Kaisos Special added as card 2; show-more "6 albums" → "7 releases"; stats strip "6 / Self-Released Albums" → "7 / Releases"; MUSIC h2 updated; meta/JSON-LD descriptions updated
+- `links.html`: profile tag "6 albums" → "7 releases"
+
+---
+
 ## Session 28 — Analytics, link-in-bio, cookie UX
 
 ### Added
