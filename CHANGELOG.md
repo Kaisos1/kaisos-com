@@ -2,6 +2,148 @@
 
 ---
 
+## Session 37 — Trim & optimize: CTA, stats, hero image
+
+### Changed
+- `ProfileImg.webp` 189 KB → **66 KB** (1254px → 800px, q82) — this is the asset that actually loads in the hero; display max is 380px so 800px covers @2x
+- `ProfileImg.png` 2.1 MB → **196 KB** (1254px → 760px, 256-color) — the `<picture>`/schema fallback was 11× heavier than the WebP; dark palette quantizes cleanly with no visible banding
+- `index.html`: Stats strip third stat "Munich / Based in Germany" → **"2024 / Active Since"** — a real metric; Munich is already stated in the hero, footer, and schema
+
+### Removed
+- `index.html`: Pre-footer "Choose where you want to listen" CTA bar — duplicated the platform pills already shown in the hero, music section, and connect (cut one of ~11 listen/follow prompts)
+- `index.html`: Now-dead CSS for that block — `.section-cta-bar--center` (+ descendants), `.platform-btns-row`, `.platform-btn--lg`
+
+### Fixed
+- `press.html`: Bio-fact release count "7 (6 albums + 1 single)" → **"8 (7 albums + 1 single)"** — stale after Quiet Chaos was added; the stat strip and discography on the same page already said 8
+
+---
+
+## Session 36 — Dead-code cleanup
+
+Audited every CSS class and JS symbol against actual usage.
+
+### Removed
+- `index.html`: `.btn-ghost` + `.btn-ghost:hover` — orphaned after the hero switched to `.btn-outline-gold`
+- `index.html`: `PENDING_ICON` const — byte-identical to `MUSIC_ICON`; deduped (the embed-pending placeholder now reuses `MUSIC_ICON`)
+- `press.html`: `.photo-dl` + `.photo-dl:hover` — no matching markup
+
+### Verified clean
+- All JS functions and module constants have live references; full script re-executes with no errors
+- No other dead classes across any page (`album-tile-close` is set via `className` in JS — live)
+- `og-image.svg` left in place: it's the editable source for `og-image.png`, not a stray
+
+---
+
+## Session 35 — New release: Quiet Chaos (album)
+
+New album **Quiet Chaos** (Spotify `4e6gK5CEZqllYvsjWDY3Pl`, Apple `6773957574`) added as the latest release across the whole site; Purple Gold demoted from "latest" to a standard single. Release count 7 → 8 everywhere.
+
+### Added
+- `covers/quiet-chaos.webp`: Album cover (600px WebP, 32 KB)
+- `index.html`: Quiet Chaos as the new Latest Release strip (title, tagline, listen button + platform links + embed) and the first discography tile ("Latest · Album"); added to JSON-LD `album[]`
+- `music.html` / `press.html`: Quiet Chaos added as the featured/latest discography entry; Purple Gold relabeled "Single"
+- `links.html`: Featured release block now Quiet Chaos ("New Album")
+
+### Changed
+- All pages: release count 7 → 8 (hero trust line, stats strips, headings, story copy, profile tag, disco CTAs), `numberOfAlbums` 7 → 8, Purple Gold label "Latest · Single" → "Single"
+- `index.html` / `music.html`: meta description, og:description, twitter:description, and JSON-LD now lead with Quiet Chaos
+- Hero badge "New single — Purple Gold" → "New album — Quiet Chaos"
+
+---
+
+## Session 34 — WCAG AA contrast pass (all pages)
+
+Audited every text/background color combo against WCAG. All text now meets AA; the two brand colors keep all their fill/border/glow uses unchanged.
+
+### Changed
+- `site.css`: `--muted` `#6b647e` → `#837c96` — was 3.58:1 (small-text FAIL), now **5.05:1 AA**. Cascades to every page (stat labels, handles, captions, footer copy, tags)
+- `site.css`: Added `--accent-text` `#a45fe0` (**5.06:1 AA**) — a lighter purple for *small text only* (eyebrows, small links, labels). `--accent` `#8b3fc9` (3.49:1) stays for fills/borders/glows where contrast rules don't apply
+- All pages: `color:var(--accent)` on text → `color:var(--accent-text)` (negative-lookbehind swap; `border-color`/`background-color` untouched)
+
+### Fixed
+- Removed compounding `opacity` on small muted/accent text that pushed it below AA even after the token bump: `.footer-copy`, `.section-credit`, `.hero-trust`, `.embed-pending-text`, `.chapter-num`, `.scroll-cue` (index), `.footer-copy` (404), `.merch-card-eyebrow` (index), `.links-footer` (links), `.na-tag` (music)
+- `--gold` `#c8850f` verified at 6.52:1 (AA) — no change needed
+
+---
+
+## Session 33 — Discography cover facade + UX/a11y polish
+
+### Added
+- `covers/*.webp`: Self-hosted 600px album artwork for all 7 releases (WebP, 228 KB total) — pulled from Spotify and converted locally, no runtime CDN dependency
+- `index.html`: **Discography rebuilt as a cover-art facade** — the music grid now shows real album artwork (hover reveals a play badge + mood line) instead of seven gray players. Clicking a cover expands it inline into a full-width tracklist player (Spotify/Apple/YouTube per the active platform); only one album iframe ever loads, on demand, and switching platform or clicking again collapses it. Falls back to a new-tab link when the chosen platform has no embed (e.g. Vol. 5 on Apple)
+- `index.html`: Hero scroll cue — minimal "Scroll" label + bobbing chevron anchored to the latest release; signals there's content below the full-viewport hero. Fades out after 120px of scroll, hidden on mobile, motion respected
+- `index.html`: Brand-gradient on the hero headline accent ("lo-fi worlds.") — gold→purple `background-clip:text`, wrapped in `@supports` so unsupported browsers keep the solid accent color
+
+### Changed
+- `index.html`: Music section no longer spins up ~9 iframes on consent — only the featured artist + latest-release players load up front; the 7 album players are click-to-load facades. Removes the mobile "show all 7" toggle (covers are cheap, all 7 show in a 2-col mobile grid)
+- `index.html`: YouTube subscriber counter now respects `prefers-reduced-motion` — reduced-motion users see the final `55K+` immediately instead of an animated count
+
+### Fixed
+- `index.html`: Stat value renders `55K+` in markup (was `0K+`) so no-JS visitors see the real number; JS resets to `0K+` only when it will animate
+- `index.html`: `.lr-flash` glow animation now disabled under `prefers-reduced-motion`
+
+### Removed
+- `index.html`: Dead CSS/JS from the old album grid — `.album-card*`, `.album-apple-na`, `.album-card-mood*`, `.mob-hide`, `.albums-show-more` and their handlers
+
+---
+
+## Session 32 — Design polish: hover consistency, contrast, refinement
+
+### Fixed
+- `index.html`: Platform-colored CTAs no longer flash purple on hover — `.btn-primary` and `.mobile-spotify-cta a` now stay in their platform color (Spotify green / Apple / YouTube) via `filter:brightness` + matching glow, instead of hardcoded `#a050d8`
+
+### Changed
+- `index.html`: Body paragraphs (`.chapter p`, `.gear-card p`, `.gear-featured-body p`, `.mood-card-desc`) moved from `--muted` to `--muted2` — lifts reading copy above WCAG AA contrast (was ~3.4:1)
+- `index.html`: `.gear-featured-body p` max-width 56ch → 64ch to reduce the empty gap in the FL Studio callout
+
+### Added
+- `site.css`: Branded `::selection` styling (purple highlight, white text)
+
+---
+
+## Session 31 — SEO, structured data, and performance pass
+
+### Added
+- `index.html`: Full `album` array in MusicArtist JSON-LD (all 7 releases with types + datePublished)
+- `index.html`: `numberOfAlbums: 7` to MusicArtist schema
+- `index.html`: `<link rel="sitemap">` added to `<head>`
+- `index.html`: Apple PWA meta tags (`apple-mobile-web-app-capable`, `apple-mobile-web-app-status-bar-style`)
+- `index.html`: Preconnect hints for Apple Music and YouTube embeds
+- `index.html`: BreadcrumbList JSON-LD schema (already in music/press/merch via previous sessions)
+- `music.html`: `<link rel="sitemap">`, preconnect hints for Spotify/Apple/YouTube, BreadcrumbList
+- `music.html`: `Purple Gold` corrected to `@type: MusicSingle` (was incorrectly MusicAlbum)
+- `press.html`: Purple Gold added to discography; `<link rel="sitemap">`; preconnect hints
+- `merch.html`: `<link rel="sitemap">`, BreadcrumbList
+
+### Changed
+- `index.html`: Hero badge → "Munich · 55K+ YouTube · 7 releases" (real numbers instead of generic labels)
+- `index.html`: YouTube subscriber count now animates on scroll (count-up from 0→55K+)
+- `index.html`: Scroll progress bar and active nav now rAF-throttled
+- `press.html`: All "Six albums" → "Seven releases" fixes; stat strip corrected; bio paragraph updated
+
+---
+
+## Session 30 — Copy consistency and professionalism pass
+
+### Changed
+- `index.html`: hero badge → "Munich · Lo-fi Producer · Active since 2024"
+- `index.html`: hero sub "Six self-released albums" → "Seven self-released records" with improved copy
+- `index.html`: hero-trust "6 albums" → "7 releases"
+- `index.html`: chapter 04 "Six volumes in" → "Seven releases in"
+- `music.html`: twitter:description "Six self-released lo-fi albums" → "Seven self-released records"
+- `press.html`: hero description, stats strip value (6→7), bio paragraph, bio-fact — all updated to 7 releases
+- `links.html`: Spotify sub-label "Stream all albums" → "Stream all releases"
+- `press.html`: Added Purple Gold to discography as "Latest · Single"; Lofi Kaisos Special label fixed to just "Special"
+- `sitemap.xml`: Updated all lastmod dates to 2026-05-28
+- `index.html`: YouTube subscriber count now animates (count-up from 0→55K+ on scroll into view)
+- `index.html`: Scroll progress bar and active nav detection now rAF-throttled (prevents >1 update per frame)
+- `index.html`: Hero badge updated to show real stats ("Munich · 55K+ YouTube · 7 releases")
+- `index.html`: MusicArtist JSON-LD expanded with full album list (all 7 releases) + numberOfAlbums
+- `index.html`: Added preconnect hints for Apple Music and YouTube embeds
+- `netlify.toml`: Added Permissions-Policy and X-DNS-Prefetch-Control security/perf headers
+
+---
+
 ## Session 29 — Purple Gold single release
 
 ### Added

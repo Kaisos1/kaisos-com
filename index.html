@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<meta name="description" content="Kaisos turns quiet moments into lo-fi worlds. Seven releases — new single Purple Gold plus six lo-fi albums — from Munich, on Spotify, Apple Music, and YouTube."/>
+<meta name="description" content="Kaisos turns quiet moments into lo-fi worlds. Eight releases — new album Quiet Chaos, the Purple Gold single, plus six lo-fi albums — from Munich, on Spotify, Apple Music, and YouTube."/>
 <meta property="og:title" content="Kaisos — Lo-fi Worlds from Munich"/>
-<meta property="og:description" content="Seven releases from Munich — new single Purple Gold plus six lo-fi albums. 55K+ YouTube subscribers. Ambient beats, dark trap, and chill hip-hop."/>
+<meta property="og:description" content="Eight releases from Munich — new album Quiet Chaos, the Purple Gold single, and six lo-fi albums. 55K+ YouTube subscribers. Ambient beats, dark trap, and chill hip-hop."/>
 <meta property="og:image" content="https://kaisos.com/og-image.png"/>
 <meta property="og:image:alt" content="Kaisos — Lo-Fi Music Producer from Munich"/>
 <meta property="og:image:type" content="image/png"/>
@@ -15,7 +15,7 @@
 <meta property="og:locale" content="en_US"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Kaisos — Lo-fi Worlds from Munich"/>
-<meta name="twitter:description" content="Seven releases from Munich — new single Purple Gold plus six lo-fi albums. 55K+ YouTube subscribers."/>
+<meta name="twitter:description" content="Eight releases from Munich — new album Quiet Chaos, the Purple Gold single, and six lo-fi albums. 55K+ YouTube subscribers."/>
 <meta name="twitter:image" content="https://kaisos.com/og-image.png"/>
 <meta name="twitter:image:alt" content="Kaisos — Lo-Fi Music Producer from Munich"/>
 <!-- SOCIAL METADATA — When the site focus or latest release changes, update:
@@ -23,6 +23,8 @@
      og:image / twitter:image (and the og:image:alt / twitter:image:alt).
      These are the only meta tags that need updating for link previews. -->
 <meta name="theme-color" content="#07070f"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 <meta name="robots" content="index, follow"/>
 <meta name="color-scheme" content="dark light"/>
 <meta property="og:image:width" content="1200"/>
@@ -30,6 +32,7 @@
 <link rel="icon" type="image/png" href="favicon.png"/>
 <link rel="apple-touch-icon" href="Logo.png"/>
 <link rel="canonical" href="https://kaisos.com"/>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
 <link rel="preload" as="image" href="ProfileImg.webp" type="image/webp"/>
 <link rel="preload" as="image" href="Logo.webp" type="image/webp"/>
 <meta name="author" content="Adnan Cengiz"/>
@@ -38,12 +41,16 @@
 <link rel="dns-prefetch" href="https://www.tiktok.com"/>
 <link rel="dns-prefetch" href="https://kaisos-shop.fourthwall.com"/>
 <link rel="preconnect" href="https://open.spotify.com"/>
+<link rel="preconnect" href="https://embed.music.apple.com" crossorigin/>
+<link rel="preconnect" href="https://www.youtube.com" crossorigin/>
+<link rel="dns-prefetch" href="https://embed.music.apple.com"/>
+<link rel="dns-prefetch" href="https://www.youtube.com"/>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"MusicArtist",
   "name":"Kaisos",
-  "description":"Lo-fi music producer from Munich, Germany. Creating ambient beats, chill study music, and lo-fi hip-hop since 2024. Seven releases — including new single Purple Gold — available on Spotify, Apple Music, and YouTube.",
+  "description":"Lo-fi music producer from Munich, Germany. Creating ambient beats, chill study music, and lo-fi hip-hop since 2024. Eight releases — including new album Quiet Chaos — available on Spotify, Apple Music, and YouTube.",
   "genre":["Lo-fi","Lo-fi Hip Hop","Chillhop","Ambient","Chill","Study Music"],
   "url":"https://kaisos.com",
   "image":"https://kaisos.com/ProfileImg.png",
@@ -54,7 +61,18 @@
     "https://youtube.com/@LofiKaisos",
     "https://www.instagram.com/lofikaisos/",
     "https://www.tiktok.com/@lofikaisos"
-  ]
+  ],
+  "album":[
+    {"@type":"MusicAlbum","name":"Quiet Chaos","url":"https://open.spotify.com/album/4e6gK5CEZqllYvsjWDY3Pl","datePublished":"2025"},
+    {"@type":"MusicSingle","name":"Purple Gold","url":"https://open.spotify.com/album/0Vhoh9SYaNQ5IFcKuEj8s3","datePublished":"2025"},
+    {"@type":"MusicAlbum","name":"Lofi Kaisos Special","url":"https://open.spotify.com/album/67OMy0DOFbt4Y5iTbL4lnE","datePublished":"2024"},
+    {"@type":"MusicAlbum","name":"Lofi Kaisos Vol. 5","url":"https://open.spotify.com/album/0sm4rH9Bv1VJ5r8hTaFDfz","datePublished":"2024"},
+    {"@type":"MusicAlbum","name":"Lofi Kaisos Vol. 4","url":"https://open.spotify.com/album/49c8g3dFdDOS8aezK0ltDb","datePublished":"2024"},
+    {"@type":"MusicAlbum","name":"Lofi Kaisos Vol. 3","url":"https://open.spotify.com/album/3bcGnK12xEytemEmjFGH86","datePublished":"2024"},
+    {"@type":"MusicAlbum","name":"Lofi Kaisos Vol. 2","url":"https://open.spotify.com/album/1G9pQYYIS1hZEqu0hieCyE","datePublished":"2024"},
+    {"@type":"MusicAlbum","name":"Lofi Kaisos Vol. 1","url":"https://open.spotify.com/album/0EQS01PkeiRoi9zaeVDtt7","datePublished":"2024"}
+  ],
+  "numberOfAlbums":8
 }
 </script>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
@@ -80,7 +98,7 @@ nav.scrolled{border-bottom-color:var(--border)}
 .nav-icons{display:flex;gap:0.4rem}
 .nav-icon{width:34px;height:34px;border-radius:50%;border:1px solid var(--border2);display:inline-flex;align-items:center;justify-content:center;color:var(--muted);text-decoration:none;transition:all 0.2s}
 .nav-icon svg{width:14px;height:14px;fill:currentColor}
-.nav-icon:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-dim)}
+.nav-icon:hover{border-color:var(--accent);color:var(--accent-text);background:var(--accent-dim)}
 .btn-kofi{display:inline-flex;align-items:center;gap:0.4rem;padding:0.45rem 1rem;background:var(--accent);color:var(--gold);font-size:0.73rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;text-decoration:none;border-radius:3px;border:1px solid transparent;transition:all 0.25s;white-space:nowrap}
 .btn-kofi svg{width:14px;height:14px;flex-shrink:0}
 .btn-kofi:hover{opacity:1;border-color:var(--gold);box-shadow:0 4px 20px rgba(200,133,15,0.2)}
@@ -109,18 +127,16 @@ nav.scrolled{border-bottom-color:var(--border)}
 .hero-noise{position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");opacity:0.5;pointer-events:none}
 .hero-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(139,63,201,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(139,63,201,0.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;mask-image:radial-gradient(ellipse at 50% 50%,black 20%,transparent 80%)}
 .hero-inner{position:relative;z-index:1;max-width:var(--max);width:100%;margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:5rem;align-items:center}
-.hero-badge{display:inline-flex;align-items:center;gap:0.6rem;padding:0.3rem 0.85rem;border:1px solid rgba(139,63,201,0.3);border-radius:100px;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1.75rem}
+.hero-badge{display:inline-flex;align-items:center;gap:0.6rem;padding:0.3rem 0.85rem;border:1px solid rgba(139,63,201,0.3);border-radius:100px;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent-text);margin-bottom:1.75rem}
 .badge-dot{width:5px;height:5px;border-radius:50%;background:var(--accent);animation:pulse-dot 2s infinite;flex-shrink:0}
 @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.7)}}
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.2rem,6.2vw,6.2rem);font-weight:400;line-height:1.05;color:var(--white);margin-bottom:1.5rem;letter-spacing:-0.01em}
-.hero h1 em{font-style:italic;color:var(--accent)}
+.hero h1 em{font-style:italic;color:var(--accent-text)}
 .hero-sub{color:var(--muted2);font-size:1.05rem;line-height:1.85;max-width:440px;margin-bottom:2.5rem;font-weight:300}
 .hero-ctas{display:flex;gap:0.85rem;flex-wrap:wrap;align-items:center}
 .btn-primary{display:inline-flex;align-items:center;gap:0.5rem;padding:0.8rem 1.75rem;background:var(--platform-primary);color:#fff;border:1px solid transparent;font-size:0.78rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:3px;transition:all 0.25s}
 .btn-primary svg{width:14px;height:14px;fill:currentColor;flex-shrink:0}
-.btn-primary:hover{background:#a050d8;border-color:var(--gold);transform:translateY(-1px);box-shadow:0 8px 30px rgba(139,63,201,0.3),0 0 16px rgba(200,133,15,0.15)}
-.btn-ghost{display:inline-flex;align-items:center;gap:0.5rem;padding:0.8rem 1.75rem;border:1px solid rgba(139,63,201,0.4);color:var(--muted2);font-size:0.78rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:3px;transition:all 0.2s;opacity:0.8}
-.btn-ghost:hover{border-color:var(--accent);color:var(--text);opacity:1;background:var(--accent-dim)}
+.btn-primary:hover{filter:brightness(1.08);border-color:var(--gold);transform:translateY(-1px);box-shadow:0 8px 30px var(--platform-primary-glow),0 0 16px rgba(200,133,15,0.15)}
 
 /* HERO PHOTO */
 .hero-photo-wrap{display:flex;justify-content:center;align-items:center;position:relative}
@@ -145,22 +161,23 @@ nav.scrolled{border-bottom-color:var(--border)}
 /* SECTIONS */
 .section{padding:6rem var(--pad);border-top:1px solid var(--border)}
 .inner{max-width:var(--max);margin:0 auto}
-.eyebrow{display:flex;align-items:center;gap:0.75rem;font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:3rem;font-weight:600}
+.eyebrow{display:flex;align-items:center;gap:0.75rem;font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent-text);margin-bottom:3rem;font-weight:600}
 .eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--accent)}
 
 /* MUSIC */
 .listen-intro{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;flex-wrap:wrap;gap:1rem}
 .listen-intro h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:400;color:var(--white);line-height:1.15}
-.link-arrow{font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;flex-shrink:0;transition:all 0.2s;opacity:0.8}
-.link-arrow:hover{opacity:1;gap:0.65rem}
 .featured-embed{border-radius:12px;overflow:hidden;margin-bottom:2rem;border:1px solid var(--border)}
 .featured-embed iframe{display:block;width:100%}
-.albums-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.skip-link{position:absolute;left:-9999px;top:0;z-index:1000;background:var(--accent);color:#fff;padding:0.65rem 1.1rem;border-radius:0 0 5px 0;font-size:0.76rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none}
+.skip-link:focus{left:0}
+main:focus{outline:none}
+.albums-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
 .platforms-row{display:flex;flex-wrap:wrap;gap:0.65rem;margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid var(--border);align-items:center}
-.platforms-row .label{font-size:0.73rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--accent);margin-right:0.35rem}
+.platforms-row .label{font-size:0.73rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--accent-text);margin-right:0.35rem}
 .platform-btn{display:inline-flex;align-items:center;gap:0.45rem;padding:0.5rem 1.1rem;border:1px solid var(--border2);border-radius:3px;color:var(--muted2);text-decoration:none;font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;transition:all 0.2s}
 .platform-btn svg{width:13px;height:13px;fill:currentColor;flex-shrink:0}
-.platform-btn:hover{border-color:var(--accent);color:var(--accent)}
+.platform-btn:hover{border-color:var(--accent);color:var(--accent-text)}
 
 /* STORY */
 .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
@@ -173,10 +190,10 @@ nav.scrolled{border-bottom-color:var(--border)}
 .chapter{padding:1.5rem 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:2.5rem 1fr;gap:1rem;align-items:start}
 .chapter:first-child{border-top:1px solid var(--border)}
 .chapter:hover .chapter-body{padding-left:0.35rem}
-.chapter-num{font-family:'Cormorant Garamond',serif;font-size:0.72rem;color:var(--accent);margin-top:0.2rem;opacity:0.8}
+.chapter-num{font-family:'Cormorant Garamond',serif;font-size:0.72rem;color:var(--accent-text);margin-top:0.2rem}
 .chapter-body{transition:padding 0.2s}
 .chapter h3{font-size:0.88rem;font-weight:600;color:var(--white);margin-bottom:0.4rem}
-.chapter p{font-size:0.84rem;color:var(--muted);line-height:1.75}
+.chapter p{font-size:0.84rem;color:var(--muted2);line-height:1.75}
 
 
 /* GEAR */
@@ -188,8 +205,8 @@ nav.scrolled{border-bottom-color:var(--border)}
 .gear-card:hover::before{opacity:1}
 .gear-num{font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem;opacity:1}
 .gear-card h3{font-size:0.93rem;font-weight:600;color:var(--white);margin-bottom:0.6rem;line-height:1.3}
-.gear-card p{font-size:0.83rem;color:var(--muted);line-height:1.75;margin-bottom:1.5rem}
-.gear-link{font-size:0.73rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:0.35rem;transition:gap 0.2s}
+.gear-card p{font-size:0.83rem;color:var(--muted2);line-height:1.75;margin-bottom:1.5rem}
+.gear-link{font-size:0.73rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent-text);display:inline-flex;align-items:center;gap:0.35rem;transition:gap 0.2s}
 .gear-card:hover .gear-link{gap:0.6rem}
 .gear-featured{display:flex;align-items:center;justify-content:space-between;gap:2rem;margin-top:1px;background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:2.25rem 2.5rem;text-decoration:none;position:relative;overflow:hidden;transition:background 0.2s}
 .gear-featured::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,var(--gold),var(--accent),transparent);opacity:0.7}
@@ -197,7 +214,7 @@ nav.scrolled{border-bottom-color:var(--border)}
 .gear-featured-body{flex:1}
 .gear-featured-body .gear-num{margin-bottom:0.75rem}
 .gear-featured-body h3{font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:0.5rem}
-.gear-featured-body p{font-size:0.85rem;color:var(--muted);line-height:1.75;margin-bottom:1.25rem;max-width:56ch}
+.gear-featured-body p{font-size:0.85rem;color:var(--muted2);line-height:1.75;margin-bottom:1.25rem;max-width:64ch}
 .gear-featured-cta{flex-shrink:0;display:inline-block;padding:0.7rem 1.5rem;background:var(--gold);color:var(--bg);font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border-radius:3px;white-space:nowrap;transition:opacity 0.2s}
 .gear-featured:hover .gear-featured-cta{opacity:0.85}
 @media(max-width:600px){.gear-featured{flex-direction:column;align-items:flex-start}.gear-featured-cta{width:100%;text-align:center}}
@@ -210,7 +227,7 @@ nav.scrolled{border-bottom-color:var(--border)}
 .social-link{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:all 0.2s}
 .social-link:first-child{border-top:1px solid var(--border)}
 .social-link:hover{padding-left:0.65rem}
-.social-link:hover .social-arrow{color:var(--accent);transform:translateX(3px)}
+.social-link:hover .social-arrow{color:var(--accent-text);transform:translateX(3px)}
 .social-info{display:flex;flex-direction:column;gap:0.15rem}
 .social-name{font-size:0.9rem;font-weight:500;color:var(--white)}
 .social-handle{font-size:0.8rem;color:var(--muted)}
@@ -232,12 +249,12 @@ footer{border-top:1px solid var(--border);padding:3.5rem var(--pad) 0}
 .footer-tagline{font-size:0.72rem;color:var(--muted);line-height:1.6;max-width:240px}
 .footer-socials{display:flex;gap:0.4rem;margin-top:1.5rem}
 .footer-nav-col{display:flex;flex-direction:column;gap:0.65rem}
-.footer-nav-label{font-size:0.64rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:0.35rem}
+.footer-nav-label{font-size:0.64rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent-text);font-weight:600;margin-bottom:0.35rem}
 .footer-nav-col a{color:var(--muted);text-decoration:none;font-size:0.82rem;transition:color 0.2s}
 .footer-nav-col a:hover{color:var(--text)}
 .footer-base{max-width:var(--max);margin:0 auto;padding:1.25rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 .footer-legal{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
-.footer-copy{font-size:0.73rem;color:var(--muted);opacity:0.5}
+.footer-copy{font-size:0.73rem;color:var(--muted)}
 @media(max-width:700px){
   .footer-inner{grid-template-columns:1fr;gap:2rem}
   .footer-base{flex-direction:column;align-items:flex-start;gap:0.75rem}
@@ -257,7 +274,7 @@ footer{border-top:1px solid var(--border);padding:3.5rem var(--pad) 0}
   .stat-item+.stat-item::before{display:none}
   .story-grid,.connect-grid{grid-template-columns:1fr;gap:3rem}
   .gear-grid{grid-template-columns:1fr}
-  .albums-grid{grid-template-columns:1fr}
+  .albums-grid{grid-template-columns:repeat(2,1fr);gap:0.75rem}
   .nav-center,.nav-icons{display:none}
   nav .btn-kofi{display:none}
   .hamburger{display:flex}
@@ -287,15 +304,15 @@ footer{border-top:1px solid var(--border);padding:3.5rem var(--pad) 0}
 .modal-panel{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:2.5rem;max-width:580px;width:100%;max-height:82vh;overflow-y:auto;position:relative;transform:translateY(20px);transition:transform 0.3s;scrollbar-width:thin}
 .modal-overlay.open .modal-panel{transform:translateY(0)}
 .modal-close{position:absolute;top:1rem;right:1rem;width:32px;height:32px;border-radius:50%;border:1px solid var(--border2);background:none;cursor:pointer;color:var(--muted);display:flex;align-items:center;justify-content:center;font-size:1.1rem;line-height:1;transition:all 0.2s}
-.modal-close:hover{border-color:var(--accent);color:var(--accent)}
+.modal-close:hover{border-color:var(--accent);color:var(--accent-text)}
 .modal-panel h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--white);margin-bottom:2rem}
-.modal-panel h3{font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin:1.5rem 0 0.4rem}
+.modal-panel h3{font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent-text);margin:1.5rem 0 0.4rem}
 .modal-panel p{font-size:0.9rem;color:var(--muted2);line-height:1.85;margin-bottom:0.75rem}
-.modal-panel a{color:var(--accent)}
+.modal-panel a{color:var(--accent-text)}
 
 /* footer modal triggers */
 .footer-link-btn{background:none;border:none;cursor:pointer;color:var(--muted);font-size:0.73rem;letter-spacing:0.09em;text-transform:uppercase;font-family:'Inter',sans-serif;transition:color 0.2s;padding:0}
-.footer-link-btn:hover{color:var(--accent)}
+.footer-link-btn:hover{color:var(--accent-text)}
 
 
 /* ── BACK TO TOP ── */
@@ -309,7 +326,7 @@ footer{border-top:1px solid var(--border);padding:3.5rem var(--pad) 0}
   transition:all 0.3s;pointer-events:none;
 }
 .back-top.visible{opacity:1;transform:translateY(0);pointer-events:auto}
-.back-top:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-dim)}
+.back-top:hover{border-color:var(--accent);color:var(--accent-text);background:var(--accent-dim)}
 .back-top svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
 
 /* ── COOKIE NOTICE ── */
@@ -325,7 +342,7 @@ footer{border-top:1px solid var(--border);padding:3.5rem var(--pad) 0}
 }
 .cookie-notice.hidden{opacity:0;pointer-events:none;transform:translateX(-50%) translateY(12px)}
 .cookie-notice p{font-size:0.76rem;color:var(--muted);line-height:1.5;flex:1;margin:0}
-.cookie-notice a{color:var(--accent);text-decoration:underline;cursor:pointer}
+.cookie-notice a{color:var(--accent-text);text-decoration:underline;cursor:pointer}
 .cookie-accept{
   background:var(--accent);color:var(--gold);border:none;border-radius:3px;
   padding:0.45rem 1rem;font-size:0.72rem;font-weight:600;
@@ -355,7 +372,7 @@ iframe:not([src]){display:block;height:0!important;visibility:hidden}
 .embed-ph.declined{gap:0.75rem}
 .embed-ph.declined .ph-label{font-size:0.67rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
 .embed-ph.declined .ph-links{display:flex;gap:0.5rem;flex-wrap:wrap;justify-content:center}
-.embed-ph.declined .ph-links a{font-size:0.73rem;color:var(--accent);text-decoration:none;padding:0.28rem 0.65rem;border:1px solid rgba(139,63,201,0.3);border-radius:3px;transition:all 0.2s}
+.embed-ph.declined .ph-links a{font-size:0.73rem;color:var(--accent-text);text-decoration:none;padding:0.28rem 0.65rem;border:1px solid rgba(139,63,201,0.3);border-radius:3px;transition:all 0.2s}
 .embed-ph.declined .ph-links a:hover{color:var(--text);border-color:var(--accent)}
 .featured-embed .embed-ph{min-height:352px}
 
@@ -377,7 +394,7 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 /* ── Embed pending placeholder ── */
 .embed-pending{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.5rem;min-height:152px;background:var(--surface);border-radius:8px;border:1px dashed var(--border2)}
 .embed-pending svg{width:22px;height:22px;fill:none;stroke:var(--platform-primary);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;opacity:0.35}
-.embed-pending-text{font-size:0.67rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);opacity:0.6}
+.embed-pending-text{font-size:0.67rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
 .embed-pending-link{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--platform-primary);text-decoration:none;padding:0.38rem 0.9rem;border:1px solid var(--platform-primary-dim);border-radius:3px;transition:all 0.2s;margin-top:0.25rem}
 .embed-pending-link:hover{background:var(--platform-primary-dim)}
 .featured-embed .embed-pending{min-height:352px}
@@ -391,7 +408,7 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 .social-sub{font-size:0.72rem;color:var(--muted);line-height:1.4;margin-top:0.1rem}
 
 /* ── SECTION CREDIT ── */
-.section-credit{font-size:0.71rem;letter-spacing:0.04em;color:var(--muted);margin-top:2.5rem;opacity:0.6}
+.section-credit{font-size:0.71rem;letter-spacing:0.04em;color:var(--muted);margin-top:2.5rem}
 
 
 /* ── FREE SUPPORT NOTE ── */
@@ -400,7 +417,7 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 /* ── COPY LINK BUTTON ── */
 .copy-link-btn{background:none;border:1px solid var(--border2);border-radius:3px;color:var(--muted);font-size:0.68rem;letter-spacing:0.09em;text-transform:uppercase;font-family:'Inter',sans-serif;cursor:pointer;padding:0.3rem 0.75rem;transition:all 0.2s;white-space:nowrap}
 .copy-link-btn:hover{color:var(--text);border-color:var(--muted2)}
-.copy-link-btn.copied{color:var(--accent);border-color:rgba(139,63,201,0.4)}
+.copy-link-btn.copied{color:var(--accent-text);border-color:rgba(139,63,201,0.4)}
 
 /* ── COOKIE DECLINE ── */
 .cookie-btns{display:flex;gap:0.5rem;flex-shrink:0}
@@ -422,13 +439,26 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 .lr-plat-btn:hover{border-color:rgba(139,63,201,0.4);color:var(--white)}
 .lr-plat-btn svg{width:13px;height:13px;fill:currentColor;flex-shrink:0}
 
-/* ALBUM CARDS */
-.album-card{border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--surface);transition:border-color 0.2s,transform 0.2s}
-.album-card:hover{border-color:rgba(139,63,201,0.5);transform:translateY(-2px)}
-.album-card-header{padding:0.65rem 0.9rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
-.album-card-label{font-size:0.62rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--accent);font-weight:600}
-.album-card-name{font-size:0.78rem;color:var(--muted2)}
-.album-card iframe{display:block;width:100%}
+/* ══ DISCOGRAPHY — cover facade ══ */
+.album-tile{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--surface);transition:border-color 0.25s}
+.album-tile-face{display:block;width:100%;padding:0;border:none;background:none;cursor:pointer;position:relative;aspect-ratio:1;overflow:hidden;font-family:inherit}
+.album-tile-cover{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.45s ease,filter 0.3s}
+.album-tile-shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(7,7,15,0.94) 0%,rgba(7,7,15,0.4) 36%,rgba(7,7,15,0) 60%);transition:opacity 0.3s;pointer-events:none}
+.album-tile-meta{position:absolute;left:0;right:0;bottom:0;padding:0.8rem 0.85rem;display:flex;flex-direction:column;gap:0.1rem;text-align:left;z-index:2;pointer-events:none}
+.album-tile-label{font-size:0.57rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.album-tile-title{font-family:'Cormorant Garamond',serif;font-size:1.02rem;color:var(--white);line-height:1.18}
+.album-tile-mood{font-size:0.68rem;color:var(--muted2);font-style:italic;opacity:0;max-height:0;overflow:hidden;transition:opacity 0.3s,max-height 0.3s}
+.album-tile-play{position:absolute;top:46%;left:50%;width:46px;height:46px;border-radius:50%;background:rgba(139,63,201,0.94);display:flex;align-items:center;justify-content:center;transform:translate(-50%,-50%) scale(0.82);opacity:0;transition:opacity 0.3s,transform 0.3s;z-index:2;box-shadow:0 8px 26px rgba(0,0,0,0.45);pointer-events:none}
+.album-tile-play svg{width:18px;height:18px;margin-left:2px;fill:#fff}
+.album-tile-face:hover .album-tile-cover,.album-tile-face:focus-visible .album-tile-cover{transform:scale(1.06)}
+.album-tile-face:hover .album-tile-play,.album-tile-face:focus-visible .album-tile-play{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.album-tile-face:hover .album-tile-mood,.album-tile-face:focus-visible .album-tile-mood{opacity:1;max-height:2rem}
+.album-tile.open{grid-column:1/-1;border-color:rgba(139,63,201,0.45)}
+.album-tile.open .album-tile-face{display:none}
+.album-tile iframe{display:block;width:100%;border:0}
+.album-tile-close{position:absolute;top:0.5rem;right:0.5rem;z-index:5;width:30px;height:30px;border-radius:50%;border:1px solid var(--border2);background:rgba(7,7,15,0.88);color:var(--muted2);cursor:pointer;font-size:1.05rem;line-height:1;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;transition:all 0.2s}
+.album-tile-close:hover{color:var(--accent-text);border-color:var(--accent)}
+@media(prefers-reduced-motion:reduce){.album-tile-cover{transition:none}}
 
 /* HERO CTA EMPHASIS */
 .hero-ctas .btn-primary{padding:0.95rem 2.25rem;font-size:0.82rem;box-shadow:0 4px 20px var(--platform-primary-glow)}
@@ -441,7 +471,7 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 .mobile-spotify-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:199;background:rgba(7,7,15,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--border);padding:0.75rem var(--pad) calc(0.75rem + env(safe-area-inset-bottom,0px));transform:translateY(100%);opacity:0;transition:transform 0.35s cubic-bezier(0.4,0,0.2,1),opacity 0.35s,bottom 0.25s ease}
 .mobile-spotify-cta.visible{transform:translateY(0);opacity:1}
 .mobile-spotify-cta a{display:flex;align-items:center;justify-content:center;gap:0.6rem;padding:0.9rem;background:var(--platform-primary);color:#fff;text-decoration:none;border-radius:4px;font-size:0.82rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;border:1px solid transparent;box-shadow:0 2px 16px var(--platform-primary-glow);transition:all 0.25s}
-.mobile-spotify-cta a:hover{background:#a050d8;border-color:var(--gold);box-shadow:0 4px 24px rgba(139,63,201,0.4),0 0 14px rgba(200,133,15,0.18)}
+.mobile-spotify-cta a:hover{filter:brightness(1.08);border-color:var(--gold);box-shadow:0 4px 24px var(--platform-primary-glow),0 0 14px rgba(200,133,15,0.18)}
 .mobile-spotify-cta a svg{width:15px;height:15px;fill:currentColor;flex-shrink:0}
 @media(max-width:900px){.mobile-spotify-cta{display:block}}
 @media(min-width:901px){.mobile-spotify-cta{display:none!important}}
@@ -453,11 +483,7 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 
 /* ── Section CTA bar ── */
 .section-cta-bar{padding:3.5rem var(--pad);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;background:linear-gradient(to right,rgba(139,63,201,0.04),transparent)}
-.section-cta-bar--center{justify-content:center;text-align:center;flex-direction:column;gap:1.5rem;padding:4rem var(--pad)}
-.section-cta-bar--center .section-cta-bar-text{font-size:clamp(1.1rem,2.2vw,1.6rem)}
-.section-cta-bar--center .platform-btns-row{display:flex;gap:0.75rem;flex-wrap:wrap;justify-content:center}
-.platform-btn--lg{padding:0.65rem 1.4rem}
-.cookie-link-btn{background:none;border:none;padding:0;color:var(--accent);text-decoration:underline;cursor:pointer;font-family:inherit;font-size:inherit;line-height:inherit}
+.cookie-link-btn{background:none;border:none;padding:0;color:var(--accent-text);text-decoration:underline;cursor:pointer;font-family:inherit;font-size:inherit;line-height:inherit}
 .kofi-btn--gold{background:var(--gold);color:var(--bg)}
 .kofi-btn--gold:hover{background:var(--gold);opacity:0.85;border-color:var(--gold);box-shadow:0 8px 30px rgba(200,133,15,0.3)}
 .section-cta-bar-text{font-family:'Cormorant Garamond',serif;font-size:clamp(1.05rem,2vw,1.35rem);color:var(--muted2);font-style:italic;line-height:1.4}
@@ -477,7 +503,7 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 
 /* ── Choose Your Mood ── */
 .mood-section{margin-top:3.5rem;padding-top:3.5rem;border-top:1px solid var(--border)}
-.mood-section-eyebrow{font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;font-weight:600;display:flex;align-items:center;gap:0.6rem}
+.mood-section-eyebrow{font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent-text);margin-bottom:1.5rem;font-weight:600;display:flex;align-items:center;gap:0.6rem}
 .mood-section-eyebrow::before{content:'';display:block;width:20px;height:1px;background:var(--accent)}
 .mood-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden}
 .mood-card{background:var(--bg);padding:2.25rem 2rem;display:flex;flex-direction:column;text-decoration:none;transition:background 0.2s;position:relative;overflow:hidden}
@@ -489,37 +515,76 @@ body[data-platform="youtube"] .ptog-btn[data-p="youtube"]{background:#CC0000;col
 .mood-card:hover::before{opacity:1}
 .mood-card-num{font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:1.1rem}
 .mood-card-title{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--white);margin-bottom:0.6rem;line-height:1.2}
-.mood-card-desc{font-size:0.83rem;color:var(--muted);line-height:1.75;flex:1;margin-bottom:1.5rem}
-.mood-card-cta{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:0.4rem;transition:gap 0.2s}
+.mood-card-desc{font-size:0.83rem;color:var(--muted2);line-height:1.75;flex:1;margin-bottom:1.5rem}
+.mood-card-cta{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-text);display:inline-flex;align-items:center;gap:0.4rem;transition:gap 0.2s}
 .mood-card:hover .mood-card-cta{gap:0.7rem}
 @media(max-width:900px){.mood-grid{grid-template-columns:1fr}}
-
-/* ── Apple Music unavailable tag ── */
-.album-apple-na{display:none;font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);padding:0.15rem 0.5rem;border:1px solid var(--border);border-radius:3px;margin-left:auto;flex-shrink:0}
-body[data-platform="apple"] .album-apple-na{display:inline-block}
-
-/* ── Album card mood label ── */
-.album-card-mood-row{padding:0.4rem 0.9rem 0;border-bottom:1px solid var(--border)}
-.album-card-mood{font-size:0.67rem;color:var(--muted);font-style:italic;opacity:0.8}
-
-/* ── Mobile album show-more ── */
-@media(max-width:900px){
-  .album-card.mob-hide{display:none}
-  .albums-show-more{display:flex;align-items:center;justify-content:center;gap:0.5rem;width:100%;padding:1.1rem;background:var(--surface);border:1px solid var(--border);border-radius:10px;cursor:pointer;color:var(--muted2);font-size:0.8rem;letter-spacing:0.09em;text-transform:uppercase;font-family:'Inter',sans-serif;transition:all 0.2s;margin-top:0}
-  .albums-show-more:hover{color:var(--text);border-color:var(--accent)}
-}
-@media(min-width:901px){.albums-show-more{display:none}}
 
 /* ── Merch teaser card ── */
 .merch-card{background:var(--surface);border:1px solid var(--border2);border-radius:8px;padding:2.5rem;position:relative;overflow:hidden;margin-bottom:1.5rem}
 .merch-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--gold) 50%,transparent);opacity:0.6}
-.merch-card-eyebrow{font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;opacity:0.8}
+.merch-card-eyebrow{font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem}
 .merch-card h3{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--white);margin-bottom:0.65rem;line-height:1.3}
 .merch-card p{font-size:0.85rem;color:var(--muted2);line-height:1.85;margin-bottom:1.75rem}
 
 /* ── Hero trust line ── */
-.hero-trust{font-size:0.7rem;letter-spacing:0.08em;color:var(--muted);margin-top:1rem;opacity:0.7}
-.hero-trust span{color:var(--accent);opacity:0.9}
+.hero-trust{font-size:0.7rem;letter-spacing:0.08em;color:var(--muted);margin-top:1rem}
+.hero-trust span{color:var(--accent-text);opacity:0.9}
+
+/* ══ DESIGN REFRESH ══ */
+/* ── Section rhythm: alternating surface ── */
+.section--alt{background:linear-gradient(to bottom,var(--surface),var(--bg) 90%)}
+.section--alt::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--accent) 50%,transparent);opacity:0.25}
+.section{position:relative}
+
+/* ── Bolder accent: eyebrow rule + heading kicker ── */
+.eyebrow::before{width:34px;height:2px;background:linear-gradient(to right,var(--gold),var(--accent))}
+.eyebrow{color:var(--gold)}
+
+/* ── Story readability ── */
+#story .story-left p{color:#b9b3cf}
+#story .story-left h2{position:relative}
+
+/* ── Brand world atmosphere ── */
+.world-section{background:radial-gradient(120% 120% at 85% 15%,rgba(139,63,201,0.10),transparent 55%),var(--bg)}
+.world-section::after{content:'';position:absolute;right:-60px;bottom:-80px;width:340px;height:340px;background:url("Logo.webp") center/contain no-repeat;opacity:0.05;pointer-events:none;filter:grayscale(0.3)}
+@media(max-width:700px){.world-section::after{display:none}}
+
+/* ── Hero play (one-tap, on-page) ── */
+#hero-play-btn{cursor:pointer;font-family:'Inter',sans-serif}
+#hero-play-btn .play-tri{width:0;height:0;border-style:solid;border-width:6px 0 6px 10px;border-color:transparent transparent transparent currentColor;flex-shrink:0}
+
+/* ── Latest release glow when targeted by hero play ── */
+.lr-strip.lr-flash{animation:lr-flash 1.6s ease-out}
+@keyframes lr-flash{0%{box-shadow:0 0 0 0 rgba(200,133,15,0.0)}25%{box-shadow:0 0 0 2px rgba(200,133,15,0.35),0 0 40px rgba(200,133,15,0.18)}100%{box-shadow:0 0 0 0 rgba(200,133,15,0)}}
+
+/* ── Hero atmospheric vignette (depth) ── */
+.hero::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;background:radial-gradient(125% 95% at 50% 28%,transparent 52%,rgba(0,0,0,0.5) 100%)}
+.hero-bg{will-change:transform}
+
+/* ── Now-playing equalizer ── */
+.eq{display:inline-flex;align-items:flex-end;gap:2px;height:10px}
+.eq i{display:block;width:2px;background:currentColor;border-radius:1px;animation:eq-b 1.05s ease-in-out infinite}
+.eq i:nth-child(1){height:40%;animation-delay:-0.2s}
+.eq i:nth-child(2){height:100%;animation-delay:-0.5s}
+.eq i:nth-child(3){height:60%}
+@keyframes eq-b{0%,100%{transform:scaleY(0.4)}50%{transform:scaleY(1)}}
+@media(prefers-reduced-motion:reduce){.eq i{animation:none}}
+
+/* ── Hero brand-gradient accent ── */
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .hero h1 em{background:linear-gradient(108deg,var(--gold) 0%,var(--accent) 70%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+}
+
+/* ── Hero scroll cue ── */
+.scroll-cue{position:absolute;bottom:1.6rem;left:50%;transform:translateX(-50%);z-index:1;display:flex;flex-direction:column;align-items:center;gap:0.4rem;color:var(--muted);text-decoration:none;transition:opacity 0.4s,color 0.2s,transform 0.2s}
+.scroll-cue:hover{color:var(--text);opacity:1}
+.scroll-cue.hide{opacity:0;pointer-events:none}
+.scroll-cue-label{font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase}
+.scroll-cue svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;animation:cue-bob 2.2s ease-in-out infinite}
+@keyframes cue-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+@media(max-width:900px){.scroll-cue{display:none}}
+@media(prefers-reduced-motion:reduce){.scroll-cue svg{animation:none}.lr-strip.lr-flash{animation:none}}
 </style>
 </head>
 <body>
@@ -534,6 +599,8 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
 </defs></svg>
 
 <div id="progress"></div>
+
+<a href="#main" class="skip-link">Skip to content</a>
 
 <!-- NAV -->
 <nav id="nav">
@@ -601,7 +668,7 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
   </div>
 </div>
 
-<main>
+<main id="main" tabindex="-1">
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-bg">
@@ -615,18 +682,18 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
     <div class="hero-text">
       <div class="hero-badge reveal">
         <div class="badge-dot"></div>
-        <span>Self-released · Munich · Lo-fi</span>
+        <span>New album — Quiet Chaos</span>
       </div>
       <h1 class="reveal d1">Kaisos turns quiet moments into <em>lo-fi worlds.</em></h1>
-      <p class="hero-sub reveal d2">Six self-released albums from Munich — made in private, for the hours when everything else gets too loud.</p>
+      <p class="hero-sub reveal d2">Eight self-released records from Munich — lo-fi for deep focus, late nights, and the hours when everything else gets too loud.</p>
       <div class="hero-ctas reveal d3">
-        <a href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" class="btn-primary" id="hero-listen-btn" target="_blank" rel="noopener" aria-label="Listen now on Spotify">
-          <svg id="hero-listen-icon" viewBox="0 0 24 24"><use href="#ico-spotify"/></svg>
-          <span id="hero-listen-label">Listen Now</span>
-        </a>
+        <button type="button" class="btn-primary" id="hero-play-btn" aria-label="Play the latest release on this page">
+          <span class="play-tri"></span>
+          <span>Hear the Sound</span>
+        </button>
         <a href="#world" class="btn-outline-gold">Enter the World →</a>
       </div>
-      <p class="hero-trust">Self-released from Munich · <span>6 albums</span> · <span>55K+ YouTube subscribers</span></p>
+      <p class="hero-trust">Self-released from Munich · <span>8 releases</span> · <span>55K+ YouTube subscribers</span></p>
     </div>
     <div class="hero-photo-wrap reveal d2">
       <div class="hero-photo-outer">
@@ -649,6 +716,10 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
       </div>
     </div>
   </div>
+  <a href="#latest" class="scroll-cue" aria-label="Scroll to latest release">
+    <span class="scroll-cue-label">Scroll</span>
+    <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+  </a>
 </section>
 
 <!-- PLATFORM SELECTOR -->
@@ -668,27 +739,27 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
 </div>
 
 <!-- LATEST RELEASE -->
-<div class="lr-strip">
+<div class="lr-strip" id="latest">
   <div class="lr-wrap">
     <div class="reveal">
       <div class="lr-badge"><span class="badge-dot"></span> Latest Release</div>
-      <h2 class="lr-title">Purple Gold</h2>
-      <p class="lr-sub">Dark energy, heavy bass, raw hip-hop. A new direction from the same world.</p>
-      <a href="https://open.spotify.com/album/0Vhoh9SYaNQ5IFcKuEj8s3"
+      <h2 class="lr-title">Quiet Chaos</h2>
+      <p class="lr-sub">Late-night lo-fi for the calm inside the noise — the newest room in the same world.</p>
+      <a href="https://open.spotify.com/album/4e6gK5CEZqllYvsjWDY3Pl"
          id="lr-listen-btn"
-         data-spotify="https://open.spotify.com/album/0Vhoh9SYaNQ5IFcKuEj8s3"
-         data-apple="https://music.apple.com/us/song/purple-gold/6772434750"
+         data-spotify="https://open.spotify.com/album/4e6gK5CEZqllYvsjWDY3Pl"
+         data-apple="https://music.apple.com/us/album/quiet-chaos/6773957574"
          data-youtube="https://youtube.com/@LofiKaisos"
-         class="btn-primary" target="_blank" rel="noopener" aria-label="Listen to Purple Gold">
+         class="btn-primary" target="_blank" rel="noopener" aria-label="Listen to Quiet Chaos">
         <svg viewBox="0 0 24 24" id="lr-listen-icon"><use href="#ico-spotify"/></svg>
         Listen Now
       </a>
       <div class="lr-plat-row">
-        <a class="lr-plat-btn" href="https://open.spotify.com/album/0Vhoh9SYaNQ5IFcKuEj8s3" target="_blank" rel="noopener">
+        <a class="lr-plat-btn" href="https://open.spotify.com/album/4e6gK5CEZqllYvsjWDY3Pl" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
           Spotify
         </a>
-        <a class="lr-plat-btn" href="https://music.apple.com/us/song/purple-gold/6772434750" target="_blank" rel="noopener">
+        <a class="lr-plat-btn" href="https://music.apple.com/us/album/quiet-chaos/6773957574" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
           Apple Music
         </a>
@@ -699,7 +770,7 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
       </div>
     </div>
     <div class="lr-embed reveal d1">
-      <iframe data-src="https://open.spotify.com/embed/album/0Vhoh9SYaNQ5IFcKuEj8s3?utm_source=generator&theme=0" data-spotify="https://open.spotify.com/embed/album/0Vhoh9SYaNQ5IFcKuEj8s3?utm_source=generator&theme=0" data-apple="https://embed.music.apple.com/us/song/purple-gold/6772434750" data-youtube="" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Kaisos — Purple Gold"></iframe>
+      <iframe data-src="https://open.spotify.com/embed/album/4e6gK5CEZqllYvsjWDY3Pl?utm_source=generator&theme=0" data-spotify="https://open.spotify.com/embed/album/4e6gK5CEZqllYvsjWDY3Pl?utm_source=generator&theme=0" data-apple="https://embed.music.apple.com/us/album/quiet-chaos/6773957574" data-youtube="" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Kaisos — Quiet Chaos"></iframe>
     </div>
   </div>
 </div>
@@ -707,16 +778,16 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
 <!-- STATS STRIP -->
 <div class="stats-strip">
   <div class="stat-item reveal">
-    <div class="stat-value" id="yt-count" data-target="55">0K+</div>
+    <div class="stat-value" id="yt-count" data-target="55">55K+</div>
     <div class="stat-label">YouTube Subscribers</div>
   </div>
   <div class="stat-item reveal d1">
-    <div class="stat-value">7</div>
+    <div class="stat-value">8</div>
     <div class="stat-label">Releases</div>
   </div>
   <div class="stat-item reveal d2">
-    <div class="stat-value">Munich</div>
-    <div class="stat-label">Based in Germany</div>
+    <div class="stat-value">2024</div>
+    <div class="stat-label">Active Since</div>
   </div>
 </div>
 
@@ -742,7 +813,7 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
   <div class="inner">
     <div class="eyebrow reveal">Music</div>
     <div class="listen-intro reveal">
-      <h2>Seven releases of lo-fi.</h2>
+      <h2>Eight releases of lo-fi.</h2>
       <div class="music-platform-toggle">
         <span class="music-platform-label">Stream on</span>
         <div class="platform-toggle" id="platform-toggle" role="group" aria-label="Choose streaming platform">
@@ -772,65 +843,135 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
       ></iframe>
     </div>
     <div class="albums-grid">
-      <div class="album-card reveal">
-        <div class="album-card-header">
-          <span class="album-card-label">Latest · Single</span>
-          <span class="album-card-name">Purple Gold</span>
-        </div>
-        <div class="album-card-mood-row"><span class="album-card-mood">Dark trap · hip-hop</span></div>
-        <iframe data-src="https://open.spotify.com/embed/album/0Vhoh9SYaNQ5IFcKuEj8s3?utm_source=generator&theme=0" data-spotify="https://open.spotify.com/embed/album/0Vhoh9SYaNQ5IFcKuEj8s3?utm_source=generator&theme=0" data-apple="https://embed.music.apple.com/us/song/purple-gold/6772434750" data-youtube="" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Purple Gold"></iframe>
+      <div class="album-tile reveal"
+        data-spotify="https://open.spotify.com/embed/album/4e6gK5CEZqllYvsjWDY3Pl?utm_source=generator&theme=0"
+        data-apple="https://embed.music.apple.com/us/album/quiet-chaos/6773957574"
+        data-youtube=""
+        data-title="Quiet Chaos">
+        <button type="button" class="album-tile-face" aria-label="Play Quiet Chaos">
+          <picture><source srcset="covers/quiet-chaos.webp" type="image/webp"/><img class="album-tile-cover" src="covers/quiet-chaos.webp" alt="Quiet Chaos — album cover" width="600" height="600" loading="lazy" decoding="async"/></picture>
+          <span class="album-tile-shade"></span>
+          <span class="album-tile-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="album-tile-meta">
+            <span class="album-tile-label">Latest · Album</span>
+            <span class="album-tile-title">Quiet Chaos</span>
+            <span class="album-tile-mood">Calm inside the noise</span>
+          </span>
+        </button>
       </div>
-      <div class="album-card reveal d1">
-        <div class="album-card-header">
-          <span class="album-card-label">Special</span>
-          <span class="album-card-name">Lofi Kaisos Special</span>
-        </div>
-        <div class="album-card-mood-row"><span class="album-card-mood">Late-night focus</span></div>
-        <iframe data-src="https://open.spotify.com/embed/album/67OMy0DOFbt4Y5iTbL4lnE?utm_source=generator&theme=0" data-spotify="https://open.spotify.com/embed/album/67OMy0DOFbt4Y5iTbL4lnE?utm_source=generator&theme=0" data-apple="https://embed.music.apple.com/us/album/lofi-kaisos-special/1768802069" data-youtube="https://www.youtube.com/embed/Yjr_UgeBxWE" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Special Release"></iframe>
+      <div class="album-tile reveal d1"
+        data-spotify="https://open.spotify.com/embed/album/0Vhoh9SYaNQ5IFcKuEj8s3?utm_source=generator&theme=0"
+        data-apple="https://embed.music.apple.com/us/song/purple-gold/6772434750"
+        data-youtube=""
+        data-title="Purple Gold">
+        <button type="button" class="album-tile-face" aria-label="Play Purple Gold">
+          <picture><source srcset="covers/purple-gold.webp" type="image/webp"/><img class="album-tile-cover" src="covers/purple-gold.webp" alt="Purple Gold — single cover" width="600" height="600" loading="lazy" decoding="async"/></picture>
+          <span class="album-tile-shade"></span>
+          <span class="album-tile-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="album-tile-meta">
+            <span class="album-tile-label">Single</span>
+            <span class="album-tile-title">Purple Gold</span>
+            <span class="album-tile-mood">Dark trap · hip-hop</span>
+          </span>
+        </button>
       </div>
-      <div class="album-card reveal d2">
-        <div class="album-card-header">
-          <span class="album-card-label">Vol. 5</span>
-          <span class="album-card-name">Lofi Kaisos Vol. 5</span>
-          <span class="album-apple-na">Not on Apple Music</span>
-        </div>
-        <div class="album-card-mood-row"><span class="album-card-mood">Calm study beats</span></div>
-        <iframe data-src="https://open.spotify.com/embed/album/0sm4rH9Bv1VJ5r8hTaFDfz?utm_source=generator&theme=0" data-spotify="https://open.spotify.com/embed/album/0sm4rH9Bv1VJ5r8hTaFDfz?utm_source=generator&theme=0" data-youtube="https://www.youtube.com/embed/N02MDMs_q0Y" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Lofi Kaisos Vol. 5"></iframe>
+      <div class="album-tile reveal d1"
+        data-spotify="https://open.spotify.com/embed/album/67OMy0DOFbt4Y5iTbL4lnE?utm_source=generator&theme=0"
+        data-apple="https://embed.music.apple.com/us/album/lofi-kaisos-special/1768802069"
+        data-youtube="https://www.youtube.com/embed/Yjr_UgeBxWE"
+        data-title="Lofi Kaisos Special">
+        <button type="button" class="album-tile-face" aria-label="Play Lofi Kaisos Special">
+          <picture><source srcset="covers/special.webp" type="image/webp"/><img class="album-tile-cover" src="covers/special.webp" alt="Lofi Kaisos Special — album cover" width="600" height="600" loading="lazy" decoding="async"/></picture>
+          <span class="album-tile-shade"></span>
+          <span class="album-tile-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="album-tile-meta">
+            <span class="album-tile-label">Special</span>
+            <span class="album-tile-title">Lofi Kaisos Special</span>
+            <span class="album-tile-mood">Late-night focus</span>
+          </span>
+        </button>
       </div>
-      <div class="album-card reveal d2">
-        <div class="album-card-header">
-          <span class="album-card-label">Vol. 4</span>
-          <span class="album-card-name">Lofi Kaisos Vol. 4</span>
-        </div>
-        <div class="album-card-mood-row"><span class="album-card-mood">Dreamy textures</span></div>
-        <iframe data-src="https://open.spotify.com/embed/album/49c8g3dFdDOS8aezK0ltDb?utm_source=generator&theme=0" data-spotify="https://open.spotify.com/embed/album/49c8g3dFdDOS8aezK0ltDb?utm_source=generator&theme=0" data-apple="https://embed.music.apple.com/us/album/lofi-kaisos-vol-4/1756205758" data-youtube="https://www.youtube.com/embed/FoTLqmSQ6rU" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Lofi Kaisos Vol. 4"></iframe>
+      <div class="album-tile reveal d2"
+        data-spotify="https://open.spotify.com/embed/album/0sm4rH9Bv1VJ5r8hTaFDfz?utm_source=generator&theme=0"
+        data-apple=""
+        data-youtube="https://www.youtube.com/embed/N02MDMs_q0Y"
+        data-title="Lofi Kaisos Vol. 5">
+        <button type="button" class="album-tile-face" aria-label="Play Lofi Kaisos Vol. 5">
+          <picture><source srcset="covers/vol5.webp" type="image/webp"/><img class="album-tile-cover" src="covers/vol5.webp" alt="Lofi Kaisos Vol. 5 — album cover" width="600" height="600" loading="lazy" decoding="async"/></picture>
+          <span class="album-tile-shade"></span>
+          <span class="album-tile-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="album-tile-meta">
+            <span class="album-tile-label">Vol. 5</span>
+            <span class="album-tile-title">Lofi Kaisos Vol. 5</span>
+            <span class="album-tile-mood">Calm study beats</span>
+          </span>
+        </button>
       </div>
-      <div class="album-card reveal mob-hide">
-        <div class="album-card-header">
-          <span class="album-card-label">Vol. 3</span>
-          <span class="album-card-name">Lofi Kaisos Vol. 3</span>
-        </div>
-        <div class="album-card-mood-row"><span class="album-card-mood">Soft melancholy</span></div>
-        <iframe data-src="https://open.spotify.com/embed/album/3bcGnK12xEytemEmjFGH86?utm_source=generator&theme=0" data-spotify="https://open.spotify.com/embed/album/3bcGnK12xEytemEmjFGH86?utm_source=generator&theme=0" data-apple="https://embed.music.apple.com/us/album/lofi-kaisos-vol-3/1738116842" data-youtube="https://www.youtube.com/embed/-9b__6G67_c" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Lofi Kaisos Vol. 3"></iframe>
+      <div class="album-tile reveal d3"
+        data-spotify="https://open.spotify.com/embed/album/49c8g3dFdDOS8aezK0ltDb?utm_source=generator&theme=0"
+        data-apple="https://embed.music.apple.com/us/album/lofi-kaisos-vol-4/1756205758"
+        data-youtube="https://www.youtube.com/embed/FoTLqmSQ6rU"
+        data-title="Lofi Kaisos Vol. 4">
+        <button type="button" class="album-tile-face" aria-label="Play Lofi Kaisos Vol. 4">
+          <picture><source srcset="covers/vol4.webp" type="image/webp"/><img class="album-tile-cover" src="covers/vol4.webp" alt="Lofi Kaisos Vol. 4 — album cover" width="600" height="600" loading="lazy" decoding="async"/></picture>
+          <span class="album-tile-shade"></span>
+          <span class="album-tile-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="album-tile-meta">
+            <span class="album-tile-label">Vol. 4</span>
+            <span class="album-tile-title">Lofi Kaisos Vol. 4</span>
+            <span class="album-tile-mood">Dreamy textures</span>
+          </span>
+        </button>
       </div>
-      <div class="album-card reveal d1 mob-hide">
-        <div class="album-card-header">
-          <span class="album-card-label">Vol. 2</span>
-          <span class="album-card-name">Lofi Kaisos Vol. 2</span>
-        </div>
-        <div class="album-card-mood-row"><span class="album-card-mood">Quiet focus</span></div>
-        <iframe data-src="https://open.spotify.com/embed/album/1G9pQYYIS1hZEqu0hieCyE?utm_source=generator&theme=0" data-spotify="https://open.spotify.com/embed/album/1G9pQYYIS1hZEqu0hieCyE?utm_source=generator&theme=0" data-apple="https://embed.music.apple.com/us/album/lofi-kaisos-vol-2/1735069982" data-youtube="https://www.youtube.com/embed/LE8U85EA7G4" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Lofi Kaisos Vol. 2"></iframe>
+      <div class="album-tile reveal"
+        data-spotify="https://open.spotify.com/embed/album/3bcGnK12xEytemEmjFGH86?utm_source=generator&theme=0"
+        data-apple="https://embed.music.apple.com/us/album/lofi-kaisos-vol-3/1738116842"
+        data-youtube="https://www.youtube.com/embed/-9b__6G67_c"
+        data-title="Lofi Kaisos Vol. 3">
+        <button type="button" class="album-tile-face" aria-label="Play Lofi Kaisos Vol. 3">
+          <picture><source srcset="covers/vol3.webp" type="image/webp"/><img class="album-tile-cover" src="covers/vol3.webp" alt="Lofi Kaisos Vol. 3 — album cover" width="600" height="600" loading="lazy" decoding="async"/></picture>
+          <span class="album-tile-shade"></span>
+          <span class="album-tile-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="album-tile-meta">
+            <span class="album-tile-label">Vol. 3</span>
+            <span class="album-tile-title">Lofi Kaisos Vol. 3</span>
+            <span class="album-tile-mood">Soft melancholy</span>
+          </span>
+        </button>
       </div>
-      <div class="album-card reveal d2 mob-hide">
-        <div class="album-card-header">
-          <span class="album-card-label">Vol. 1</span>
-          <span class="album-card-name">Lofi Kaisos Vol. 1</span>
-        </div>
-        <div class="album-card-mood-row"><span class="album-card-mood">Where it began</span></div>
-        <iframe data-src="https://open.spotify.com/embed/album/0EQS01PkeiRoi9zaeVDtt7?utm_source=generator&theme=0" data-spotify="https://open.spotify.com/embed/album/0EQS01PkeiRoi9zaeVDtt7?utm_source=generator&theme=0" data-apple="https://embed.music.apple.com/us/album/lofi-kaisos-vol-1/1735055810" data-youtube="https://www.youtube.com/embed/qZ1g6cxGZRw" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Lofi Kaisos Vol. 1"></iframe>
+      <div class="album-tile reveal d1"
+        data-spotify="https://open.spotify.com/embed/album/1G9pQYYIS1hZEqu0hieCyE?utm_source=generator&theme=0"
+        data-apple="https://embed.music.apple.com/us/album/lofi-kaisos-vol-2/1735069982"
+        data-youtube="https://www.youtube.com/embed/LE8U85EA7G4"
+        data-title="Lofi Kaisos Vol. 2">
+        <button type="button" class="album-tile-face" aria-label="Play Lofi Kaisos Vol. 2">
+          <picture><source srcset="covers/vol2.webp" type="image/webp"/><img class="album-tile-cover" src="covers/vol2.webp" alt="Lofi Kaisos Vol. 2 — album cover" width="600" height="600" loading="lazy" decoding="async"/></picture>
+          <span class="album-tile-shade"></span>
+          <span class="album-tile-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="album-tile-meta">
+            <span class="album-tile-label">Vol. 2</span>
+            <span class="album-tile-title">Lofi Kaisos Vol. 2</span>
+            <span class="album-tile-mood">Quiet focus</span>
+          </span>
+        </button>
+      </div>
+      <div class="album-tile reveal d2"
+        data-spotify="https://open.spotify.com/embed/album/0EQS01PkeiRoi9zaeVDtt7?utm_source=generator&theme=0"
+        data-apple="https://embed.music.apple.com/us/album/lofi-kaisos-vol-1/1735055810"
+        data-youtube="https://www.youtube.com/embed/qZ1g6cxGZRw"
+        data-title="Lofi Kaisos Vol. 1">
+        <button type="button" class="album-tile-face" aria-label="Play Lofi Kaisos Vol. 1">
+          <picture><source srcset="covers/vol1.webp" type="image/webp"/><img class="album-tile-cover" src="covers/vol1.webp" alt="Lofi Kaisos Vol. 1 — album cover" width="600" height="600" loading="lazy" decoding="async"/></picture>
+          <span class="album-tile-shade"></span>
+          <span class="album-tile-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="album-tile-meta">
+            <span class="album-tile-label">Vol. 1</span>
+            <span class="album-tile-title">Lofi Kaisos Vol. 1</span>
+            <span class="album-tile-mood">Where it began</span>
+          </span>
+        </button>
       </div>
     </div>
-    <button type="button" class="albums-show-more" id="albums-show-more">Show all 7 releases ↓</button>
     <!-- CHOOSE YOUR MOOD -->
     <div class="mood-section reveal">
       <div class="mood-section-eyebrow">Choose your mood</div>
@@ -887,7 +1028,7 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
 
 
 <!-- STORY -->
-<section class="section" id="story">
+<section class="section section--alt" id="story">
   <div class="inner">
     <div class="eyebrow reveal">The story</div>
     <div class="story-grid">
@@ -927,19 +1068,13 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
           <div class="chapter-num">04</div>
           <div class="chapter-body">
             <h3>Now</h3>
-            <p>Making music at the pace of real life. Imperfect, evolving, and entirely my own. Six volumes in — and this is only the beginning.</p>
+            <p>Making music at the pace of real life. Imperfect, evolving, and entirely my own. Eight releases in — and this is only the beginning.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- CTA: LISTEN -->
-<div class="section-cta-bar">
-  <p class="section-cta-bar-text">The music says it better than the story can. <em>Press play.</em></p>
-  <a href="#music" class="btn-outline-gold">Listen to the sound →</a>
-</div>
 
 <!-- GEAR -->
 <section class="section" id="gear">
@@ -979,7 +1114,7 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
 </div>
 
 <!-- CONNECT -->
-<section class="section" id="connect">
+<section class="section section--alt" id="connect">
   <div class="inner">
     <div class="eyebrow reveal">Connect</div>
     <div class="connect-grid">
@@ -1039,25 +1174,6 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
 </section>
 
 </main>
-
-<!-- PRE-FOOTER CTA -->
-<div class="section-cta-bar section-cta-bar--center">
-  <p class="section-cta-bar-text"><em>Choose where you want to listen.</em></p>
-  <div class="platform-btns-row">
-    <a href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" class="platform-btn platform-btn--lg" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><use href="#ico-spotify"/></svg>
-      Spotify
-    </a>
-    <a href="https://music.apple.com/us/artist/kaisos/1735054792" class="platform-btn platform-btn--lg" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><use href="#ico-apple"/></svg>
-      Apple Music
-    </a>
-    <a href="https://youtube.com/@LofiKaisos" class="platform-btn platform-btn--lg" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><use href="#ico-youtube"/></svg>
-      YouTube
-    </a>
-  </div>
-</div>
 
 <!-- FOOTER -->
 <footer>
@@ -1123,7 +1239,7 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
 
 <!-- COOKIE NOTICE -->
 <div class="cookie-notice hidden" id="cookie-notice" role="region" aria-label="Cookie consent" aria-live="polite">
-  <p>This site embeds Spotify players. Loading them may set third-party cookies. <button type="button" class="cookie-link-btn" onclick="openModal('privacy')">Privacy Policy</button></p>
+  <p>This site embeds music players (Spotify, Apple Music, YouTube). Loading them may set third-party cookies. <button type="button" class="cookie-link-btn" onclick="openModal('privacy')">Privacy Policy</button></p>
   <div class="cookie-btns">
     <button type="button" class="cookie-accept" id="cookie-accept">Accept</button>
     <button type="button" class="cookie-decline" id="cookie-decline">Decline</button>
@@ -1165,12 +1281,17 @@ body[data-platform="apple"] .album-apple-na{display:inline-block}
 </div>
 
 <script>
-// Scroll progress bar
+// Scroll progress bar — rAF-throttled
 const progress = document.getElementById('progress');
+let _rafProg = null;
 window.addEventListener('scroll', () => {
-  const scrollable = document.body.scrollHeight - window.innerHeight;
-  const pct = scrollable > 0 ? window.scrollY / scrollable : 0;
-  progress.style.width = (pct * 100) + '%';
+  if (_rafProg) return;
+  _rafProg = requestAnimationFrame(() => {
+    const scrollable = document.body.scrollHeight - window.innerHeight;
+    const pct = scrollable > 0 ? window.scrollY / scrollable : 0;
+    progress.style.width = (pct * 100) + '%';
+    _rafProg = null;
+  });
 }, { passive: true });
 
 // Nav border on scroll
@@ -1220,22 +1341,83 @@ function updateActiveNav() {
     a.classList.toggle('active', a.getAttribute('href') === '#' + current);
   });
 }
-window.addEventListener('scroll', updateActiveNav, { passive: true });
+let _rafNav = null;
+window.addEventListener('scroll', () => {
+  if (_rafNav) return;
+  _rafNav = requestAnimationFrame(() => { updateActiveNav(); _rafNav = null; });
+}, { passive: true });
 updateActiveNav();
 
 
-// ── YOUTUBE SUBSCRIBER COUNT ──
+// ── YOUTUBE SUBSCRIBER COUNT — animate on first enter ──
 const ytCount = document.getElementById('yt-count');
-if (ytCount) ytCount.textContent = ytCount.dataset.target + 'K+';
-
-// ── MOBILE ALBUM SHOW ALL ──
-const showMoreBtn = document.getElementById('albums-show-more');
-if (showMoreBtn) {
-  showMoreBtn.addEventListener('click', () => {
-    document.querySelectorAll('.album-card.mob-hide').forEach(el => el.classList.remove('mob-hide'));
-    showMoreBtn.remove();
-  });
+if (ytCount && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const target = parseInt(ytCount.dataset.target, 10);
+  ytCount.textContent = '0K+';
+  let animated = false;
+  const countObs = new IntersectionObserver((entries) => {
+    if (!animated && entries[0].isIntersecting) {
+      animated = true;
+      countObs.disconnect();
+      const dur = 1400, start = performance.now();
+      const tick = (now) => {
+        const pct = Math.min((now - start) / dur, 1);
+        const ease = 1 - Math.pow(1 - pct, 3);
+        ytCount.textContent = Math.round(ease * target) + 'K+';
+        if (pct < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }
+  }, { threshold: 0.5 });
+  countObs.observe(ytCount);
 }
+
+// ── DISCOGRAPHY FACADE — covers expand into one inline player on click ──
+let openAlbumTile = null;
+const ALBUM_OPEN_H = { spotify: 352, apple: 450, youtube: 315 };
+function closeAlbumTile() {
+  if (!openAlbumTile) return;
+  openAlbumTile.querySelectorAll('iframe, .album-tile-close').forEach(el => el.remove());
+  openAlbumTile.classList.remove('open');
+  openAlbumTile = null;
+}
+function toggleAlbumTile(tile) {
+  if (openAlbumTile === tile) { closeAlbumTile(); return; }
+  const platform = document.body.dataset.platform || 'spotify';
+  const embed = tile.dataset[platform];
+  if (!embed) {
+    const cfg = PLATFORM_CFG[platform] || PLATFORM_CFG.spotify;
+    window.open(cfg.artistUrl, '_blank', 'noopener');
+    return;
+  }
+  closeAlbumTile();
+  lsSet('cookie-ok', '1');
+  cookieNotice.classList.add('hidden');
+  const attrs = PLATFORM_EMBED_ATTRS[platform] || PLATFORM_EMBED_ATTRS.spotify;
+  const iframe = document.createElement('iframe');
+  iframe.src = embed;
+  iframe.height = ALBUM_OPEN_H[platform] || 352;
+  iframe.loading = 'lazy';
+  iframe.setAttribute('frameborder', '0');
+  iframe.setAttribute('allow', attrs.allow);
+  if (attrs.sandbox) iframe.setAttribute('sandbox', attrs.sandbox);
+  if (attrs.referrerpolicy) iframe.setAttribute('referrerpolicy', attrs.referrerpolicy);
+  if (attrs.allowfullscreen) iframe.setAttribute('allowfullscreen', '');
+  iframe.title = (tile.dataset.title || 'Album') + ' player';
+  const close = document.createElement('button');
+  close.type = 'button';
+  close.className = 'album-tile-close';
+  close.setAttribute('aria-label', 'Close player');
+  close.textContent = '×';
+  close.addEventListener('click', e => { e.stopPropagation(); closeAlbumTile(); });
+  tile.classList.add('open');
+  tile.append(iframe, close);
+  openAlbumTile = tile;
+  syncMobileCta();
+}
+document.querySelectorAll('.album-tile .album-tile-face').forEach(face => {
+  face.addEventListener('click', () => toggleAlbumTile(face.closest('.album-tile')));
+});
 
 // ── SAFE LOCALSTORAGE ──
 function lsGet(k){try{return localStorage.getItem(k)}catch(e){return null}}
@@ -1249,11 +1431,11 @@ function initPlaceholders() {
   document.querySelectorAll('iframe[data-src]').forEach(frame => {
     const ph = document.createElement('div');
     ph.className = 'embed-ph';
-    ph.innerHTML = MUSIC_ICON + '<span class="embed-ph-text">Spotify player</span><button type="button" class="embed-ph-btn">Load player →</button>';
+    ph.innerHTML = MUSIC_ICON + '<span class="embed-ph-text">Music player</span><button type="button" class="embed-ph-btn">Load player →</button>';
     ph.querySelector('.embed-ph-btn').addEventListener('click', () => {
       lsSet('cookie-ok', '1');
       cookieNotice.classList.add('hidden');
-      loadEmbeds();
+      loadOne(frame);
       syncMobileCta();
     });
     frame.after(ph);
@@ -1268,12 +1450,16 @@ function showDeclinedFallbacks() {
 }
 
 function loadEmbeds() {
-  document.querySelectorAll('iframe[data-src]').forEach(f => {
-    f.src = f.dataset.src;
-    f.removeAttribute('data-src');
-    const ph = f.nextElementSibling;
-    if (ph && ph.classList.contains('embed-ph')) ph.remove();
-  });
+  document.querySelectorAll('iframe[data-src]').forEach(loadOne);
+}
+
+// Load a single embed on demand (perf — avoids spinning up all 7 iframes at once)
+function loadOne(frame) {
+  if (!frame || !frame.dataset.src) return;
+  frame.src = frame.dataset.src;
+  frame.removeAttribute('data-src');
+  const ph = frame.nextElementSibling;
+  if (ph && ph.classList.contains('embed-ph')) ph.remove();
 }
 
 
@@ -1298,8 +1484,6 @@ const PLATFORM_CFG = {
     iconId: 'ico-youtube'
   }
 };
-
-const PENDING_ICON = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>`;
 
 const PLATFORM_EMBED_ATTRS = {
   spotify: {
@@ -1340,17 +1524,11 @@ function applyPlatform(platform) {
   document.body.dataset.platform = platform;
 
   // Toggle active state (both desktop + drawer)
-  document.querySelectorAll('.ptog-btn').forEach(b =>
-    b.classList.toggle('active', b.dataset.p === platform)
-  );
-
-  // Hero button
-  const heroBtn   = document.getElementById('hero-listen-btn');
-  const heroIcon  = document.getElementById('hero-listen-icon');
-  const heroLabel = document.getElementById('hero-listen-label');
-  if (heroBtn)    { heroBtn.href = cfg.artistUrl; heroBtn.setAttribute('aria-label', label); }
-  if (heroIcon)   heroIcon.innerHTML = `<use href="#${cfg.iconId}"/>`;
-  if (heroLabel)  { heroLabel.textContent = label; }
+  document.querySelectorAll('.ptog-btn').forEach(b => {
+    const on = b.dataset.p === platform;
+    b.classList.toggle('active', on);
+    b.setAttribute('aria-pressed', String(on));
+  });
 
   // Mobile sticky CTA
   const mobileBtn   = document.getElementById('mobile-listen-btn');
@@ -1359,18 +1537,6 @@ function applyPlatform(platform) {
   if (mobileBtn)   { mobileBtn.href = cfg.artistUrl; mobileBtn.setAttribute('aria-label', label); }
   if (mobileIcon)  mobileIcon.innerHTML = `<use href="#${cfg.iconId}"/>`;
   if (mobileLabel) mobileLabel.textContent = label;
-
-  // "View all" link in music section
-  const viewAllLink = document.querySelector('.listen-intro .link-arrow');
-  if (viewAllLink) {
-    viewAllLink.href = cfg.artistUrl;
-    const viewAllLabels = {
-      spotify: 'View all on Spotify →',
-      apple:   'View all on Apple Music →',
-      youtube: 'View all on YouTube →'
-    };
-    viewAllLink.textContent = viewAllLabels[platform];
-  }
 
   // Latest release listen button
   const lrBtn  = document.getElementById('lr-listen-btn');
@@ -1399,7 +1565,7 @@ function applyPlatform(platform) {
   const embedAttrs = PLATFORM_EMBED_ATTRS[platform];
   document.querySelectorAll('iframe[data-spotify]').forEach(frame => {
     const url     = frame.dataset[platform] || '';
-    const wrapper = frame.closest('.album-card, .lr-embed, .featured-embed') || frame.parentElement;
+    const wrapper = frame.closest('.lr-embed, .featured-embed') || frame.parentElement;
     const isFeatured = !!frame.closest('.featured-embed');
 
     // Remove any existing pending placeholder
@@ -1423,22 +1589,39 @@ function applyPlatform(platform) {
       const ph = document.createElement('div');
       ph.className = 'embed-pending';
       const platformName = platform === 'apple' ? 'Apple Music' : 'YouTube';
-      ph.innerHTML = `${PENDING_ICON}<span class="embed-pending-text">${platformName}</span><a href="${cfg.artistUrl}" target="_blank" rel="noopener" class="embed-pending-link">Listen on ${platformName} →</a>`;
+      ph.innerHTML = `${MUSIC_ICON}<span class="embed-pending-text">${platformName}</span><a href="${cfg.artistUrl}" target="_blank" rel="noopener" class="embed-pending-link">Listen on ${platformName} →</a>`;
       frame.after(ph);
     }
   });
 }
 
+// ── REGION-AWARE APPLE MUSIC STOREFRONT ──
+// Apple links are authored as /us/; swap to the visitor's storefront so they
+// don't land on the wrong region. Limited to major storefronts to avoid 404s.
+const APPLE_STOREFRONTS = new Set(['us','de','gb','fr','es','it','nl','at','ch','be','ie','se','no','dk','fi','pl','pt','cz','ca','au','nz','jp','br','mx','in','tr']);
+function localizeAppleLinks() {
+  const loc = (navigator.language || 'us').toLowerCase();
+  const cc  = loc.includes('-') ? loc.split('-')[1] : loc.slice(0, 2);
+  if (!APPLE_STOREFRONTS.has(cc) || cc === 'us') return;
+  const swap = s => s.replace(/music\.apple\.com\/us\//g, 'music.apple.com/' + cc + '/');
+  document.querySelectorAll('a[href*="music.apple.com/us/"]').forEach(a => { a.href = swap(a.href); });
+  document.querySelectorAll('[data-apple*="music.apple.com/us/"]').forEach(el => { el.dataset.apple = swap(el.dataset.apple); });
+  if (PLATFORM_CFG.apple.artistUrl.includes('/us/')) PLATFORM_CFG.apple.artistUrl = swap(PLATFORM_CFG.apple.artistUrl);
+}
+localizeAppleLinks();
+
 document.querySelectorAll('.ptog-btn').forEach(btn =>
-  btn.addEventListener('click', () => applyPlatform(btn.dataset.p))
+  btn.addEventListener('click', () => { closeAlbumTile(); applyPlatform(btn.dataset.p); })
 );
 
 applyPlatform(detectPlatform());
 
 // ── MODALS ──
+let modalReturnFocus = null;
 function openModal(id) {
   const m = document.getElementById('modal-' + id);
   if (!m) return;
+  modalReturnFocus = document.activeElement;
   m.classList.add('open');
   document.body.style.overflow = 'hidden';
   // Move focus to close button
@@ -1450,6 +1633,9 @@ function closeModal(id) {
   if (!m) return;
   m.classList.remove('open');
   document.body.style.overflow = '';
+  // Return focus to the element that opened the modal
+  if (modalReturnFocus && typeof modalReturnFocus.focus === 'function') modalReturnFocus.focus();
+  modalReturnFocus = null;
 }
 // Focus trap inside modals
 document.querySelectorAll('.modal-overlay').forEach(overlay => {
@@ -1470,10 +1656,12 @@ document.addEventListener('keydown', e => {
     );
 });
 
-// ── BACK TO TOP ──
+// ── BACK TO TOP + HERO SCROLL CUE ──
 const backTop = document.getElementById('back-top');
+const scrollCue = document.querySelector('.scroll-cue');
 window.addEventListener('scroll', () => {
   backTop.classList.toggle('visible', window.scrollY > 400);
+  if (scrollCue) scrollCue.classList.toggle('hide', window.scrollY > 120);
 }, { passive: true });
 
 // ── COOKIE NOTICE ──
@@ -1500,6 +1688,29 @@ cookieDecline.addEventListener('click', () => {
   showDeclinedFallbacks();
   syncMobileCta();
 });
+
+// ── HERO ONE-TAP PLAY — accept embeds, load, scroll to live player ──
+const heroPlayBtn = document.getElementById('hero-play-btn');
+if (heroPlayBtn) {
+  heroPlayBtn.addEventListener('click', () => {
+    lsSet('cookie-ok', '1');
+    cookieNotice.classList.add('hidden');
+    const latest = document.getElementById('latest');
+    if (latest) {
+      loadOne(latest.querySelector('iframe'));
+      const badge = latest.querySelector('.lr-badge');
+      if (badge && !badge.dataset.playing) {
+        badge.dataset.playing = '1';
+        badge.innerHTML = '<span class="eq" aria-hidden="true"><i></i><i></i><i></i></span> Now Playing';
+      }
+      latest.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      latest.classList.remove('lr-flash');
+      void latest.offsetWidth;
+      latest.classList.add('lr-flash');
+    }
+    syncMobileCta();
+  });
+}
 
 // ── COPY ARTIST LINK ──
 const copyLinkBtn = document.getElementById('copy-link-btn');
@@ -1566,6 +1777,20 @@ if (footerEl && mobileCta) {
 
 window.addEventListener('scroll', syncMobileCta, { passive: true });
 syncMobileCta();
+
+// ── HERO PARALLAX — drift the blob layer on scroll (rAF, motion-safe) ──
+const heroBg = document.querySelector('.hero-bg');
+if (heroBg && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  let _rafPar = null;
+  window.addEventListener('scroll', () => {
+    if (_rafPar) return;
+    _rafPar = requestAnimationFrame(() => {
+      const y = window.scrollY;
+      if (y < 1000) heroBg.style.transform = 'translateY(' + (y * 0.18) + 'px)';
+      _rafPar = null;
+    });
+  }, { passive: true });
+}
 
 </script>
 </body>

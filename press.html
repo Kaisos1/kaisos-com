@@ -25,9 +25,15 @@
 <meta name="theme-color" content="#07070f"/>
 <meta name="color-scheme" content="dark light"/>
 <link rel="canonical" href="https://kaisos.com/press"/>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
 <link rel="icon" type="image/png" href="favicon.png"/>
 <link rel="apple-touch-icon" href="Logo.png"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Kaisos","item":"https://kaisos.com"},{"@type":"ListItem","position":2,"name":"Press","item":"https://kaisos.com/press"}]}
+</script>
 <title>Press — Kaisos</title>
+<link rel="preconnect" href="https://open.spotify.com"/>
+<link rel="dns-prefetch" href="https://open.spotify.com"/>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-latin.woff2" crossorigin/>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/cg-normal-latin.woff2" crossorigin/>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/cg-italic-latin.woff2" crossorigin/>
@@ -42,9 +48,9 @@
 .blob-1{width:600px;height:600px;background:radial-gradient(circle,rgba(139,63,201,0.18) 0%,transparent 70%);top:-150px;right:-100px}
 .blob-2{width:350px;height:350px;background:radial-gradient(circle,rgba(200,133,15,0.07) 0%,transparent 70%);bottom:-50px;left:-50px}
 .hero-inner{position:relative;z-index:1;max-width:var(--max);width:100%;margin:0 auto;display:grid;grid-template-columns:1fr 340px;gap:5rem;align-items:center}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:0.6rem;padding:0.3rem 0.85rem;border:1px solid rgba(139,63,201,0.3);border-radius:100px;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:0.6rem;padding:0.3rem 0.85rem;border:1px solid rgba(139,63,201,0.3);border-radius:100px;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent-text);margin-bottom:1.5rem}
 .press-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,5vw,4.5rem);font-weight:400;line-height:1.05;color:var(--white);margin-bottom:1.25rem}
-.press-hero h1 em{font-style:italic;color:var(--accent)}
+.press-hero h1 em{font-style:italic;color:var(--accent-text)}
 .press-hero p{color:var(--muted2);font-size:1rem;max-width:480px;line-height:1.85;margin-bottom:2rem}
 .hero-ctas{display:flex;gap:0.75rem;flex-wrap:wrap}
 .btn-primary{display:inline-flex;align-items:center;gap:0.5rem;padding:0.8rem 1.75rem;background:var(--accent);color:#fff;font-size:0.78rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border-radius:3px;transition:opacity 0.2s}
@@ -64,7 +70,7 @@
 /* ══ SECTIONS ══ */
 .section{padding:5rem var(--pad);border-top:1px solid var(--border)}
 .inner{max-width:var(--max);margin:0 auto}
-.eyebrow{display:flex;align-items:center;gap:0.75rem;font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:2.5rem;font-weight:600}
+.eyebrow{display:flex;align-items:center;gap:0.75rem;font-size:0.68rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent-text);margin-bottom:2.5rem;font-weight:600}
 .eyebrow::before{content:'';display:block;width:28px;height:1px;background:var(--accent)}
 
 /* ── Bio ── */
@@ -84,21 +90,19 @@
 .disco-card:hover{border-color:rgba(139,63,201,0.4)}
 .disco-card.latest{border-color:rgba(200,133,15,0.25)}
 .disco-card.latest:hover{border-color:rgba(200,133,15,0.5)}
-.disco-num{font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.6rem;font-weight:600}
+.disco-num{font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent-text);margin-bottom:0.6rem;font-weight:600}
 .disco-card.latest .disco-num{color:var(--gold)}
 .disco-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:400;color:var(--white);margin-bottom:0.3rem;line-height:1.2}
 .disco-mood{font-size:0.78rem;color:var(--muted);font-style:italic;margin-bottom:1rem}
 .disco-links{display:flex;gap:0.4rem;flex-wrap:wrap}
 .disco-link{font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted2);padding:0.2rem 0.55rem;border:1px solid var(--border2);border-radius:3px;transition:all 0.2s}
-.disco-link:hover{color:var(--accent);border-color:rgba(139,63,201,0.4)}
+.disco-link:hover{color:var(--accent-text);border-color:rgba(139,63,201,0.4)}
 
 /* ── Photo ── */
 .photo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
 .photo-card{border-radius:6px;overflow:hidden;border:1px solid var(--border);position:relative;aspect-ratio:4/3;background:var(--surface);display:flex;align-items:center;justify-content:center}
 .photo-card img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 .photo-card-label{position:absolute;bottom:0;left:0;right:0;padding:0.75rem 1rem;background:linear-gradient(to top,rgba(7,7,15,0.9),transparent);font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted2)}
-.photo-dl{display:inline-flex;align-items:center;gap:0.5rem;margin-top:1.25rem;padding:0.6rem 1.25rem;border:1px solid var(--border2);border-radius:3px;font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted2);transition:all 0.2s}
-.photo-dl:hover{border-color:var(--accent);color:var(--accent)}
 
 .photo-logo-img{object-fit:contain;padding:2rem;background:#0a0914}
 
@@ -138,7 +142,7 @@
     <div class="hero-text">
       <div class="hero-eyebrow reveal">Press Kit</div>
       <h1 class="reveal d1">Lo-fi from <em>Munich.</em></h1>
-      <p class="reveal d2">Six self-released albums of ambient beats and chill hip-hop. Made quietly, for the hours when everything else gets too loud.</p>
+      <p class="reveal d2">Eight self-released records of ambient beats and chill hip-hop. Made quietly, for the hours when everything else gets too loud.</p>
       <div class="hero-ctas reveal d3">
         <a href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="noopener" class="btn-primary">Spotify Profile</a>
         <a href="/music" class="btn-ghost">Full Discography</a>
@@ -160,8 +164,8 @@
     <div class="stat-label">YouTube Subscribers</div>
   </div>
   <div class="stat-item reveal d1">
-    <div class="stat-value">6</div>
-    <div class="stat-label">Self-Released Albums</div>
+    <div class="stat-value">8</div>
+    <div class="stat-label">Releases</div>
   </div>
   <div class="stat-item reveal d2">
     <div class="stat-value">Munich</div>
@@ -181,7 +185,7 @@
       <div class="bio-text reveal">
         <p class="lead">Kaisos is a self-released lo-fi music producer from Munich, Germany — creating ambient beats, chill hip-hop, and slow-tempo instrumental music since 2024.</p>
         <p>It didn't start with gear or talent. It started with a keyboard, impatience, and eventually silence. Twice, Kaisos walked away. Twice, something pulled him back. The shift was a decision to slow down — to make something honest before worrying about what anyone else might think.</p>
-        <p>Six albums in, the sound remains consistent: warm, imperfect, and built for the hours when everything else gets too loud. Every release is built for a specific kind of stillness — after a long day, before a hard conversation, or when the city gets too loud. Lo-fi gave the space to create without pressure. The music stays free.</p>
+        <p>Eight releases in, the sound remains consistent: warm, imperfect, and built for the hours when everything else gets too loud. Every release is built for a specific kind of stillness — after a long day, before a hard conversation, or when the city gets too loud. Lo-fi gave the space to create without pressure. The music stays free.</p>
         <p>Kaisos records and produces everything in FL Studio. All releases are fully self-released and independent — no label, no middleman.</p>
       </div>
       <div class="bio-facts reveal d1">
@@ -189,7 +193,7 @@
         <div class="bio-fact"><span class="bio-fact-label">Based in</span><span class="bio-fact-value">Munich, Germany</span></div>
         <div class="bio-fact"><span class="bio-fact-label">Active since</span><span class="bio-fact-value">2024</span></div>
         <div class="bio-fact"><span class="bio-fact-label">Genre</span><span class="bio-fact-value">Lo-fi · Chillhop · Ambient</span></div>
-        <div class="bio-fact"><span class="bio-fact-label">Releases</span><span class="bio-fact-value">6 albums</span></div>
+        <div class="bio-fact"><span class="bio-fact-label">Releases</span><span class="bio-fact-value">8 (7 albums + 1 single)</span></div>
         <div class="bio-fact"><span class="bio-fact-label">YouTube</span><span class="bio-fact-value">55K+ subscribers</span></div>
         <div class="bio-fact"><span class="bio-fact-label">Tools</span><span class="bio-fact-value">FL Studio</span></div>
         <div class="bio-fact"><span class="bio-fact-label">Label</span><span class="bio-fact-value">Independent</span></div>
@@ -205,7 +209,29 @@
     <div class="disco-grid">
 
       <div class="disco-card latest reveal">
-        <div class="disco-num">Latest · Special</div>
+        <div class="disco-num">Latest · Album</div>
+        <div class="disco-name">Quiet Chaos</div>
+        <div class="disco-mood">Calm inside the noise</div>
+        <div class="disco-links">
+          <a class="disco-link" href="https://open.spotify.com/album/4e6gK5CEZqllYvsjWDY3Pl" target="_blank" rel="noopener">Spotify</a>
+          <a class="disco-link" href="https://music.apple.com/us/album/quiet-chaos/6773957574" target="_blank" rel="noopener">Apple</a>
+          <a class="disco-link" href="https://youtube.com/@LofiKaisos" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+
+      <div class="disco-card reveal">
+        <div class="disco-num">Single</div>
+        <div class="disco-name">Purple Gold</div>
+        <div class="disco-mood">Dark trap · hip-hop</div>
+        <div class="disco-links">
+          <a class="disco-link" href="https://open.spotify.com/album/0Vhoh9SYaNQ5IFcKuEj8s3" target="_blank" rel="noopener">Spotify</a>
+          <a class="disco-link" href="https://music.apple.com/us/song/purple-gold/6772434750" target="_blank" rel="noopener">Apple</a>
+          <a class="disco-link" href="https://youtube.com/@LofiKaisos" target="_blank" rel="noopener">YouTube</a>
+        </div>
+      </div>
+
+      <div class="disco-card reveal">
+        <div class="disco-num">Special</div>
         <div class="disco-name">Lofi Kaisos Special</div>
         <div class="disco-mood">Late-night focus</div>
         <div class="disco-links">
