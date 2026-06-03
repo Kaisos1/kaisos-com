@@ -2,6 +2,27 @@
 
 ---
 
+## Session 43 — Scoped subpage re-audit (Web-Builder critic re-gate → SHIP)
+
+Independent fresh audit of merch/404/music/press. Critic filed 5 tickets,
+patched inline, re-gated → SHIP. 404 clean.
+
+### Added
+- `press.html` EPK now functions for media: download links (press photo,
+  logo, cover PNG) + public press/booking `mailto:` contact
+- `music.html` `.eyebrow-dot` styling + `pulse-dot` keyframe (hero eyebrow
+  dot was an invisible zero-size span)
+
+### Changed
+- `press.html` bio reworded — removed doubled "too loud" phrase
+- `press.html` caption inline `style` → scoped `.photo-note` class
+
+### Fixed
+- `merch.html` fixed mobile shop-CTA bar no longer overlays the footer
+  link (footer `padding-bottom` added under ≤900px)
+
+---
+
 ## Session 42 — Kaisos-Web-Builder 3-agent audit (critic → architect/stylist → re-gate)
 
 Ran the `Kaisos-Web-Builder` audit protocol: critic diagnosed + filed 9 tickets into `build.contract.json`, architect/stylist patched by ownership, critic re-gated → **SHIP** (checklist passed, all tickets fixed). No blockers found — mature site; these close real a11y/security/cohesion gaps.

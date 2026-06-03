@@ -105,6 +105,13 @@
 .photo-card-label{position:absolute;bottom:0;left:0;right:0;padding:0.75rem 1rem;background:linear-gradient(to top,rgba(7,7,15,0.9),transparent);font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted2)}
 
 .photo-logo-img{object-fit:contain;padding:2rem;background:#0a0914}
+.photo-note{margin-top:1.25rem;font-size:0.82rem;color:var(--muted);line-height:1.7}
+.press-downloads{display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1.25rem}
+.dl-link{display:inline-flex;align-items:center;gap:0.5rem;min-height:44px;padding:0.6rem 1.1rem;border:1px solid rgba(139,63,201,0.4);border-radius:3px;font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted2);transition:all 0.2s}
+.dl-link:hover{border-color:var(--accent);color:var(--text)}
+.press-contact{margin-top:1.5rem;font-size:0.9rem;color:var(--muted)}
+.press-contact a{color:var(--accent-text);border-bottom:1px solid rgba(139,63,201,0.4);transition:border-color 0.2s}
+.press-contact a:hover{border-color:var(--accent-text)}
 
 /* ══ MOBILE ══ */
 @media(max-width:900px){
@@ -190,7 +197,7 @@
       <div class="bio-text reveal">
         <p class="lead">Kaisos is a self-released lo-fi music producer from Munich, Germany — creating ambient beats, chill hip-hop, and slow-tempo instrumental music since 2024.</p>
         <p>It didn't start with gear or talent. It started with a keyboard, impatience, and eventually silence. Twice, Kaisos walked away. Twice, something pulled him back. The shift was a decision to slow down — to make something honest before worrying about what anyone else might think.</p>
-        <p>Eight releases in, the sound remains consistent: warm, imperfect, and built for the hours when everything else gets too loud. Every release is built for a specific kind of stillness — after a long day, before a hard conversation, or when the city gets too loud. Lo-fi gave the space to create without pressure. The music stays free.</p>
+        <p>Eight releases in, the sound remains consistent: warm, imperfect, and unhurried. Every release is built for a specific kind of stillness — after a long day, before a hard conversation, or in the small hours when sleep won't come. Lo-fi gave the space to create without pressure. The music stays free.</p>
         <p>Kaisos records and produces everything in FL Studio. All releases are fully self-released and independent — no label, no middleman.</p>
       </div>
       <div class="bio-facts reveal d1">
@@ -324,7 +331,13 @@
         <div class="photo-card-label">Official logo · transparent background</div>
       </div>
     </div>
-    <p style="margin-top:1.25rem;font-size:0.82rem;color:var(--muted);line-height:1.7">Free to use in editorial and promotional contexts with artist credit.</p>
+    <p class="photo-note">Free to use in editorial and promotional contexts with artist credit.</p>
+    <div class="press-downloads reveal d2">
+      <a href="ProfileImg.png" download class="dl-link">↓ Press photo (PNG)</a>
+      <a href="Logo.png" download class="dl-link">↓ Logo (PNG · transparent)</a>
+      <a href="og-image.png" download class="dl-link">↓ Cover image (PNG)</a>
+    </div>
+    <p class="press-contact">Press &amp; booking — <a href="mailto:cengiz.adnan93@gmail.com">cengiz.adnan93@gmail.com</a></p>
   </div>
 </section>
 
