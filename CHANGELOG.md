@@ -2,6 +2,16 @@
 
 ---
 
+## Session 44 — Remove intro "Enter the world" splash overlay
+
+### Removed
+- `index.html` entry-threshold splash overlay (`#enter`) — markup, CSS,
+  `enter-veil`/`enter-line` keyframes, `--z-enter` token, noscript +
+  reduced-motion rules, and the cleanup IIFE
+- site now paints straight to the hero on load
+
+---
+
 ## Session 43 — Scoped subpage re-audit (Web-Builder critic re-gate → SHIP)
 
 Independent fresh audit of merch/404/music/press. Critic filed 5 tickets,
