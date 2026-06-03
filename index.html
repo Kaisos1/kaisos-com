@@ -72,6 +72,7 @@
 <link rel="dns-prefetch" href="https://open.spotify.com"/>
 <link rel="preconnect" href="https://open.spotify.com"/>
 <link rel="dns-prefetch" href="https://embed.music.apple.com"/>
+<link rel="preconnect" href="https://embed.music.apple.com" crossorigin/>
 <link rel="dns-prefetch" href="https://www.youtube.com"/>
 <link rel="stylesheet" href="/fonts.css"/>
 <link rel="stylesheet" href="/site.css"/>
@@ -442,7 +443,7 @@ body{background:var(--bg);overflow-x:hidden}
   <div class="hero-text">
     <div class="hero-badge reveal"><span class="hb-dot"></span> New album · Quiet Chaos</div>
     <h1 class="h-display reveal d1">Quiet moments,<br/>turned into <em>lo-fi worlds.</em></h1>
-    <p class="hero-sub lede reveal d2">Eight self-released records from Munich. Lo-fi for deep focus, late nights, and the hours when everything gets too loud.</p>
+    <p class="hero-sub lede reveal d2">Eight self-released titles from Munich — seven albums and a single. Lo-fi for deep focus, late nights, and the hours when everything gets too loud.</p>
     <div class="hero-ctas reveal d3">
       <a href="#latest" class="btn btn-violet"><span class="play-tri"></span> Hear the Sound</a>
       <a href="#music" class="btn btn-ghost">Walk the Hall →</a>
@@ -471,7 +472,7 @@ body{background:var(--bg);overflow-x:hidden}
 <!-- ══ STATS ══ -->
 <div class="stats">
   <div class="stat reveal"><div class="stat-v"><b>55K</b>+</div><div class="stat-l">YouTube Subscribers</div></div>
-  <div class="stat reveal d1"><div class="stat-v"><b>8</b></div><div class="stat-l">Self-released Records</div></div>
+  <div class="stat reveal d1"><div class="stat-v"><b>8</b></div><div class="stat-l">Self-released · 7 Albums + 1 Single</div></div>
   <div class="stat reveal d2"><div class="stat-v"><b>2024</b></div><div class="stat-l">Active Since</div></div>
 </div>
 
@@ -960,15 +961,28 @@ document.querySelectorAll('.embed-facade').forEach(btn=>{
 // ══ MOBILE DRAWER ══
 (function(){
   const b=document.getElementById('burger'),d=document.getElementById('drawer'); if(!b||!d)return;
-  b.addEventListener('click',()=>{const o=d.classList.toggle('open');b.classList.toggle('open',o);b.setAttribute('aria-expanded',o);});
-  d.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{d.classList.remove('open');b.classList.remove('open');b.setAttribute('aria-expanded','false');}));
+  function close(focusBurger){
+    if(!d.classList.contains('open'))return;
+    d.classList.remove('open');b.classList.remove('open');b.setAttribute('aria-expanded','false');
+    if(focusBurger)b.focus();
+  }
+  b.addEventListener('click',()=>{
+    const o=d.classList.toggle('open');b.classList.toggle('open',o);b.setAttribute('aria-expanded',o);
+    if(o){const f=d.querySelector('a');if(f)f.focus();}
+  });
+  d.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>close(false)));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')close(true);});
+  document.addEventListener('click',e=>{if(d.classList.contains('open')&&!d.contains(e.target)&&!b.contains(e.target))close(false);});
 })();
 
 // ══ LEGAL MODALS ══
 let modalReturnFocus=null;
+document.querySelectorAll('.modal-overlay').forEach(m=>{m.setAttribute('inert','');m.setAttribute('aria-hidden','true');});
 function openModal(id){
   const m=document.getElementById('modal-'+id); if(!m)return;
   modalReturnFocus=document.activeElement;
+  m.removeAttribute('inert');
+  m.removeAttribute('aria-hidden');
   m.classList.add('open');
   document.body.style.overflow='hidden';
   const f=m.querySelector('.modal-close'); if(f)f.focus();
@@ -976,6 +990,8 @@ function openModal(id){
 function closeModal(id){
   const m=document.getElementById('modal-'+id); if(!m)return;
   m.classList.remove('open');
+  m.setAttribute('inert','');
+  m.setAttribute('aria-hidden','true');
   document.body.style.overflow='';
   if(modalReturnFocus){modalReturnFocus.focus();modalReturnFocus=null;}
 }

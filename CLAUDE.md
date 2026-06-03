@@ -28,7 +28,7 @@ Single-page static site for Kaisos (lo-fi music producer from Munich).
 - `CHANGELOG.md` — add new session at the **TOP** (newest-first), after the `---` separator; find the last session number and increment; format: `## Session N — description` with Added/Changed/Fixed
 
 ## Site structure (sections in `index.html`)
-NAV → MOBILE DRAWER → HERO → LATEST RELEASE → STATS STRIP → BRAND WORLD → MUSIC (+ Choose Your Mood) → CTA: FOLLOW → STORY → CTA: LISTEN → GEAR → CTA: SUPPORT → CONNECT → PRE-FOOTER CTA → FOOTER → BACK TO TOP → MOBILE STICKY CTA → COOKIE NOTICE → IMPRESSUM MODAL → PRIVACY POLICY MODAL
+ENTRY THRESHOLD → WEBGL ATMOSPHERE (nebula + grain + vignette) → NAV → MOBILE DRAWER → HERO (3D tilt deck) → MARQUEE → STATS → LATEST RELEASE (click-to-load embed) → THE HALL OF ROOMS (3D carousel) → STORY → GEAR → CONNECT → FOOTER → IMPRESSUM MODAL → PRIVACY POLICY MODAL → BACK TO TOP
 
 ## Design system
 - Colors: gold `#c8850f`, accent purple `#8b3fc9`, bg `#07070f`

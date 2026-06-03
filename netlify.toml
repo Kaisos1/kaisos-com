@@ -9,6 +9,7 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
     X-DNS-Prefetch-Control = "on"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://cdn.fourthwall.com https://i.scdn.co; font-src 'self'; connect-src 'self' https://plausible.io; frame-src https://open.spotify.com https://embed.music.apple.com https://www.youtube.com https://www.youtube-nocookie.com; base-uri 'self'; form-action 'self'"
 
 [[headers]]
   for = "*.woff2"

@@ -2,6 +2,38 @@
 
 ---
 
+## Session 42 — Kaisos-Web-Builder 3-agent audit (critic → architect/stylist → re-gate)
+
+Ran the `Kaisos-Web-Builder` audit protocol: critic diagnosed + filed 9 tickets into `build.contract.json`, architect/stylist patched by ownership, critic re-gated → **SHIP** (checklist passed, all tickets fixed). No blockers found — mature site; these close real a11y/security/cohesion gaps.
+
+### Added
+- **Shared subpage atmosphere** (`site.css` `.tex-bg`/`.tex-grain`/`.tex-vig`) — CSS-only static nebula + film grain + vignette, ported from the homepage's WebGL look, wired into all 5 subpages (music/merch/press/404/links). Layers are `position:fixed;z-index:-1;pointer-events:none` (above the base bg, below all content — never washes out text); grain gated under `prefers-reduced-data`. Closes the premium-cohesion gap where subpages looked like a cheaper template next to the immersive home
+- **Content-Security-Policy** in `netlify.toml` — scoped `script/style/img/frame/connect-src` (allows inline + Plausible + the three embed origins + Fourthwall CDN; blocks nothing the site uses)
+- **≥44px touch tap targets** (`site.css`, coarse-pointer media query) — `.nav-back`/`.footer-back`/`.plat-btn`/`.disco-link`/`.ptog-btn`/`.btn-listen`/`.release-plat-btn`; desktop untouched
+- `index.html` `preconnect` for `embed.music.apple.com` (parity with music.html)
+
+### Changed
+- `index.html` legal modals now toggle `inert`+`aria-hidden` (closed dialogs leave the tab order / SR tree; focus-trap + Escape preserved)
+- `index.html` mobile drawer: Escape-to-close (returns focus to burger), outside-click close, focus moves into drawer on open
+- `index.html` releases framing standardized — "Eight self-released titles — seven albums and a single" (was "Self-released Records"); `music.html` hero "seven albums and a single" (was "six lo-fi albums and a new single"). 8 releases = 7 albums + 1 single, consistent across home/music/press/JSON-LD
+- `links.html` Merch icon → single clean fill path (was mixed fill+stroke, rendered inconsistently)
+
+---
+
+## Session 41 — Deep audit: consistency + perf cleanups
+
+Full-folder critical pass over every page and config. The site is mature (post-tribunal); this fixes the small consistency/perf gaps that remained, no churn on the polished homepage.
+
+### Changed
+- `color-scheme` unified to `dark` across all pages (`music`, `merch`, `press`, `links`, `404`, `classic`). They declared `dark light` despite the site being dark-only — on a light-mode OS that lets native scrollbars/UI render light against the dark design. `index.html` was already correct
+- `merch.html` brand-strip "stream now" link `index.html#music` → `/#music` (clean-URL convention used everywhere else; `index.html` isn't covered by the `*.html → pretty` redirects)
+- `links.html` social-profile links (Spotify, YouTube, Apple, Instagram, TikTok) now carry `rel="me"` — identity consistency with the rest of the site, and rel-me matters most on the link-in-bio page
+
+### Added
+- `merch.html` `dns-prefetch` + `preconnect` to `https://cdn.fourthwall.com` — every product image (LCP once scrolled) loads from there; warms TLS before the grid enters view
+
+---
+
 ## Session 40 — Tribunal design pass: accessible Hall + cleanup
 
 Ran an adversarial design review (Defender vs Challenger vs Judge) over the homepage. Shipped the unanimous verdict: fix the Hall's scroll-trap + keyboard inaccessibility, dedup CTAs, clean dead/duplicate CSS, harden motion/data fallbacks. Rejected as churn: any motion lib, font swap, bento re-layout, or gutting the WebGL nebula.

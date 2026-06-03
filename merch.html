@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Kaisos"/>
 <meta property="og:locale" content="en_US"/>
 <meta name="theme-color" content="#07070f"/>
-<meta name="color-scheme" content="dark light"/>
+<meta name="color-scheme" content="dark"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="Merch — Kaisos"/>
 <meta name="twitter:description" content="Official Kaisos merch. Hoodies, tees, caps and more — the sound, made wearable."/>
@@ -51,6 +51,8 @@
 <title>Merch — Kaisos</title>
 <link rel="icon" type="image/png" href="favicon.png"/>
 <link rel="apple-touch-icon" href="Logo.png"/>
+<link rel="dns-prefetch" href="https://cdn.fourthwall.com"/>
+<link rel="preconnect" href="https://cdn.fourthwall.com" crossorigin/>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-latin.woff2" crossorigin/>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/cg-normal-latin.woff2" crossorigin/>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/cg-italic-latin.woff2" crossorigin/>
@@ -169,6 +171,9 @@
 <script defer src="/analytics.js"></script>
 </head>
 <body>
+<div class="tex-bg" aria-hidden="true"></div>
+<div class="tex-grain" aria-hidden="true"></div>
+<div class="tex-vig" aria-hidden="true"></div>
 <div id="progress"></div>
 
 <!-- NAV -->
@@ -323,7 +328,7 @@
       <h2>Built for <em>quiet creators.</em></h2>
       <p>Every piece in the collection is designed around the same identity as the music — minimal, intentional, and made for people who create in silence. No loud branding. No fast fashion. Just the world, made wearable.</p>
       <a href="https://kaisos-shop.fourthwall.com/en-eur" target="_blank" rel="noopener" class="merch-hero-cta">View Full Store →</a>
-      <p class="brand-strip-music">The music behind it — <a href="index.html#music">stream now →</a></p>
+      <p class="brand-strip-music">The music behind it — <a href="/#music">stream now →</a></p>
     </div>
     <div class="brand-strip-logo reveal d1">
       <picture>

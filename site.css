@@ -48,5 +48,25 @@ footer{border-top:1px solid var(--border);padding:2.5rem var(--pad);display:flex
 .reveal.visible{opacity:1;transform:none}
 .d1{transition-delay:0.1s}.d2{transition-delay:0.2s}.d3{transition-delay:0.3s}.d4{transition-delay:0.4s}.d5{transition-delay:0.5s}
 
+/* ══ SHARED ATMOSPHERE ══ */
+.tex-bg,.tex-grain,.tex-vig{position:fixed;inset:0;z-index:-1;pointer-events:none}
+.tex-bg{background:
+  radial-gradient(1100px 700px at 78% -8%,rgba(139,63,201,0.22),transparent 60%),
+  radial-gradient(900px 600px at 8% 12%,rgba(45,15,80,0.34),transparent 62%),
+  radial-gradient(700px 600px at 60% 108%,rgba(200,133,15,0.08),transparent 60%),
+  var(--bg)}
+.tex-grain{opacity:0.32;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E")}
+.tex-vig{background:radial-gradient(ellipse 120% 90% at 50% 40%,transparent 55%,rgba(7,7,15,0.55) 100%)}
+
+/* ══ TAP TARGETS ══ */
+@media(hover:none) and (pointer:coarse){
+  .nav-back,.footer-back,.plat-btn,.disco-link,.release-plat-btn,.ptog-btn,.btn-listen{
+    min-height:44px;display:inline-flex;align-items:center}
+}
+
 /* ══ REDUCED MOTION ══ */
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ══ REDUCED DATA ══ */
+@media(prefers-reduced-data:reduce){.tex-grain{display:none}}
