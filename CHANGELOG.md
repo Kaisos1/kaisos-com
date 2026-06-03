@@ -2,6 +2,72 @@
 
 ---
 
+## Session 40 — Tribunal design pass: accessible Hall + cleanup
+
+Ran an adversarial design review (Defender vs Challenger vs Judge) over the homepage. Shipped the unanimous verdict: fix the Hall's scroll-trap + keyboard inaccessibility, dedup CTAs, clean dead/duplicate CSS, harden motion/data fallbacks. Rejected as churn: any motion lib, font swap, bento re-layout, or gutting the WebGL nebula.
+
+### Changed
+- **Hall of Rooms** no longer hijacks vertical mouse-wheel scroll (was trapping readers mid-page). Horizontal walk is now via native sideways scroll/trackpad, drag, or the new arrow buttons — vertical page scroll always passes through
+- `index.html` Latest section: removed the standalone green "Listen Now" button (redundant with the inline player below it); Spotify now sits in the platform row alongside Apple Music / YouTube
+- `--muted` token `#837c96` → `#8f88a0` (site.css) — better legibility on the smallest uppercase labels, hierarchy with `--muted2` preserved
+- `#progress` bar reconciled to 2px in `site.css` (removed the duplicate inline rule in `index.html`)
+
+### Added
+- **Hall arrow controls + hint** (`.hall-nav`) — visible "drag / scroll / arrows" affordance, shown only when the 3D carousel is active; left/right arrows scroll by ~one viewport, auto-disable at each end
+- **Keyboard access to the Hall** — `focusin` centers any tabbed-to card (off-center cards were dimmed to 0.42 opacity but still focusable links with no way to reach them)
+- `prefers-reduced-data` now short-circuits the WebGL nebula (CSS gradient fallback stays), alongside `prefers-reduced-motion`
+
+### Removed
+- Dead `.hall-hint{display:none}` rule (the hint was never built — now it is)
+- Dead `.btn-fill` / `.btn-fill:hover` CSS (only the removed Listen Now button used it)
+- Duplicate `#progress` rule from `index.html` inline styles
+
+---
+
+## Session 39 — Promote immersive page to homepage
+
+Compared the three homepage candidates (old `index.html`, `experience.html`, `kaisos3d.html`). `experience.html` was the best-crafted (WebGL atmosphere, 3D tilt deck, "Hall of Rooms" horizontal walk, cleanest code) but was `noindex`. Promoted it to the canonical homepage; retired the other two.
+
+### Changed
+- `index.html` is now the former `experience.html` content (WebGL nebula, tilt deck, hall of rooms, click-to-load embeds), promoted from `noindex` to the canonical, indexed homepage
+- Ported the full homepage SEO head onto it: `robots: index,follow`, `canonical https://kaisos.com`, MusicArtist JSON-LD (8 albums), OG + Twitter cards w/ image dims + alt, sitemap link, apple-mobile metas, dns-prefetch/preconnect for Apple/YouTube
+- `sitemap.xml`: homepage `lastmod` → 2026-06-03
+
+### Added
+- Ported the legally-required **Impressum** + **Datenschutzerklärung** modals (with CSS + open/close/ESC/focus-trap JS) and footer Privacy/Impressum links onto the new homepage — these only existed on the old index and would otherwise have been lost
+- Plausible + `/analytics.js` script tags onto the new homepage (parity with the rest of the site)
+- `classic.html` — the old homepage preserved at `/classic` (set `noindex`, canonical → `/classic`) as a fallback
+- `_redirects`: `/classic.html → /classic`; `/experience` and `/kaisos3d` (+ `.html`) → `/` 301
+
+### Removed
+- `experience.html` (became `index.html`), `kaisos3d.html` (weakest candidate — reused a frozen snapshot of the old index's CSS)
+
+### Note
+- No cookie-consent banner on the new homepage: its embeds are click-to-load (the click *is* the consent), which is cleaner than the old consent-gated auto-loader. Privacy modal wording updated to match.
+
+---
+
+## Session 38 — Analytics & conversion instrumentation
+
+Site was strategically blind: 37 sessions of optimization with no way to know which of the ~11 listen/follow CTAs anyone uses. This adds measurement before any data-driven CTA cuts.
+
+### Added
+- `analytics.js` (new) — one delegated, capture-phase click listener for the whole site, no per-link markup. Fires Plausible custom events:
+  - **Outbound** `{platform, location, url}` — every external link (spotify/apple/youtube/kofi/merch/instagram/tiktok/amazon/fl-studio/other), labelled by nearest section id (`home`, `latest`, `music`, `story`, `gear`, `connect`, `footer`)
+  - **Hero Play** — `#hero-play-btn`
+  - **Embed Switch** `{platform, location}` — `.ptog-btn[data-p]` player toggles (also on `music.html`)
+- Plausible Analytics (`script.js`, cookieless, GDPR-clean) + `analytics.js` loaded on all 6 pages: index, links, music, merch, press, 404
+- `netlify.toml`: 1h cache header for `analytics.js`
+
+### Changed
+- `index.html`: Privacy policy modal — added transparency line on Plausible (cookieless, aggregate-only, no cross-site tracking) with link to their policy
+
+### Note
+- Inbound UTM tagging of social bio links is done on the platforms (Instagram/TikTok/YouTube), not in the repo — see session handoff for the ready-to-paste URLs
+- CTA cuts deferred until ~1 week of click data confirms which prompts are dead weight (per council verdict: instrument first, cut second)
+
+---
+
 ## Session 37 — Trim & optimize: CTA, stats, hero image
 
 ### Changed

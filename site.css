@@ -8,7 +8,7 @@
   --border:#1c1a2e;
   --border2:#252235;
   --text:#e8e3f5;
-  --muted:#837c96;
+  --muted:#8f88a0;
   --muted2:#9590a8;
   --accent:#8b3fc9;
   --accent-text:#a45fe0;
@@ -27,7 +27,7 @@ a{text-decoration:none;color:inherit}
 ::selection{background:rgba(139,63,201,0.32);color:var(--white)}
 
 /* ══ PROGRESS ══ */
-#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(to right,var(--accent),var(--gold));z-index:1000;transition:width 0.1s linear;pointer-events:none}
+#progress{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(to right,var(--accent),var(--gold));z-index:1000;transition:width 0.1s linear;pointer-events:none}
 
 /* ══ NAV ══ */
 nav{position:fixed;top:0;left:0;right:0;z-index:500;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);background:rgba(7,7,15,0.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
