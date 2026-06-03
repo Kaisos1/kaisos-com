@@ -2,6 +2,27 @@
 
 ---
 
+## Session 45 — Align subpage design to index + mobile nav fixes
+
+### Added
+- Shared `.nav-right`/`.nav-cta` (+`.gold`) nav-CTA system in `site.css`
+- `.nav-cta` to `press.html` (Press & Booking) — page had no nav CTA before
+- `-webkit-backdrop-filter` on subpage cards for iOS Safari <16
+
+### Changed
+- music/merch/press navs unified: logo + collapsible back + CTA
+- Cards aligned to index glass style — translucent bg, blur(8px), 12px radius
+- Buttons standardised to 4px radius; nav CTA now gold-on-purple signature
+- `eyebrow-dot` given glow to match index `.hb-dot`
+- Sitemap `lastmod` bumped to 2026-06-03 for music/merch/press
+
+### Fixed
+- press `.btn-ghost` recoloured purple → gold to match index
+- `.nav-back` gains `aria-label` so it keeps a name when label hides ≤560px
+- Buy/CTA buttons added to coarse-pointer 44px tap-target rule
+
+---
+
 ## Session 44 — Remove intro "Enter the world" splash overlay
 
 ### Removed

@@ -35,6 +35,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;height:68px;display:flex;ali
 .nav-logo:hover{opacity:0.8}
 .nav-back{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);transition:color 0.2s;display:flex;align-items:center;gap:0.4rem}
 .nav-back:hover{color:var(--text)}
+.nav-right{display:flex;align-items:center;gap:0.85rem}
+.nav-cta{display:inline-flex;align-items:center;gap:0.45rem;padding:0.5rem 1.05rem;background:var(--accent);color:var(--gold);font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border-radius:4px;border:1px solid transparent;transition:all 0.25s;white-space:nowrap}
+.nav-cta:hover{border-color:var(--gold);box-shadow:0 6px 24px rgba(200,133,15,0.22)}
+.nav-cta svg{width:15px;height:15px;fill:currentColor;flex-shrink:0}
+.nav-cta.gold{background:var(--gold);color:var(--bg)}
+.nav-cta.gold:hover{border-color:transparent;box-shadow:0 6px 24px rgba(200,133,15,0.3)}
+@media(max-width:560px){
+  .nav-back-txt{display:none}
+  .nav-cta{padding:0.45rem 0.85rem;letter-spacing:0.05em}
+}
 
 /* ══ FOOTER ══ */
 footer{border-top:1px solid var(--border);padding:2.5rem var(--pad);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
@@ -61,7 +71,8 @@ footer{border-top:1px solid var(--border);padding:2.5rem var(--pad);display:flex
 
 /* ══ TAP TARGETS ══ */
 @media(hover:none) and (pointer:coarse){
-  .nav-back,.footer-back,.plat-btn,.disco-link,.release-plat-btn,.ptog-btn,.btn-listen{
+  .nav-back,.footer-back,.plat-btn,.disco-link,.release-plat-btn,.ptog-btn,.btn-listen,
+  .nav-cta,.btn-buy,.btn-cta,.btn-primary,.btn-ghost,.dl-link,.merch-hero-cta,.merch-cta-btn{
     min-height:44px;display:inline-flex;align-items:center}
 }
 
