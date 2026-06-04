@@ -2,6 +2,68 @@
 
 ---
 
+## Session 46 — Premium remaster: landing page + merch page
+
+Full editorial remaster guided by a 6-dimension audit. Governing principle:
+subtraction — one atmosphere layer, one signature motion, covers sit flat.
+Palette and fonts unchanged.
+
+### merch.html (same premium pass)
+- Removed the scrolling purple ticker → quiet static marks strip
+  (Ships Worldwide · Independent Label · Dark Tones · Made in Munich)
+- Flattened product cards (dropped `backdrop-filter:blur`); section rhythm now
+  uses the shared `--space-*`/`--fs-*`/`--glow-*` scales
+- Copy tightened: hero "Wear the world" → "Pieces for quiet creators."
+- Head cleaned: dropped `rel=sitemap` + divergent twitter:title/description/image;
+  `apple-touch-icon` → 180px icon; explicit `width`/`height` on all product imgs
+- Consolidated two scroll listeners into one rAF-throttled handler;
+  `content-visibility:auto` on brand-strip/CTA/footer
+- Added Merch to the desktop nav on index.html (was drawer/footer/card only)
+
+### index.html landing page
+
+### Added
+- Skip-to-content link (first focusable element)
+- Shared token scales in `site.css`: `--space-*`, `--fs-*`, `--glow-violet/gold`
+- `prefers-contrast:more` + `forced-colors:active` support in `site.css`
+- `content-visibility:auto` on `#story`/`#gear`/`#connect`/footer (cheap INP win)
+- `<h2>` for the Gear section (fixes heading-outline skip)
+- `apple-touch-icon.png` (180×180, ~12KB) — replaces the 1.2MP Logo.png as touch icon
+- Footer mobile breakpoint (`.ft-inner` stacks 1fr/1fr below 560px)
+- Embed iframe now injected with `sandbox` + `referrerpolicy`
+
+### Changed
+- Hero → editorial-asymmetric (oversized Cormorant headline, cover as quiet anchor)
+- "The Hall of Rooms" 3D carousel → clean responsive discography grid (now primary)
+- Discography hover reduced to one quiet state (lift + caption); dropped cursor spotlight
+- WebGL nebula: 3 octaves (was 4), gold derived from existing noise (dropped 2nd fbm),
+  ~30fps cap, 0.75× internal resolution <900px, RAF stops when hero scrolled past
+- Greys lifted for AA contrast (`--muted`/`--muted2`), `--accent-text` brightened
+- Copy tightened throughout (hero, CTAs, discography, stats, connect, support);
+  dropped the "rooms/worlds/doorway" metaphor pile-up
+- JSON-LD: `@graph` with WebSite + MusicArtist; invalid `MusicSingle` → `MusicAlbum`
+  with `albumReleaseType`; `numberOfAlbums` corrected to 7
+- Nav label "The Hall" → "Releases"; mobile drawer now locks body scroll
+- Section rhythm now uses the `--space-*` scale (dense Gear vs open Hero/Story)
+
+### Removed
+- Scrolling album-title marquee (hobby-coded, duplicated the grid)
+- Live-canvas SVG grain overlay + WebGL scroll-warming zone + duplicate shader vignette
+  (static grain retained only in reduced-motion / no-WebGL fallback)
+- 3D Hall carousel JS (drag, click-swallow, arrow state, focus-centering)
+- Hero "Now playing · the latest world" tag (false affordance)
+- Dead `--gold-dim` token, dead `.ft-home` rule, divergent twitter:title/description,
+  non-standard `rel=sitemap` link, cargo-culted apple-mobile-web-app metas
+- `backdrop-filter` on `.quote`/`.support-card`/footer (kept on nav + modals only)
+
+### Fixed
+- Modal Tab-trap hardened (guards empty focusables, scoped to `.modal-panel`)
+- German legal text wrapped in `lang="de"` for correct screen-reader pronunciation
+- Back-to-top nudged to `bottom:1rem` on mobile (clears thumb zone / CTA buttons)
+- Sitemap `lastmod` for index bumped to 2026-06-04
+
+---
+
 ## Session 45 — Align subpage design to index + mobile nav fixes
 
 ### Added

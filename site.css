@@ -1,21 +1,42 @@
+/* ══════════════════════════════════════════════════════════════════
+   site.css — SHARED stylesheet, loaded by EVERY page.
+   OWNS: design tokens, reset, the subpage nav/.nav-* + footer/.footer-*
+   systems, .tex-* atmosphere, .reveal/.d*, tap-targets, contrast/motion.
+   index.html OWNS its own page-local layer in its <style> block:
+   .nv* nav, #atmos WebGL, hero deck, discography grid, section rhythm.
+   → Two nav systems are intentional: subpages use .nav-*, index uses .nv-*.
+     Do NOT "dedupe" them — it breaks the subpages.
+   ══════════════════════════════════════════════════════════════════ */
+
 /* ══ RESET ══ */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 
 /* ══ VARIABLES ══ */
 :root{
+  /* ── palette (locked: gold + violet + ink) ── */
   --bg:#07070f;
   --surface:#0d0c1a;
   --border:#1c1a2e;
   --border2:#252235;
   --text:#e8e3f5;
-  --muted:#8f88a0;
-  --muted2:#9590a8;
+  --muted:#a39cba;
+  --muted2:#b6b1cc;
   --accent:#8b3fc9;
-  --accent-text:#a45fe0;
+  --accent-text:#b074e6;
   --accent-dim:rgba(139,63,201,0.12);
   --white:#f5f2ff;
   --gold:#c8850f;
-  --gold-dim:rgba(200,133,15,0.1);
+  /* ── glow (violet = ambient, gold = rare punctuation) ── */
+  --glow-violet:0 10px 34px rgba(139,63,201,0.30);
+  --glow-gold:0 6px 24px rgba(200,133,15,0.24);
+  /* ── type scale (modular, reused everywhere) ── */
+  --fs-eyebrow:0.67rem;
+  --fs-h2:clamp(2rem,3.8vw,3rem);
+  --fs-display:clamp(2.6rem,6.4vw,5.6rem);
+  /* ── spacing scale (rhythmic, not metronomic) ── */
+  --space-md:clamp(1.6rem,3.2vw,2.6rem);
+  --space-lg:clamp(3rem,6vw,5rem);
+  --space-xl:clamp(4.5rem,9vw,8rem);
   --max:1140px;
   --pad:clamp(1.5rem,4vw,3rem);
 }
@@ -81,3 +102,12 @@ footer{border-top:1px solid var(--border);padding:2.5rem var(--pad);display:flex
 
 /* ══ REDUCED DATA ══ */
 @media(prefers-reduced-data:reduce){.tex-grain{display:none}}
+
+/* ══ HIGH CONTRAST ══ */
+@media(prefers-contrast:more){
+  :root{--border:#4a4663;--border2:#5a5675;--muted:#c4bfd6;--muted2:#d2cee0}
+}
+@media(forced-colors:active){
+  .tex-bg,.tex-grain,.tex-vig{display:none}
+  :root{--border:CanvasText;--border2:CanvasText}
+}

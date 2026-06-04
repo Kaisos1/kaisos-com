@@ -3,18 +3,15 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<meta name="description" content="Step inside the Kaisos world — an immersive lo-fi experience from Munich. Walk the hall of releases: new album Quiet Chaos, the Purple Gold single, plus six lo-fi albums on Spotify, Apple Music, and YouTube."/>
+<meta name="description" content="Kaisos — lo-fi music producer from Munich. Ambient beats, dark trap, and chill study music. Eight self-released titles, including the album Quiet Chaos and the single Purple Gold. On Spotify, Apple Music, and YouTube."/>
 <meta name="theme-color" content="#07070f"/>
 <meta name="color-scheme" content="dark"/>
 <meta name="robots" content="index, follow"/>
 <meta name="author" content="Adnan Cengiz"/>
-<meta name="apple-mobile-web-app-capable" content="yes"/>
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-<!-- SOCIAL METADATA — When the site focus or latest release changes, update:
-     og:title, og:description, twitter:title, twitter:description,
-     og:image / twitter:image (and the og:image:alt / twitter:image:alt). -->
-<meta property="og:title" content="Kaisos — Lo-fi Worlds from Munich"/>
-<meta property="og:description" content="Step inside the Kaisos world. New album Quiet Chaos, the Purple Gold single, plus six lo-fi albums. 55K+ YouTube subscribers — ambient beats, dark trap, and chill hip-hop from Munich."/>
+<!-- SOCIAL METADATA — when the focus or latest release changes, update og:title,
+     og:description, og:image (+ its alt). X/Twitter falls back to the og:* tags. -->
+<meta property="og:title" content="Kaisos — Lo-Fi Worlds from Munich"/>
+<meta property="og:description" content="Lo-fi music producer from Munich. Ambient beats, dark trap, and chill hip-hop — eight self-released releases, including the album Quiet Chaos. 55K+ YouTube subscribers."/>
 <meta property="og:image" content="https://kaisos.com/og-image.png"/>
 <meta property="og:image:alt" content="Kaisos — Lo-Fi Music Producer from Munich"/>
 <meta property="og:image:type" content="image/png"/>
@@ -25,43 +22,51 @@
 <meta property="og:site_name" content="Kaisos"/>
 <meta property="og:locale" content="en_US"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Kaisos — Lo-fi Worlds from Munich"/>
-<meta name="twitter:description" content="Step inside the Kaisos world. New album Quiet Chaos and eight releases. 55K+ YouTube subscribers."/>
-<meta name="twitter:image" content="https://kaisos.com/og-image.png"/>
-<meta name="twitter:image:alt" content="Kaisos — Lo-Fi Music Producer from Munich"/>
 <link rel="canonical" href="https://kaisos.com"/>
-<link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
 <link rel="icon" type="image/png" href="favicon.png"/>
-<link rel="apple-touch-icon" href="Logo.png"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
 <title>Kaisos — Lo-Fi Music Producer from Munich | Ambient Beats &amp; Chill Hip-Hop</title>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
-  "@type":"MusicArtist",
-  "name":"Kaisos",
-  "description":"Lo-fi music producer from Munich, Germany. Creating ambient beats, chill study music, and lo-fi hip-hop since 2024. Eight releases — including new album Quiet Chaos — available on Spotify, Apple Music, and YouTube.",
-  "genre":["Lo-fi","Lo-fi Hip Hop","Chillhop","Ambient","Chill","Study Music"],
-  "url":"https://kaisos.com",
-  "image":"https://kaisos.com/ProfileImg.png",
-  "foundingLocation":{"@type":"Place","name":"Munich, Germany"},
-  "sameAs":[
-    "https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M",
-    "https://music.apple.com/us/artist/kaisos/1735054792",
-    "https://youtube.com/@LofiKaisos",
-    "https://www.instagram.com/lofikaisos/",
-    "https://www.tiktok.com/@lofikaisos"
-  ],
-  "album":[
-    {"@type":"MusicAlbum","name":"Quiet Chaos","url":"https://open.spotify.com/album/4e6gK5CEZqllYvsjWDY3Pl","datePublished":"2025"},
-    {"@type":"MusicSingle","name":"Purple Gold","url":"https://open.spotify.com/album/0Vhoh9SYaNQ5IFcKuEj8s3","datePublished":"2025"},
-    {"@type":"MusicAlbum","name":"Lofi Kaisos Special","url":"https://open.spotify.com/album/67OMy0DOFbt4Y5iTbL4lnE","datePublished":"2024"},
-    {"@type":"MusicAlbum","name":"Lofi Kaisos Vol. 5","url":"https://open.spotify.com/album/0sm4rH9Bv1VJ5r8hTaFDfz","datePublished":"2024"},
-    {"@type":"MusicAlbum","name":"Lofi Kaisos Vol. 4","url":"https://open.spotify.com/album/49c8g3dFdDOS8aezK0ltDb","datePublished":"2024"},
-    {"@type":"MusicAlbum","name":"Lofi Kaisos Vol. 3","url":"https://open.spotify.com/album/3bcGnK12xEytemEmjFGH86","datePublished":"2024"},
-    {"@type":"MusicAlbum","name":"Lofi Kaisos Vol. 2","url":"https://open.spotify.com/album/1G9pQYYIS1hZEqu0hieCyE","datePublished":"2024"},
-    {"@type":"MusicAlbum","name":"Lofi Kaisos Vol. 1","url":"https://open.spotify.com/album/0EQS01PkeiRoi9zaeVDtt7","datePublished":"2024"}
-  ],
-  "numberOfAlbums":8
+  "@graph":[
+    {
+      "@type":"WebSite",
+      "@id":"https://kaisos.com/#website",
+      "url":"https://kaisos.com",
+      "name":"Kaisos",
+      "inLanguage":"en",
+      "publisher":{"@id":"https://kaisos.com/#artist"}
+    },
+    {
+      "@type":"MusicArtist",
+      "@id":"https://kaisos.com/#artist",
+      "name":"Kaisos",
+      "description":"Lo-fi music producer from Munich, Germany. Ambient beats, dark trap, and chill hip-hop since 2024. Eight self-released titles — seven albums and a single — on Spotify, Apple Music, and YouTube.",
+      "genre":["Lo-fi","Lo-fi Hip Hop","Chillhop","Ambient","Chill","Study Music"],
+      "url":"https://kaisos.com",
+      "image":"https://kaisos.com/ProfileImg.png",
+      "foundingLocation":{"@type":"Place","name":"Munich, Germany"},
+      "sameAs":[
+        "https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M",
+        "https://music.apple.com/us/artist/kaisos/1735054792",
+        "https://youtube.com/@LofiKaisos",
+        "https://www.instagram.com/lofikaisos/",
+        "https://www.tiktok.com/@lofikaisos"
+      ],
+      "album":[
+        {"@type":"MusicAlbum","name":"Quiet Chaos","albumReleaseType":"AlbumRelease","url":"https://open.spotify.com/album/4e6gK5CEZqllYvsjWDY3Pl","datePublished":"2025"},
+        {"@type":"MusicAlbum","name":"Purple Gold","albumReleaseType":"SingleRelease","url":"https://open.spotify.com/album/0Vhoh9SYaNQ5IFcKuEj8s3","datePublished":"2025"},
+        {"@type":"MusicAlbum","name":"Lofi Kaisos Special","albumReleaseType":"AlbumRelease","url":"https://open.spotify.com/album/67OMy0DOFbt4Y5iTbL4lnE","datePublished":"2024"},
+        {"@type":"MusicAlbum","name":"Lofi Kaisos Vol. 5","albumReleaseType":"AlbumRelease","url":"https://open.spotify.com/album/0sm4rH9Bv1VJ5r8hTaFDfz","datePublished":"2024"},
+        {"@type":"MusicAlbum","name":"Lofi Kaisos Vol. 4","albumReleaseType":"AlbumRelease","url":"https://open.spotify.com/album/49c8g3dFdDOS8aezK0ltDb","datePublished":"2024"},
+        {"@type":"MusicAlbum","name":"Lofi Kaisos Vol. 3","albumReleaseType":"AlbumRelease","url":"https://open.spotify.com/album/3bcGnK12xEytemEmjFGH86","datePublished":"2024"},
+        {"@type":"MusicAlbum","name":"Lofi Kaisos Vol. 2","albumReleaseType":"AlbumRelease","url":"https://open.spotify.com/album/1G9pQYYIS1hZEqu0hieCyE","datePublished":"2024"},
+        {"@type":"MusicAlbum","name":"Lofi Kaisos Vol. 1","albumReleaseType":"AlbumRelease","url":"https://open.spotify.com/album/0EQS01PkeiRoi9zaeVDtt7","datePublished":"2024"}
+      ],
+      "numberOfAlbums":8
+    }
+  ]
 }
 </script>
 
@@ -71,15 +76,12 @@
 <link rel="preload" as="font" type="font/woff2" href="/fonts/cg-italic-latin.woff2" crossorigin/>
 <link rel="dns-prefetch" href="https://open.spotify.com"/>
 <link rel="preconnect" href="https://open.spotify.com"/>
-<link rel="dns-prefetch" href="https://embed.music.apple.com"/>
-<link rel="preconnect" href="https://embed.music.apple.com" crossorigin/>
-<link rel="dns-prefetch" href="https://www.youtube.com"/>
 <link rel="stylesheet" href="/fonts.css"/>
 <link rel="stylesheet" href="/site.css"/>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}.tilt-deck{transform:none!important}</style></noscript>
 <style>
 
-/* ══ TOKENS / EXTEND ══ */
+/* ══ TOKENS / PAGE-LOCAL ══ */
 :root{
   --z-canvas:0;--z-page:1;--z-nav:500;--z-overlay:800;
   --edge:rgba(232,227,245,0.08);
@@ -87,17 +89,22 @@
 html{scroll-padding-top:80px}
 body{background:var(--bg);overflow-x:hidden}
 
-/* ══ WEBGL ATMOSPHERE ══ */
+/* ══ ATMOSPHERE ══ */
 #atmos{position:fixed;inset:0;z-index:var(--z-canvas);display:block;width:100%;height:100%;
   background:
     radial-gradient(1100px 700px at 78% -8%,rgba(139,63,201,0.30),transparent 60%),
     radial-gradient(900px 600px at 8% 12%,rgba(45,15,80,0.42),transparent 62%),
     radial-gradient(700px 600px at 60% 108%,rgba(200,133,15,0.10),transparent 60%),
     var(--bg);}
-.atmos-grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:0.5;mix-blend-mode:overlay;
+.atmos-grain{position:fixed;inset:0;z-index:1;pointer-events:none;display:none;opacity:0.5;mix-blend-mode:overlay;
   background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E")}
+.no-webgl .atmos-grain{display:block}
 .atmos-vig{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 120% 90% at 50% 40%,transparent 55%,rgba(7,7,15,0.55) 100%)}
 .page{position:relative;z-index:var(--z-page)}
+
+/* ══ SKIP LINK ══ */
+.skip{position:fixed;top:0;left:50%;transform:translate(-50%,-130%);z-index:var(--z-overlay);background:var(--accent);color:#fff;padding:0.7rem 1.3rem;border-radius:0 0 6px 6px;font-size:0.78rem;font-weight:600;letter-spacing:0.06em;transition:transform 0.2s}
+.skip:focus{transform:translate(-50%,0)}
 
 /* ══ NAV ══ */
 .nv{position:fixed;top:0;left:0;right:0;z-index:var(--z-nav);height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);background:rgba(7,7,15,0.55);backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);border-bottom:1px solid transparent;transition:border-color 0.3s,background 0.3s}
@@ -111,72 +118,63 @@ body{background:var(--bg);overflow-x:hidden}
 .nv-center a:hover::after{right:0}
 .nv-right{display:flex;align-items:center;gap:0.7rem}
 .nv-icons{display:flex;gap:0.35rem}
-.nv-ic{width:36px;height:36px;border-radius:50%;border:1px solid var(--border2);display:inline-flex;align-items:center;justify-content:center;color:var(--muted);transition:all 0.2s}
+.nv-ic{width:36px;height:36px;border-radius:50%;border:1px solid var(--border2);display:inline-flex;align-items:center;justify-content:center;color:var(--muted);transition:border-color 0.2s,color 0.2s,background 0.2s,transform 0.2s}
 .nv-ic svg{width:15px;height:15px;fill:currentColor}
 .nv-ic:hover{border-color:var(--accent);color:var(--accent-text);background:var(--accent-dim);transform:translateY(-1px)}
-.nv-cta{display:inline-flex;align-items:center;gap:0.45rem;padding:0.5rem 1.05rem;background:var(--accent);color:var(--gold);font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border-radius:3px;border:1px solid transparent;transition:all 0.25s;white-space:nowrap}
-.nv-cta svg{width:15px;height:15px}
-.nv-cta:hover{border-color:var(--gold);box-shadow:0 6px 24px rgba(200,133,15,0.22)}
+.nv-cta{display:inline-flex;align-items:center;gap:0.45rem;padding:0.5rem 1.05rem;background:var(--accent);color:var(--gold);font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border-radius:4px;border:1px solid transparent;transition:border-color 0.25s,box-shadow 0.25s;white-space:nowrap}
+.nv-cta svg{width:15px;height:15px;fill:currentColor}
+.nv-cta:hover{border-color:var(--gold);box-shadow:var(--glow-gold)}
 .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;min-width:44px;min-height:44px;align-items:center;justify-content:center}
 .burger span{display:block;width:22px;height:1.5px;background:var(--text);border-radius:2px;transition:transform 0.3s,opacity 0.3s}
 .burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
 .burger.open span:nth-child(2){opacity:0}
 .burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-.drawer{position:fixed;top:68px;left:0;right:0;z-index:490;background:rgba(7,7,15,0.96);backdrop-filter:blur(16px);padding:1.5rem var(--pad) 2rem;transform:translateY(-115%);transition:transform 0.35s cubic-bezier(0.4,0,0.2,1);border-bottom:1px solid var(--border)}
+.drawer{position:fixed;top:68px;left:0;right:0;z-index:490;background:rgba(7,7,15,0.96);backdrop-filter:blur(16px);padding:1rem var(--pad) 1.8rem;transform:translateY(-115%);transition:transform 0.35s cubic-bezier(0.4,0,0.2,1);border-bottom:1px solid var(--border)}
 .drawer.open{transform:translateY(0)}
-.drawer a{display:block;padding:0.95rem 0;border-bottom:1px solid var(--border);color:var(--text);text-decoration:none;font-size:0.95rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:500}
-.drawer-soc{display:flex;gap:0.6rem;margin-top:1.4rem}
+.drawer a{display:flex;align-items:center;min-height:48px;border-bottom:1px solid var(--border);color:var(--text);text-decoration:none;font-size:0.95rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:500}
+.drawer-soc{display:flex;gap:0.6rem;margin-top:1.3rem}
+.drawer-soc .nv-ic{width:44px;height:44px}
 
-/* ══ SHARED ══ */
+/* ══ SHARED PRIMITIVES ══ */
 .wrap{max-width:var(--max);margin:0 auto}
-.sec{position:relative;padding:7rem var(--pad)}
+.sec{position:relative;padding:var(--space-xl) var(--pad)}
+.sec-tight{padding:var(--space-lg) var(--pad)}
 .sec-line{border-top:1px solid var(--border)}
-.eyebrow{display:inline-flex;align-items:center;gap:0.7rem;font-size:0.67rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-text);margin-bottom:2.5rem;font-weight:600}
+.eyebrow{display:inline-flex;align-items:center;gap:0.7rem;font-size:var(--fs-eyebrow);letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-text);margin-bottom:2.4rem;font-weight:600}
 .eyebrow::before{content:'';width:30px;height:1px;background:var(--accent)}
 .h-display{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--white);line-height:1.08;letter-spacing:-0.01em}
 .h-display em{font-style:italic;color:var(--accent-text)}
 .lede{color:var(--muted2);font-weight:300;line-height:1.85}
-.btn{display:inline-flex;align-items:center;gap:0.55rem;padding:0.92rem 1.9rem;font-size:0.78rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:4px;border:1px solid transparent;cursor:pointer;font-family:'Inter',sans-serif;transition:all 0.25s}
+.btn{display:inline-flex;align-items:center;gap:0.55rem;padding:0.92rem 1.9rem;font-size:0.78rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:4px;border:1px solid transparent;cursor:pointer;font-family:'Inter',sans-serif;transition:background 0.25s,border-color 0.25s,box-shadow 0.25s,transform 0.25s}
 .btn svg{width:15px;height:15px;fill:currentColor;flex-shrink:0}
 .btn-ghost{border-color:rgba(200,133,15,0.4);color:var(--gold);background:rgba(200,133,15,0.05)}
-.btn-ghost:hover{border-color:var(--gold);background:rgba(200,133,15,0.1);box-shadow:0 6px 20px rgba(200,133,15,0.16)}
+.btn-ghost:hover{border-color:var(--gold);background:rgba(200,133,15,0.1);box-shadow:var(--glow-gold)}
 .btn-violet{background:var(--accent);color:#fff;box-shadow:0 6px 24px rgba(139,63,201,0.26)}
-.btn-violet:hover{background:#9a4ad8;border-color:var(--gold);transform:translateY(-1px);box-shadow:0 10px 34px rgba(139,63,201,0.34)}
+.btn-violet:hover{background:#9a4ad8;border-color:var(--gold);transform:translateY(-1px);box-shadow:var(--glow-violet)}
 .play-tri{width:0;height:0;border-style:solid;border-width:6px 0 6px 10px;border-color:transparent transparent transparent currentColor;display:inline-block}
 
 /* ══ HERO ══ */
-.hero{position:relative;min-height:100svh;display:grid;grid-template-columns:1.05fr 0.95fr;align-items:center;gap:4rem;padding:120px var(--pad) 90px;max-width:var(--max);margin:0 auto;perspective:1400px}
-.hero-badge{display:inline-flex;align-items:center;gap:0.6rem;padding:0.34rem 0.9rem;border:1px solid rgba(139,63,201,0.35);border-radius:100px;font-size:0.68rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--accent-text);margin-bottom:1.9rem;background:rgba(139,63,201,0.06)}
+.hero{position:relative;min-height:100svh;display:grid;grid-template-columns:1.15fr 0.85fr;align-items:center;gap:clamp(2.5rem,6vw,6rem);padding:140px var(--pad) 100px;max-width:var(--max);margin:0 auto;perspective:1400px}
+.hero-badge{display:inline-flex;align-items:center;gap:0.6rem;padding:0.34rem 0.9rem;border:1px solid rgba(139,63,201,0.35);border-radius:100px;font-size:0.68rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--accent-text);margin-bottom:2.1rem;background:rgba(139,63,201,0.06)}
 .hb-dot{width:5px;height:5px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent);animation:pulse-dot 2.4s ease-in-out infinite}
 @keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.35;transform:scale(0.6)}}
-.hero h1{font-size:clamp(3rem,6.6vw,6rem);margin-bottom:1.6rem}
-.hero-sub{font-size:1.06rem;max-width:430px;margin-bottom:2.4rem}
+.hero h1{font-size:var(--fs-display);margin-bottom:1.8rem;max-width:13ch}
+.hero-sub{font-size:1.08rem;max-width:46ch;margin-bottom:2.6rem}
 .hero-ctas{display:flex;gap:0.85rem;flex-wrap:wrap;align-items:center}
-.hero-trust{margin-top:2.2rem;font-size:0.74rem;letter-spacing:0.04em;color:var(--muted)}
+.hero-trust{margin-top:2.4rem;font-size:0.74rem;letter-spacing:0.04em;color:var(--muted)}
 .hero-trust b{color:var(--muted2);font-weight:600}
 
-/* ── 3D tilt deck (floating cover + glow only) ── */
+/* ── hero deck (single signature motion) ── */
 .tilt-stage{position:relative;display:grid;place-items:center;transform-style:preserve-3d}
-.tilt-deck{position:relative;width:min(380px,80vw);aspect-ratio:1;transform-style:preserve-3d;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform 0.2s cubic-bezier(0.2,0.6,0.2,1);will-change:transform}
+.tilt-deck{position:relative;width:min(330px,72vw);aspect-ratio:1;transform-style:preserve-3d;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform 0.2s cubic-bezier(0.2,0.6,0.2,1);will-change:transform}
 .tilt-glow{position:absolute;inset:-22%;border-radius:50%;background:radial-gradient(circle at 42% 40%,rgba(139,63,201,0.4),rgba(139,63,201,0.08) 52%,transparent 70%);filter:blur(26px);transform:translateZ(-80px);animation:glow-breathe 6s ease-in-out infinite}
 @keyframes glow-breathe{0%,100%{opacity:0.7;transform:translateZ(-80px) scale(1)}50%{opacity:1;transform:translateZ(-80px) scale(1.06)}}
-.tilt-cover{position:relative;width:80%;aspect-ratio:1;border-radius:14px;overflow:hidden;transform:translateZ(58px);box-shadow:0 50px 100px -28px rgba(0,0,0,0.85),0 0 0 1px var(--edge),0 0 60px rgba(139,63,201,0.22);transition:transform 0.45s cubic-bezier(0.4,0,0.2,1)}
+.tilt-cover{position:relative;width:82%;aspect-ratio:1;border-radius:14px;overflow:hidden;transform:translateZ(58px);box-shadow:0 50px 100px -28px rgba(0,0,0,0.85),0 0 0 1px var(--edge),0 0 60px rgba(139,63,201,0.22);transition:transform 0.45s cubic-bezier(0.4,0,0.2,1)}
 .tilt-cover img{width:100%;height:100%;object-fit:cover;display:block}
 .tilt-deck:hover .tilt-cover{transform:translateZ(82px) rotateY(-5deg)}
-.tilt-tag{position:absolute;bottom:-3.2rem;left:50%;transform:translateX(-50%) translateZ(70px);display:flex;align-items:center;gap:0.5rem;white-space:nowrap;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);padding:0.4rem 0.95rem;border:1px solid var(--border2);border-radius:100px;background:rgba(7,7,15,0.6);backdrop-filter:blur(8px)}
-.tilt-tag b{color:var(--gold);font-weight:600}
-
-/* ══ MARQUEE ══ */
-.marquee{position:relative;overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.15rem 0;background:rgba(13,12,26,0.4);backdrop-filter:blur(8px);mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent)}
-.marquee-track{display:flex;width:max-content;gap:0;animation:marquee 60s linear infinite;will-change:transform}
-.marquee:hover .marquee-track{animation-play-state:paused}
-.mq-item{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--muted2);padding:0 1.6rem;display:inline-flex;align-items:center;gap:1.6rem}
-.mq-item::after{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);opacity:0.7}
-.mq-item em{font-style:italic;color:var(--white)}
-@keyframes marquee{to{transform:translateX(-50%)}}
 
 /* ══ STATS ══ */
-.stats{display:grid;grid-template-columns:repeat(3,1fr);max-width:var(--max);margin:0 auto;padding:3.5rem var(--pad)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);max-width:var(--max);margin:0 auto;padding:var(--space-lg) var(--pad)}
 .stat{text-align:center;padding:0 2rem;position:relative}
 .stat+.stat::before{content:'';position:absolute;left:0;top:18%;height:64%;width:1px;background:var(--border)}
 .stat-v{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4vw,3.4rem);color:var(--white);line-height:1}
@@ -186,8 +184,8 @@ body{background:var(--bg);overflow-x:hidden}
 /* ══ LATEST ══ */
 .latest{max-width:720px;margin:0 auto}
 .latest-badge{display:inline-flex;align-items:center;gap:0.55rem;padding:0.3rem 0.85rem;border:1px solid rgba(200,133,15,0.42);border-radius:100px;font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem}
-.latest h2{font-size:clamp(2.4rem,4.5vw,3.6rem);margin-bottom:1rem}
-.latest>p{font-size:1.05rem;max-width:440px;margin-bottom:2rem}
+.latest h2{font-size:var(--fs-h2);margin-bottom:1rem}
+.latest>p{font-size:1.05rem;max-width:48ch;margin-bottom:2rem}
 .embed-shell{margin-top:2rem;border-radius:12px;overflow:hidden;border:1px solid var(--border2);background:var(--surface)}
 .embed-facade{position:relative;display:flex;align-items:center;gap:1rem;padding:1.1rem 1.3rem;cursor:pointer;width:100%;border:none;background:none;text-align:left;font-family:inherit;color:var(--text)}
 .embed-facade .ef-art{width:54px;height:54px;border-radius:8px;object-fit:cover;flex-shrink:0;border:1px solid var(--edge)}
@@ -198,56 +196,36 @@ body{background:var(--bg);overflow-x:hidden}
 .embed-facade:hover .ef-play{transform:scale(1.08)}
 .embed-shell iframe{display:block;width:100%;border:0}
 .plat-row{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:1.4rem}
-.plat-btn{display:inline-flex;align-items:center;gap:0.4rem;padding:0.5rem 1rem;border:1px solid var(--border2);border-radius:3px;color:var(--muted2);text-decoration:none;font-size:0.74rem;letter-spacing:0.05em;text-transform:uppercase;transition:all 0.2s}
+.plat-row--divided{margin-top:2.6rem;padding-top:2.6rem;border-top:1px solid var(--border)}
+.plat-btn{display:inline-flex;align-items:center;gap:0.4rem;padding:0.5rem 1rem;border:1px solid var(--border2);border-radius:4px;color:var(--muted2);text-decoration:none;font-size:0.74rem;letter-spacing:0.05em;text-transform:uppercase;transition:border-color 0.2s,color 0.2s,transform 0.2s}
 .plat-btn svg{width:13px;height:13px;fill:currentColor}
 .plat-btn:hover{border-color:var(--accent);color:var(--accent-text);transform:translateY(-1px)}
 
-/* ══ DISCOGRAPHY — grid (default + no-JS / reduced-motion fallback) ══ */
-.disc-head{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
-.disc-head h2{font-size:clamp(2rem,3.6vw,2.9rem)}
-.disc-head p{color:var(--muted);font-size:0.86rem;max-width:300px;text-align:right}
+/* ══ DISCOGRAPHY ══ */
+.disc-head{display:flex;justify-content:space-between;align-items:flex-end;gap:1.5rem;flex-wrap:wrap;margin-bottom:3rem}
+.disc-head h2{font-size:var(--fs-h2)}
+.disc-head p{color:var(--muted);font-size:0.9rem;max-width:34ch;text-align:right}
 .disc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
-.disc-card{position:relative;perspective:760px}
-.dc-inner{position:relative;border-radius:13px;overflow:hidden;transform-style:preserve-3d;transition:transform 0.18s ease-out,box-shadow 0.3s,opacity 0.18s,filter 0.18s;box-shadow:0 18px 40px -22px rgba(0,0,0,0.8),0 0 0 1px var(--border)}
-.disc-card:hover .dc-inner{box-shadow:0 40px 70px -28px rgba(0,0,0,0.85),0 0 0 1px rgba(139,63,201,0.4),0 0 40px rgba(139,63,201,0.16)}
+.disc-card{position:relative}
+.dc-inner{position:relative;border-radius:13px;overflow:hidden;transition:transform 0.3s ease,box-shadow 0.3s ease;box-shadow:0 18px 40px -22px rgba(0,0,0,0.8),0 0 0 1px var(--border)}
+.disc-card:hover .dc-inner{transform:translateY(-6px);box-shadow:0 40px 70px -28px rgba(0,0,0,0.85),0 0 0 1px rgba(139,63,201,0.4),0 0 40px rgba(139,63,201,0.16)}
 .dc-link{display:block;aspect-ratio:1;position:relative;overflow:hidden}
 .dc-link img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s ease}
-.disc-card:hover .dc-link img{transform:scale(1.05)}
-.dc-spot{position:absolute;inset:0;background:radial-gradient(180px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,0.16),transparent 62%);opacity:0;transition:opacity 0.3s;pointer-events:none;z-index:2}
-.disc-card:hover .dc-spot{opacity:1}
+.disc-card:hover .dc-link img{transform:scale(1.04)}
 .dc-shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(7,7,15,0.94) 0%,rgba(7,7,15,0.35) 40%,transparent 62%);z-index:1;pointer-events:none}
 .dc-meta{position:absolute;left:0;right:0;bottom:0;padding:0.85rem 0.9rem;z-index:3;pointer-events:none}
 .dc-l{font-size:0.56rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
 .dc-t{font-family:'Cormorant Garamond',serif;font-size:1.04rem;color:var(--white);line-height:1.16;display:block}
 .dc-m{font-size:0.66rem;color:var(--muted2);font-style:italic;opacity:0;max-height:0;overflow:hidden;transition:opacity 0.3s,max-height 0.3s}
 .disc-card:hover .dc-m{opacity:1;max-height:2rem}
-.dc-play{position:absolute;top:46%;left:50%;width:46px;height:46px;border-radius:50%;background:rgba(139,63,201,0.95);display:flex;align-items:center;justify-content:center;color:#fff;transform:translate(-50%,-50%) scale(0.8);opacity:0;transition:opacity 0.3s,transform 0.3s;z-index:4;box-shadow:0 10px 28px rgba(0,0,0,0.5)}
+.dc-play{position:absolute;top:44%;left:50%;width:46px;height:46px;border-radius:50%;background:rgba(139,63,201,0.95);display:flex;align-items:center;justify-content:center;color:#fff;transform:translate(-50%,-50%) scale(0.8);opacity:0;transition:opacity 0.3s,transform 0.3s;z-index:4;box-shadow:0 10px 28px rgba(0,0,0,0.5)}
 .disc-card:hover .dc-play{opacity:1;transform:translate(-50%,-50%) scale(1)}
-
-/* ══ DISCOGRAPHY — Hall of Rooms (progressive enhancement) ══ */
-.hall-nav{display:none;align-items:center;justify-content:center;gap:1.1rem;margin-top:1.6rem}
-.disc-grid.hall-on~.hall-nav{display:flex}
-.hall-arrow{width:42px;height:42px;flex-shrink:0;border-radius:50%;border:1px solid var(--border2);background:rgba(13,12,26,0.6);backdrop-filter:blur(8px);color:var(--muted2);font-size:1.3rem;line-height:1;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:border-color 0.2s,color 0.2s,opacity 0.2s;font-family:'Inter',sans-serif}
-.hall-arrow:hover{border-color:var(--accent);color:var(--accent-text)}
-.hall-arrow[disabled]{opacity:0.3;cursor:default;pointer-events:none}
-.hall-hint{font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);text-align:center}
-.disc-grid.hall-on{display:flex;flex-wrap:nowrap;gap:clamp(1rem,3vw,2.4rem);overflow-x:auto;overflow-y:hidden;perspective:1700px;perspective-origin:50% 46%;scroll-snap-type:x proximity;padding:3.4rem calc((100% - min(340px,72vw)) / 2);scrollbar-width:none;-webkit-overflow-scrolling:touch;cursor:grab}
-.disc-grid.hall-on.dragging{cursor:grabbing;scroll-snap-type:none}
-.disc-grid.hall-on::-webkit-scrollbar{display:none}
-.disc-grid.hall-on .disc-card{flex:0 0 auto;width:min(340px,72vw);perspective:none;scroll-snap-align:center;transform-style:preserve-3d}
-.disc-grid.hall-on .disc-card::before{content:'';position:absolute;inset:-16% -10%;z-index:-1;transform:translateZ(-90px);background:radial-gradient(circle at 50% 58%,rgba(200,133,15,0),transparent 70%);transition:background 0.35s}
-.disc-grid.hall-on .disc-card.center::before{background:radial-gradient(circle at 50% 58%,rgba(200,133,15,0.22),rgba(139,63,201,0.16) 46%,transparent 74%)}
-.disc-grid.hall-on .dc-inner{transform:translateZ(var(--tz,0px)) rotateY(var(--ry,0deg)) scale(var(--sc,1));opacity:var(--op,1);filter:brightness(var(--br,1));will-change:transform,opacity}
-.disc-grid.hall-on .disc-card.center .dc-inner{box-shadow:0 56px 96px -30px rgba(0,0,0,0.9),0 0 0 1px rgba(200,133,15,0.5),0 0 60px rgba(200,133,15,0.2),0 0 130px rgba(139,63,201,0.3)}
-.disc-grid.hall-on .disc-card.center .dc-spot{opacity:1}
-.disc-grid.hall-on .disc-card .dc-m{opacity:1;max-height:2rem}
-.disc-grid.hall-on .dc-link img{transform:none}
 
 /* ══ STORY ══ */
 .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;max-width:var(--max);margin:0 auto}
-.story-left h2{font-size:clamp(2rem,3.4vw,2.9rem);margin-bottom:1.5rem}
+.story-left h2{font-size:var(--fs-h2);margin-bottom:1.5rem}
 .story-left p{color:var(--muted2);line-height:1.95;margin-bottom:1.1rem;font-size:0.98rem}
-.quote{margin-top:2.4rem;padding:1.6rem 1.8rem;background:rgba(13,12,26,0.6);border:1px solid var(--border);border-left:2px solid var(--accent);border-radius:0 5px 5px 0;backdrop-filter:blur(6px)}
+.quote{margin-top:2.4rem;padding:1.6rem 1.8rem;background:rgba(13,12,26,0.72);border:1px solid var(--border);border-left:2px solid var(--accent);border-radius:0 5px 5px 0}
 .quote blockquote{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--text);line-height:1.7;margin-bottom:0.7rem}
 .quote cite{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);font-style:normal}
 .chapters{display:flex;flex-direction:column}
@@ -258,7 +236,8 @@ body{background:var(--bg);overflow-x:hidden}
 .chap p{font-size:0.85rem;color:var(--muted2);line-height:1.75}
 
 /* ══ GEAR ══ */
-.gear-intro{max-width:520px;margin-bottom:3rem;font-size:0.98rem;color:var(--muted2);line-height:1.9}
+.gear-head h2{font-size:var(--fs-h2);margin-bottom:1rem}
+.gear-intro{max-width:52ch;margin-bottom:3rem;font-size:0.98rem;color:var(--muted2);line-height:1.9}
 .gear-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
 .gear-card{position:relative;border:1px solid var(--border);border-radius:12px;padding:2.1rem;text-decoration:none;display:block;background:rgba(13,12,26,0.45);overflow:hidden;transition:border-color 0.25s,transform 0.25s,background 0.25s}
 .gear-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--accent),transparent);opacity:0;transition:opacity 0.3s}
@@ -279,7 +258,7 @@ body{background:var(--bg);overflow-x:hidden}
 
 /* ══ CONNECT ══ */
 .connect-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;max-width:var(--max);margin:0 auto}
-.connect-left h2{font-size:clamp(2rem,3.4vw,2.8rem);margin-bottom:1rem}
+.connect-left h2{font-size:var(--fs-h2);margin-bottom:1rem}
 .connect-left>p{color:var(--muted2);font-size:0.98rem;line-height:1.9;margin-bottom:2.2rem}
 .soc-list{display:flex;flex-direction:column}
 .soc{display:flex;align-items:center;justify-content:space-between;padding:1.05rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:padding 0.2s}
@@ -289,7 +268,7 @@ body{background:var(--bg);overflow-x:hidden}
 .soc-handle{font-size:0.78rem;color:var(--muted)}
 .soc-arrow{color:var(--muted);transition:color 0.2s,transform 0.2s}
 .soc:hover .soc-arrow{color:var(--accent-text);transform:translateX(4px)}
-.support-card{background:rgba(13,12,26,0.6);border:1px solid var(--border2);border-radius:12px;padding:2.4rem;position:relative;overflow:hidden;backdrop-filter:blur(8px)}
+.support-card{background:rgba(13,12,26,0.72);border:1px solid var(--border2);border-radius:12px;padding:2.4rem;position:relative;overflow:hidden}
 .support-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--accent) 50%,transparent)}
 .support-card+.support-card{margin-top:1.2rem}
 .support-card h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--white);margin-bottom:0.7rem}
@@ -298,7 +277,7 @@ body{background:var(--bg);overflow-x:hidden}
 .support-note{margin-top:0.9rem;font-size:0.72rem;color:var(--muted);text-align:center}
 
 /* ══ FOOTER ══ */
-.ft{position:relative;z-index:var(--z-page);border-top:1px solid var(--border);padding:3.5rem var(--pad) 0;background:rgba(7,7,15,0.6);backdrop-filter:blur(8px)}
+.ft{position:relative;z-index:var(--z-page);border-top:1px solid var(--border);padding:3.5rem var(--pad) 0;background:rgba(7,7,15,0.6)}
 .ft-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 130px 140px;gap:3.5rem;padding-bottom:3rem;border-bottom:1px solid var(--border)}
 .ft-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold);margin-bottom:0.5rem}
 .ft-tag{font-size:0.74rem;color:var(--muted);line-height:1.6;max-width:240px}
@@ -309,10 +288,9 @@ body{background:var(--bg);overflow-x:hidden}
 .ft-col a:hover{color:var(--text)}
 .ft-base{max-width:var(--max);margin:0 auto;padding:1.3rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 .ft-copy{font-size:0.72rem;color:var(--muted)}
-.ft-home{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-text);text-decoration:none}
 
 /* ══ BACK TO TOP ══ */
-.back-top{position:fixed;bottom:1.6rem;right:1.6rem;width:44px;height:44px;border-radius:50%;border:1px solid var(--border2);background:rgba(13,12,26,0.8);backdrop-filter:blur(8px);color:var(--muted);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:300;opacity:0;transform:translateY(12px);transition:all 0.3s;pointer-events:none}
+.back-top{position:fixed;bottom:1.6rem;right:1.6rem;width:44px;height:44px;border-radius:50%;border:1px solid var(--border2);background:rgba(13,12,26,0.8);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--muted);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:300;opacity:0;transform:translateY(12px);transition:opacity 0.3s,transform 0.3s,border-color 0.2s,color 0.2s;pointer-events:none}
 .back-top.show{opacity:1;transform:translateY(0);pointer-events:auto}
 .back-top:hover{border-color:var(--accent);color:var(--accent-text)}
 .back-top svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
@@ -324,20 +302,24 @@ body{background:var(--bg);overflow-x:hidden}
 .footer-link-btn{background:none;border:none;cursor:pointer;color:var(--muted);font-size:0.72rem;letter-spacing:0.09em;text-transform:uppercase;font-family:'Inter',sans-serif;transition:color 0.2s;padding:0}
 .footer-link-btn:hover{color:var(--accent-text)}
 .ft-legal{display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap}
-.modal-overlay{position:fixed;inset:0;z-index:var(--z-overlay);background:rgba(0,0,0,0.78);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;pointer-events:none;transition:opacity 0.3s}
+.modal-overlay{position:fixed;inset:0;z-index:var(--z-overlay);background:rgba(0,0,0,0.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;pointer-events:none;transition:opacity 0.3s}
 .modal-overlay.open{opacity:1;pointer-events:auto}
 .modal-panel{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:2.5rem;max-width:580px;width:100%;max-height:82vh;overflow-y:auto;position:relative;transform:translateY(20px);transition:transform 0.3s;scrollbar-width:thin}
 .modal-overlay.open .modal-panel{transform:translateY(0)}
-.modal-close{position:absolute;top:1rem;right:1rem;width:32px;height:32px;border-radius:50%;border:1px solid var(--border2);background:none;cursor:pointer;color:var(--muted);display:flex;align-items:center;justify-content:center;font-size:1.1rem;line-height:1;transition:all 0.2s;font-family:'Inter',sans-serif}
+.modal-close{position:absolute;top:1rem;right:1rem;width:32px;height:32px;border-radius:50%;border:1px solid var(--border2);background:none;cursor:pointer;color:var(--muted);display:flex;align-items:center;justify-content:center;font-size:1.1rem;line-height:1;transition:border-color 0.2s,color 0.2s;font-family:'Inter',sans-serif}
 .modal-close:hover{border-color:var(--accent);color:var(--accent-text)}
 .modal-panel h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--white);margin-bottom:2rem}
 .modal-panel h3{font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent-text);margin:1.5rem 0 0.4rem}
 .modal-panel p{font-size:0.9rem;color:var(--muted2);line-height:1.85;margin-bottom:0.75rem}
 .modal-panel a{color:var(--accent-text)}
 
+/* ══ PERF ══ */
+#story,#gear,#connect,.ft{content-visibility:auto;contain-intrinsic-size:auto 600px}
+
 /* ══ RESPONSIVE ══ */
 @media(max-width:980px){
-  .hero{grid-template-columns:1fr;gap:3rem;text-align:center;min-height:auto;padding-top:110px}
+  .hero{grid-template-columns:1fr;gap:3rem;text-align:center;min-height:auto;padding-top:120px}
+  .hero h1,.hero-sub{max-width:none}
   .hero-sub,.hero-trust{margin-left:auto;margin-right:auto}
   .hero-ctas{justify-content:center}
   .tilt-stage{order:-1}
@@ -347,29 +329,30 @@ body{background:var(--bg);overflow-x:hidden}
   .nv-center,.nv-icons{display:none}
   .nv .nv-cta{display:none}
   .burger{display:flex}
+  .disc-head{align-items:flex-start}
   .disc-head p{text-align:left}
 }
 @media(max-width:560px){
-  .sec{padding:4.5rem var(--pad)}
-  .stats{grid-template-columns:1fr;gap:2rem;padding:2.5rem var(--pad)}
+  .sec{padding:var(--space-lg) var(--pad)}
+  .hero{padding-top:108px}
+  .hero h1{font-size:clamp(2.4rem,11vw,3.2rem)}
+  .stats{grid-template-columns:1fr;gap:2rem;padding:var(--space-md) var(--pad)}
   .stat+.stat::before{display:none}
   .stat{padding:1.5rem 0 0;border-top:1px solid var(--border)}
   .stat:first-child{border-top:none;padding-top:0}
-  .mq-item{font-size:1.2rem}
   .gear-feat{flex-direction:column;align-items:flex-start;gap:1.4rem}
   .gear-feat-cta{width:100%;text-align:center}
+  .back-top{bottom:1rem;right:1rem}
+  .ft-inner{grid-template-columns:1fr 1fr;gap:2.2rem 1.5rem}
+  .ft-inner>div:first-child{grid-column:1 / -1}
 }
 
 /* ══ REDUCED MOTION ══ */
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .tilt-glow,.hb-dot,.marquee-track{animation:none}
+  .tilt-glow,.hb-dot{animation:none}
   .tilt-deck{transform:none!important;transition:none}
-  #atmos{background:
-    radial-gradient(1100px 700px at 78% -8%,rgba(139,63,201,0.30),transparent 60%),
-    radial-gradient(900px 600px at 8% 12%,rgba(45,15,80,0.42),transparent 62%),
-    radial-gradient(700px 600px at 60% 108%,rgba(200,133,15,0.10),transparent 60%),
-    var(--bg)!important}
+  .atmos-grain{display:block}
 }
 </style>
 </head>
@@ -385,6 +368,7 @@ body{background:var(--bg);overflow-x:hidden}
   <path id="i-kofi" d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/>
 </defs></svg>
 
+<a href="#latest" class="skip">Skip to content</a>
 <canvas id="atmos" aria-hidden="true"></canvas>
 <div class="atmos-grain" aria-hidden="true"></div>
 <div class="atmos-vig" aria-hidden="true"></div>
@@ -395,9 +379,10 @@ body{background:var(--bg);overflow-x:hidden}
   <a href="#top" class="nv-logo">Kaisos</a>
   <ul class="nv-center">
     <li><a href="#latest">Latest</a></li>
-    <li><a href="#music">The Hall</a></li>
+    <li><a href="#music">Releases</a></li>
     <li><a href="#story">Story</a></li>
     <li><a href="#gear">Gear</a></li>
+    <li><a href="/merch">Merch</a></li>
     <li><a href="#connect">Connect</a></li>
   </ul>
   <div class="nv-right">
@@ -412,7 +397,7 @@ body{background:var(--bg);overflow-x:hidden}
 </nav>
 <div class="drawer" id="drawer">
   <a href="#latest">Latest</a>
-  <a href="#music">The Hall</a>
+  <a href="#music">Releases</a>
   <a href="#story">Story</a>
   <a href="#gear">Gear</a>
   <a href="#connect">Connect</a>
@@ -432,11 +417,11 @@ body{background:var(--bg);overflow-x:hidden}
 <section class="hero">
   <div class="hero-text">
     <div class="hero-badge reveal"><span class="hb-dot"></span> New album · Quiet Chaos</div>
-    <h1 class="h-display reveal d1">Quiet moments,<br/>turned into <em>lo-fi worlds.</em></h1>
-    <p class="hero-sub lede reveal d2">Eight self-released titles from Munich — seven albums and a single. Lo-fi for deep focus, late nights, and the hours when everything gets too loud.</p>
+    <h1 class="h-display reveal d1">Quiet moments, turned into <em>lo-fi worlds.</em></h1>
+    <p class="hero-sub lede reveal d2">Eight releases from Munich — seven albums and a single, all self-released. Lo-fi for deep focus, late nights, and the hours when everything gets too loud.</p>
     <div class="hero-ctas reveal d3">
-      <a href="#latest" class="btn btn-violet"><span class="play-tri"></span> Hear the Sound</a>
-      <a href="#music" class="btn btn-ghost">Walk the Hall →</a>
+      <a href="#latest" class="btn btn-violet"><span class="play-tri"></span> Listen now</a>
+      <a href="#music" class="btn btn-ghost">All releases →</a>
     </div>
     <p class="hero-trust reveal d4">Self-released from Munich · <b>8 releases</b> · <b>55K+ YouTube subscribers</b></p>
   </div>
@@ -444,25 +429,16 @@ body{background:var(--bg);overflow-x:hidden}
     <div class="tilt-deck">
       <div class="tilt-glow"></div>
       <div class="tilt-cover">
-        <picture><source srcset="covers/quiet-chaos.webp" type="image/webp"/><img src="covers/quiet-chaos.webp" alt="Quiet Chaos album cover by Kaisos" width="380" height="380" fetchpriority="high" decoding="async"/></picture>
+        <picture><source srcset="covers/quiet-chaos.webp" type="image/webp"/><img src="covers/quiet-chaos.webp" alt="Quiet Chaos album cover by Kaisos" width="330" height="330" fetchpriority="high" decoding="async"/></picture>
       </div>
-      <div class="tilt-tag"><b>Now playing</b> · the latest world</div>
     </div>
   </div>
 </section>
 
-<!-- ══ MARQUEE ══ -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track" id="mq">
-    <span class="mq-item"><em>Quiet Chaos</em></span><span class="mq-item">Purple Gold</span><span class="mq-item">Lofi Kaisos Special</span><span class="mq-item">Volume Five</span><span class="mq-item">Volume Four</span><span class="mq-item">Volume Three</span><span class="mq-item">Volume Two</span><span class="mq-item">Volume One</span>
-    <span class="mq-item"><em>Quiet Chaos</em></span><span class="mq-item">Purple Gold</span><span class="mq-item">Lofi Kaisos Special</span><span class="mq-item">Volume Five</span><span class="mq-item">Volume Four</span><span class="mq-item">Volume Three</span><span class="mq-item">Volume Two</span><span class="mq-item">Volume One</span>
-  </div>
-</div>
-
 <!-- ══ STATS ══ -->
 <div class="stats">
   <div class="stat reveal"><div class="stat-v"><b>55K</b>+</div><div class="stat-l">YouTube Subscribers</div></div>
-  <div class="stat reveal d1"><div class="stat-v"><b>8</b></div><div class="stat-l">Self-released · 7 Albums + 1 Single</div></div>
+  <div class="stat reveal d1"><div class="stat-v"><b>8</b></div><div class="stat-l">Seven albums, one single</div></div>
   <div class="stat reveal d2"><div class="stat-v"><b>2024</b></div><div class="stat-l">Active Since</div></div>
 </div>
 
@@ -471,7 +447,7 @@ body{background:var(--bg);overflow-x:hidden}
   <div class="latest reveal">
     <div class="latest-badge"><span class="hb-dot"></span> Latest Release</div>
     <h2 class="h-display">Quiet Chaos</h2>
-    <p class="lede">Late-night lo-fi for the calm inside the noise. The newest room in the same world.</p>
+    <p class="lede">Late-night lo-fi for the calm inside the noise — the newest Kaisos album.</p>
     <div class="plat-row">
       <a class="plat-btn" href="https://open.spotify.com/album/4e6gK5CEZqllYvsjWDY3Pl" target="_blank" rel="noopener" aria-label="Open Quiet Chaos on Spotify"><svg viewBox="0 0 24 24"><use href="#i-spotify"/></svg> Spotify</a>
       <a class="plat-btn" href="https://music.apple.com/us/album/quiet-chaos/6773957574" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-apple"/></svg> Apple Music</a>
@@ -479,7 +455,7 @@ body{background:var(--bg);overflow-x:hidden}
     </div>
     <div class="embed-shell">
       <button type="button" class="embed-facade" data-embed="https://open.spotify.com/embed/album/4e6gK5CEZqllYvsjWDY3Pl?utm_source=generator&amp;theme=0" data-h="352" aria-label="Load Spotify player for Quiet Chaos">
-        <img class="ef-art" src="covers/quiet-chaos.webp" alt="" aria-hidden="true"/>
+        <img class="ef-art" src="covers/quiet-chaos.webp" alt="" aria-hidden="true" width="54" height="54"/>
         <span class="ef-txt"><span class="ef-t">Quiet Chaos</span><span class="ef-s">Play the full album · Spotify</span></span>
         <span class="ef-play"><span class="play-tri"></span></span>
       </button>
@@ -487,78 +463,73 @@ body{background:var(--bg);overflow-x:hidden}
   </div>
 </section>
 
-<!-- ══ THE HALL OF ROOMS ══ -->
+<!-- ══ DISCOGRAPHY ══ -->
 <section class="sec sec-line" id="music">
   <div class="wrap">
-    <div class="eyebrow reveal">The hall of rooms</div>
+    <div class="eyebrow reveal">Discography</div>
     <div class="disc-head reveal">
-      <h2 class="h-display">Eight worlds, <em>one feeling.</em></h2>
-      <p>Every album is another room in the same quiet world. Each cover is a doorway. Step inside to listen.</p>
+      <h2 class="h-display">Eight releases, <em>one world.</em></h2>
+      <p>Seven albums and a single — each a different mood from the same place. Tap a cover to listen.</p>
     </div>
-    <div class="disc-grid" id="hall">
+    <div class="disc-grid">
       <div class="disc-card reveal"><div class="dc-inner">
         <a class="dc-link" href="https://open.spotify.com/album/4e6gK5CEZqllYvsjWDY3Pl" target="_blank" rel="noopener" aria-label="Quiet Chaos on Spotify">
           <picture><source srcset="covers/quiet-chaos.webp" type="image/webp"/><img src="covers/quiet-chaos.webp" alt="Quiet Chaos album cover" width="600" height="600" loading="lazy" decoding="async"/></picture>
-          <span class="dc-spot"></span><span class="dc-shade"></span>
+          <span class="dc-shade"></span>
           <span class="dc-play"><span class="play-tri"></span></span>
           <span class="dc-meta"><span class="dc-l">Latest · Album</span><span class="dc-t">Quiet Chaos</span><span class="dc-m">Calm inside the noise</span></span>
         </a></div></div>
       <div class="disc-card reveal d1"><div class="dc-inner">
         <a class="dc-link" href="https://open.spotify.com/album/0Vhoh9SYaNQ5IFcKuEj8s3" target="_blank" rel="noopener" aria-label="Purple Gold on Spotify">
           <picture><source srcset="covers/purple-gold.webp" type="image/webp"/><img src="covers/purple-gold.webp" alt="Purple Gold single cover" width="600" height="600" loading="lazy" decoding="async"/></picture>
-          <span class="dc-spot"></span><span class="dc-shade"></span>
+          <span class="dc-shade"></span>
           <span class="dc-play"><span class="play-tri"></span></span>
           <span class="dc-meta"><span class="dc-l">Single</span><span class="dc-t">Purple Gold</span><span class="dc-m">Dark trap, hip-hop</span></span>
         </a></div></div>
       <div class="disc-card reveal d2"><div class="dc-inner">
         <a class="dc-link" href="https://open.spotify.com/album/67OMy0DOFbt4Y5iTbL4lnE" target="_blank" rel="noopener" aria-label="Lofi Kaisos Special on Spotify">
           <picture><source srcset="covers/special.webp" type="image/webp"/><img src="covers/special.webp" alt="Lofi Kaisos Special album cover" width="600" height="600" loading="lazy" decoding="async"/></picture>
-          <span class="dc-spot"></span><span class="dc-shade"></span>
+          <span class="dc-shade"></span>
           <span class="dc-play"><span class="play-tri"></span></span>
           <span class="dc-meta"><span class="dc-l">Special</span><span class="dc-t">Lofi Kaisos Special</span><span class="dc-m">Late-night focus</span></span>
         </a></div></div>
       <div class="disc-card reveal d3"><div class="dc-inner">
         <a class="dc-link" href="https://open.spotify.com/album/0sm4rH9Bv1VJ5r8hTaFDfz" target="_blank" rel="noopener" aria-label="Lofi Kaisos Vol. 5 on Spotify">
           <picture><source srcset="covers/vol5.webp" type="image/webp"/><img src="covers/vol5.webp" alt="Lofi Kaisos Vol. 5 album cover" width="600" height="600" loading="lazy" decoding="async"/></picture>
-          <span class="dc-spot"></span><span class="dc-shade"></span>
+          <span class="dc-shade"></span>
           <span class="dc-play"><span class="play-tri"></span></span>
           <span class="dc-meta"><span class="dc-l">Vol. 5</span><span class="dc-t">Lofi Kaisos Vol. 5</span><span class="dc-m">Calm study beats</span></span>
         </a></div></div>
       <div class="disc-card reveal"><div class="dc-inner">
         <a class="dc-link" href="https://open.spotify.com/album/49c8g3dFdDOS8aezK0ltDb" target="_blank" rel="noopener" aria-label="Lofi Kaisos Vol. 4 on Spotify">
           <picture><source srcset="covers/vol4.webp" type="image/webp"/><img src="covers/vol4.webp" alt="Lofi Kaisos Vol. 4 album cover" width="600" height="600" loading="lazy" decoding="async"/></picture>
-          <span class="dc-spot"></span><span class="dc-shade"></span>
+          <span class="dc-shade"></span>
           <span class="dc-play"><span class="play-tri"></span></span>
           <span class="dc-meta"><span class="dc-l">Vol. 4</span><span class="dc-t">Lofi Kaisos Vol. 4</span><span class="dc-m">Dreamy textures</span></span>
         </a></div></div>
       <div class="disc-card reveal d1"><div class="dc-inner">
         <a class="dc-link" href="https://open.spotify.com/album/3bcGnK12xEytemEmjFGH86" target="_blank" rel="noopener" aria-label="Lofi Kaisos Vol. 3 on Spotify">
           <picture><source srcset="covers/vol3.webp" type="image/webp"/><img src="covers/vol3.webp" alt="Lofi Kaisos Vol. 3 album cover" width="600" height="600" loading="lazy" decoding="async"/></picture>
-          <span class="dc-spot"></span><span class="dc-shade"></span>
+          <span class="dc-shade"></span>
           <span class="dc-play"><span class="play-tri"></span></span>
           <span class="dc-meta"><span class="dc-l">Vol. 3</span><span class="dc-t">Lofi Kaisos Vol. 3</span><span class="dc-m">Soft melancholy</span></span>
         </a></div></div>
       <div class="disc-card reveal d2"><div class="dc-inner">
         <a class="dc-link" href="https://open.spotify.com/album/1G9pQYYIS1hZEqu0hieCyE" target="_blank" rel="noopener" aria-label="Lofi Kaisos Vol. 2 on Spotify">
           <picture><source srcset="covers/vol2.webp" type="image/webp"/><img src="covers/vol2.webp" alt="Lofi Kaisos Vol. 2 album cover" width="600" height="600" loading="lazy" decoding="async"/></picture>
-          <span class="dc-spot"></span><span class="dc-shade"></span>
+          <span class="dc-shade"></span>
           <span class="dc-play"><span class="play-tri"></span></span>
           <span class="dc-meta"><span class="dc-l">Vol. 2</span><span class="dc-t">Lofi Kaisos Vol. 2</span><span class="dc-m">Quiet focus</span></span>
         </a></div></div>
       <div class="disc-card reveal d3"><div class="dc-inner">
         <a class="dc-link" href="https://open.spotify.com/album/0EQS01PkeiRoi9zaeVDtt7" target="_blank" rel="noopener" aria-label="Lofi Kaisos Vol. 1 on Spotify">
           <picture><source srcset="covers/vol1.webp" type="image/webp"/><img src="covers/vol1.webp" alt="Lofi Kaisos Vol. 1 album cover" width="600" height="600" loading="lazy" decoding="async"/></picture>
-          <span class="dc-spot"></span><span class="dc-shade"></span>
+          <span class="dc-shade"></span>
           <span class="dc-play"><span class="play-tri"></span></span>
           <span class="dc-meta"><span class="dc-l">Vol. 1</span><span class="dc-t">Lofi Kaisos Vol. 1</span><span class="dc-m">Where it began</span></span>
         </a></div></div>
     </div>
-    <div class="hall-nav">
-      <button type="button" class="hall-arrow" data-dir="-1" aria-label="Previous albums">&lsaquo;</button>
-      <span class="hall-hint">Drag, scroll sideways, or use the arrows to walk the hall</span>
-      <button type="button" class="hall-arrow" data-dir="1" aria-label="Next albums">&rsaquo;</button>
-    </div>
-    <div class="plat-row reveal" style="margin-top:2.6rem;padding-top:2.6rem;border-top:1px solid var(--border)">
+    <div class="plat-row plat-row--divided reveal">
       <a class="plat-btn" href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-spotify"/></svg> Spotify</a>
       <a class="plat-btn" href="https://music.apple.com/us/artist/kaisos/1735054792" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-apple"/></svg> Apple Music</a>
       <a class="plat-btn" href="https://youtube.com/@LofiKaisos" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-youtube"/></svg> YouTube</a>
@@ -593,10 +564,13 @@ body{background:var(--bg);overflow-x:hidden}
 </section>
 
 <!-- ══ GEAR ══ -->
-<section class="sec sec-line" id="gear">
+<section class="sec sec-tight sec-line" id="gear">
   <div class="wrap">
     <div class="eyebrow reveal">The setup</div>
-    <p class="gear-intro reveal">Simple, purposeful tools chosen for feel over spec. Everything here contributes to the sound, nothing more.</p>
+    <div class="gear-head reveal">
+      <h2 class="h-display">Made on simple tools.</h2>
+    </div>
+    <p class="gear-intro reveal">Purposeful tools chosen for feel over spec. Everything here contributes to the sound, nothing more.</p>
     <div class="gear-grid">
       <a class="gear-card reveal" href="https://amzn.to/4t59kTK" target="_blank" rel="noopener sponsored">
         <div class="gear-n">Gear 01</div><h3>Beyerdynamic DT 900 Pro X</h3>
@@ -623,8 +597,8 @@ body{background:var(--bg);overflow-x:hidden}
     <div class="eyebrow reveal">Connect</div>
     <div class="connect-grid">
       <div class="connect-left reveal">
-        <h2 class="h-display">Follow the journey.</h2>
-        <p>The music is made in private. The story is shared in public. Join wherever you listen, watch, or create.</p>
+        <h2 class="h-display">Made in private. <em>Shared in public.</em></h2>
+        <p>Find Kaisos wherever you listen, watch, or create.</p>
         <div class="soc-list">
           <a class="soc" href="https://www.instagram.com/lofikaisos/" target="_blank" rel="me noopener"><span><span class="soc-name">Instagram</span> &nbsp;<span class="soc-handle">@lofikaisos</span></span><span class="soc-arrow">→</span></a>
           <a class="soc" href="https://youtube.com/@LofiKaisos" target="_blank" rel="me noopener"><span><span class="soc-name">YouTube</span> &nbsp;<span class="soc-handle">@LofiKaisos</span></span><span class="soc-arrow">→</span></a>
@@ -636,7 +610,7 @@ body{background:var(--bg);overflow-x:hidden}
       <div class="reveal d1">
         <div class="support-card">
           <h3>Minimal pieces for quiet creators.</h3>
-          <p>Wear the Kaisos world: dark tones, soft gold, purple details, music-first design. Made for the people who make things in silence.</p>
+          <p>Dark tones, soft gold, purple detail — built to wear while you work. Made for the people who make things in silence.</p>
           <a class="btn btn-ghost" href="/merch">Enter the Shop →</a>
         </div>
         <div class="support-card">
@@ -667,7 +641,7 @@ body{background:var(--bg);overflow-x:hidden}
     </div>
     <div class="ft-col">
       <span class="lbl">Listen</span>
-      <a href="#music">The Hall</a>
+      <a href="#music">Releases</a>
       <a href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="noopener">Spotify</a>
       <a href="https://music.apple.com/us/artist/kaisos/1735054792" target="_blank" rel="noopener">Apple Music</a>
       <a href="https://youtube.com/@LofiKaisos" target="_blank" rel="noopener">YouTube</a>
@@ -692,7 +666,7 @@ body{background:var(--bg);overflow-x:hidden}
 
 <!-- ══ IMPRESSUM MODAL ══ -->
 <div class="modal-overlay" id="modal-impressum" role="dialog" aria-modal="true" aria-labelledby="impressum-title" onclick="if(event.target===this)closeModal('impressum')">
-  <div class="modal-panel">
+  <div class="modal-panel" lang="de">
     <button type="button" class="modal-close" aria-label="Close" onclick="closeModal('impressum')">×</button>
     <h2 id="impressum-title">Impressum</h2>
     <h3>Angaben gemäß § 5 TMG</h3>
@@ -710,16 +684,16 @@ body{background:var(--bg);overflow-x:hidden}
 <div class="modal-overlay" id="modal-privacy" role="dialog" aria-modal="true" aria-labelledby="privacy-title" onclick="if(event.target===this)closeModal('privacy')">
   <div class="modal-panel">
     <button type="button" class="modal-close" aria-label="Close" onclick="closeModal('privacy')">×</button>
-    <h2 id="privacy-title">Datenschutzerklärung</h2>
-    <h3>Verantwortlicher / Controller</h3>
+    <h2 id="privacy-title">Privacy Policy</h2>
+    <h3>Controller</h3>
     <p>Adnan Cengiz, Landshuter Allee 138, 80637 München<br/>E-Mail: <a href="mailto:cengiz.adnan93@gmail.com">cengiz.adnan93@gmail.com</a></p>
-    <h3>Datenerhebung / Data Collection</h3>
+    <h3>Data Collection</h3>
     <p>This website does not collect personal data. No first-party cookies are set. We use Plausible Analytics — a privacy-friendly, cookieless service that records only aggregated, anonymous usage statistics (page views and outbound clicks); it sets no cookies and performs no cross-site tracking. See <a href="https://plausible.io/privacy" target="_blank" rel="noopener">Plausible's privacy policy</a>.</p>
-    <h3>Drittanbieter / Third-party Services</h3>
+    <h3>Third-party Services</h3>
     <p>Music players (Spotify, Apple Music, YouTube) load only after you click to play them. Once loaded, these providers may set their own cookies. Please refer to their privacy policies: <a href="https://www.spotify.com/legal/privacy-policy/" target="_blank" rel="noopener">Spotify</a>, <a href="https://more.ko-fi.com/privacy" target="_blank" rel="noopener">Ko-fi</a>.</p>
-    <p>Spotify-Player werden erst nach einem Klick auf den Play-Button geladen. Erst danach können diese Anbieter eigene Daten erheben. Bitte beachten Sie die Datenschutzerklärungen dieser Anbieter.</p>
-    <h3>Ihre Rechte / Your Rights</h3>
-    <p>Sie haben das Recht auf Auskunft, Berichtigung und Löschung Ihrer gespeicherten Daten. Kontakt / Contact: <a href="mailto:cengiz.adnan93@gmail.com">cengiz.adnan93@gmail.com</a></p>
+    <p lang="de">Spotify-Player werden erst nach einem Klick auf den Play-Button geladen. Erst danach können diese Anbieter eigene Daten erheben. Bitte beachten Sie die Datenschutzerklärungen dieser Anbieter.</p>
+    <h3>Your Rights</h3>
+    <p>You have the right to access, rectify, and erase your stored data. Contact: <a href="mailto:cengiz.adnan93@gmail.com">cengiz.adnan93@gmail.com</a></p>
   </div>
 </div>
 
@@ -730,21 +704,21 @@ body{background:var(--bg);overflow-x:hidden}
 (function(){
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches || matchMedia('(prefers-reduced-data: reduce)').matches;
   const cv = document.getElementById('atmos');
-  if (reduce || !cv) return; // CSS gradient fallback stays
+  if (reduce || !cv) { document.documentElement.classList.add('no-webgl'); return; }
   let gl;
   try { gl = cv.getContext('webgl', {antialias:false, alpha:false, depth:false, powerPreference:'low-power'}); } catch(e){}
-  if (!gl) return;
+  if (!gl) { document.documentElement.classList.add('no-webgl'); return; }
 
   const vs = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
   const fs = [
     'precision mediump float;',
-    'uniform vec2 u_res;uniform float u_t;uniform vec2 u_ptr;uniform float u_zone;',
+    'uniform vec2 u_res;uniform float u_t;uniform vec2 u_ptr;',
     'float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}',
     'float noise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);',
     ' float a=hash(i),b=hash(i+vec2(1,0)),c=hash(i+vec2(0,1)),d=hash(i+vec2(1,1));',
     ' return mix(mix(a,b,f.x),mix(c,d,f.x),f.y);}',
     'float fbm(vec2 p){float v=0.,a=.5;mat2 m=mat2(1.6,1.2,-1.2,1.6);',
-    ' for(int i=0;i<4;i++){v+=a*noise(p);p=m*p;a*=.5;}return v;}',
+    ' for(int i=0;i<3;i++){v+=a*noise(p);p=m*p;a*=.5;}return v;}',
     'void main(){',
     ' vec2 p=(gl_FragCoord.xy-.5*u_res)/u_res.y;',
     ' p+=u_ptr*0.06;',
@@ -758,10 +732,8 @@ body{background:var(--bg);overflow-x:hidden}
     ' vec3 col=bg;',
     ' col=mix(col,deep,smoothstep(0.2,0.85,n)*0.85);',
     ' col=mix(col,purple,smoothstep(0.5,1.05,n)*0.55);',
-    ' float gm=0.0;',
-    ' if(n>0.45){ gm=smoothstep(0.62,0.92,fbm(p*1.1-q+t*1.4)); }',
-    ' col=mix(col,gold,gm*smoothstep(0.45,0.95,n)*(0.18+0.18*u_zone));',
-    ' col=mix(col,col*vec3(1.06,0.97,0.82),u_zone*0.45);',
+    ' float gm=smoothstep(0.55,0.95,n)*smoothstep(0.5,0.9,q.x+q.y);',
+    ' col=mix(col,gold,gm*0.16);',
     ' float vig=smoothstep(1.35,0.25,length(p));',
     ' col*=mix(0.45,1.05,vig);',
     ' col+=(hash(gl_FragCoord.xy+t)-0.5)*0.015;',
@@ -774,7 +746,7 @@ body{background:var(--bg);overflow-x:hidden}
   gl.attachShader(prog,sh(gl.VERTEX_SHADER,vs));
   gl.attachShader(prog,sh(gl.FRAGMENT_SHADER,fs));
   gl.linkProgram(prog);
-  if(!gl.getProgramParameter(prog,gl.LINK_STATUS)) return;
+  if(!gl.getProgramParameter(prog,gl.LINK_STATUS)){ document.documentElement.classList.add('no-webgl'); return; }
   gl.useProgram(prog);
   const b=gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER,b);
@@ -783,42 +755,52 @@ body{background:var(--bg);overflow-x:hidden}
   gl.enableVertexAttribArray(loc);
   gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
   const uRes=gl.getUniformLocation(prog,'u_res'),uT=gl.getUniformLocation(prog,'u_t'),
-        uPtr=gl.getUniformLocation(prog,'u_ptr'),uZone=gl.getUniformLocation(prog,'u_zone');
+        uPtr=gl.getUniformLocation(prog,'u_ptr');
 
-  let W=0,H=0,DPR=1,maxDPR=1.5;
+  let W=0,H=0,DPR=1,maxDPR=1.5,scale=1;
   function resize(){
     maxDPR = innerWidth<900 ? 1.0 : 1.5;
+    scale  = innerWidth<900 ? 0.75 : 1.0; // fewer fragments on small screens
     DPR = Math.min(DPR||maxDPR, maxDPR);
-    W=Math.floor(innerWidth*DPR); H=Math.floor(innerHeight*DPR);
+    W=Math.floor(innerWidth*DPR*scale); H=Math.floor(innerHeight*DPR*scale);
     cv.width=W; cv.height=H; gl.viewport(0,0,W,H);
   }
   DPR=maxDPR; resize();
   addEventListener('resize',resize,{passive:true});
 
-  let px=0,py=0,tx=0,ty=0,zone=0;
+  let px=0,py=0,tx=0,ty=0;
   addEventListener('pointermove',e=>{tx=(e.clientX/innerWidth-0.5)*2;ty=-(e.clientY/innerHeight-0.5)*2;},{passive:true});
 
-  let running=true,start=null,raf=0,first=true,last=0,slow=0;
+  let running=true,onScreen=true,raf=0,first=true,last=0,lastDraw=0,slow=0,clock=0;
   function frame(ts){
     if(!running) return;
-    if(start===null){start=ts;last=ts;}
-    const dt=ts-last; last=ts;
-    // frame-time guard: drop DPR once if sustained jank
-    if(dt>22 && DPR>1){ if(++slow>20){ DPR=1; resize(); slow=0; } } else slow=0;
+    raf=requestAnimationFrame(frame);
+    if(!last){last=ts;lastDraw=ts;}
+    if(ts-lastDraw<33) return; // cap ~30fps
+    let dt=ts-last; last=ts; lastDraw=ts;
+    if(dt>100)dt=100; // clamp across pauses so the clock never jumps/rewinds
+    if(dt>40 && DPR>1){ if(++slow>20){ DPR=1; resize(); slow=0; } } else slow=0;
+    clock+=dt*0.001; // accumulator freezes while paused → smooth on resume
     px+=(tx-px)*0.04; py+=(ty-py)*0.04;
-    zone+=(((window.__kZone||0))-zone)*0.05;
-    gl.uniform2f(uRes,W,H); gl.uniform1f(uT,(ts-start)*0.001);
-    gl.uniform2f(uPtr,px,py); gl.uniform1f(uZone,zone);
+    gl.uniform2f(uRes,W,H); gl.uniform1f(uT,clock);
+    gl.uniform2f(uPtr,px,py);
     gl.drawArrays(gl.TRIANGLES,0,3);
     if(first){ cv.style.background='none'; first=false; }
-    raf=requestAnimationFrame(frame);
   }
-  function go(){ if(!raf){ running=true; raf=requestAnimationFrame(frame); } }
-  // defer first frame past LCP
+  function go(){ if(!raf && running && onScreen){ last=0; raf=requestAnimationFrame(frame); } }
+  function stop(){ running=false; cancelAnimationFrame(raf); raf=0; }
   ('requestIdleCallback' in window) ? requestIdleCallback(go,{timeout:1400}) : setTimeout(go,400);
+
+  // stop rendering once the hero (where the field reads) is scrolled past
+  const hero=document.querySelector('.hero');
+  if(hero && 'IntersectionObserver' in window){
+    new IntersectionObserver(es=>{
+      onScreen=es[0].isIntersecting;
+      if(onScreen){ running=true; go(); } else { stop(); }
+    },{rootMargin:'200px'}).observe(hero);
+  }
   document.addEventListener('visibilitychange',()=>{
-    if(document.hidden){running=false;cancelAnimationFrame(raf);raf=0;}
-    else{start=null;go();}
+    if(document.hidden){ stop(); } else if(onScreen){ running=true; go(); }
   });
 })();
 
@@ -838,71 +820,6 @@ body{background:var(--bg);overflow-x:hidden}
   host.addEventListener('pointerleave',()=>{nx=0;ny=0;if(!q){q=true;requestAnimationFrame(apply);}});
 })();
 
-// ══ THE HALL OF ROOMS (progressive enhancement) ══
-(function(){
-  const hall=document.getElementById('hall');
-  if(!hall) return;
-  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return; // grid fallback stays
-  const rooms=[...hall.querySelectorAll('.disc-card')];
-  hall.classList.add('hall-on');
-
-  let q=false;
-  function layout(){
-    q=false;
-    const r=hall.getBoundingClientRect(), mid=r.left+r.width/2;
-    let near=null, nd=1e9;
-    for(const room of rooms){
-      const b=room.getBoundingClientRect(), c=b.left+b.width/2;
-      const d=(c-mid)/r.width, ad=Math.min(Math.abs(d),1.1);
-      const inner=room.firstElementChild;
-      inner.style.setProperty('--ry',(-d*40).toFixed(2)+'deg');
-      inner.style.setProperty('--tz',(-ad*230).toFixed(0)+'px');
-      inner.style.setProperty('--sc',(1-ad*0.16).toFixed(3));
-      inner.style.setProperty('--op',(1-ad*0.42).toFixed(3));
-      inner.style.setProperty('--br',(1-ad*0.5).toFixed(3));
-      const dist=Math.abs(c-mid); if(dist<nd){nd=dist;near=room;}
-    }
-    for(const room of rooms) room.classList.toggle('center', room===near);
-  }
-  // arrow buttons: visible affordance + non-jacking walk (native vertical scroll preserved)
-  const arrows=[...document.querySelectorAll('.hall-arrow')];
-  function updateArrows(){
-    const max=hall.scrollWidth-hall.clientWidth;
-    arrows.forEach(a=>{
-      const dir=+a.dataset.dir;
-      a.disabled = (dir<0 && hall.scrollLeft<=1) || (dir>0 && hall.scrollLeft>=max-1);
-    });
-  }
-  arrows.forEach(a=>a.addEventListener('click',()=>{
-    hall.scrollBy({left:(+a.dataset.dir)*hall.clientWidth*0.8,behavior:'smooth'});
-  }));
-
-  function onScroll(){ if(!q){q=true;requestAnimationFrame(()=>{layout();updateArrows();});} }
-  hall.addEventListener('scroll',onScroll,{passive:true});
-  addEventListener('resize',onScroll,{passive:true});
-
-  // keyboard: bring a tabbed-to (off-center, dimmed) card into the centre so it's usable
-  hall.addEventListener('focusin',e=>{
-    const card=e.target.closest('.disc-card');
-    if(card) card.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'});
-  });
-
-  // fine-pointer drag to walk (touch already scrolls natively)
-  if(matchMedia('(pointer: fine)').matches){
-    let down=false,sx=0,sl=0,moved=0;
-    hall.addEventListener('pointerdown',e=>{down=true;moved=0;sx=e.clientX;sl=hall.scrollLeft;hall.classList.add('dragging');hall.setPointerCapture(e.pointerId);});
-    hall.addEventListener('pointermove',e=>{ if(!down)return; const dx=e.clientX-sx; moved+=Math.abs(dx); hall.scrollLeft=sl-dx; });
-    function up(e){ if(!down)return; down=false; hall.classList.remove('dragging'); try{hall.releasePointerCapture(e.pointerId);}catch(_){} }
-    hall.addEventListener('pointerup',up); hall.addEventListener('pointercancel',up);
-    // swallow the click if it was a drag, so a walk doesn't open Spotify
-    hall.addEventListener('click',e=>{ if(moved>8){e.preventDefault();e.stopPropagation();} },true);
-  }
-
-  // start centered-ish and lay out once images/fonts settle
-  requestAnimationFrame(()=>{layout();updateArrows();});
-  addEventListener('load',()=>requestAnimationFrame(()=>{layout();updateArrows();}));
-})();
-
 // ══ CLICK-TO-LOAD EMBED (privacy friendly) ══
 document.querySelectorAll('.embed-facade').forEach(btn=>{
   btn.addEventListener('click',()=>{
@@ -910,6 +827,8 @@ document.querySelectorAll('.embed-facade').forEach(btn=>{
     const f=document.createElement('iframe');
     f.src=src; f.height=h; f.loading='lazy'; f.title='Kaisos player';
     f.setAttribute('frameborder','0');
+    f.setAttribute('referrerpolicy','strict-origin-when-cross-origin');
+    f.setAttribute('sandbox','allow-scripts allow-same-origin allow-presentation allow-popups');
     f.allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
     btn.replaceWith(f);
   });
@@ -923,7 +842,7 @@ document.querySelectorAll('.embed-facade').forEach(btn=>{
   els.forEach(e=>io.observe(e));
 })();
 
-// ══ NAV + PROGRESS + BACK TO TOP + SHADER ZONE ══
+// ══ NAV + PROGRESS + BACK TO TOP ══
 (function(){
   const nav=document.getElementById('nav'),prog=document.getElementById('progress'),back=document.getElementById('back-top');
   let tick=false;
@@ -934,7 +853,6 @@ document.querySelectorAll('.embed-facade').forEach(btn=>{
       nav.classList.toggle('scrolled',y>20);
       prog.style.width=(p*100)+'%';
       back.classList.toggle('show',y>700);
-      window.__kZone=p; // background warms as you descend the world
       tick=false;
     });
   }
@@ -942,16 +860,25 @@ document.querySelectorAll('.embed-facade').forEach(btn=>{
   back.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
 })();
 
+// ══ SCROLL LOCK (single source of truth: drawer OR any modal) ══
+function syncScrollLock(){
+  const d=document.getElementById('drawer');
+  const open=document.querySelector('.modal-overlay.open')||(d&&d.classList.contains('open'));
+  document.body.style.overflow=open?'hidden':'';
+}
+
 // ══ MOBILE DRAWER ══
 (function(){
   const b=document.getElementById('burger'),d=document.getElementById('drawer'); if(!b||!d)return;
   function close(focusBurger){
     if(!d.classList.contains('open'))return;
     d.classList.remove('open');b.classList.remove('open');b.setAttribute('aria-expanded','false');
+    syncScrollLock();
     if(focusBurger)b.focus();
   }
   b.addEventListener('click',()=>{
     const o=d.classList.toggle('open');b.classList.toggle('open',o);b.setAttribute('aria-expanded',o);
+    syncScrollLock();
     if(o){const f=d.querySelector('a');if(f)f.focus();}
   });
   d.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>close(false)));
@@ -968,7 +895,7 @@ function openModal(id){
   m.removeAttribute('inert');
   m.removeAttribute('aria-hidden');
   m.classList.add('open');
-  document.body.style.overflow='hidden';
+  syncScrollLock();
   const f=m.querySelector('.modal-close'); if(f)f.focus();
 }
 function closeModal(id){
@@ -976,13 +903,14 @@ function closeModal(id){
   m.classList.remove('open');
   m.setAttribute('inert','');
   m.setAttribute('aria-hidden','true');
-  document.body.style.overflow='';
+  syncScrollLock();
   if(modalReturnFocus){modalReturnFocus.focus();modalReturnFocus=null;}
 }
 document.querySelectorAll('.modal-overlay').forEach(overlay=>{
   overlay.addEventListener('keydown',e=>{
     if(e.key!=='Tab')return;
-    const f=overlay.querySelectorAll('button, a, [tabindex]:not([tabindex="-1"])');
+    const f=overlay.querySelectorAll('.modal-panel button, .modal-panel a, .modal-panel [tabindex]:not([tabindex="-1"])');
+    if(!f.length)return;
     const first=f[0],last=f[f.length-1];
     if(e.shiftKey?document.activeElement===first:document.activeElement===last){e.preventDefault();(e.shiftKey?last:first).focus();}
   });
