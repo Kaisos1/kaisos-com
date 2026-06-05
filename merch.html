@@ -103,11 +103,21 @@
 .product-price span{font-family:'Inter',sans-serif;font-size:0.7rem;color:var(--muted);font-weight:400;margin-left:0.25rem}
 .btn-buy{display:inline-flex;align-items:center;gap:0.4rem;padding:0.5rem 1.1rem;background:var(--accent);color:#fff;font-size:0.72rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;border-radius:4px;border:1px solid transparent;transition:background 0.2s,border-color 0.2s;white-space:nowrap}
 .btn-buy:hover{background:#9a4ad8}
-.product-card-featured{border-color:rgba(200,133,15,0.25)}
-.product-card-featured:hover{border-color:rgba(200,133,15,0.55);box-shadow:0 18px 44px -20px rgba(0,0,0,0.7),0 0 0 1px rgba(200,133,15,0.12)}
-.product-card-featured .btn-buy{background:var(--gold);color:var(--bg)}
-.product-card-featured .btn-buy:hover{background:var(--gold);border-color:var(--bg)}
-.featured-badge{position:absolute;top:0.75rem;left:0.75rem;padding:0.25rem 0.65rem;background:var(--gold);color:var(--bg);font-size:0.58rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;border-radius:2px;z-index:1}
+.product-index{position:absolute;top:0.85rem;left:1rem;z-index:2;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--accent-text);letter-spacing:0.01em;opacity:0.9;pointer-events:none}
+
+/* ══ THE DROP ══ */
+.drop{border-bottom:1px solid var(--border);padding:var(--space-xl) var(--pad);position:relative;overflow:hidden}
+.drop-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+.drop-media{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:1;background:#0a0914;display:grid;place-items:center;box-shadow:0 50px 100px -34px rgba(0,0,0,0.85),0 0 0 1px var(--border),0 0 60px rgba(139,63,201,0.16)}
+.drop-media>img{width:100%;height:100%;object-fit:contain;position:relative;z-index:1}
+.drop-mark{position:absolute;inset:0;display:grid;place-items:center;font-family:'Cormorant Garamond',serif;font-size:34rem;line-height:0;color:rgba(176,116,230,0.05);z-index:0;pointer-events:none;user-select:none}
+.drop-text h2{font-family:'Cormorant Garamond',serif;font-size:var(--fs-h2);font-weight:400;color:var(--white);line-height:1.1;letter-spacing:-0.01em;margin-bottom:1rem}
+.drop-text h2 em{font-style:italic;color:var(--accent-text)}
+.drop-cap{color:var(--muted2);font-weight:300;line-height:1.85;max-width:42ch;margin-bottom:2rem}
+.drop-foot{display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap}
+.drop-price{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--gold);font-weight:500;line-height:1;display:inline-flex;align-items:flex-start;gap:0.1em}
+.drop-price .cur{font-size:1rem;transform:translateY(0.25em);opacity:0.85}
+.drop-price span:last-child{font-family:'Inter',sans-serif;font-size:0.7rem;color:var(--muted);font-weight:600;letter-spacing:0.12em;text-transform:uppercase;align-self:flex-end;margin-bottom:0.35rem}
 
 /* ══ BRAND STRIP ══ */
 .brand-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:var(--space-lg) var(--pad);background:linear-gradient(to right,rgba(139,63,201,0.04),transparent)}
@@ -149,6 +159,8 @@
 /* ══ MOBILE ══ */
 @media(max-width:900px){
   .merch-hero{padding-top:120px}
+  .drop-inner{grid-template-columns:1fr;gap:2.2rem}
+  .drop-mark{font-size:22rem}
   .products-grid{grid-template-columns:1fr 1fr}
   .brand-strip-inner{grid-template-columns:1fr;gap:2.5rem}
   .brand-strip-logo{display:none}
@@ -188,19 +200,38 @@
   </div>
   <div class="merch-hero-inner">
     <div class="merch-eyebrow"><span class="eyebrow-dot"></span>2026 Collection</div>
-    <h1 class="reveal">Pieces for <em>quiet creators.</em></h1>
+    <h1 class="reveal reveal--settle">Pieces for <em>quiet creators.</em></h1>
     <p class="reveal d1">Minimal pieces built for the people who make things in silence. Dark tones, soft gold, purple detail — the Kaisos identity, made wearable.</p>
-    <a href="#products" class="merch-hero-cta reveal d2">View the collection →</a>
+    <a href="#products" class="merch-hero-cta reveal d2">Step inside →</a>
   </div>
 </section>
 
 <!-- ══ MARKS ══ -->
 <div class="marks">
   <div class="marks-inner">
-    <span class="mark">Ships Worldwide</span>
-    <span class="mark">Independent Label</span>
-    <span class="mark">Dark Tones</span>
-    <span class="mark">Made in Munich</span>
+    <span class="mark">Printed to order</span>
+    <span class="mark">No label, no boss</span>
+    <span class="mark">Dark by default</span>
+    <span class="mark">Drawn in Munich</span>
+  </div>
+</div>
+
+<!-- ══ THE DROP ══ -->
+<div class="drop">
+  <div class="drop-inner">
+    <div class="drop-media reveal">
+      <span class="drop-mark" aria-hidden="true">K</span>
+      <img loading="lazy" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/b390bb32-ccc8-4b88-94c8-5d1f07ef9fd9.webp" alt="Kaisos Lofi Hoodie" width="600" height="600"/>
+    </div>
+    <div class="drop-text reveal d1">
+      <div class="eyebrow" data-num="01">The Drop</div>
+      <h2>Lofi <em>Hoodie.</em></h2>
+      <p class="drop-cap">Full back print, Lofi Worlds sleeve, four colorways. Worn by the people who make things in silence.</p>
+      <div class="drop-foot">
+        <span class="drop-price"><span class="cur">$</span>60<span>+ shipping</span></span>
+        <a href="https://kaisos-shop.fourthwall.com/products/kaisos-lofi-hoodie" target="_blank" rel="noopener" class="merch-hero-cta">Take one home →</a>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -208,29 +239,15 @@
 <div id="products" class="products-section">
   <div class="section-header reveal">
     <div class="eyebrow">The Collection</div>
-    <h2>Made for the <em>quiet hours.</em></h2>
-    <p>Every piece carries the Kaisos identity — minimal, intentional, built to last.</p>
+    <h2 class="reveal reveal--settle">Made for the <em>quiet hours.</em></h2>
+    <p>Six pieces. The same dark, the same gold, the same quiet — now in cotton.</p>
   </div>
 
   <div class="products-grid">
 
-    <div class="product-card product-card-featured reveal">
+    <div class="product-card reveal">
       <div class="product-img">
-        <div class="featured-badge">Signature</div>
-        <img loading="lazy" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/b390bb32-ccc8-4b88-94c8-5d1f07ef9fd9.webp" alt="Kaisos Lofi Hoodie" width="600" height="600"/>
-      </div>
-      <div class="product-info">
-        <div class="product-name">Kaisos Lofi Hoodie</div>
-        <div class="product-desc">Full back print, Lofi Worlds sleeve, 4 colorways. The signature piece.</div>
-        <div class="product-footer">
-          <div class="product-price">$60 <span>+ shipping</span></div>
-          <a href="https://kaisos-shop.fourthwall.com/products/kaisos-lofi-hoodie" target="_blank" rel="noopener" class="btn-buy" aria-label="Buy Kaisos Lofi Hoodie">Buy Now →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card reveal d1">
-      <div class="product-img">
+        <span class="product-index">No. 02</span>
         <img loading="lazy" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/8f4512af-fc5d-48e7-9c21-f84401fb2837.webp" alt="Kaisos Logo Tee" width="600" height="600"/>
       </div>
       <div class="product-info">
@@ -238,13 +255,14 @@
         <div class="product-desc">Classic K mark on the chest. Minimal, clean, built for everyday wear.</div>
         <div class="product-footer">
           <div class="product-price">$29 <span>+ shipping</span></div>
-          <a href="https://kaisos-shop.fourthwall.com/products/kaisos-logo-tee" target="_blank" rel="noopener" class="btn-buy" aria-label="Buy Kaisos Logo Tee">Buy Now →</a>
+          <a href="https://kaisos-shop.fourthwall.com/products/kaisos-logo-tee" target="_blank" rel="noopener" class="btn-buy" aria-label="Buy Kaisos Logo Tee">Take one home →</a>
         </div>
       </div>
     </div>
 
     <div class="product-card reveal d2">
       <div class="product-img">
+        <span class="product-index">No. 03</span>
         <img loading="lazy" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/a996cb53-143d-4874-b38b-54f1c81a3e6b.webp" alt="Kaisos Lofi Hoodie Vol. 2" width="600" height="600"/>
       </div>
       <div class="product-info">
@@ -252,13 +270,14 @@
         <div class="product-desc">Darker colorways, the Lofi Worlds scene reframed. Vol. 1's quieter sibling.</div>
         <div class="product-footer">
           <div class="product-price">$60 <span>+ shipping</span></div>
-          <a href="https://kaisos-shop.fourthwall.com/products/kaisos-lofi-hoodie-2" target="_blank" rel="noopener" class="btn-buy" aria-label="Buy Kaisos Lofi Hoodie Vol. 2">Buy Now →</a>
+          <a href="https://kaisos-shop.fourthwall.com/products/kaisos-lofi-hoodie-2" target="_blank" rel="noopener" class="btn-buy" aria-label="Buy Kaisos Lofi Hoodie Vol. 2">Take one home →</a>
         </div>
       </div>
     </div>
 
     <div class="product-card reveal">
       <div class="product-img">
+        <span class="product-index">No. 04</span>
         <img loading="lazy" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/93ba98a1-e2f3-419b-b2ef-8ea2f028dd09.webp" alt="Kaisos Embroidered Cap" width="600" height="600"/>
       </div>
       <div class="product-info">
@@ -266,13 +285,14 @@
         <div class="product-desc">Classic dad hat with stitched K logo. Yupoong fit, built to last.</div>
         <div class="product-footer">
           <div class="product-price">$32 <span>+ shipping</span></div>
-          <a href="https://kaisos-shop.fourthwall.com/products/kaisos-embroidered-cap" target="_blank" rel="noopener" class="btn-buy" aria-label="Buy Kaisos Embroidered Cap">Buy Now →</a>
+          <a href="https://kaisos-shop.fourthwall.com/products/kaisos-embroidered-cap" target="_blank" rel="noopener" class="btn-buy" aria-label="Buy Kaisos Embroidered Cap">Take one home →</a>
         </div>
       </div>
     </div>
 
     <div class="product-card reveal d1">
       <div class="product-img">
+        <span class="product-index">No. 05</span>
         <img loading="lazy" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/90df3d57-a716-4fa4-8997-45fe5368d13e.webp" alt="Kaisos Lofi Hoodie Vol. 3" width="600" height="600"/>
       </div>
       <div class="product-info">
@@ -280,13 +300,14 @@
         <div class="product-desc">The logo edition. Less scenery, more identity — Kaisos mark bold on the back.</div>
         <div class="product-footer">
           <div class="product-price">$60 <span>+ shipping</span></div>
-          <a href="https://kaisos-shop.fourthwall.com/products/kaisos-lofi-hoodie-3" target="_blank" rel="noopener" class="btn-buy" aria-label="Buy Kaisos Lofi Hoodie Vol. 3">Buy Now →</a>
+          <a href="https://kaisos-shop.fourthwall.com/products/kaisos-lofi-hoodie-3" target="_blank" rel="noopener" class="btn-buy" aria-label="Buy Kaisos Lofi Hoodie Vol. 3">Take one home →</a>
         </div>
       </div>
     </div>
 
     <div class="product-card reveal d2">
       <div class="product-img">
+        <span class="product-index">No. 06</span>
         <img loading="lazy" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/d2480214-719c-482d-ab74-24374d0cf4d7.webp" alt="Kaisos Mug" width="600" height="600"/>
       </div>
       <div class="product-info">
@@ -294,7 +315,7 @@
         <div class="product-desc">Kaisos artwork, 11oz ceramic. The ritual object for the late-night session.</div>
         <div class="product-footer">
           <div class="product-price">$14 <span>+ shipping</span></div>
-          <a href="https://kaisos-shop.fourthwall.com/products/kaisos-mug" target="_blank" rel="noopener" class="btn-buy" aria-label="Buy Kaisos Mug">Buy Now →</a>
+          <a href="https://kaisos-shop.fourthwall.com/products/kaisos-mug" target="_blank" rel="noopener" class="btn-buy" aria-label="Buy Kaisos Mug">Take one home →</a>
         </div>
       </div>
     </div>
@@ -306,9 +327,9 @@
 <div class="brand-strip">
   <div class="brand-strip-inner">
     <div class="brand-strip-text reveal">
-      <h2>Built for <em>quiet creators.</em></h2>
-      <p>Every piece is designed around the same identity as the music — minimal, intentional, and made for people who create in silence. No loud branding. No fast fashion. Just the world, made wearable.</p>
-      <a href="https://kaisos-shop.fourthwall.com/en-eur" target="_blank" rel="noopener" class="merch-hero-cta">View full store →</a>
+      <h2 class="reveal reveal--settle">Built for <em>quiet creators.</em></h2>
+      <p>Every piece carries the same identity as the music — made for people who keep the volume low and the lights lower. No logos shouting across the chest. Just the world you already listen to, in something you can wear at 2am.</p>
+      <a href="https://kaisos-shop.fourthwall.com/en-eur" target="_blank" rel="noopener" class="merch-hero-cta">See the whole rack →</a>
       <p class="brand-strip-music">The music behind it — <a href="/#music">stream now →</a></p>
     </div>
     <div class="brand-strip-logo reveal d1">
@@ -323,9 +344,9 @@
 <!-- ══ CTA ══ -->
 <div class="merch-cta">
   <div class="merch-cta-inner reveal">
-    <h2>The sound, <em>made wearable.</em></h2>
+    <h2 class="reveal reveal--settle">The sound, <em>made wearable.</em></h2>
     <p>Everything ships from the Fourthwall store. Independent, self-released, and worn by the people who get it.</p>
-    <a href="https://kaisos-shop.fourthwall.com/en-eur" target="_blank" rel="noopener" class="merch-cta-btn">Shop the full collection →</a>
+    <a href="https://kaisos-shop.fourthwall.com/en-eur" target="_blank" rel="noopener" class="merch-cta-btn">Wear the quiet →</a>
   </div>
 </div>
 

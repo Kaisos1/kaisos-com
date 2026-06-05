@@ -49,6 +49,8 @@ a{text-decoration:none;color:inherit}
 
 /* ══ PROGRESS ══ */
 #progress{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(to right,var(--accent),var(--gold));z-index:1000;transition:width 0.1s linear;pointer-events:none}
+#progress::after{content:'';position:absolute;right:-3px;top:50%;width:6px;height:6px;border-radius:50%;background:var(--gold);transform:translateY(-50%);box-shadow:0 0 8px 1px rgba(200,133,15,0.6);opacity:0;transition:opacity 0.25s}
+#progress[style*="width"]::after{opacity:1}
 
 /* ══ NAV ══ */
 nav{position:fixed;top:0;left:0;right:0;z-index:500;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);background:rgba(7,7,15,0.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
@@ -78,6 +80,11 @@ footer{border-top:1px solid var(--border);padding:2.5rem var(--pad);display:flex
 .reveal{opacity:0;transform:translateY(20px);transition:opacity 0.65s ease,transform 0.65s ease}
 .reveal.visible{opacity:1;transform:none}
 .d1{transition-delay:0.1s}.d2{transition-delay:0.2s}.d3{transition-delay:0.3s}.d4{transition-delay:0.4s}.d5{transition-delay:0.5s}
+.reveal--settle{opacity:0;filter:blur(3px);letter-spacing:0.04em;transform:translateY(6px);transition:opacity 0.9s ease,filter 0.9s ease,letter-spacing 0.9s cubic-bezier(0.2,0.6,0.2,1),transform 0.9s ease}
+.reveal--settle.visible{opacity:1;filter:blur(0);letter-spacing:inherit;transform:none}
+
+/* ══ EYEBROW NUMERALS (sitewide chapter index) ══ */
+.eyebrow[data-num]::after{content:attr(data-num);order:-1;margin-right:0.1rem;font-family:'Cormorant Garamond',serif;font-style:italic;text-transform:none;letter-spacing:0;font-size:0.95rem;color:var(--gold);opacity:0.75}
 
 /* ══ SHARED ATMOSPHERE ══ */
 .tex-bg,.tex-grain,.tex-vig{position:fixed;inset:0;z-index:-1;pointer-events:none}
@@ -98,7 +105,11 @@ footer{border-top:1px solid var(--border);padding:2.5rem var(--pad);display:flex
 }
 
 /* ══ REDUCED MOTION ══ */
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .reveal--settle{filter:none;letter-spacing:inherit;transition:none}
+  #progress::after{box-shadow:none}
+}
 
 /* ══ REDUCED DATA ══ */
 @media(prefers-reduced-data:reduce){.tex-grain{display:none}}

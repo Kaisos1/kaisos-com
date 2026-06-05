@@ -2,6 +2,41 @@
 
 ---
 
+## Session 47 — Distinctive pass: signature moments + chapter index
+
+Multi-agent audit (4 design lenses → director pressure-test) into a tight,
+on-brand enhancement set. One signature moment per page plus a unified
+"chapter-numbering / music-metaphor" finishing system. Palette + fonts
+unchanged; every effect reduced-motion gated; zero new dependencies.
+
+### Added
+- `.reveal--settle` — Cormorant display headings resolve from a soft blur as
+  they enter (piggybacks the existing observer, zero new JS); applied to the
+  hero h1 + every section h2 on both pages
+- Sitewide chapter index: Story I–IV → eyebrow numerals (`data-num`) →
+  merch catalogue "No. 0X" plate numbers → The Drop "01"
+- Story drop-cap (italic Cormorant initial, violet glow)
+- Discography cover scan-line sweep on hover (one-shot, GPU-cheap)
+- Needle-drop embed load — Spotify facade spins up and swaps in on iframe load
+  (1600ms fallback), masking load latency; all security attrs preserved
+- Scroll-spy nav — the hover underline now tracks the section you're reading
+- Progress bar playhead — glowing gold dot at the leading edge (both pages)
+- merch **The Drop** — the Lofi Hoodie lifted out of the grid into a full-bleed
+  editorial feature (violet wash + ghost-K watermark matching the homepage)
+
+### Changed
+- Copy pass killing template tells: "Listen now"→"Press play", "Buy Now"→
+  "Take one home", "Shop the full collection"→"Wear the quiet", marks strip,
+  brand-strip + gear-intro body rewritten in Kaisos's quiet voice
+
+### Removed
+- Dead `.product-card-featured` / `.featured-badge` rules (the only featured
+  card became The Drop)
+- Retired the legacy `classic.html` page, its `_redirects` rule, nav links,
+  and unused `og-image.svg` source
+
+---
+
 ## Session 46 — Premium remaster: landing page + merch page
 
 Full editorial remaster guided by a 6-dimension audit. Governing principle:
