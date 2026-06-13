@@ -122,17 +122,20 @@ body{background:var(--bg);overflow-x:hidden}
 .nv-ic{width:36px;height:36px;border-radius:50%;border:1px solid var(--border2);display:inline-flex;align-items:center;justify-content:center;color:var(--muted);transition:border-color 0.2s,color 0.2s,background 0.2s,transform 0.2s}
 .nv-ic svg{width:15px;height:15px;fill:currentColor}
 .nv-ic:hover{border-color:var(--accent);color:var(--accent-text);background:var(--accent-dim);transform:translateY(-1px)}
-.nv-cta{display:inline-flex;align-items:center;gap:0.45rem;padding:0.5rem 1.05rem;background:var(--accent);color:var(--gold);font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border-radius:4px;border:1px solid transparent;transition:border-color 0.25s,box-shadow 0.25s;white-space:nowrap}
+.nv-cta{display:inline-flex;align-items:center;gap:0.45rem;padding:0.5rem 1.05rem;background:var(--accent);color:#fff;font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border-radius:4px;border:1px solid transparent;transition:border-color 0.25s,box-shadow 0.25s,transform 0.15s;white-space:nowrap}
 .nv-cta svg{width:15px;height:15px;fill:currentColor}
 .nv-cta:hover{border-color:var(--gold);box-shadow:var(--glow-gold)}
+.nv-cta:active{transform:scale(0.97)}
 .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;min-width:44px;min-height:44px;align-items:center;justify-content:center}
 .burger span{display:block;width:22px;height:1.5px;background:var(--text);border-radius:2px;transition:transform 0.3s,opacity 0.3s}
 .burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
 .burger.open span:nth-child(2){opacity:0}
 .burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-.drawer{position:fixed;top:68px;left:0;right:0;z-index:490;background:rgba(7,7,15,0.96);backdrop-filter:blur(16px);padding:1rem var(--pad) 1.8rem;transform:translateY(-115%);transition:transform 0.35s cubic-bezier(0.4,0,0.2,1);border-bottom:1px solid var(--border)}
+.drawer{position:fixed;top:68px;left:0;right:0;z-index:490;background:rgba(7,7,15,0.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:1rem var(--pad) calc(1.8rem + env(safe-area-inset-bottom,0px));transform:translateY(-115%);transition:transform 0.35s cubic-bezier(0.4,0,0.2,1);border-bottom:1px solid var(--border);max-height:calc(100vh - 68px);max-height:calc(100dvh - 68px);overflow-y:auto;overscroll-behavior:contain}
 .drawer.open{transform:translateY(0)}
 .drawer a{display:flex;align-items:center;min-height:48px;border-bottom:1px solid var(--border);color:var(--text);text-decoration:none;font-size:0.95rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:500}
+.drawer a.drawer-cta{display:flex;align-items:center;justify-content:center;gap:0.55rem;min-height:50px;margin-top:1.2rem;background:var(--accent);color:#fff;border:none;border-radius:6px;font-size:0.8rem;font-weight:600;letter-spacing:0.09em;box-shadow:0 8px 26px rgba(139,63,201,0.3)}
+.drawer a.drawer-cta svg{width:16px;height:16px;fill:currentColor}
 .drawer-soc{display:flex;gap:0.6rem;margin-top:1.3rem}
 .drawer-soc .nv-ic{width:44px;height:44px}
 
@@ -143,10 +146,11 @@ body{background:var(--bg);overflow-x:hidden}
 .sec-line{border-top:1px solid var(--border)}
 .eyebrow{display:inline-flex;align-items:center;gap:0.7rem;font-size:var(--fs-eyebrow);letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-text);margin-bottom:2.4rem;font-weight:600}
 .eyebrow::before{content:'';width:30px;height:1px;background:var(--accent)}
-.h-display{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--white);line-height:1.08;letter-spacing:-0.01em}
+.h-display{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--white);line-height:1.08;letter-spacing:-0.01em;text-wrap:balance}
 .h-display em{font-style:italic;color:var(--accent-text)}
 .lede{color:var(--muted2);font-weight:300;line-height:1.85}
 .btn{display:inline-flex;align-items:center;gap:0.55rem;padding:0.92rem 1.9rem;font-size:0.78rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:4px;border:1px solid transparent;cursor:pointer;font-family:'Inter',sans-serif;transition:background 0.25s,border-color 0.25s,box-shadow 0.25s,transform 0.25s}
+.btn:active{transform:translateY(0) scale(0.98)}
 .btn svg{width:15px;height:15px;fill:currentColor;flex-shrink:0}
 .btn-ghost{border-color:rgba(200,133,15,0.4);color:var(--gold);background:rgba(200,133,15,0.05)}
 .btn-ghost:hover{border-color:var(--gold);background:rgba(200,133,15,0.1);box-shadow:var(--glow-gold)}
@@ -188,14 +192,13 @@ body{background:var(--bg);overflow-x:hidden}
 .latest h2{font-size:var(--fs-h2);margin-bottom:1rem}
 .latest>p{font-size:1.05rem;max-width:48ch;margin-bottom:2rem}
 .embed-shell{margin-top:2rem;border-radius:12px;overflow:hidden;border:1px solid var(--border2);background:var(--surface)}
-.embed-facade{position:relative;display:flex;align-items:center;gap:1rem;padding:1.1rem 1.3rem;cursor:pointer;width:100%;border:none;background:none;text-align:left;font-family:inherit;color:var(--text)}
+.embed-facade{position:relative;display:flex;align-items:center;gap:1rem;padding:1.1rem 1.3rem;cursor:pointer;width:100%;border:none;background:none;text-align:left;font-family:inherit;color:var(--text);transition:opacity 0.28s ease}
 .embed-facade .ef-art{width:54px;height:54px;border-radius:8px;object-fit:cover;flex-shrink:0;border:1px solid var(--edge)}
 .embed-facade .ef-txt{flex:1;min-width:0}
 .embed-facade .ef-t{display:block;font-size:0.9rem;color:var(--white);font-weight:500}
 .embed-facade .ef-s{display:block;font-size:0.74rem;color:var(--muted);letter-spacing:0.04em}
 .embed-facade .ef-play{width:42px;height:42px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;box-shadow:0 6px 20px rgba(139,63,201,0.4);transition:transform 0.2s}
 .embed-facade:hover .ef-play{transform:scale(1.08)}
-.embed-facade{transition:opacity 0.28s ease}
 .embed-facade.loading{opacity:0.45;pointer-events:none}
 .embed-facade.loading .ef-play{animation:spin-up 0.9s ease-in-out infinite}
 @keyframes spin-up{0%,100%{transform:scale(1)}50%{transform:scale(0.9)}}
@@ -220,12 +223,13 @@ body{background:var(--bg);overflow-x:hidden}
 .disc-card:hover .dc-link img{transform:scale(1.04)}
 .dc-shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(7,7,15,0.94) 0%,rgba(7,7,15,0.35) 40%,transparent 62%);z-index:1;pointer-events:none}
 .dc-meta{position:absolute;left:0;right:0;bottom:0;padding:0.85rem 0.9rem;z-index:3;pointer-events:none}
-.dc-l{font-size:0.56rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.dc-l{font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
 .dc-t{font-family:'Cormorant Garamond',serif;font-size:1.04rem;color:var(--white);line-height:1.16;display:block}
 .dc-m{font-size:0.66rem;color:var(--muted2);font-style:italic;opacity:0;max-height:0;overflow:hidden;transition:opacity 0.3s,max-height 0.3s}
 .disc-card:hover .dc-m{opacity:1;max-height:2rem}
 .dc-play{position:absolute;top:44%;left:50%;width:46px;height:46px;border-radius:50%;background:rgba(139,63,201,0.95);display:flex;align-items:center;justify-content:center;color:#fff;transform:translate(-50%,-50%) scale(0.8);opacity:0;transition:opacity 0.3s,transform 0.3s;z-index:4;box-shadow:0 10px 28px rgba(0,0,0,0.5)}
 .disc-card:hover .dc-play{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.disc-card:active .dc-inner{transform:translateY(-2px) scale(0.985)}
 .dc-link::after{content:'';position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(to bottom,transparent,rgba(200,133,15,0.5),transparent);height:40%;transform:translateY(-140%);opacity:0}
 .disc-card:hover .dc-link::after{animation:cover-scan 0.7s ease forwards}
 @keyframes cover-scan{0%{transform:translateY(-140%);opacity:0}30%{opacity:0.7}100%{transform:translateY(260%);opacity:0}}
@@ -328,7 +332,7 @@ body{background:var(--bg);overflow-x:hidden}
 
 /* ══ RESPONSIVE ══ */
 @media(max-width:980px){
-  .hero{grid-template-columns:1fr;gap:3rem;text-align:center;min-height:auto;padding-top:120px}
+  .hero{grid-template-columns:1fr;gap:2.6rem;text-align:center;min-height:auto;padding:120px var(--pad) 72px}
   .hero h1,.hero-sub{max-width:none}
   .hero-sub,.hero-trust{margin-left:auto;margin-right:auto}
   .hero-ctas{justify-content:center}
@@ -337,25 +341,43 @@ body{background:var(--bg);overflow-x:hidden}
   .gear-grid{grid-template-columns:1fr}
   .disc-grid{grid-template-columns:repeat(2,1fr)}
   .nv-center,.nv-icons{display:none}
-  .nv .nv-cta{display:none}
   .burger{display:flex}
   .disc-head{align-items:flex-start}
   .disc-head p{text-align:left}
 }
 @media(max-width:560px){
   .sec{padding:var(--space-lg) var(--pad)}
-  .hero{padding-top:108px}
+  .nv-cta{padding:0.45rem 0.85rem;font-size:0.68rem}
+  .hero{padding:96px var(--pad) 56px;gap:2.2rem}
   .hero h1{font-size:clamp(2.4rem,11vw,3.2rem)}
+  .hero-badge{margin-bottom:1.6rem}
+  .hero-sub{font-size:1rem;margin-bottom:2rem}
+  .tilt-deck{width:min(290px,70vw)}
+  .hero-ctas{flex-direction:column;align-items:stretch;width:100%}
+  .hero-ctas .btn{width:100%;justify-content:center}
+  .hero-trust{margin-top:2rem}
   .story-open::first-letter{font-size:3rem}
-  .stats{grid-template-columns:1fr;gap:2rem;padding:var(--space-md) var(--pad)}
+  .stats{grid-template-columns:1fr;gap:0;padding:var(--space-md) var(--pad)}
   .stat+.stat::before{display:none}
-  .stat{padding:1.5rem 0 0;border-top:1px solid var(--border)}
+  .stat{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;text-align:left;padding:1.05rem 0;border-top:1px solid var(--border)}
   .stat:first-child{border-top:none;padding-top:0}
-  .gear-feat{flex-direction:column;align-items:flex-start;gap:1.4rem}
+  .stat:last-child{padding-bottom:0}
+  .stat-v{font-size:clamp(1.9rem,7.5vw,2.4rem)}
+  .stat-l{margin-top:0;text-align:right;line-height:1.5}
+  .disc-grid{gap:0.85rem}
+  .dc-meta{padding:0.7rem 0.75rem}
+  .dc-t{font-size:0.95rem}
+  .gear-feat{flex-direction:column;align-items:flex-start;gap:1.4rem;padding:1.7rem 1.4rem}
   .gear-feat-cta{width:100%;text-align:center}
-  .back-top{bottom:1rem;right:1rem}
+  .gear-card{padding:1.7rem 1.4rem}
+  .support-card{padding:1.8rem 1.4rem}
+  .quote{padding:1.4rem 1.3rem}
+  .modal-overlay{padding:0.9rem}
+  .modal-panel{padding:1.8rem 1.3rem;max-height:88vh;max-height:88dvh}
+  .back-top{bottom:calc(1rem + env(safe-area-inset-bottom,0px));right:1rem}
   .ft-inner{grid-template-columns:1fr 1fr;gap:2.2rem 1.5rem}
   .ft-inner>div:first-child{grid-column:1 / -1}
+  .ft-base{justify-content:center;text-align:center}
 }
 
 /* ══ REDUCED MOTION ══ */
@@ -387,7 +409,7 @@ body{background:var(--bg);overflow-x:hidden}
 <div id="progress"></div>
 
 <!-- ══ NAV ══ -->
-<nav class="nv" id="nav">
+<nav class="nv" id="nav" aria-label="Primary">
   <a href="#top" class="nv-logo">Kaisos</a>
   <ul class="nv-center">
     <li><a href="#latest">Latest</a></li>
@@ -407,20 +429,21 @@ body{background:var(--bg);overflow-x:hidden}
     <button type="button" class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
   </div>
 </nav>
-<div class="drawer" id="drawer">
+<nav class="drawer" id="drawer" aria-label="Mobile menu">
   <a href="#latest">Latest</a>
   <a href="#music">Releases</a>
   <a href="#story">Story</a>
   <a href="#gear">Gear</a>
-  <a href="#connect">Connect</a>
   <a href="/merch">Merch</a>
+  <a href="#connect">Connect</a>
+  <a class="drawer-cta" href="https://ko-fi.com/I3I41YQ1DA" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-kofi"/></svg> Support on Ko-fi</a>
   <div class="drawer-soc">
     <a class="nv-ic" href="https://www.instagram.com/lofikaisos/" target="_blank" rel="me noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><use href="#i-instagram"/></svg></a>
     <a class="nv-ic" href="https://youtube.com/@LofiKaisos" target="_blank" rel="me noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><use href="#i-youtube"/></svg></a>
     <a class="nv-ic" href="https://www.tiktok.com/@lofikaisos" target="_blank" rel="me noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><use href="#i-tiktok"/></svg></a>
     <a class="nv-ic" href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="me noopener" aria-label="Spotify"><svg viewBox="0 0 24 24"><use href="#i-spotify"/></svg></a>
   </div>
-</div>
+</nav>
 
 <main class="page" id="top">
 
@@ -477,7 +500,7 @@ body{background:var(--bg);overflow-x:hidden}
 <!-- ══ DISCOGRAPHY ══ -->
 <section class="sec sec-line" id="music">
   <div class="wrap">
-    <div class="eyebrow reveal" data-num="I">Discography</div>
+    <div class="eyebrow reveal">Discography</div>
     <div class="disc-head reveal">
       <h2 class="h-display reveal reveal--settle">Eight releases, <em>one world.</em></h2>
       <p>Seven albums and a single — each a different mood from the same place. Tap a cover to listen.</p>
@@ -552,7 +575,7 @@ body{background:var(--bg);overflow-x:hidden}
 <!-- ══ STORY ══ -->
 <section class="sec sec-line" id="story">
   <div class="wrap">
-    <div class="eyebrow reveal" data-num="II">The story</div>
+    <div class="eyebrow reveal">The story</div>
     <div class="story-grid">
       <div class="story-left reveal">
         <h2 class="h-display reveal reveal--settle">Built on honest restarts.</h2>
@@ -577,7 +600,7 @@ body{background:var(--bg);overflow-x:hidden}
 <!-- ══ GEAR ══ -->
 <section class="sec sec-tight sec-line" id="gear">
   <div class="wrap">
-    <div class="eyebrow reveal" data-num="III">The setup</div>
+    <div class="eyebrow reveal">The setup</div>
     <div class="gear-head reveal">
       <h2 class="h-display reveal reveal--settle">Made on simple tools.</h2>
     </div>
@@ -605,7 +628,7 @@ body{background:var(--bg);overflow-x:hidden}
 <!-- ══ CONNECT ══ -->
 <section class="sec sec-line" id="connect">
   <div class="wrap">
-    <div class="eyebrow reveal" data-num="IV">Connect</div>
+    <div class="eyebrow reveal">Connect</div>
     <div class="connect-grid">
       <div class="connect-left reveal">
         <h2 class="h-display reveal reveal--settle">Made in private. <em>Shared in public.</em></h2>
@@ -941,6 +964,15 @@ document.querySelectorAll('.modal-overlay').forEach(overlay=>{
 document.addEventListener('keydown',e=>{
   if(e.key==='Escape')document.querySelectorAll('.modal-overlay.open').forEach(m=>closeModal(m.id.replace('modal-','')));
 });
+
+// ══ DEEP-LINK LEGAL MODALS (/#impressum, /#privacy — linked from merch) ══
+(function(){
+  const h=location.hash.slice(1);
+  if(h==='impressum'||h==='privacy'){
+    history.replaceState(null,'',location.pathname+location.search);
+    openModal(h);
+  }
+})();
 </script>
 <script defer data-domain="kaisos.com" src="https://plausible.io/js/script.js"></script>
 <script defer src="/analytics.js"></script>

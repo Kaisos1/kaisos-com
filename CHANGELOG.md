@@ -2,6 +2,29 @@
 
 ---
 
+## Session 48 — A11y polish + working legal deep-links
+
+Refined index + merch to newer revisions. Accessibility, micro-polish, and one
+real fix: the merch footer's Privacy/Impressum links now actually open the
+homepage modals instead of dead-landing. Design, palette, fonts unchanged.
+
+### Added
+- Deep-link legal modals — `/#privacy` and `/#impressum` (linked from merch)
+  open the matching modal on load, then `replaceState` strips the hash
+- Mobile drawer Ko-fi "Support" CTA (desktop parity)
+- merch: `robots` index/follow meta, skip-link styles, `:focus-visible` ring
+
+### Changed
+- Semantic `<nav>` + `aria-label` on primary nav and mobile drawer
+- `text-wrap:balance` on all headings; `:active` press states on every button;
+  mobile shop CTA shadow; product footer wraps on narrow screens
+- merch footer restructured into a dedicated `.footer-legal` group
+
+### Removed
+- Eyebrow `data-num` roman numerals (I–IV) on index section labels
+
+---
+
 ## Session 47 — Distinctive pass: signature moments + chapter index
 
 Multi-agent audit (4 design lenses → director pressure-test) into a tight,
