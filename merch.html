@@ -186,7 +186,8 @@
   .brand-strip-logo{order:-1;justify-content:flex-start}
   .brand-strip-logo img{width:84px;height:84px}
   .mobile-shop-cta{display:block}
-  nav.nav-cta-hidden .nav-cta.gold{opacity:0;pointer-events:none;transform:translateY(-4px);transition:opacity 0.25s,transform 0.25s}
+  nav .nav-cta.gold{transition:opacity 0.25s,transform 0.25s,visibility 0.25s}
+  nav.nav-cta-hidden .nav-cta.gold{opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-4px)}
   footer{padding-bottom:calc(86px + env(safe-area-inset-bottom,0px))}
 }
 @media(min-width:901px){.mobile-shop-cta{display:none!important}}
