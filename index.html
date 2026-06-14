@@ -233,6 +233,7 @@ body{background:var(--bg);overflow-x:hidden}
 .dc-link::after{content:'';position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(to bottom,transparent,rgba(200,133,15,0.5),transparent);height:40%;transform:translateY(-140%);opacity:0}
 .disc-card:hover .dc-link::after{animation:cover-scan 0.7s ease forwards}
 @keyframes cover-scan{0%{transform:translateY(-140%);opacity:0}30%{opacity:0.7}100%{transform:translateY(260%);opacity:0}}
+@media(hover:none){.disc-card .dc-play{opacity:1;transform:translate(-50%,-50%) scale(0.92)}}
 
 /* ══ STORY ══ */
 .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;max-width:var(--max);margin:0 auto}
@@ -282,6 +283,8 @@ body{background:var(--bg);overflow-x:hidden}
 .soc-handle{font-size:0.78rem;color:var(--muted)}
 .soc-arrow{color:var(--muted);transition:color 0.2s,transform 0.2s}
 .soc:hover .soc-arrow{color:var(--accent-text);transform:translateX(4px)}
+.soc:active{background:rgba(139,63,201,0.06)}
+.soc:active .soc-arrow{color:var(--accent-text)}
 .support-card{background:rgba(13,12,26,0.72);border:1px solid var(--border2);border-radius:12px;padding:2.4rem;position:relative;overflow:hidden}
 .support-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--accent) 50%,transparent)}
 .support-card+.support-card{margin-top:1.2rem}
@@ -342,12 +345,16 @@ body{background:var(--bg);overflow-x:hidden}
   .disc-grid{grid-template-columns:repeat(2,1fr)}
   .nv-center,.nv-icons{display:none}
   .burger{display:flex}
+  .ft-soc{gap:0.6rem}
+  .ft-soc .nv-ic{width:44px;height:44px}
   .disc-head{align-items:flex-start}
   .disc-head p{text-align:left}
 }
 @media(max-width:560px){
   .sec{padding:var(--space-lg) var(--pad)}
   .nv-cta{padding:0.45rem 0.85rem;font-size:0.68rem}
+  .eyebrow{font-size:0.72rem;letter-spacing:0.14em}
+  .story-left p,.connect-left>p,.gear-intro{line-height:1.75}
   .hero{padding:96px var(--pad) 56px;gap:2.2rem}
   .hero h1{font-size:clamp(2.4rem,11vw,3.2rem)}
   .hero-badge{margin-bottom:1.6rem}
@@ -363,9 +370,10 @@ body{background:var(--bg);overflow-x:hidden}
   .stat:first-child{border-top:none;padding-top:0}
   .stat:last-child{padding-bottom:0}
   .stat-v{font-size:clamp(1.9rem,7.5vw,2.4rem)}
-  .stat-l{margin-top:0;text-align:right;line-height:1.5}
+  .stat-l{margin-top:0;text-align:right;line-height:1.5;font-size:0.7rem;letter-spacing:0.1em}
   .disc-grid{gap:0.85rem}
   .dc-meta{padding:0.7rem 0.75rem}
+  .dc-l{font-size:0.66rem;letter-spacing:0.1em}
   .dc-t{font-size:0.95rem}
   .gear-feat{flex-direction:column;align-items:flex-start;gap:1.4rem;padding:1.7rem 1.4rem}
   .gear-feat-cta{width:100%;text-align:center}
@@ -374,10 +382,16 @@ body{background:var(--bg);overflow-x:hidden}
   .quote{padding:1.4rem 1.3rem}
   .modal-overlay{padding:0.9rem}
   .modal-panel{padding:1.8rem 1.3rem;max-height:88vh;max-height:88dvh}
+  .modal-panel h3{font-size:0.76rem;letter-spacing:0.09em}
+  .modal-close{width:44px;height:44px;font-size:1.3rem}
   .back-top{bottom:calc(1rem + env(safe-area-inset-bottom,0px));right:1rem}
   .ft-inner{grid-template-columns:1fr 1fr;gap:2.2rem 1.5rem}
   .ft-inner>div:first-child{grid-column:1 / -1}
   .ft-base{justify-content:center;text-align:center}
+}
+@media(max-width:560px) and (max-height:520px){
+  .hero{padding-top:80px}
+  .tilt-deck{width:min(180px,42vw)}
 }
 
 /* ══ REDUCED MOTION ══ */
@@ -790,16 +804,19 @@ body{background:var(--bg);overflow-x:hidden}
   const uRes=gl.getUniformLocation(prog,'u_res'),uT=gl.getUniformLocation(prog,'u_t'),
         uPtr=gl.getUniformLocation(prog,'u_ptr');
 
-  let W=0,H=0,DPR=1,maxDPR=1.5,scale=1;
+  let W=0,H=0,DPR=1,maxDPR=1.5,scale=1,lastW=0;
+  const coarse=matchMedia('(pointer:coarse)').matches;
   function resize(){
     maxDPR = innerWidth<900 ? 1.0 : 1.5;
     scale  = innerWidth<900 ? 0.75 : 1.0; // fewer fragments on small screens
     DPR = Math.min(DPR||maxDPR, maxDPR);
     W=Math.floor(innerWidth*DPR*scale); H=Math.floor(innerHeight*DPR*scale);
     cv.width=W; cv.height=H; gl.viewport(0,0,W,H);
+    lastW=innerWidth;
   }
   DPR=maxDPR; resize();
-  addEventListener('resize',resize,{passive:true});
+  // ignore pure-height resizes (mobile URL-bar show/hide) on touch devices
+  addEventListener('resize',()=>{ if(coarse && innerWidth===lastW) return; resize(); },{passive:true});
 
   let px=0,py=0,tx=0,ty=0;
   addEventListener('pointermove',e=>{tx=(e.clientX/innerWidth-0.5)*2;ty=-(e.clientY/innerHeight-0.5)*2;},{passive:true});
@@ -907,10 +924,22 @@ document.querySelectorAll('.embed-facade').forEach(btn=>{
 })();
 
 // ══ SCROLL LOCK (single source of truth: drawer OR any modal) ══
+// position:fixed + saved offset so iOS Safari can't scroll the page behind
+let scrollLockY=0,scrollLocked=false;
 function syncScrollLock(){
   const d=document.getElementById('drawer');
-  const open=document.querySelector('.modal-overlay.open')||(d&&d.classList.contains('open'));
-  document.body.style.overflow=open?'hidden':'';
+  const open=!!(document.querySelector('.modal-overlay.open')||(d&&d.classList.contains('open')));
+  if(open===scrollLocked)return;
+  const b=document.body;
+  if(open){
+    scrollLockY=window.scrollY||window.pageYOffset||0;
+    b.style.position='fixed';b.style.top=-scrollLockY+'px';b.style.left='0';b.style.right='0';b.style.width='100%';b.style.overflow='hidden';
+    scrollLocked=true;
+  }else{
+    b.style.position='';b.style.top='';b.style.left='';b.style.right='';b.style.width='';b.style.overflow='';
+    scrollLocked=false;
+    window.scrollTo(0,scrollLockY);
+  }
 }
 
 // ══ MOBILE DRAWER ══
@@ -928,8 +957,16 @@ function syncScrollLock(){
     if(o){const f=d.querySelector('a');if(f)f.focus();}
   });
   d.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>close(false)));
+  d.addEventListener('keydown',e=>{
+    if(e.key!=='Tab'||!d.classList.contains('open'))return;
+    const f=[...d.querySelectorAll('a[href],button:not([disabled])')].filter(el=>el.offsetParent!==null);
+    if(!f.length)return;
+    const first=f[0],last=f[f.length-1];
+    if(e.shiftKey?document.activeElement===first:document.activeElement===last){e.preventDefault();(e.shiftKey?last:first).focus();}
+  });
   document.addEventListener('keydown',e=>{if(e.key==='Escape')close(true);});
   document.addEventListener('click',e=>{if(d.classList.contains('open')&&!d.contains(e.target)&&!b.contains(e.target))close(false);});
+  matchMedia('(min-width:981px)').addEventListener('change',e=>{if(e.matches)close(false);});
 })();
 
 // ══ LEGAL MODALS ══

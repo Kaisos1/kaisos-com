@@ -2,6 +2,39 @@
 
 ---
 
+## Session 50 — Mobile polish pass (index + merch)
+
+Adversarially-verified mobile-only audit across overflow, touch targets, nav,
+typography, and interaction. 27 confirmed fixes; all scoped to small viewports
+so desktop is untouched. Design/palette/fonts unchanged.
+
+### Fixed
+- **iOS scroll-lock:** drawer/modals now lock the body with `position:fixed` +
+  saved offset (was `overflow:hidden`, which iOS Safari ignores — page used to
+  rubber-band behind the drawer)
+- Touch targets ≥44px: footer social icons (both pages), modal close ×, footer
+  legal buttons; broadened the tap-target query to `any-pointer:coarse` (covers
+  hybrid touch laptops)
+- WebGL canvas no longer reallocates on every mobile address-bar height change
+  (pure-height resizes ignored on touch)
+- `-webkit-tap-highlight-color:transparent` kills the grey tap-flash
+
+### Added
+- Drawer focus trap; drawer auto-closes when resizing back to desktop
+- merch: nav "Shop Now" fades out once the bottom shop bar appears (was a
+  duplicate CTA); reduced-data hides hero blobs
+- Touch fallbacks: discography play button + `.soc` rows now show affordance/
+  feedback without hover; landscape-phone hero block (shorter padding + deck)
+
+### Changed
+- Readability on phones: bumped sub-14px text (eyebrows, marks, product/disc
+  labels, stat labels, modal subheads), tightened wide letter-spacing, reduced
+  story/connect line-height; `--fs-h2` now scales down to 1.75rem at 320px
+- merch: drop price 2.4→2rem on phones; merch back-arrow hidden ≤560px (logo
+  already links home)
+
+---
+
 ## Session 49 — Multi-agent review pass on index + merch
 
 Adversarially-verified review across bugs, a11y, perf, SEO, and polish. 30

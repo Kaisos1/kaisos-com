@@ -32,7 +32,7 @@
   --glow-gold:0 6px 24px rgba(200,133,15,0.24);
   /* ── type scale (modular, reused everywhere) ── */
   --fs-eyebrow:0.67rem;
-  --fs-h2:clamp(2rem,3.8vw,3rem);
+  --fs-h2:clamp(1.75rem,6vw,3rem);
   --fs-display:clamp(2.6rem,6.4vw,5.6rem);
   /* ── spacing scale (rhythmic, not metronomic) ── */
   --space-md:clamp(1.6rem,3.2vw,2.6rem);
@@ -43,7 +43,7 @@
 }
 
 /* ══ BASE ══ */
-html{scroll-behavior:smooth;scroll-padding-top:76px}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-tap-highlight-color:transparent}
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
 ::selection{background:rgba(139,63,201,0.32);color:var(--white)}
@@ -66,7 +66,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;height:68px;display:flex;ali
 .nav-cta.gold{background:var(--gold);color:var(--bg)}
 .nav-cta.gold:hover{border-color:transparent;box-shadow:0 6px 24px rgba(200,133,15,0.3)}
 @media(max-width:560px){
-  .nav-back-txt{display:none}
+  .nav-back{display:none}
   .nav-cta{padding:0.45rem 0.85rem;letter-spacing:0.05em}
 }
 
@@ -99,8 +99,8 @@ footer{border-top:1px solid var(--border);padding:2.5rem var(--pad);display:flex
 .tex-vig{background:radial-gradient(ellipse 120% 90% at 50% 40%,transparent 55%,rgba(7,7,15,0.55) 100%)}
 
 /* ══ TAP TARGETS ══ */
-@media(hover:none) and (pointer:coarse){
-  .nav-back,.footer-back,.plat-btn,.disco-link,.release-plat-btn,.ptog-btn,.btn-listen,
+@media(any-pointer:coarse){
+  .nav-back,.footer-back,.footer-link-btn,.plat-btn,.disco-link,.release-plat-btn,.ptog-btn,.btn-listen,
   .nav-cta,.btn-buy,.btn-cta,.btn-primary,.btn-ghost,.dl-link,.merch-hero-cta,.merch-cta-btn{
     min-height:44px;display:inline-flex;align-items:center}
 }
