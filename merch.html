@@ -11,7 +11,7 @@
 <meta property="og:title" content="Merch — Kaisos"/>
 <meta property="og:description" content="Official Kaisos merch. Minimal pieces for quiet creators — the sound, made wearable. Shipped worldwide."/>
 <meta property="og:image" content="https://kaisos.com/og-image.png"/>
-<meta property="og:image:alt" content="Kaisos — Lo-Fi Music Producer from Munich"/>
+<meta property="og:image:alt" content="Kaisos merch — minimal pieces for quiet creators"/>
 <meta property="og:image:type" content="image/png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
@@ -28,6 +28,8 @@
   "name":"Kaisos Merch",
   "description":"Official Kaisos merchandise — minimal pieces for quiet creators. Dark tones, soft gold, purple details.",
   "url":"https://kaisos.com/merch",
+  "isPartOf":{"@id":"https://kaisos.com/#website"},
+  "about":{"@id":"https://kaisos.com/#artist"},
   "mainEntity":{
     "@type":"ItemList",
     "itemListElement":[
@@ -45,10 +47,12 @@
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Kaisos","item":"https://kaisos.com"},{"@type":"ListItem","position":2,"name":"Merch","item":"https://kaisos.com/merch"}]}
 </script>
 <title>Merch — Kaisos | Minimal Pieces for Quiet Creators</title>
-<link rel="icon" type="image/png" href="favicon.png"/>
-<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+<link rel="icon" type="image/png" href="/favicon.png"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 <link rel="dns-prefetch" href="https://cdn.fourthwall.com"/>
 <link rel="preconnect" href="https://cdn.fourthwall.com" crossorigin/>
+<link rel="preconnect" href="https://plausible.io"/>
+<link rel="preload" as="image" href="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/b390bb32-ccc8-4b88-94c8-5d1f07ef9fd9.webp" type="image/webp" fetchpriority="high"/>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-latin.woff2" crossorigin/>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/cg-normal-latin.woff2" crossorigin/>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/cg-italic-latin.woff2" crossorigin/>
@@ -65,7 +69,7 @@
 /* ══ HERO ══ */
 .merch-hero{min-height:54vh;display:flex;align-items:center;padding:140px var(--pad) var(--space-lg);position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
 .merch-hero-bg{position:absolute;inset:0;pointer-events:none}
-.hero-blob{position:absolute;border-radius:50%;filter:blur(80px)}
+.hero-blob{position:absolute;border-radius:50%;filter:blur(60px)}
 .hero-blob-1{width:600px;height:600px;background:radial-gradient(circle,rgba(139,63,201,0.2) 0%,transparent 70%);top:-100px;right:-100px}
 .hero-blob-2{width:400px;height:400px;background:radial-gradient(circle,rgba(200,133,15,0.1) 0%,transparent 70%);bottom:-50px;left:-50px}
 .merch-hero-inner{position:relative;z-index:1;max-width:var(--max);width:100%;margin:0 auto}
@@ -78,6 +82,8 @@
 .merch-hero-cta{display:inline-flex;align-items:center;gap:0.5rem;padding:0.9rem 2rem;background:var(--gold);color:var(--bg);font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border-radius:4px;transition:box-shadow 0.25s,transform 0.25s}
 .merch-hero-cta:hover{transform:translateY(-1px);box-shadow:var(--glow-gold)}
 .merch-hero-cta:active{transform:translateY(0) scale(0.98)}
+.merch-hero-cta.ghost{background:transparent;color:var(--gold);box-shadow:inset 0 0 0 1px var(--gold)}
+.merch-hero-cta.ghost:hover{background:rgba(200,133,15,0.08);box-shadow:inset 0 0 0 1px var(--gold)}
 
 /* ══ MARKS STRIP (static, restrained) ══ */
 .marks{border-bottom:1px solid var(--border);background:rgba(13,12,26,0.4)}
@@ -109,7 +115,7 @@
 .product-price{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--gold);font-weight:500}
 .product-price span{font-family:'Inter',sans-serif;font-size:0.7rem;color:var(--muted);font-weight:400;margin-left:0.25rem}
 .btn-buy{display:inline-flex;align-items:center;gap:0.4rem;padding:0.62rem 1.15rem;background:var(--accent);color:#fff;font-size:0.72rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;border-radius:4px;border:1px solid transparent;transition:background 0.2s,border-color 0.2s,transform 0.15s;white-space:nowrap}
-.btn-buy:hover{background:#9a4ad8}
+.btn-buy:hover{background:var(--accent-hover)}
 .btn-buy:active{transform:scale(0.97)}
 .product-index{position:absolute;top:0.85rem;left:1rem;z-index:2;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--accent-text);letter-spacing:0.01em;opacity:0.9;pointer-events:none}
 
@@ -117,7 +123,8 @@
 .drop{border-bottom:1px solid var(--border);padding:var(--space-xl) var(--pad);position:relative;overflow:hidden}
 .drop-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(2rem,5vw,5rem);align-items:center}
 .drop-media{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:1;background:#0a0914;display:grid;place-items:center;box-shadow:0 50px 100px -34px rgba(0,0,0,0.85),0 0 0 1px var(--border),0 0 60px rgba(139,63,201,0.16)}
-.drop-media>img{width:100%;height:100%;object-fit:contain;position:relative;z-index:1}
+.drop-media>img{width:100%;height:100%;object-fit:contain;position:relative;z-index:1;transition:transform 0.5s ease}
+.drop-media:hover>img{transform:scale(1.03)}
 .drop-mark{position:absolute;inset:0;display:grid;place-items:center;font-family:'Cormorant Garamond',serif;font-size:34rem;line-height:0;color:rgba(176,116,230,0.05);z-index:0;pointer-events:none;user-select:none}
 .drop-text h2{font-family:'Cormorant Garamond',serif;font-size:var(--fs-h2);font-weight:400;color:var(--white);line-height:1.1;letter-spacing:-0.01em;margin-bottom:1rem;text-wrap:balance}
 .drop-text h2 em{font-style:italic;color:var(--accent-text)}
@@ -125,7 +132,7 @@
 .drop-foot{display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap}
 .drop-price{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--gold);font-weight:500;line-height:1;display:inline-flex;align-items:flex-start;gap:0.1em}
 .drop-price .cur{font-size:1rem;transform:translateY(0.25em);opacity:0.85}
-.drop-price span:last-child{font-family:'Inter',sans-serif;font-size:0.7rem;color:var(--muted);font-weight:600;letter-spacing:0.12em;text-transform:uppercase;align-self:flex-end;margin-bottom:0.35rem}
+.drop-price span:last-child{font-family:'Inter',sans-serif;font-size:0.7rem;color:var(--muted);font-weight:400;align-self:flex-end;margin-bottom:0.35rem}
 
 /* ══ BRAND STRIP ══ */
 .brand-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:var(--space-lg) var(--pad);background:linear-gradient(to right,rgba(139,63,201,0.04),transparent)}
@@ -201,24 +208,26 @@
   .product-name{font-size:1.12rem}
   .brand-strip,.merch-cta{padding:var(--space-lg) var(--pad)}
 }
-@media(prefers-reduced-motion:reduce){.eyebrow-dot{animation:none}}
+@media(prefers-reduced-motion:reduce){.eyebrow-dot{animation:none}.mobile-shop-cta{transition:none}.drop-media>img{transition:none}}
 </style>
 </head>
 <body>
-<a href="#products" class="skip">Skip to products</a>
+<a href="#main" class="skip">Skip to content</a>
 <div class="tex-bg" aria-hidden="true"></div>
 <div class="tex-grain" aria-hidden="true"></div>
 <div class="tex-vig" aria-hidden="true"></div>
 <div id="progress"></div>
 
 <!-- ══ NAV ══ -->
-<nav>
+<nav aria-label="Primary">
   <a href="/" class="nav-logo">Kaisos</a>
   <div class="nav-right">
     <a href="/" class="nav-back" aria-label="Back to site"><span aria-hidden="true">←</span> <span class="nav-back-txt">Back to site</span></a>
     <a href="https://kaisos-shop.fourthwall.com/en-eur" target="_blank" rel="noopener" class="nav-cta gold">Shop Now</a>
   </div>
 </nav>
+
+<main id="main">
 
 <!-- ══ HERO ══ -->
 <section class="merch-hero">
@@ -230,7 +239,7 @@
     <div class="merch-eyebrow"><span class="eyebrow-dot"></span>2026 Collection</div>
     <h1 class="reveal reveal--settle">Pieces for <em>quiet creators.</em></h1>
     <p class="reveal d1">Minimal pieces built for the people who make things in silence. Dark tones, soft gold, purple detail — the Kaisos identity, made wearable.</p>
-    <a href="#products" class="merch-hero-cta reveal d2">Step inside →</a>
+    <a href="#products" class="merch-hero-cta reveal d2">Step inside <span aria-hidden="true">→</span></a>
   </div>
 </section>
 
@@ -248,8 +257,9 @@
 <div class="drop">
   <div class="drop-inner">
     <div class="drop-media reveal">
+      <span class="product-index" aria-hidden="true">No. 01</span>
       <span class="drop-mark" aria-hidden="true">K</span>
-      <img loading="lazy" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/b390bb32-ccc8-4b88-94c8-5d1f07ef9fd9.webp" alt="Kaisos Lofi Hoodie" width="600" height="600"/>
+      <img fetchpriority="high" decoding="async" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/b390bb32-ccc8-4b88-94c8-5d1f07ef9fd9.webp" alt="Kaisos Lofi Hoodie" width="600" height="600"/>
     </div>
     <div class="drop-text reveal d1">
       <div class="eyebrow">The Drop</div>
@@ -257,7 +267,7 @@
       <p class="drop-cap">Full back print, Lofi Worlds sleeve, four colorways. Worn by the people who make things in silence.</p>
       <div class="drop-foot">
         <span class="drop-price"><span class="cur">$</span>60<span>+ shipping</span></span>
-        <a href="https://kaisos-shop.fourthwall.com/products/kaisos-lofi-hoodie" target="_blank" rel="noopener" class="merch-hero-cta">Take one home →</a>
+        <a href="https://kaisos-shop.fourthwall.com/products/kaisos-lofi-hoodie" target="_blank" rel="noopener" class="merch-hero-cta ghost">Take one home <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </div>
@@ -275,8 +285,8 @@
 
     <div class="product-card reveal">
       <div class="product-img">
-        <span class="product-index">No. 02</span>
-        <img loading="lazy" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/8f4512af-fc5d-48e7-9c21-f84401fb2837.webp" alt="Kaisos Logo Tee" width="600" height="600"/>
+        <span class="product-index" aria-hidden="true">No. 02</span>
+        <img loading="lazy" decoding="async" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/8f4512af-fc5d-48e7-9c21-f84401fb2837.webp" alt="Kaisos Logo Tee" width="600" height="600"/>
       </div>
       <div class="product-info">
         <h3 class="product-name">Kaisos Logo Tee</h3>
@@ -290,8 +300,8 @@
 
     <div class="product-card reveal d2">
       <div class="product-img">
-        <span class="product-index">No. 03</span>
-        <img loading="lazy" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/a996cb53-143d-4874-b38b-54f1c81a3e6b.webp" alt="Kaisos Lofi Hoodie Vol. 2" width="600" height="600"/>
+        <span class="product-index" aria-hidden="true">No. 03</span>
+        <img loading="lazy" decoding="async" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/a996cb53-143d-4874-b38b-54f1c81a3e6b.webp" alt="Kaisos Lofi Hoodie Vol. 2" width="600" height="600"/>
       </div>
       <div class="product-info">
         <h3 class="product-name">Kaisos Lofi Hoodie Vol. 2</h3>
@@ -305,8 +315,8 @@
 
     <div class="product-card reveal">
       <div class="product-img">
-        <span class="product-index">No. 04</span>
-        <img loading="lazy" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/93ba98a1-e2f3-419b-b2ef-8ea2f028dd09.webp" alt="Kaisos Embroidered Cap" width="600" height="600"/>
+        <span class="product-index" aria-hidden="true">No. 04</span>
+        <img loading="lazy" decoding="async" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/93ba98a1-e2f3-419b-b2ef-8ea2f028dd09.webp" alt="Kaisos Embroidered Cap" width="600" height="600"/>
       </div>
       <div class="product-info">
         <h3 class="product-name">Kaisos Embroidered Cap</h3>
@@ -320,8 +330,8 @@
 
     <div class="product-card reveal d1">
       <div class="product-img">
-        <span class="product-index">No. 05</span>
-        <img loading="lazy" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/90df3d57-a716-4fa4-8997-45fe5368d13e.webp" alt="Kaisos Lofi Hoodie Vol. 3" width="600" height="600"/>
+        <span class="product-index" aria-hidden="true">No. 05</span>
+        <img loading="lazy" decoding="async" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/90df3d57-a716-4fa4-8997-45fe5368d13e.webp" alt="Kaisos Lofi Hoodie Vol. 3" width="600" height="600"/>
       </div>
       <div class="product-info">
         <h3 class="product-name">Kaisos Lofi Hoodie Vol. 3</h3>
@@ -335,8 +345,8 @@
 
     <div class="product-card reveal d2">
       <div class="product-img">
-        <span class="product-index">No. 06</span>
-        <img loading="lazy" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/d2480214-719c-482d-ab74-24374d0cf4d7.webp" alt="Kaisos Mug" width="600" height="600"/>
+        <span class="product-index" aria-hidden="true">No. 06</span>
+        <img loading="lazy" decoding="async" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/d2480214-719c-482d-ab74-24374d0cf4d7.webp" alt="Kaisos Mug" width="600" height="600"/>
       </div>
       <div class="product-info">
         <h3 class="product-name">Kaisos Mug</h3>
@@ -357,8 +367,8 @@
     <div class="brand-strip-text reveal">
       <h2 class="reveal reveal--settle">Built for <em>quiet creators.</em></h2>
       <p>Every piece carries the same identity as the music — made for people who keep the volume low and the lights lower. No logos shouting across the chest. Just the world you already listen to, in something you can wear at 2am.</p>
-      <a href="https://kaisos-shop.fourthwall.com/en-eur" target="_blank" rel="noopener" class="merch-hero-cta">See the whole rack →</a>
-      <p class="brand-strip-music">The music behind it — <a href="/#music">stream now →</a></p>
+      <a href="https://kaisos-shop.fourthwall.com/en-eur" target="_blank" rel="noopener" class="merch-hero-cta ghost">See the whole rack <span aria-hidden="true">→</span></a>
+      <p class="brand-strip-music">The music behind it — <a href="/#music">stream now <span aria-hidden="true">→</span></a></p>
     </div>
     <div class="brand-strip-logo reveal d1">
       <picture>
@@ -374,9 +384,11 @@
   <div class="merch-cta-inner reveal">
     <h2 class="reveal reveal--settle">The sound, <em>made wearable.</em></h2>
     <p>Everything ships from the Fourthwall store. Independent, self-released, and worn by the people who get it.</p>
-    <a href="https://kaisos-shop.fourthwall.com/en-eur" target="_blank" rel="noopener" class="merch-cta-btn">Wear the quiet →</a>
+    <a href="https://kaisos-shop.fourthwall.com/en-eur" target="_blank" rel="noopener" class="merch-cta-btn">Wear the quiet <span aria-hidden="true">→</span></a>
   </div>
 </div>
+
+</main>
 
 <!-- ══ FOOTER ══ -->
 <footer>
@@ -417,6 +429,7 @@
   const hero=document.querySelector('.merch-hero');
   let threshold=hero?hero.offsetTop+hero.offsetHeight:400;
   addEventListener('resize',()=>{threshold=hero?hero.offsetTop+hero.offsetHeight:400;},{passive:true});
+  addEventListener('load',()=>{threshold=hero?hero.offsetTop+hero.offsetHeight:400;},{passive:true});
   let tick=false;
   addEventListener('scroll',()=>{
     if(tick)return; tick=true;

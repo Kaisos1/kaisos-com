@@ -2,6 +2,39 @@
 
 ---
 
+## Session 49 — Multi-agent review pass on index + merch
+
+Adversarially-verified review across bugs, a11y, perf, SEO, and polish. 30
+confirmed findings applied to `index.html`, `merch.html`, and shared `site.css`.
+Design, palette, fonts unchanged.
+
+### Fixed
+- **Contrast (AA):** shared `.nav-cta` was gold-on-purple (1.87:1) — now white
+  on purple (5.75:1); this also un-breaks the live CTAs on music + press pages
+- `merch` LCP hoodie no longer lazy-loaded — now `fetchpriority="high"` + a
+  matching `<link rel=preload as=image>` for the cross-origin CDN image
+- `aria-expanded` on the mobile burger now writes the string `"true"`/`"false"`
+
+### Added
+- `merch`: `<main id="main">` landmark + skip-link retargeted to it; `<nav>`
+  `aria-label`; `No. 01` index on the Drop (sequence now 01–06, matches copy)
+- `merch`: hover scale on the Drop hoodie; ghost CTA variant so only the
+  entry/exit buttons stay solid gold; `load` listener re-measures the shop-CTA
+  threshold; `decoding="async"` on all product images
+- `merch` JSON-LD `isPartOf`/`about` linking the CollectionPage to the site graph
+- `--accent-hover` token (replaces hardcoded `#9a4ad8` in both pages)
+- `plausible.io` preconnect; merch-specific `og:image:alt`
+
+### Changed
+- Decorative `→` arrows marked `aria-hidden` across both pages; `product-index`
+  numbers hidden from the a11y tree
+- Removed redundant `<picture>` wrappers (webp source == img src) on all 9
+  index covers; absolute icon paths; unified `scroll-padding-top` at 76px
+- `merch` reduced-motion now also stills the shop-CTA + Drop image transitions;
+  Drop "+ shipping" label matches product-card typography; hero blur 80→60px
+
+---
+
 ## Session 48 — A11y polish + working legal deep-links
 
 Refined index + merch to newer revisions. Accessibility, micro-polish, and one
