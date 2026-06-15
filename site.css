@@ -101,7 +101,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem var(--pad);display:flex
 /* ══ TAP TARGETS ══ */
 @media(any-pointer:coarse){
   .nav-back,.footer-back,.footer-link-btn,.plat-btn,.disco-link,.release-plat-btn,.ptog-btn,.btn-listen,
-  .nav-cta,.btn-buy,.btn-cta,.btn-primary,.btn-ghost,.dl-link,.merch-hero-cta,.merch-cta-btn{
+  .nav-cta,.btn-buy,.btn-cta,.btn-primary,.btn-ghost,.dl-link,.merch-hero-cta,.merch-cta-btn,.footer-legal a{
     min-height:44px;display:inline-flex;align-items:center}
 }
 

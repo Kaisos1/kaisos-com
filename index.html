@@ -131,7 +131,7 @@ body{background:var(--bg);overflow-x:hidden}
 .burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
 .burger.open span:nth-child(2){opacity:0}
 .burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-.drawer{position:fixed;top:68px;left:0;right:0;z-index:490;background:rgba(7,7,15,0.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:1rem var(--pad) calc(1.8rem + env(safe-area-inset-bottom,0px));transform:translateY(-115%);transition:transform 0.35s cubic-bezier(0.4,0,0.2,1);border-bottom:1px solid var(--border);max-height:calc(100vh - 68px);max-height:calc(100dvh - 68px);overflow-y:auto;overscroll-behavior:contain}
+.drawer{display:block;height:auto;position:fixed;top:68px;left:0;right:0;z-index:490;background:rgba(7,7,15,0.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:1rem var(--pad) calc(1.8rem + env(safe-area-inset-bottom,0px));transform:translateY(-115%);transition:transform 0.35s cubic-bezier(0.4,0,0.2,1);border-bottom:1px solid var(--border);max-height:calc(100vh - 68px);max-height:calc(100dvh - 68px);overflow-y:auto;overscroll-behavior:contain}
 .drawer.open{transform:translateY(0)}
 .drawer a{display:flex;align-items:center;min-height:48px;border-bottom:1px solid var(--border);color:var(--text);text-decoration:none;font-size:0.95rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:500}
 .drawer a.drawer-cta{display:flex;align-items:center;justify-content:center;gap:0.55rem;min-height:50px;margin-top:1.2rem;background:var(--accent);color:#fff;border:none;border-radius:6px;font-size:0.8rem;font-weight:600;letter-spacing:0.09em;box-shadow:0 8px 26px rgba(139,63,201,0.3)}
