@@ -1,2 +1,4 @@
 *.bak.png
 CLAUDE.md
+DEPLOY
+.agent/
