@@ -14,6 +14,13 @@ sentinel.style.cssText='position:absolute;top:80px;height:1px;width:1px';
 document.body.prepend(sentinel);
 new IntersectionObserver(([e])=>document.getElementById('nv').classList.toggle('on',!e.isIntersecting)).observe(sentinel);
 
+// ══ LISTEN FAB ══
+(()=>{
+  const fab=document.getElementById('listenFab'),hero=document.querySelector('.hero');
+  if(!fab||!hero)return;
+  new IntersectionObserver(([e])=>fab.classList.toggle('show',!e.isIntersecting),{rootMargin:'-45% 0px 0px 0px'}).observe(hero);
+})();
+
 // ══ MOBILE DRAWER ══
 (()=>{
   const b=document.getElementById('burger'),d=document.getElementById('drawer');

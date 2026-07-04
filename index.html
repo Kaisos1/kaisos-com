@@ -213,6 +213,21 @@ h2.voice{font-size:clamp(2rem,4.6vw,3.4rem);margin-bottom:1.2rem}
 .np-proof{margin-top:1.6rem;font-size:0.76rem;color:var(--ink-3)}
 .np-proof b{color:var(--ink-2);font-weight:600}
 
+/* ── stats band ── */
+.stats-band{padding:3.4rem 0}
+.stats{display:flex;justify-content:center;gap:clamp(2.2rem,8vw,5.5rem);flex-wrap:wrap;text-align:center}
+.stat{display:flex;flex-direction:column;gap:0.5rem}
+.stat-v{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(2.3rem,5vw,3.1rem);line-height:1;color:var(--gold-soft)}
+.stat-v i{font-style:normal;font-size:0.55em;color:var(--ink-3)}
+.stat-l{font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3)}
+
+/* ── floating listen CTA ── */
+.listen-fab{position:fixed;left:50%;bottom:1.5rem;z-index:48;display:inline-flex;align-items:center;gap:0.6rem;background:var(--violet);color:#fff;font-family:var(--sans);font-size:0.76rem;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;padding:0.85rem 1.7rem;border-radius:100px;text-decoration:none;box-shadow:0 12px 38px rgba(139,63,201,0.5);opacity:0;visibility:hidden;transform:translate(-50%,150%);transition:transform 0.45s cubic-bezier(.2,.9,.3,1),opacity 0.35s,visibility 0.35s,box-shadow 0.25s}
+.listen-fab.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.listen-fab:hover{box-shadow:0 16px 50px rgba(139,63,201,0.7)}
+.listen-fab:active{transform:translate(-50%,2px)}
+.listen-fab svg{width:16px;height:16px;fill:currentColor}
+
 /* ══ THE SHELF ══ */
 .shelf-head{display:flex;align-items:baseline;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:2.6rem}
 .shelf-head p{font-size:0.86rem;color:var(--ink-3);max-width:36ch}
@@ -389,6 +404,15 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem
   </div>
 </header>
 
+<!-- ══ STATS ══ -->
+<section class="stats-band" aria-label="At a glance" data-phase="dusk">
+  <div class="wrap stats">
+    <div class="stat rv"><span class="stat-v">55K<i>+</i></span><span class="stat-l">YouTube subscribers</span></div>
+    <div class="stat rv d1"><span class="stat-v">8</span><span class="stat-l">Releases — seven albums, one single</span></div>
+    <div class="stat rv d2"><span class="stat-v">2024</span><span class="stat-l">Making lo-fi since</span></div>
+  </div>
+</section>
+
 <hr class="hairline"/>
 
 <!-- ══ NOW PLAYING ══ -->
@@ -553,6 +577,11 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem
 </section>
 
 </main>
+
+<!-- ══ FLOATING LISTEN CTA ══ -->
+<a class="listen-fab" id="listenFab" href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="noopener" aria-label="Listen to Kaisos on Spotify">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-spotify"/></svg><span>Listen on Spotify</span>
+</a>
 
 <!-- ══ FOOTER ══ -->
 <footer data-phase="dawn">

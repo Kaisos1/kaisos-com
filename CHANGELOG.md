@@ -2,6 +2,31 @@
 
 ---
 
+## Session 54 — Restore stats + floating Spotify CTA, fix JS caching (index)
+
+Brought back beneficial pieces the redesign dropped, and fixed the stale-cache
+issue that made the new burger menu appear broken on already-visited devices.
+
+### Added
+- **Stats band** (restored from pre-redesign): 55K+ subscribers · 8 releases ·
+  since 2024 — social proof, styled in the current serif/gold system
+- **Floating "Listen on Spotify" CTA** that slides in once the hero scrolls out
+  of view (IntersectionObserver, links to the artist page)
+
+### Fixed
+- `*.js` and `site.css` now `max-age=0, must-revalidate` (were `max-age=3600`),
+  so a deploy is picked up immediately instead of up to an hour later — this is
+  why the burger menu looked dead after the last push (phone had cached the old
+  `main.js`)
+
+### Audit note
+- Reviewed everything the redesign removed vs the pre-redesign version. Kept out
+  on purpose: the WebGL nebula + 3D tilt hero (heavy, hurts load speed; the
+  bokeh orbs are the lighter stand-in). Everything else beneficial (social
+  links, support cards, discography, legal modals) was already preserved.
+
+---
+
 ## Session 53 — Remove ambient rain toggle (index)
 
 Dropped the generative "rain" ambience button entirely.
