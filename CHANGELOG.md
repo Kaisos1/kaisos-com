@@ -2,6 +2,18 @@
 
 ---
 
+## Session 53 — Remove ambient rain toggle (index)
+
+Dropped the generative "rain" ambience button entirely.
+
+### Removed
+- `.rain-btn` markup, all its CSS, the `eq` equaliser keyframe, and mobile /
+  reduced-motion rules for it
+- The Web Audio rain generator (`RAIN` block) from `main.js`
+- The "Ambient Sound" note from the privacy modal
+
+---
+
 ## Session 52 — Mobile burger menu (index)
 
 The homepage nav hid its links at ≤900px with nothing to replace them — mobile
