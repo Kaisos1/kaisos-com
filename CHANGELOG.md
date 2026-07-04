@@ -13,6 +13,11 @@ Moved the inline `<script>` blocks out of `index.html` and `merch.html` into
 - `main.js` / `merch.js`: now hold the reveal, nav-state, legal-modal (and
   homepage bokeh/facade-embed/rain) handlers verbatim — cacheable, non-blocking
 
+### Fixed
+- Restored the `album[]` JSON-LD (all 8 releases) on the `MusicArtist` schema —
+  it had been dropped during the redesign; brings back rich-result eligibility
+  for the discography in search
+
 ---
 
 ## Session 50 — Mobile polish pass (index + merch)
