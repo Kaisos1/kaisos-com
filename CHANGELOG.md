@@ -2,6 +2,23 @@
 
 ---
 
+## Session 52 — Mobile burger menu (index)
+
+The homepage nav hid its links at ≤900px with nothing to replace them — mobile
+had no navigation at all. Added a proper burger + full-screen drawer.
+
+### Added
+- `.nv-burger` (animates to X) + full-screen `.drawer` with centered serif links
+  (Listen / Releases / Story / Merch) and a Support CTA
+- Drawer JS in `main.js`: iOS-safe `position:fixed` scroll lock, closes on link
+  tap, backdrop tap, or Escape
+
+### Changed
+- ≤900px: desktop Support pill moves into the drawer; top bar is now logo · rain
+  · burger
+
+---
+
 ## Session 51 — Externalize page scripts (index + merch)
 
 Moved the inline `<script>` blocks out of `index.html` and `merch.html` into

@@ -162,6 +162,27 @@ h2.voice{font-size:clamp(2rem,4.6vw,3.4rem);margin-bottom:1.2rem}
 .nv-cta:hover{box-shadow:0 6px 26px rgba(139,63,201,0.45)}
 .nv-cta:active{transform:scale(0.97)}
 .nv-cta svg{width:14px;height:14px;fill:currentColor}
+
+/* ── mobile burger + drawer ── */
+.nv-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;padding:0;background:none;border:0;cursor:pointer}
+.nv-burger span{display:block;width:24px;height:2px;margin:0 auto;background:var(--ink-2);border-radius:2px;transition:transform 0.3s,opacity 0.2s,background 0.25s}
+.nv-burger[aria-expanded="true"] span{background:var(--ink)}
+.nv-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nv-burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nv-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.drawer{position:fixed;inset:0;z-index:49;display:grid;place-items:center;background:rgba(7,7,15,0.94);backdrop-filter:blur(24px) saturate(140%);-webkit-backdrop-filter:blur(24px) saturate(140%);opacity:0;visibility:hidden;transition:opacity 0.35s,visibility 0.35s}
+.drawer.open{opacity:1;visibility:visible}
+.drawer-in{display:flex;flex-direction:column;align-items:center;gap:1.9rem;text-align:center}
+.drawer-in a{font-family:var(--serif);font-style:italic;font-weight:400;font-size:2rem;line-height:1;color:var(--ink);text-decoration:none;opacity:0;transform:translateY(14px);transition:color 0.25s}
+.drawer-in a:hover{color:var(--gold-soft)}
+.drawer.open .drawer-in a{opacity:1;transform:none;transition:color 0.25s,opacity 0.45s ease,transform 0.45s ease}
+.drawer.open .drawer-in a:nth-child(1){transition-delay:0.06s}
+.drawer.open .drawer-in a:nth-child(2){transition-delay:0.12s}
+.drawer.open .drawer-in a:nth-child(3){transition-delay:0.18s}
+.drawer.open .drawer-in a:nth-child(4){transition-delay:0.24s}
+.drawer.open .drawer-in a:nth-child(5){transition-delay:0.32s}
+.drawer-cta{margin-top:1.1rem;font-family:var(--sans)!important;font-style:normal!important;font-size:0.74rem!important;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#fff!important;background:var(--violet);padding:0.85rem 2.4rem;border-radius:100px}
+.drawer-cta:hover{color:#fff!important;box-shadow:0 6px 26px rgba(139,63,201,0.45)}
 .skip{position:fixed;top:0;left:50%;transform:translate(-50%,-130%);z-index:80;background:var(--violet);color:#fff;padding:0.7rem 1.3rem;border-radius:0 0 6px 6px;font-size:0.78rem;transition:transform 0.2s}
 .skip:focus{transform:translate(-50%,0)}
 
@@ -289,6 +310,8 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem
 /* ══ RESPONSIVE ══ */
 @media(max-width:900px){
   .nv-links{display:none}
+  .nv-cta{display:none}
+  .nv-burger{display:flex}
   .np{grid-template-columns:1fr;gap:2.4rem}
   .np-cover{max-width:380px;margin:0 auto;transform:rotate(0)}
   .stay-grid{grid-template-columns:1fr;gap:2.6rem}
@@ -350,8 +373,22 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem
       <span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="lbl">rain</span>
     </button>
     <a class="nv-cta" href="https://ko-fi.com/I3I41YQ1DA" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-kofi"/></svg><span>Support</span></a>
+    <button type="button" class="nv-burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<!-- ══ MOBILE DRAWER ══ -->
+<div class="drawer" id="drawer" aria-hidden="true">
+  <nav class="drawer-in" aria-label="Mobile">
+    <a href="#listen">Listen</a>
+    <a href="#releases">Releases</a>
+    <a href="#story">Story</a>
+    <a href="/merch">Merch</a>
+    <a class="drawer-cta" href="https://ko-fi.com/I3I41YQ1DA" target="_blank" rel="noopener">Support</a>
+  </nav>
+</div>
 
 <main class="page" id="top">
 

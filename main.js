@@ -14,6 +14,19 @@ sentinel.style.cssText='position:absolute;top:80px;height:1px;width:1px';
 document.body.prepend(sentinel);
 new IntersectionObserver(([e])=>document.getElementById('nv').classList.toggle('on',!e.isIntersecting)).observe(sentinel);
 
+// ══ MOBILE DRAWER ══
+(()=>{
+  const b=document.getElementById('burger'),d=document.getElementById('drawer');
+  if(!b||!d)return;
+  let y=0;
+  const open=()=>{y=window.scrollY;d.classList.add('open');b.setAttribute('aria-expanded','true');d.setAttribute('aria-hidden','false');document.body.style.cssText=`position:fixed;top:${-y}px;left:0;right:0;width:100%`};
+  const close=()=>{d.classList.remove('open');b.setAttribute('aria-expanded','false');d.setAttribute('aria-hidden','true');document.body.style.cssText='';window.scrollTo(0,y)};
+  b.addEventListener('click',()=>b.getAttribute('aria-expanded')==='true'?close():open());
+  d.addEventListener('click',e=>{if(e.target===d)close()});
+  d.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&d.classList.contains('open'))close()});
+})();
+
 // ══ BOKEH ══
 (()=>{
   const host=document.getElementById('orbs');
