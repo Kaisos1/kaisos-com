@@ -3,15 +3,13 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<meta name="description" content="Kaisos — lo-fi music producer from Munich. Ambient beats, dark trap, and chill study music. Eight self-released titles, including the album Quiet Chaos and the single Purple Gold. On Spotify, Apple Music, and YouTube."/>
+<meta name="description" content="Kaisos — lo-fi music producer from Munich. Ambient beats, dark trap, and chill study music. Eight self-released titles, including the album Quiet Chaos. On Spotify, Apple Music, and YouTube."/>
 <meta name="theme-color" content="#07070f"/>
 <meta name="color-scheme" content="dark"/>
 <meta name="robots" content="index, follow"/>
 <meta name="author" content="Adnan Cengiz"/>
-<!-- SOCIAL METADATA — when the focus or latest release changes, update og:title,
-     og:description, og:image (+ its alt). X/Twitter falls back to the og:* tags. -->
 <meta property="og:title" content="Kaisos — Lo-Fi Worlds from Munich"/>
-<meta property="og:description" content="Lo-fi music producer from Munich. Ambient beats, dark trap, and chill hip-hop — eight self-released releases, including the album Quiet Chaos. 55K+ YouTube subscribers."/>
+<meta property="og:description" content="Lo-fi music producer from Munich. Ambient beats, dark trap, and chill hip-hop. Eight self-released releases, including the album Quiet Chaos. 55K+ YouTube subscribers."/>
 <meta property="og:image" content="https://kaisos.com/og-image.png"/>
 <meta property="og:image:alt" content="Kaisos — Lo-Fi Music Producer from Munich"/>
 <meta property="og:image:type" content="image/png"/>
@@ -42,7 +40,7 @@
       "@type":"MusicArtist",
       "@id":"https://kaisos.com/#artist",
       "name":"Kaisos",
-      "description":"Lo-fi music producer from Munich, Germany. Ambient beats, dark trap, and chill hip-hop since 2024. Eight self-released titles — seven albums and a single — on Spotify, Apple Music, and YouTube.",
+      "description":"Lo-fi music producer from Munich, Germany. Ambient beats, dark trap, and chill hip-hop since 2024. Eight self-released titles on Spotify, Apple Music, and YouTube.",
       "genre":["Lo-fi","Lo-fi Hip Hop","Chillhop","Ambient","Chill","Study Music"],
       "url":"https://kaisos.com",
       "image":"https://kaisos.com/ProfileImg.png",
@@ -54,357 +52,263 @@
         "https://www.instagram.com/lofikaisos/",
         "https://www.tiktok.com/@lofikaisos"
       ],
-      "album":[
-        {"@type":"MusicAlbum","name":"Quiet Chaos","albumReleaseType":"AlbumRelease","url":"https://open.spotify.com/album/4e6gK5CEZqllYvsjWDY3Pl","datePublished":"2025"},
-        {"@type":"MusicAlbum","name":"Purple Gold","albumReleaseType":"SingleRelease","url":"https://open.spotify.com/album/0Vhoh9SYaNQ5IFcKuEj8s3","datePublished":"2025"},
-        {"@type":"MusicAlbum","name":"Lofi Kaisos Special","albumReleaseType":"AlbumRelease","url":"https://open.spotify.com/album/67OMy0DOFbt4Y5iTbL4lnE","datePublished":"2024"},
-        {"@type":"MusicAlbum","name":"Lofi Kaisos Vol. 5","albumReleaseType":"AlbumRelease","url":"https://open.spotify.com/album/0sm4rH9Bv1VJ5r8hTaFDfz","datePublished":"2024"},
-        {"@type":"MusicAlbum","name":"Lofi Kaisos Vol. 4","albumReleaseType":"AlbumRelease","url":"https://open.spotify.com/album/49c8g3dFdDOS8aezK0ltDb","datePublished":"2024"},
-        {"@type":"MusicAlbum","name":"Lofi Kaisos Vol. 3","albumReleaseType":"AlbumRelease","url":"https://open.spotify.com/album/3bcGnK12xEytemEmjFGH86","datePublished":"2024"},
-        {"@type":"MusicAlbum","name":"Lofi Kaisos Vol. 2","albumReleaseType":"AlbumRelease","url":"https://open.spotify.com/album/1G9pQYYIS1hZEqu0hieCyE","datePublished":"2024"},
-        {"@type":"MusicAlbum","name":"Lofi Kaisos Vol. 1","albumReleaseType":"AlbumRelease","url":"https://open.spotify.com/album/0EQS01PkeiRoi9zaeVDtt7","datePublished":"2024"}
-      ],
       "numberOfAlbums":8
     }
   ]
 }
 </script>
-
 <link rel="preload" as="image" href="covers/quiet-chaos.webp" type="image/webp"/>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-latin.woff2" crossorigin/>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/cg-normal-latin.woff2" crossorigin/>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/cg-italic-latin.woff2" crossorigin/>
 <link rel="dns-prefetch" href="https://open.spotify.com"/>
 <link rel="preconnect" href="https://open.spotify.com"/>
-<link rel="preconnect" href="https://plausible.io"/>
 <link rel="stylesheet" href="/fonts.css"/>
-<link rel="stylesheet" href="/site.css"/>
-<noscript><style>.reveal{opacity:1!important;transform:none!important}.tilt-deck{transform:none!important}</style></noscript>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
 <style>
 
-/* ══ TOKENS / PAGE-LOCAL ══ */
+/* ══ TOKENS ══ */
 :root{
-  --z-canvas:0;--z-page:1;--z-nav:500;--z-overlay:800;
-  --edge:rgba(232,227,245,0.08);
+  --bg:#07070f;
+  --ink:#ece7f4;
+  --ink-2:#b3a9c9;
+  --ink-3:#736a8a;
+  --gold:#c8850f;
+  --gold-soft:#e0a63e;
+  --violet:#8b3fc9;
+  --violet-soft:#c9a2ec;
+  --line:rgba(232,227,245,0.09);
+  --line-2:rgba(232,227,245,0.16);
+  --pane:rgba(13,12,26,0.55);
+  --pad:clamp(1.2rem,4.5vw,3.2rem);
+  --max:1180px;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
 }
-body{background:var(--bg);overflow-x:hidden}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink-2);font-family:var(--sans);font-weight:300;line-height:1.8;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+img{max-width:100%;display:block}
+a{color:inherit}
 
-/* ══ ATMOSPHERE ══ */
-#atmos{position:fixed;inset:0;z-index:var(--z-canvas);display:block;width:100%;height:100%;
-  background:
-    radial-gradient(1100px 700px at 78% -8%,rgba(139,63,201,0.30),transparent 60%),
-    radial-gradient(900px 600px at 8% 12%,rgba(45,15,80,0.42),transparent 62%),
-    radial-gradient(700px 600px at 60% 108%,rgba(200,133,15,0.10),transparent 60%),
-    var(--bg);}
-.atmos-grain{position:fixed;inset:0;z-index:1;pointer-events:none;display:none;opacity:0.5;mix-blend-mode:overlay;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E")}
-.no-webgl .atmos-grain{display:block}
-.atmos-vig{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 120% 90% at 50% 40%,transparent 55%,rgba(7,7,15,0.55) 100%)}
-.page{position:relative;z-index:var(--z-page)}
+/* ══ NIGHT LAYER — the page moves through one night ══ */
+.night{position:fixed;inset:0;z-index:0;pointer-events:none}
+.night i{position:absolute;inset:0;opacity:0;transition:opacity 2.6s ease}
+.night .ph-dusk{background:
+  radial-gradient(1100px 700px at 80% -10%,rgba(139,63,201,0.30),transparent 60%),
+  radial-gradient(900px 620px at 6% 14%,rgba(45,15,80,0.42),transparent 62%),
+  radial-gradient(720px 600px at 60% 110%,rgba(200,133,15,0.10),transparent 60%)}
+.night .ph-mid{background:
+  radial-gradient(1000px 720px at 18% -6%,rgba(58,26,110,0.36),transparent 62%),
+  radial-gradient(880px 640px at 92% 30%,rgba(24,10,50,0.5),transparent 65%),
+  radial-gradient(700px 560px at 50% 115%,rgba(139,63,201,0.12),transparent 60%)}
+.night .ph-dawn{background:
+  radial-gradient(1050px 700px at 22% 108%,rgba(200,133,15,0.16),transparent 62%),
+  radial-gradient(900px 640px at 85% -8%,rgba(88,40,140,0.28),transparent 60%),
+  radial-gradient(760px 560px at 8% 30%,rgba(30,14,58,0.42),transparent 62%)}
+body[data-phase="dusk"] .ph-dusk,body[data-phase="mid"] .ph-mid,body[data-phase="dawn"] .ph-dawn{opacity:1}
+.night::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 120% 90% at 50% 42%,transparent 55%,rgba(7,7,15,0.6) 100%)}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:0.5;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E")}
 
-/* ══ SKIP LINK ══ */
-.skip{position:fixed;top:0;left:50%;transform:translate(-50%,-130%);z-index:var(--z-overlay);background:var(--accent);color:#fff;padding:0.7rem 1.3rem;border-radius:0 0 6px 6px;font-size:0.78rem;font-weight:600;letter-spacing:0.06em;transition:transform 0.2s}
-.skip:focus{transform:translate(-50%,0)}
+/* ── bokeh drift ── */
+.orbs{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(3px);opacity:0.35;animation:drift 22s ease-in-out infinite alternate}
+@keyframes drift{from{transform:translate3d(0,0,0)}to{transform:translate3d(var(--dx,20px),var(--dy,-46px),0)}}
+
+/* ══ PAGE / RHYTHM ══ */
+.page{position:relative;z-index:2}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+section{position:relative;padding:clamp(5.5rem,12vh,9rem) 0}
+.hairline{border:0;border-top:1px solid var(--line);max-width:var(--max);margin:0 auto}
+.rv{opacity:0;transform:translateY(22px);transition:opacity 0.9s cubic-bezier(0.16,1,0.3,1),transform 0.9s cubic-bezier(0.16,1,0.3,1)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:0.08s}.d2{transition-delay:0.16s}.d3{transition-delay:0.24s}
+
+/* ══ TYPE ══ */
+.voice{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--ink);letter-spacing:-0.01em;line-height:1.18;text-wrap:balance;padding-bottom:0.1em}
+.voice .au{color:var(--gold-soft)}
+h2.voice{font-size:clamp(2rem,4.6vw,3.4rem);margin-bottom:1.2rem}
+.lede{color:var(--ink-2);font-weight:300;line-height:1.85}
+.small{font-size:0.78rem;letter-spacing:0.05em;color:var(--ink-3)}
 
 /* ══ NAV ══ */
-.nv{position:fixed;top:0;left:0;right:0;z-index:var(--z-nav);height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);background:rgba(7,7,15,0.55);backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);border-bottom:1px solid transparent;transition:border-color 0.3s,background 0.3s}
-.nv.scrolled{border-bottom-color:var(--border);background:rgba(7,7,15,0.82)}
-.nv-logo{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:400;color:var(--gold);letter-spacing:0.04em;flex-shrink:0;transition:opacity 0.2s}
-.nv-logo:hover{opacity:0.82}
-.nv-center{display:flex;gap:2.1rem;list-style:none}
-.nv-center a{color:var(--muted);text-decoration:none;font-size:0.74rem;letter-spacing:0.13em;text-transform:uppercase;font-weight:500;position:relative;transition:color 0.2s}
-.nv-center a:hover{color:var(--text)}
-.nv-center a::after{content:'';position:absolute;left:0;right:100%;bottom:-5px;height:1px;background:var(--accent);transition:right 0.28s ease}
-.nv-center a:hover::after,.nv-center a.active::after{right:0}
-.nv-center a.active{color:var(--text)}
-.nv-right{display:flex;align-items:center;gap:0.7rem}
-.nv-icons{display:flex;gap:0.35rem}
-.nv-ic{width:36px;height:36px;border-radius:50%;border:1px solid var(--border2);display:inline-flex;align-items:center;justify-content:center;color:var(--muted);transition:border-color 0.2s,color 0.2s,background 0.2s,transform 0.2s}
-.nv-ic svg{width:15px;height:15px;fill:currentColor}
-.nv-ic:hover{border-color:var(--accent);color:var(--accent-text);background:var(--accent-dim);transform:translateY(-1px)}
-.nv-cta{display:inline-flex;align-items:center;gap:0.45rem;padding:0.5rem 1.05rem;background:var(--accent);color:#fff;font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border-radius:4px;border:1px solid transparent;transition:border-color 0.25s,box-shadow 0.25s,transform 0.15s;white-space:nowrap}
-.nv-cta svg{width:15px;height:15px;fill:currentColor}
-.nv-cta:hover{border-color:var(--gold);box-shadow:var(--glow-gold)}
+.nv{position:fixed;top:0;left:0;right:0;z-index:50;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);transition:background 0.4s,border-color 0.4s;border-bottom:1px solid transparent}
+.nv.on{background:rgba(7,7,15,0.7);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);border-bottom-color:var(--line)}
+.nv-logo{font-family:var(--serif);font-size:1.4rem;color:var(--gold);text-decoration:none;letter-spacing:0.03em}
+.nv-links{display:flex;gap:2rem;list-style:none}
+.nv-links a{text-decoration:none;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-3);transition:color 0.25s}
+.nv-links a:hover{color:var(--ink)}
+.nv-side{display:flex;align-items:center;gap:0.9rem}
+.rain-btn{display:inline-flex;align-items:center;gap:0.5rem;background:none;border:1px solid var(--line-2);border-radius:100px;color:var(--ink-3);padding:0.42rem 0.95rem;font-family:var(--sans);font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;transition:color 0.25s,border-color 0.25s}
+.rain-btn:hover{color:var(--ink);border-color:var(--violet)}
+.rain-btn[aria-pressed="true"]{color:var(--violet-soft);border-color:var(--violet)}
+.rain-btn .bars{display:inline-flex;gap:2px;align-items:flex-end;height:10px}
+.rain-btn .bars i{width:2px;height:4px;background:currentColor;border-radius:1px}
+.rain-btn[aria-pressed="true"] .bars i{animation:eq 1.1s ease-in-out infinite}
+.rain-btn[aria-pressed="true"] .bars i:nth-child(2){animation-delay:0.2s}
+.rain-btn[aria-pressed="true"] .bars i:nth-child(3){animation-delay:0.45s}
+@keyframes eq{0%,100%{height:4px}50%{height:10px}}
+.nv-cta{display:inline-flex;align-items:center;gap:0.45rem;text-decoration:none;background:var(--violet);color:#fff;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:0.52rem 1.05rem;border-radius:100px;transition:box-shadow 0.25s,transform 0.15s}
+.nv-cta:hover{box-shadow:0 6px 26px rgba(139,63,201,0.45)}
 .nv-cta:active{transform:scale(0.97)}
-.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;min-width:44px;min-height:44px;align-items:center;justify-content:center}
-.burger span{display:block;width:22px;height:1.5px;background:var(--text);border-radius:2px;transition:transform 0.3s,opacity 0.3s}
-.burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
-.burger.open span:nth-child(2){opacity:0}
-.burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-.drawer{display:block;height:auto;position:fixed;top:68px;left:0;right:0;z-index:490;background:rgba(7,7,15,0.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:1rem var(--pad) calc(1.8rem + env(safe-area-inset-bottom,0px));transform:translateY(-115%);transition:transform 0.35s cubic-bezier(0.4,0,0.2,1);border-bottom:1px solid var(--border);max-height:calc(100vh - 68px);max-height:calc(100dvh - 68px);overflow-y:auto;overscroll-behavior:contain}
-.drawer.open{transform:translateY(0)}
-.drawer a{display:flex;align-items:center;min-height:48px;border-bottom:1px solid var(--border);color:var(--text);text-decoration:none;font-size:0.95rem;letter-spacing:0.08em;text-transform:uppercase;font-weight:500}
-.drawer a.drawer-cta{display:flex;align-items:center;justify-content:center;gap:0.55rem;min-height:50px;margin-top:1.2rem;background:var(--accent);color:#fff;border:none;border-radius:6px;font-size:0.8rem;font-weight:600;letter-spacing:0.09em;box-shadow:0 8px 26px rgba(139,63,201,0.3)}
-.drawer a.drawer-cta svg{width:16px;height:16px;fill:currentColor}
-.drawer-soc{display:flex;gap:0.6rem;margin-top:1.3rem}
-.drawer-soc .nv-ic{width:44px;height:44px}
+.nv-cta svg{width:14px;height:14px;fill:currentColor}
+.skip{position:fixed;top:0;left:50%;transform:translate(-50%,-130%);z-index:80;background:var(--violet);color:#fff;padding:0.7rem 1.3rem;border-radius:0 0 6px 6px;font-size:0.78rem;transition:transform 0.2s}
+.skip:focus{transform:translate(-50%,0)}
 
-/* ══ SHARED PRIMITIVES ══ */
-.wrap{max-width:var(--max);margin:0 auto}
-.sec{position:relative;padding:var(--space-xl) var(--pad)}
-.sec-tight{padding:var(--space-lg) var(--pad)}
-.sec-line{border-top:1px solid var(--border)}
-.eyebrow{display:inline-flex;align-items:center;gap:0.7rem;font-size:var(--fs-eyebrow);letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-text);margin-bottom:2.4rem;font-weight:600}
-.eyebrow::before{content:'';width:30px;height:1px;background:var(--accent)}
-.h-display{font-family:'Cormorant Garamond',serif;font-weight:400;color:var(--white);line-height:1.08;letter-spacing:-0.01em;text-wrap:balance}
-.h-display em{font-style:italic;color:var(--accent-text)}
-.lede{color:var(--muted2);font-weight:300;line-height:1.85}
-.btn{display:inline-flex;align-items:center;gap:0.55rem;padding:0.92rem 1.9rem;font-size:0.78rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:4px;border:1px solid transparent;cursor:pointer;font-family:'Inter',sans-serif;transition:background 0.25s,border-color 0.25s,box-shadow 0.25s,transform 0.25s}
-.btn:active{transform:translateY(0) scale(0.98)}
-.btn svg{width:15px;height:15px;fill:currentColor;flex-shrink:0}
-.btn-ghost{border-color:rgba(200,133,15,0.4);color:var(--gold);background:rgba(200,133,15,0.05)}
-.btn-ghost:hover{border-color:var(--gold);background:rgba(200,133,15,0.1);box-shadow:var(--glow-gold)}
-.btn-violet{background:var(--accent);color:#fff;box-shadow:0 6px 24px rgba(139,63,201,0.26)}
-.btn-violet:hover{background:var(--accent-hover);border-color:var(--gold);transform:translateY(-1px);box-shadow:var(--glow-violet)}
-.play-tri{width:0;height:0;border-style:solid;border-width:6px 0 6px 10px;border-color:transparent transparent transparent currentColor;display:inline-block}
+/* ══ HERO — manifesto ══ */
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:110px var(--pad) 90px}
+.hero-in{max-width:880px}
+.hero h1{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(3rem,9vw,6.4rem);line-height:1.1;color:var(--ink);letter-spacing:-0.015em;text-wrap:balance;padding-bottom:0.14em}
+.hero h1 .au{color:var(--gold-soft)}
+.hero-sub{margin:2rem auto 2.8rem;max-width:44ch;font-size:1.05rem;color:var(--ink-2)}
+.hero-ctas{display:flex;gap:1.6rem;justify-content:center;align-items:center;flex-wrap:wrap}
+.btn-play{display:inline-flex;align-items:center;gap:0.7rem;text-decoration:none;background:var(--violet);color:#fff;font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:1rem 2.1rem;border-radius:100px;box-shadow:0 10px 40px rgba(139,63,201,0.35);transition:transform 0.2s,box-shadow 0.25s;border:0;cursor:pointer;font-family:var(--sans)}
+.btn-play:hover{transform:translateY(-2px);box-shadow:0 16px 52px rgba(139,63,201,0.5)}
+.btn-play:active{transform:scale(0.98)}
+.tri{width:0;height:0;border-style:solid;border-width:5.5px 0 5.5px 9px;border-color:transparent transparent transparent currentColor}
+.link-quiet{font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-3);text-decoration:none;border-bottom:1px solid var(--line-2);padding-bottom:3px;transition:color 0.25s,border-color 0.25s}
+.link-quiet:hover{color:var(--ink);border-color:var(--gold)}
 
-/* ══ HERO ══ */
-.hero{position:relative;min-height:100svh;display:grid;grid-template-columns:1.15fr 0.85fr;align-items:center;gap:clamp(2.5rem,6vw,6rem);padding:140px var(--pad) 100px;max-width:var(--max);margin:0 auto;perspective:1400px}
-.hero-badge{display:inline-flex;align-items:center;gap:0.6rem;padding:0.34rem 0.9rem;border:1px solid rgba(139,63,201,0.35);border-radius:100px;font-size:0.68rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--accent-text);margin-bottom:2.1rem;background:rgba(139,63,201,0.06)}
-.hb-dot{width:5px;height:5px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent);animation:pulse-dot 2.4s ease-in-out infinite}
-@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.35;transform:scale(0.6)}}
-.hero h1{font-size:var(--fs-display);margin-bottom:1.8rem;max-width:13ch}
-.hero-sub{font-size:1.08rem;max-width:46ch;margin-bottom:2.6rem}
-.hero-ctas{display:flex;gap:0.85rem;flex-wrap:wrap;align-items:center}
-.hero-trust{margin-top:2.4rem;font-size:0.74rem;letter-spacing:0.04em;color:var(--muted)}
-.hero-trust b{color:var(--muted2);font-weight:600}
+/* ══ NOW PLAYING ══ */
+.np{display:grid;grid-template-columns:0.9fr 1.1fr;gap:clamp(2.5rem,6vw,5.5rem);align-items:center}
+.np-cover{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 60px 120px -30px rgba(0,0,0,0.9),0 0 0 1px var(--line),0 0 80px rgba(139,63,201,0.18);transform:rotate(-1.6deg)}
+.np-cover img{width:100%;aspect-ratio:1;object-fit:cover}
+.np-txt .small{display:block;margin-bottom:1rem}
+.np-txt p.lede{max-width:44ch;margin-bottom:1.8rem}
+.embed{border:1px solid var(--line-2);border-radius:14px;overflow:hidden;background:var(--pane);margin-bottom:1.3rem}
+.facade{display:flex;align-items:center;gap:1rem;width:100%;padding:1.05rem 1.2rem;background:none;border:0;cursor:pointer;text-align:left;font-family:inherit;color:var(--ink);transition:opacity 0.3s}
+.facade img{width:52px;height:52px;border-radius:9px;object-fit:cover}
+.facade .ft1{display:block;font-size:0.92rem;font-weight:500;color:var(--ink)}
+.facade .ft2{display:block;font-size:0.74rem;color:var(--ink-3)}
+.facade .fp{margin-left:auto;width:44px;height:44px;flex-shrink:0;border-radius:50%;background:var(--violet);display:grid;place-items:center;color:#fff;box-shadow:0 6px 22px rgba(139,63,201,0.45);transition:transform 0.2s}
+.facade:hover .fp{transform:scale(1.08)}
+.facade.loading{opacity:0.45;pointer-events:none}
+.embed iframe{display:block;width:100%;border:0}
+.plats{display:flex;gap:0.5rem;flex-wrap:wrap}
+.plat{display:inline-flex;align-items:center;gap:0.45rem;padding:0.5rem 1rem;border:1px solid var(--line-2);border-radius:100px;color:var(--ink-2);text-decoration:none;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;transition:border-color 0.25s,color 0.25s}
+.plat:hover{border-color:var(--gold);color:var(--gold-soft)}
+.plat svg{width:13px;height:13px;fill:currentColor}
+.np-proof{margin-top:1.6rem;font-size:0.76rem;color:var(--ink-3)}
+.np-proof b{color:var(--ink-2);font-weight:600}
 
-/* ── hero deck (single signature motion) ── */
-.tilt-stage{position:relative;display:grid;place-items:center;transform-style:preserve-3d}
-.tilt-deck{position:relative;width:min(330px,72vw);aspect-ratio:1;transform-style:preserve-3d;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform 0.2s cubic-bezier(0.2,0.6,0.2,1);will-change:transform}
-.tilt-glow{position:absolute;inset:-22%;border-radius:50%;background:radial-gradient(circle at 42% 40%,rgba(139,63,201,0.4),rgba(139,63,201,0.08) 52%,transparent 70%);filter:blur(26px);transform:translateZ(-80px);animation:glow-breathe 6s ease-in-out infinite}
-@keyframes glow-breathe{0%,100%{opacity:0.7;transform:translateZ(-80px) scale(1)}50%{opacity:1;transform:translateZ(-80px) scale(1.06)}}
-.tilt-cover{position:relative;width:82%;aspect-ratio:1;border-radius:14px;overflow:hidden;transform:translateZ(58px);box-shadow:0 50px 100px -28px rgba(0,0,0,0.85),0 0 0 1px var(--edge),0 0 60px rgba(139,63,201,0.22);transition:transform 0.45s cubic-bezier(0.4,0,0.2,1)}
-.tilt-cover img{width:100%;height:100%;object-fit:cover;display:block}
-.tilt-deck:hover .tilt-cover{transform:translateZ(82px) rotateY(-5deg)}
-
-/* ══ STATS ══ */
-.stats{display:grid;grid-template-columns:repeat(3,1fr);max-width:var(--max);margin:0 auto;padding:var(--space-lg) var(--pad)}
-.stat{text-align:center;padding:0 2rem;position:relative}
-.stat+.stat::before{content:'';position:absolute;left:0;top:18%;height:64%;width:1px;background:var(--border)}
-.stat-v{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,4vw,3.4rem);color:var(--white);line-height:1}
-.stat-v b{color:var(--gold);font-weight:400}
-.stat-l{font-size:0.66rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-top:0.5rem}
-
-/* ══ LATEST ══ */
-.latest{max-width:720px;margin:0 auto}
-.latest-badge{display:inline-flex;align-items:center;gap:0.55rem;padding:0.3rem 0.85rem;border:1px solid rgba(200,133,15,0.42);border-radius:100px;font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem}
-.latest h2{font-size:var(--fs-h2);margin-bottom:1rem}
-.latest>p{font-size:1.05rem;max-width:48ch;margin-bottom:2rem}
-.embed-shell{margin-top:2rem;border-radius:12px;overflow:hidden;border:1px solid var(--border2);background:var(--surface)}
-.embed-facade{position:relative;display:flex;align-items:center;gap:1rem;padding:1.1rem 1.3rem;cursor:pointer;width:100%;border:none;background:none;text-align:left;font-family:inherit;color:var(--text);transition:opacity 0.28s ease}
-.embed-facade .ef-art{width:54px;height:54px;border-radius:8px;object-fit:cover;flex-shrink:0;border:1px solid var(--edge)}
-.embed-facade .ef-txt{flex:1;min-width:0}
-.embed-facade .ef-t{display:block;font-size:0.9rem;color:var(--white);font-weight:500}
-.embed-facade .ef-s{display:block;font-size:0.74rem;color:var(--muted);letter-spacing:0.04em}
-.embed-facade .ef-play{width:42px;height:42px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;box-shadow:0 6px 20px rgba(139,63,201,0.4);transition:transform 0.2s}
-.embed-facade:hover .ef-play{transform:scale(1.08)}
-.embed-facade.loading{opacity:0.45;pointer-events:none}
-.embed-facade.loading .ef-play{animation:spin-up 0.9s ease-in-out infinite}
-@keyframes spin-up{0%,100%{transform:scale(1)}50%{transform:scale(0.9)}}
-.embed-shell iframe{display:block;width:100%;border:0;animation:needle-in 0.5s ease}
-@keyframes needle-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-.plat-row{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:1.4rem}
-.plat-row--divided{margin-top:2.6rem;padding-top:2.6rem;border-top:1px solid var(--border)}
-.plat-btn{display:inline-flex;align-items:center;gap:0.4rem;padding:0.5rem 1rem;border:1px solid var(--border2);border-radius:4px;color:var(--muted2);text-decoration:none;font-size:0.74rem;letter-spacing:0.05em;text-transform:uppercase;transition:border-color 0.2s,color 0.2s,transform 0.2s}
-.plat-btn svg{width:13px;height:13px;fill:currentColor}
-.plat-btn:hover{border-color:var(--accent);color:var(--accent-text);transform:translateY(-1px)}
-
-/* ══ DISCOGRAPHY ══ */
-.disc-head{display:flex;justify-content:space-between;align-items:flex-end;gap:1.5rem;flex-wrap:wrap;margin-bottom:3rem}
-.disc-head h2{font-size:var(--fs-h2)}
-.disc-head p{color:var(--muted);font-size:0.9rem;max-width:34ch;text-align:right}
-.disc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
-.disc-card{position:relative}
-.dc-inner{position:relative;border-radius:13px;overflow:hidden;transition:transform 0.3s ease,box-shadow 0.3s ease;box-shadow:0 18px 40px -22px rgba(0,0,0,0.8),0 0 0 1px var(--border)}
-.disc-card:hover .dc-inner{transform:translateY(-6px);box-shadow:0 40px 70px -28px rgba(0,0,0,0.85),0 0 0 1px rgba(139,63,201,0.4),0 0 40px rgba(139,63,201,0.16)}
-.dc-link{display:block;aspect-ratio:1;position:relative;overflow:hidden}
-.dc-link img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s ease}
-.disc-card:hover .dc-link img{transform:scale(1.04)}
-.dc-shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(7,7,15,0.94) 0%,rgba(7,7,15,0.35) 40%,transparent 62%);z-index:1;pointer-events:none}
-.dc-meta{position:absolute;left:0;right:0;bottom:0;padding:0.85rem 0.9rem;z-index:3;pointer-events:none}
-.dc-l{font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
-.dc-t{font-family:'Cormorant Garamond',serif;font-size:1.04rem;color:var(--white);line-height:1.16;display:block}
-.dc-m{font-size:0.66rem;color:var(--muted2);font-style:italic;opacity:0;max-height:0;overflow:hidden;transition:opacity 0.3s,max-height 0.3s}
-.disc-card:hover .dc-m{opacity:1;max-height:2rem}
-.dc-play{position:absolute;top:44%;left:50%;width:46px;height:46px;border-radius:50%;background:rgba(139,63,201,0.95);display:flex;align-items:center;justify-content:center;color:#fff;transform:translate(-50%,-50%) scale(0.8);opacity:0;transition:opacity 0.3s,transform 0.3s;z-index:4;box-shadow:0 10px 28px rgba(0,0,0,0.5)}
-.disc-card:hover .dc-play{opacity:1;transform:translate(-50%,-50%) scale(1)}
-.disc-card:active .dc-inner{transform:translateY(-2px) scale(0.985)}
-.dc-link::after{content:'';position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(to bottom,transparent,rgba(200,133,15,0.5),transparent);height:40%;transform:translateY(-140%);opacity:0}
-.disc-card:hover .dc-link::after{animation:cover-scan 0.7s ease forwards}
-@keyframes cover-scan{0%{transform:translateY(-140%);opacity:0}30%{opacity:0.7}100%{transform:translateY(260%);opacity:0}}
-@media(hover:none){.disc-card .dc-play{opacity:1;transform:translate(-50%,-50%) scale(0.92)}}
+/* ══ THE SHELF ══ */
+.shelf-head{display:flex;align-items:baseline;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:2.6rem}
+.shelf-head p{font-size:0.86rem;color:var(--ink-3);max-width:36ch}
+.shelf{display:flex;gap:1.6rem;overflow-x:auto;scroll-snap-type:x proximity;padding:1rem var(--pad) 2rem;scrollbar-width:thin;scrollbar-color:var(--violet) transparent;-webkit-mask-image:linear-gradient(to right,transparent,#000 var(--pad),#000 calc(100% - var(--pad)),transparent);mask-image:linear-gradient(to right,transparent,#000 var(--pad),#000 calc(100% - var(--pad)),transparent)}
+.sleeve{scroll-snap-align:center;flex:0 0 min(320px,74vw);text-decoration:none;transition:transform 0.35s cubic-bezier(0.16,1,0.3,1)}
+.sleeve:hover{transform:translateY(-8px)}
+.sleeve-art{position:relative;display:block;border-radius:12px;overflow:hidden;box-shadow:0 26px 60px -26px rgba(0,0,0,0.9),0 0 0 1px var(--line);transition:box-shadow 0.35s}
+.sleeve:hover .sleeve-art{box-shadow:0 44px 80px -28px rgba(0,0,0,0.95),0 0 0 1px rgba(139,63,201,0.45),0 0 46px rgba(139,63,201,0.2)}
+.sleeve-art img{width:100%;aspect-ratio:1;object-fit:cover;transition:transform 0.6s ease}
+.sleeve:hover .sleeve-art img{transform:scale(1.04)}
+.sleeve-art .fp{position:absolute;inset:auto 0.9rem 0.9rem auto;width:42px;height:42px;border-radius:50%;background:rgba(139,63,201,0.92);display:grid;place-items:center;color:#fff;opacity:0;transform:scale(0.85);transition:opacity 0.3s,transform 0.3s}
+.sleeve:hover .fp{opacity:1;transform:scale(1)}
+@media(hover:none){.sleeve .fp{opacity:1;transform:scale(0.95)}}
+.sleeve-meta{display:flex;align-items:baseline;gap:0.7rem;padding:1rem 0.2rem 0}
+.sleeve-n{font-family:var(--serif);font-style:italic;font-size:0.95rem;color:var(--ink-3)}
+.sleeve-t{font-family:var(--serif);font-size:1.25rem;color:var(--ink);line-height:1.2}
+.sleeve-mood{display:block;font-size:0.74rem;color:var(--ink-3);padding:0.15rem 0.2rem 0}
+.sleeve-tag{margin-left:auto;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-soft);border:1px solid rgba(200,133,15,0.4);border-radius:100px;padding:0.16rem 0.6rem;white-space:nowrap}
 
 /* ══ STORY ══ */
-.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;max-width:var(--max);margin:0 auto}
-.story-left h2{font-size:var(--fs-h2);margin-bottom:1.5rem}
-.story-left p{color:var(--muted2);line-height:1.95;margin-bottom:1.1rem;font-size:0.98rem}
-.story-open::first-letter{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:3.6rem;line-height:0.78;float:left;padding:0.36rem 0.55rem 0 0;color:var(--gold);text-shadow:0 0 22px rgba(139,63,201,0.45)}
-.quote{margin-top:2.4rem;padding:1.6rem 1.8rem;background:rgba(13,12,26,0.72);border:1px solid var(--border);border-left:2px solid var(--accent);border-radius:0 5px 5px 0}
-.quote blockquote{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--text);line-height:1.7;margin-bottom:0.7rem}
-.quote cite{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);font-style:normal}
-.chapters{display:flex;flex-direction:column}
-.chap{padding:1.5rem 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:2.4rem 1fr;gap:1rem}
-.chap:first-child{border-top:1px solid var(--border)}
-.chap-n{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--accent-text)}
-.chap h3{font-size:0.9rem;font-weight:600;color:var(--white);margin-bottom:0.4rem}
-.chap p{font-size:0.85rem;color:var(--muted2);line-height:1.75}
+.story{max-width:660px;margin:0 auto}
+.story p{margin-bottom:1.3rem;font-size:1.02rem;line-height:2}
+.story .op::first-letter{font-family:var(--serif);font-style:italic;font-size:3.8rem;line-height:0.75;float:left;padding:0.4rem 0.6rem 0 0;color:var(--gold)}
+.story-quote{margin:2.6rem 0 0;padding-left:1.6rem;border-left:2px solid var(--violet)}
+.story-quote blockquote{font-family:var(--serif);font-style:italic;font-size:1.5rem;line-height:1.5;color:var(--ink)}
+.story-quote cite{display:block;margin-top:0.8rem;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);font-style:normal}
 
-/* ══ GEAR ══ */
-.gear-head h2{font-size:var(--fs-h2);margin-bottom:1rem}
-.gear-intro{max-width:52ch;margin-bottom:3rem;font-size:0.98rem;color:var(--muted2);line-height:1.9}
-.gear-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
-.gear-card{position:relative;border:1px solid var(--border);border-radius:12px;padding:2.1rem;text-decoration:none;display:block;background:rgba(13,12,26,0.45);overflow:hidden;transition:border-color 0.25s,transform 0.25s,background 0.25s}
-.gear-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--accent),transparent);opacity:0;transition:opacity 0.3s}
-.gear-card:hover{border-color:rgba(139,63,201,0.35);background:rgba(13,12,26,0.7);transform:translateY(-3px)}
-.gear-card:hover::before{opacity:1}
-.gear-n{font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:1.1rem}
-.gear-card h3{font-size:0.96rem;font-weight:600;color:var(--white);margin-bottom:0.6rem;line-height:1.3}
-.gear-card p{font-size:0.83rem;color:var(--muted2);line-height:1.75;margin-bottom:1.4rem}
-.gear-go{font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent-text);display:inline-flex;gap:0.35rem;transition:gap 0.2s}
-.gear-card:hover .gear-go{gap:0.6rem}
-.gear-feat{display:flex;align-items:center;justify-content:space-between;gap:2rem;margin-top:1.2rem;border:1px solid var(--border);border-radius:12px;padding:2.1rem 2.4rem;text-decoration:none;position:relative;overflow:hidden;background:rgba(13,12,26,0.45);transition:background 0.25s}
-.gear-feat::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,var(--gold),var(--accent),transparent);opacity:0.7}
-.gear-feat:hover{background:rgba(13,12,26,0.7)}
-.gear-feat .gear-n{margin-bottom:0.7rem}
-.gear-feat h3{font-size:1.1rem;color:var(--white);margin-bottom:0.5rem}
-.gear-feat p{font-size:0.85rem;color:var(--muted2);line-height:1.7;margin-bottom:0;max-width:62ch}
-.gear-feat-cta{flex-shrink:0;padding:0.75rem 1.5rem;background:var(--gold);color:var(--bg);font-size:0.74rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;border-radius:4px;white-space:nowrap}
+/* ══ THE ROOM ══ */
+.room-note{max-width:52ch;margin-bottom:0.9rem}
+.aff{font-size:0.74rem;color:var(--ink-3);opacity:0.75;margin-bottom:2.6rem}
+.room-list{border-top:1px solid var(--line)}
+.tool{display:grid;grid-template-columns:2.6rem 1fr auto;gap:1.4rem;align-items:baseline;padding:1.6rem 0;border-bottom:1px solid var(--line);text-decoration:none;transition:padding 0.25s}
+.tool:hover{padding-left:0.7rem}
+.tool-n{font-family:var(--serif);font-style:italic;font-size:1.1rem;color:var(--violet-soft)}
+.tool h3{font-family:var(--serif);font-weight:400;font-size:1.3rem;color:var(--ink);margin-bottom:0.3rem}
+.tool p{font-size:0.86rem;color:var(--ink-2);max-width:56ch}
+.tool-go{font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-3);white-space:nowrap;transition:color 0.25s}
+.tool:hover .tool-go{color:var(--gold-soft)}
 
-/* ══ CONNECT ══ */
-.connect-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;max-width:var(--max);margin:0 auto}
-.connect-left h2{font-size:var(--fs-h2);margin-bottom:1rem}
-.connect-left>p{color:var(--muted2);font-size:0.98rem;line-height:1.9;margin-bottom:2.2rem}
-.soc-list{display:flex;flex-direction:column}
-.soc{display:flex;align-items:center;justify-content:space-between;padding:1.05rem 0;border-bottom:1px solid var(--border);text-decoration:none;transition:padding 0.2s}
-.soc:first-child{border-top:1px solid var(--border)}
-.soc:hover{padding-left:0.6rem}
-.soc-name{font-size:0.9rem;font-weight:500;color:var(--white)}
-.soc-handle{font-size:0.78rem;color:var(--muted)}
-.soc-arrow{color:var(--muted);transition:color 0.2s,transform 0.2s}
-.soc:hover .soc-arrow{color:var(--accent-text);transform:translateX(4px)}
-.soc:active{background:rgba(139,63,201,0.06)}
-.soc:active .soc-arrow{color:var(--accent-text)}
-.support-card{background:rgba(13,12,26,0.72);border:1px solid var(--border2);border-radius:12px;padding:2.4rem;position:relative;overflow:hidden}
-.support-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--accent) 50%,transparent)}
-.support-card+.support-card{margin-top:1.2rem}
-.support-card h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;color:var(--white);margin-bottom:0.7rem}
-.support-card p{font-size:0.87rem;color:var(--muted2);line-height:1.8;margin-bottom:1.6rem}
-.support-card .btn{width:100%;justify-content:center}
-.support-note{margin-top:0.9rem;font-size:0.72rem;color:var(--muted);text-align:center}
+/* ══ STAY ══ */
+.stay-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:clamp(2.5rem,6vw,5rem);align-items:start}
+.socs{border-top:1px solid var(--line);margin-top:2.2rem}
+.soc{display:flex;align-items:center;justify-content:space-between;padding:1.05rem 0.2rem;border-bottom:1px solid var(--line);text-decoration:none;transition:padding 0.2s}
+.soc:hover{padding-left:0.8rem}
+.soc b{font-weight:500;font-size:0.92rem;color:var(--ink)}
+.soc span{font-size:0.76rem;color:var(--ink-3)}
+.soc i{font-style:normal;color:var(--ink-3);transition:transform 0.2s,color 0.2s}
+.soc:hover i{transform:translateX(5px);color:var(--violet-soft)}
+.pane{background:var(--pane);border:1px solid var(--line);border-radius:16px;padding:2.2rem;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.pane+.pane{margin-top:1.2rem}
+.pane h3{font-family:var(--serif);font-weight:400;font-size:1.45rem;color:var(--ink);margin-bottom:0.6rem}
+.pane p{font-size:0.87rem;margin-bottom:1.5rem}
+.pane .btn-play{width:100%;justify-content:center;padding:0.9rem 1.5rem}
+.pane .ghost{display:inline-flex;width:100%;justify-content:center;align-items:center;gap:0.5rem;text-decoration:none;border:1px solid rgba(200,133,15,0.45);color:var(--gold-soft);font-size:0.76rem;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;padding:0.9rem 1.5rem;border-radius:100px;transition:background 0.25s,border-color 0.25s}
+.pane .ghost:hover{background:rgba(200,133,15,0.08);border-color:var(--gold)}
+.pane .note{font-size:0.72rem;color:var(--ink-3);text-align:center;margin:0.9rem 0 0}
 
 /* ══ FOOTER ══ */
-.ft{position:relative;z-index:var(--z-page);border-top:1px solid var(--border);padding:3.5rem var(--pad) 0;background:rgba(7,7,15,0.6)}
-.ft-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 130px 140px;gap:3.5rem;padding-bottom:3rem;border-bottom:1px solid var(--border)}
-.ft-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold);margin-bottom:0.5rem}
-.ft-tag{font-size:0.74rem;color:var(--muted);line-height:1.6;max-width:240px}
-.ft-soc{display:flex;gap:0.4rem;margin-top:1.4rem}
-.ft-col{display:flex;flex-direction:column;gap:0.6rem}
-.ft-col .lbl{font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent-text);font-weight:600;margin-bottom:0.3rem}
-.ft-col a{color:var(--muted);text-decoration:none;font-size:0.82rem;transition:color 0.2s}
-.ft-col a:hover{color:var(--text)}
-.ft-base{max-width:var(--max);margin:0 auto;padding:1.3rem 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-.ft-copy{font-size:0.72rem;color:var(--muted)}
+footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem var(--pad) 2.4rem;background:rgba(7,7,15,0.55)}
+.ft-in{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+.ft-brand{font-family:var(--serif);font-size:1.15rem;color:var(--gold)}
+.ft-mood{font-family:var(--serif);font-style:italic;font-size:0.95rem;color:var(--ink-3)}
+.ft-links{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.ft-links a,.ft-links button{background:none;border:0;cursor:pointer;font-family:var(--sans);font-size:0.72rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink-3);text-decoration:none;padding:0;transition:color 0.2s}
+.ft-links a:hover,.ft-links button:hover{color:var(--ink)}
+.ft-copy{width:100%;font-size:0.7rem;color:var(--ink-3);opacity:0.7}
 
-/* ══ BACK TO TOP ══ */
-.back-top{position:fixed;bottom:1.6rem;right:1.6rem;width:44px;height:44px;border-radius:50%;border:1px solid var(--border2);background:rgba(13,12,26,0.8);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--muted);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:300;opacity:0;transform:translateY(12px);transition:opacity 0.3s,transform 0.3s,border-color 0.2s,color 0.2s;pointer-events:none}
-.back-top.show{opacity:1;transform:translateY(0);pointer-events:auto}
-.back-top:hover{border-color:var(--accent);color:var(--accent-text)}
-.back-top svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+/* ══ MODALS ══ */
+.modal-overlay{position:fixed;inset:0;z-index:70;background:rgba(0,0,0,0.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;pointer-events:none;transition:opacity 0.3s}
+.modal-overlay.open{opacity:1;pointer-events:auto}
+.modal-panel{background:#0d0c1a;border:1px solid var(--line-2);border-radius:12px;padding:2.5rem;max-width:580px;width:100%;max-height:82vh;overflow-y:auto;position:relative;transform:translateY(20px);transition:transform 0.3s;scrollbar-width:thin}
+.modal-overlay.open .modal-panel{transform:translateY(0)}
+.modal-close{position:absolute;top:1rem;right:1rem;width:40px;height:40px;border-radius:50%;border:1px solid var(--line-2);background:none;cursor:pointer;color:var(--ink-3);font-size:1.2rem;line-height:1;transition:color 0.2s,border-color 0.2s}
+.modal-close:hover{color:var(--ink);border-color:var(--violet)}
+.modal-panel h2{font-family:var(--serif);font-weight:400;font-size:1.6rem;color:var(--ink);margin-bottom:1.8rem}
+.modal-panel h3{font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--violet-soft);margin:1.4rem 0 0.4rem}
+.modal-panel p{font-size:0.9rem;line-height:1.85;margin-bottom:0.7rem}
+.modal-panel a{color:var(--violet-soft)}
 
 /* ══ FOCUS ══ */
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
-
-/* ══ LEGAL MODALS ══ */
-.footer-link-btn{background:none;border:none;cursor:pointer;color:var(--muted);font-size:0.72rem;letter-spacing:0.09em;text-transform:uppercase;font-family:'Inter',sans-serif;transition:color 0.2s;padding:0}
-.footer-link-btn:hover{color:var(--accent-text)}
-.ft-legal{display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap}
-.modal-overlay{position:fixed;inset:0;z-index:var(--z-overlay);background:rgba(0,0,0,0.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;pointer-events:none;transition:opacity 0.3s}
-.modal-overlay.open{opacity:1;pointer-events:auto}
-.modal-panel{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:2.5rem;max-width:580px;width:100%;max-height:82vh;overflow-y:auto;position:relative;transform:translateY(20px);transition:transform 0.3s;scrollbar-width:thin}
-.modal-overlay.open .modal-panel{transform:translateY(0)}
-.modal-close{position:absolute;top:1rem;right:1rem;width:32px;height:32px;border-radius:50%;border:1px solid var(--border2);background:none;cursor:pointer;color:var(--muted);display:flex;align-items:center;justify-content:center;font-size:1.1rem;line-height:1;transition:border-color 0.2s,color 0.2s;font-family:'Inter',sans-serif}
-.modal-close:hover{border-color:var(--accent);color:var(--accent-text)}
-.modal-panel h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;color:var(--white);margin-bottom:2rem}
-.modal-panel h3{font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent-text);margin:1.5rem 0 0.4rem}
-.modal-panel p{font-size:0.9rem;color:var(--muted2);line-height:1.85;margin-bottom:0.75rem}
-.modal-panel a{color:var(--accent-text)}
+:focus-visible{outline:2px solid var(--violet);outline-offset:3px;border-radius:3px}
 
 /* ══ PERF ══ */
-#story,#gear,#connect,.ft{content-visibility:auto;contain-intrinsic-size:auto 600px}
+#story,#room,#stay,footer{content-visibility:auto;contain-intrinsic-size:auto 560px}
 
 /* ══ RESPONSIVE ══ */
-@media(max-width:980px){
-  .hero{grid-template-columns:1fr;gap:2.6rem;text-align:center;min-height:auto;padding:120px var(--pad) 72px}
-  .hero h1,.hero-sub{max-width:none}
-  .hero-sub,.hero-trust{margin-left:auto;margin-right:auto}
-  .hero-ctas{justify-content:center}
-  .tilt-stage{order:-1}
-  .story-grid,.connect-grid{grid-template-columns:1fr;gap:3rem}
-  .gear-grid{grid-template-columns:1fr}
-  .disc-grid{grid-template-columns:repeat(2,1fr)}
-  .nv-center,.nv-icons{display:none}
-  .burger{display:flex}
-  .ft-soc{gap:0.6rem}
-  .ft-soc .nv-ic{width:44px;height:44px}
-  .disc-head{align-items:flex-start}
-  .disc-head p{text-align:left}
+@media(max-width:900px){
+  .nv-links{display:none}
+  .np{grid-template-columns:1fr;gap:2.4rem}
+  .np-cover{max-width:380px;margin:0 auto;transform:rotate(0)}
+  .stay-grid{grid-template-columns:1fr;gap:2.6rem}
 }
 @media(max-width:560px){
-  .sec{padding:var(--space-lg) var(--pad)}
-  .nv-cta{padding:0.45rem 0.85rem;font-size:0.68rem}
-  .eyebrow{font-size:0.72rem;letter-spacing:0.14em}
-  .story-left p,.connect-left>p,.gear-intro{line-height:1.75}
-  .hero{padding:96px var(--pad) 56px;gap:2.2rem}
-  .hero h1{font-size:clamp(2.4rem,11vw,3.2rem)}
-  .hero-badge{margin-bottom:1.6rem}
-  .hero-sub{font-size:1rem;margin-bottom:2rem}
-  .tilt-deck{width:min(290px,70vw)}
-  .hero-ctas{flex-direction:column;align-items:stretch;width:100%}
-  .hero-ctas .btn{width:100%;justify-content:center}
-  .hero-trust{margin-top:2rem}
-  .story-open::first-letter{font-size:3rem}
-  .stats{grid-template-columns:1fr;gap:0;padding:var(--space-md) var(--pad)}
-  .stat+.stat::before{display:none}
-  .stat{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;text-align:left;padding:1.05rem 0;border-top:1px solid var(--border)}
-  .stat:first-child{border-top:none;padding-top:0}
-  .stat:last-child{padding-bottom:0}
-  .stat-v{font-size:clamp(1.9rem,7.5vw,2.4rem)}
-  .stat-l{margin-top:0;text-align:right;line-height:1.5;font-size:0.7rem;letter-spacing:0.1em}
-  .disc-grid{gap:0.85rem}
-  .dc-meta{padding:0.7rem 0.75rem}
-  .dc-l{font-size:0.66rem;letter-spacing:0.1em}
-  .dc-t{font-size:0.95rem}
-  .gear-feat{flex-direction:column;align-items:flex-start;gap:1.4rem;padding:1.7rem 1.4rem}
-  .gear-feat-cta{width:100%;text-align:center}
-  .gear-card{padding:1.7rem 1.4rem}
-  .support-card{padding:1.8rem 1.4rem}
-  .quote{padding:1.4rem 1.3rem}
+  section{padding:4.2rem 0}
+  .hero{padding:96px var(--pad) 60px}
+  .hero-sub{margin:1.6rem auto 2.2rem}
+  .rain-btn .lbl{display:none}
+  .rain-btn{padding:0.42rem 0.7rem}
+  .sleeve{flex-basis:min(270px,78vw)}
+  .tool{grid-template-columns:1fr;gap:0.5rem}
+  .tool-n{display:none}
+  .pane{padding:1.7rem 1.4rem}
   .modal-overlay{padding:0.9rem}
-  .modal-panel{padding:1.8rem 1.3rem;max-height:88vh;max-height:88dvh}
-  .modal-panel h3{font-size:0.76rem;letter-spacing:0.09em}
-  .modal-close{width:44px;height:44px;font-size:1.3rem}
-  .back-top{bottom:calc(1rem + env(safe-area-inset-bottom,0px));right:1rem}
-  .ft-inner{grid-template-columns:1fr 1fr;gap:2.2rem 1.5rem}
-  .ft-inner>div:first-child{grid-column:1 / -1}
-  .ft-base{justify-content:center;text-align:center}
-}
-@media(max-width:560px) and (max-height:520px){
-  .hero{padding-top:80px}
-  .tilt-deck{width:min(180px,42vw)}
+  .modal-panel{padding:1.8rem 1.3rem;max-height:88dvh}
 }
 
 /* ══ REDUCED MOTION ══ */
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .tilt-glow,.hb-dot{animation:none}
-  .tilt-deck{transform:none!important;transition:none}
-  .atmos-grain{display:block}
-  .disc-card:hover .dc-link::after,.embed-facade.loading .ef-play,.embed-shell iframe{animation:none}
+  .orb{animation:none}
+  .rain-btn .bars i{animation:none!important}
+  .rv{transition:none}
+  .night i{transition:none}
+  .sleeve,.sleeve-art img,.facade .fp{transition:none}
 }
 </style>
 </head>
-<body>
+<body data-phase="dusk">
 
 <!-- ══ ICON SPRITE ══ -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
@@ -416,256 +320,200 @@ body{background:var(--bg);overflow-x:hidden}
   <path id="i-kofi" d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/>
 </defs></svg>
 
-<a href="#latest" class="skip">Skip to content</a>
-<canvas id="atmos" aria-hidden="true"></canvas>
-<div class="atmos-grain" aria-hidden="true"></div>
-<div class="atmos-vig" aria-hidden="true"></div>
-<div id="progress"></div>
+<a href="#listen" class="skip">Skip to content</a>
+
+<div class="night" aria-hidden="true"><i class="ph-dusk"></i><i class="ph-mid"></i><i class="ph-dawn"></i></div>
+<div class="orbs" aria-hidden="true" id="orbs"></div>
+<div class="grain" aria-hidden="true"></div>
 
 <!-- ══ NAV ══ -->
-<nav class="nv" id="nav" aria-label="Primary">
+<nav class="nv" id="nv" aria-label="Primary">
   <a href="#top" class="nv-logo">Kaisos</a>
-  <ul class="nv-center">
-    <li><a href="#latest">Latest</a></li>
-    <li><a href="#music">Releases</a></li>
+  <ul class="nv-links">
+    <li><a href="#listen">Listen</a></li>
+    <li><a href="#releases">Releases</a></li>
     <li><a href="#story">Story</a></li>
-    <li><a href="#gear">Gear</a></li>
     <li><a href="/merch">Merch</a></li>
-    <li><a href="#connect">Connect</a></li>
   </ul>
-  <div class="nv-right">
-    <div class="nv-icons">
-      <a class="nv-ic" href="https://www.instagram.com/lofikaisos/" target="_blank" rel="me noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><use href="#i-instagram"/></svg></a>
-      <a class="nv-ic" href="https://youtube.com/@LofiKaisos" target="_blank" rel="me noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><use href="#i-youtube"/></svg></a>
-      <a class="nv-ic" href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="me noopener" aria-label="Spotify"><svg viewBox="0 0 24 24"><use href="#i-spotify"/></svg></a>
-    </div>
+  <div class="nv-side">
+    <button type="button" class="rain-btn" id="rain" aria-pressed="false" aria-label="Toggle ambient rain sound">
+      <span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="lbl">rain</span>
+    </button>
     <a class="nv-cta" href="https://ko-fi.com/I3I41YQ1DA" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-kofi"/></svg><span>Support</span></a>
-    <button type="button" class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
-  </div>
-</nav>
-<nav class="drawer" id="drawer" aria-label="Mobile menu">
-  <a href="#latest">Latest</a>
-  <a href="#music">Releases</a>
-  <a href="#story">Story</a>
-  <a href="#gear">Gear</a>
-  <a href="/merch">Merch</a>
-  <a href="#connect">Connect</a>
-  <a class="drawer-cta" href="https://ko-fi.com/I3I41YQ1DA" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-kofi"/></svg> Support on Ko-fi</a>
-  <div class="drawer-soc">
-    <a class="nv-ic" href="https://www.instagram.com/lofikaisos/" target="_blank" rel="me noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><use href="#i-instagram"/></svg></a>
-    <a class="nv-ic" href="https://youtube.com/@LofiKaisos" target="_blank" rel="me noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><use href="#i-youtube"/></svg></a>
-    <a class="nv-ic" href="https://www.tiktok.com/@lofikaisos" target="_blank" rel="me noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><use href="#i-tiktok"/></svg></a>
-    <a class="nv-ic" href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="me noopener" aria-label="Spotify"><svg viewBox="0 0 24 24"><use href="#i-spotify"/></svg></a>
   </div>
 </nav>
 
 <main class="page" id="top">
 
 <!-- ══ HERO ══ -->
-<section class="hero">
-  <div class="hero-text">
-    <div class="hero-badge reveal"><span class="hb-dot"></span> New album · Quiet Chaos</div>
-    <h1 class="h-display reveal reveal--settle d1">Quiet moments, turned into <em>lo-fi worlds.</em></h1>
-    <p class="hero-sub lede reveal d2">Eight releases from Munich — seven albums and a single, all self-released. Lo-fi for deep focus, late nights, and the hours when everything gets too loud.</p>
-    <div class="hero-ctas reveal d3">
-      <a href="#latest" class="btn btn-violet"><span class="play-tri"></span> Press play</a>
-      <a href="#music" class="btn btn-ghost">Hear everything <span aria-hidden="true">→</span></a>
+<header class="hero" data-phase="dusk">
+  <div class="hero-in">
+    <h1 class="rv">music for the <span class="au">quiet</span> hours.</h1>
+    <p class="hero-sub rv d1">Lo-fi from Munich for deep focus and late nights. Made slowly, shared freely.</p>
+    <div class="hero-ctas rv d2">
+      <a class="btn-play" href="#listen"><span class="tri"></span> Press play</a>
+      <a class="link-quiet" href="#releases">eight releases</a>
     </div>
-    <p class="hero-trust reveal d4">Self-released from Munich · <b>8 releases</b> · <b>55K+ YouTube subscribers</b></p>
   </div>
-  <div class="tilt-stage reveal d2" id="hero-tilt">
-    <div class="tilt-deck">
-      <div class="tilt-glow"></div>
-      <div class="tilt-cover">
-        <img src="covers/quiet-chaos.webp" alt="Quiet Chaos album cover by Kaisos" width="330" height="330" fetchpriority="high" decoding="async"/>
+</header>
+
+<hr class="hairline"/>
+
+<!-- ══ NOW PLAYING ══ -->
+<section id="listen" data-phase="dusk">
+  <div class="wrap np">
+    <div class="np-cover rv">
+      <img src="covers/quiet-chaos.webp" alt="Quiet Chaos album cover by Kaisos" width="600" height="600" fetchpriority="high" decoding="async"/>
+    </div>
+    <div class="np-txt">
+      <span class="small rv">Now playing</span>
+      <h2 class="voice rv">Quiet Chaos, <span class="au">the newest album.</span></h2>
+      <p class="lede rv d1">Late-night lo-fi for the calm inside the noise.</p>
+      <div class="embed rv d2">
+        <button type="button" class="facade" data-embed="https://open.spotify.com/embed/album/4e6gK5CEZqllYvsjWDY3Pl?utm_source=generator&amp;theme=0" data-h="352" aria-label="Load Spotify player for Quiet Chaos">
+          <img src="covers/quiet-chaos.webp" alt="" aria-hidden="true" width="52" height="52"/>
+          <span><span class="ft1">Quiet Chaos</span><span class="ft2">Play the full album · Spotify</span></span>
+          <span class="fp"><span class="tri"></span></span>
+        </button>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ STATS ══ -->
-<div class="stats">
-  <div class="stat reveal"><div class="stat-v"><b>55K</b>+</div><div class="stat-l">YouTube Subscribers</div></div>
-  <div class="stat reveal d1"><div class="stat-v"><b>8</b></div><div class="stat-l">Seven albums, one single</div></div>
-  <div class="stat reveal d2"><div class="stat-v"><b>2024</b></div><div class="stat-l">Active Since</div></div>
-</div>
-
-<!-- ══ LATEST ══ -->
-<section class="sec sec-line" id="latest">
-  <div class="latest reveal">
-    <div class="latest-badge"><span class="hb-dot"></span> Latest Release</div>
-    <h2 class="h-display reveal reveal--settle">Quiet Chaos</h2>
-    <p class="lede">Late-night lo-fi for the calm inside the noise — the newest Kaisos album.</p>
-    <div class="plat-row">
-      <a class="plat-btn" href="https://open.spotify.com/album/4e6gK5CEZqllYvsjWDY3Pl" target="_blank" rel="noopener" aria-label="Open Quiet Chaos on Spotify"><svg viewBox="0 0 24 24"><use href="#i-spotify"/></svg> Spotify</a>
-      <a class="plat-btn" href="https://music.apple.com/us/album/quiet-chaos/6773957574" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-apple"/></svg> Apple Music</a>
-      <a class="plat-btn" href="https://youtube.com/@LofiKaisos" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-youtube"/></svg> YouTube</a>
-    </div>
-    <div class="embed-shell">
-      <button type="button" class="embed-facade" data-embed="https://open.spotify.com/embed/album/4e6gK5CEZqllYvsjWDY3Pl?utm_source=generator&amp;theme=0" data-h="352" aria-label="Load Spotify player for Quiet Chaos">
-        <img class="ef-art" src="covers/quiet-chaos.webp" alt="" aria-hidden="true" width="54" height="54"/>
-        <span class="ef-txt"><span class="ef-t">Quiet Chaos</span><span class="ef-s">Play the full album · Spotify</span></span>
-        <span class="ef-play"><span class="play-tri"></span></span>
-      </button>
-    </div>
-  </div>
-</section>
-
-<!-- ══ DISCOGRAPHY ══ -->
-<section class="sec sec-line" id="music">
-  <div class="wrap">
-    <div class="eyebrow reveal">Discography</div>
-    <div class="disc-head reveal">
-      <h2 class="h-display reveal reveal--settle">Eight releases, <em>one world.</em></h2>
-      <p>Seven albums and a single — each a different mood from the same place. Tap a cover to listen.</p>
-    </div>
-    <div class="disc-grid">
-      <div class="disc-card reveal"><div class="dc-inner">
-        <a class="dc-link" href="https://open.spotify.com/album/4e6gK5CEZqllYvsjWDY3Pl" target="_blank" rel="noopener" aria-label="Quiet Chaos on Spotify">
-          <img src="covers/quiet-chaos.webp" alt="Quiet Chaos album cover" width="600" height="600" loading="lazy" decoding="async"/>
-          <span class="dc-shade"></span>
-          <span class="dc-play"><span class="play-tri"></span></span>
-          <span class="dc-meta"><span class="dc-l">Latest · Album</span><span class="dc-t">Quiet Chaos</span><span class="dc-m">Calm inside the noise</span></span>
-        </a></div></div>
-      <div class="disc-card reveal d1"><div class="dc-inner">
-        <a class="dc-link" href="https://open.spotify.com/album/0Vhoh9SYaNQ5IFcKuEj8s3" target="_blank" rel="noopener" aria-label="Purple Gold on Spotify">
-          <img src="covers/purple-gold.webp" alt="Purple Gold single cover" width="600" height="600" loading="lazy" decoding="async"/>
-          <span class="dc-shade"></span>
-          <span class="dc-play"><span class="play-tri"></span></span>
-          <span class="dc-meta"><span class="dc-l">Single</span><span class="dc-t">Purple Gold</span><span class="dc-m">Dark trap, hip-hop</span></span>
-        </a></div></div>
-      <div class="disc-card reveal d2"><div class="dc-inner">
-        <a class="dc-link" href="https://open.spotify.com/album/67OMy0DOFbt4Y5iTbL4lnE" target="_blank" rel="noopener" aria-label="Lofi Kaisos Special on Spotify">
-          <img src="covers/special.webp" alt="Lofi Kaisos Special album cover" width="600" height="600" loading="lazy" decoding="async"/>
-          <span class="dc-shade"></span>
-          <span class="dc-play"><span class="play-tri"></span></span>
-          <span class="dc-meta"><span class="dc-l">Special</span><span class="dc-t">Lofi Kaisos Special</span><span class="dc-m">Late-night focus</span></span>
-        </a></div></div>
-      <div class="disc-card reveal d3"><div class="dc-inner">
-        <a class="dc-link" href="https://open.spotify.com/album/0sm4rH9Bv1VJ5r8hTaFDfz" target="_blank" rel="noopener" aria-label="Lofi Kaisos Vol. 5 on Spotify">
-          <img src="covers/vol5.webp" alt="Lofi Kaisos Vol. 5 album cover" width="600" height="600" loading="lazy" decoding="async"/>
-          <span class="dc-shade"></span>
-          <span class="dc-play"><span class="play-tri"></span></span>
-          <span class="dc-meta"><span class="dc-l">Vol. 5</span><span class="dc-t">Lofi Kaisos Vol. 5</span><span class="dc-m">Calm study beats</span></span>
-        </a></div></div>
-      <div class="disc-card reveal"><div class="dc-inner">
-        <a class="dc-link" href="https://open.spotify.com/album/49c8g3dFdDOS8aezK0ltDb" target="_blank" rel="noopener" aria-label="Lofi Kaisos Vol. 4 on Spotify">
-          <img src="covers/vol4.webp" alt="Lofi Kaisos Vol. 4 album cover" width="600" height="600" loading="lazy" decoding="async"/>
-          <span class="dc-shade"></span>
-          <span class="dc-play"><span class="play-tri"></span></span>
-          <span class="dc-meta"><span class="dc-l">Vol. 4</span><span class="dc-t">Lofi Kaisos Vol. 4</span><span class="dc-m">Dreamy textures</span></span>
-        </a></div></div>
-      <div class="disc-card reveal d1"><div class="dc-inner">
-        <a class="dc-link" href="https://open.spotify.com/album/3bcGnK12xEytemEmjFGH86" target="_blank" rel="noopener" aria-label="Lofi Kaisos Vol. 3 on Spotify">
-          <img src="covers/vol3.webp" alt="Lofi Kaisos Vol. 3 album cover" width="600" height="600" loading="lazy" decoding="async"/>
-          <span class="dc-shade"></span>
-          <span class="dc-play"><span class="play-tri"></span></span>
-          <span class="dc-meta"><span class="dc-l">Vol. 3</span><span class="dc-t">Lofi Kaisos Vol. 3</span><span class="dc-m">Soft melancholy</span></span>
-        </a></div></div>
-      <div class="disc-card reveal d2"><div class="dc-inner">
-        <a class="dc-link" href="https://open.spotify.com/album/1G9pQYYIS1hZEqu0hieCyE" target="_blank" rel="noopener" aria-label="Lofi Kaisos Vol. 2 on Spotify">
-          <img src="covers/vol2.webp" alt="Lofi Kaisos Vol. 2 album cover" width="600" height="600" loading="lazy" decoding="async"/>
-          <span class="dc-shade"></span>
-          <span class="dc-play"><span class="play-tri"></span></span>
-          <span class="dc-meta"><span class="dc-l">Vol. 2</span><span class="dc-t">Lofi Kaisos Vol. 2</span><span class="dc-m">Quiet focus</span></span>
-        </a></div></div>
-      <div class="disc-card reveal d3"><div class="dc-inner">
-        <a class="dc-link" href="https://open.spotify.com/album/0EQS01PkeiRoi9zaeVDtt7" target="_blank" rel="noopener" aria-label="Lofi Kaisos Vol. 1 on Spotify">
-          <img src="covers/vol1.webp" alt="Lofi Kaisos Vol. 1 album cover" width="600" height="600" loading="lazy" decoding="async"/>
-          <span class="dc-shade"></span>
-          <span class="dc-play"><span class="play-tri"></span></span>
-          <span class="dc-meta"><span class="dc-l">Vol. 1</span><span class="dc-t">Lofi Kaisos Vol. 1</span><span class="dc-m">Where it began</span></span>
-        </a></div></div>
-    </div>
-    <div class="plat-row plat-row--divided reveal">
-      <a class="plat-btn" href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-spotify"/></svg> Spotify</a>
-      <a class="plat-btn" href="https://music.apple.com/us/artist/kaisos/1735054792" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-apple"/></svg> Apple Music</a>
-      <a class="plat-btn" href="https://youtube.com/@LofiKaisos" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-youtube"/></svg> YouTube</a>
-      <a class="plat-btn" href="https://www.tiktok.com/@lofikaisos" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-tiktok"/></svg> TikTok</a>
-    </div>
-  </div>
-</section>
-
-<!-- ══ STORY ══ -->
-<section class="sec sec-line" id="story">
-  <div class="wrap">
-    <div class="eyebrow reveal">The story</div>
-    <div class="story-grid">
-      <div class="story-left reveal">
-        <h2 class="h-display reveal reveal--settle">Built on honest restarts.</h2>
-        <p class="story-open">It did not start with gear or talent. It started with a keyboard, impatience, and eventually silence. Twice, I walked away. Twice, something pulled me back.</p>
-        <p>The shift was not dramatic. It was a decision to slow down, to make something for myself before worrying what anyone else might think. Lo-fi gave me that space. A genre that asks for presence, not perfection.</p>
-        <p>When I uploaded the first track, I almost deleted it. I left it up. That was the beginning.</p>
-        <div class="quote">
-          <blockquote>"Progress, not perfection. And this time, I am not starting over. I am continuing."</blockquote>
-          <cite>Kaisos</cite>
-        </div>
+      <div class="plats rv d3">
+        <a class="plat" href="https://open.spotify.com/album/4e6gK5CEZqllYvsjWDY3Pl" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-spotify"/></svg> Spotify</a>
+        <a class="plat" href="https://music.apple.com/us/album/quiet-chaos/6773957574" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-apple"/></svg> Apple Music</a>
+        <a class="plat" href="https://youtube.com/@LofiKaisos" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-youtube"/></svg> YouTube</a>
       </div>
-      <div class="chapters reveal d1">
-        <div class="chap"><div class="chap-n">I</div><div><h3>Where it started</h3><p>A keyboard. High expectations. No patience. The instrument sat untouched for months before I tried again with FL Studio.</p></div></div>
-        <div class="chap"><div class="chap-n">II</div><div><h3>What went wrong</h3><p>Creating for judgment before a single note existed. I was focused on how things would be perceived, and that made everything feel wrong from the start.</p></div></div>
-        <div class="chap"><div class="chap-n">III</div><div><h3>Why I came back</h3><p>Slower. Simpler. More honest. Lo-fi asked nothing of me except to show up. No pressure, no comparison, just the sound and the feeling.</p></div></div>
-        <div class="chap"><div class="chap-n">IV</div><div><h3>Now</h3><p>Making music at the pace of real life. Imperfect, evolving, entirely my own. Eight releases in, and this is only the beginning.</p></div></div>
-      </div>
+      <p class="np-proof rv d3"><b>55K+ subscribers</b> study, work, and fall asleep to these tracks on YouTube.</p>
     </div>
   </div>
 </section>
 
-<!-- ══ GEAR ══ -->
-<section class="sec sec-tight sec-line" id="gear">
+<hr class="hairline"/>
+
+<!-- ══ THE SHELF ══ -->
+<section id="releases" data-phase="mid">
   <div class="wrap">
-    <div class="eyebrow reveal">The setup</div>
-    <div class="gear-head reveal">
-      <h2 class="h-display reveal reveal--settle">Made on simple tools.</h2>
+    <div class="shelf-head rv">
+      <h2 class="voice">Eight nights, <span class="au">one world.</span></h2>
+      <p>In the order they happened, from the first upload to now. Tap a cover to listen.</p>
     </div>
-    <p class="gear-intro reveal">Nothing here was bought to impress. Each thing earned its place by being on every track.</p>
-    <div class="gear-grid">
-      <a class="gear-card reveal" href="https://amzn.to/4t59kTK" target="_blank" rel="noopener sponsored">
-        <div class="gear-n">Gear 01</div><h3>Beyerdynamic DT 900 Pro X</h3>
-        <p>Every mix decision on every Kaisos track happened through these. Open-back means the sound breathes, which is exactly what lo-fi needs.</p>
-        <span class="gear-go">View on Amazon <span aria-hidden="true">→</span></span>
-      </a>
-      <a class="gear-card reveal d1" href="https://amzn.to/4w3IrCj" target="_blank" rel="noopener sponsored">
-        <div class="gear-n">Gear 02</div><h3>Akai MPK Mini MKIII</h3>
-        <p>Where the melodies actually start. It sits on the desk permanently, small enough to never get in the way, used on every single track.</p>
-        <span class="gear-go">View on Amazon <span aria-hidden="true">→</span></span>
-      </a>
-    </div>
-    <a class="gear-feat reveal" href="https://go.image-line.com/c/7251968/3088747/38091" target="_blank" rel="noopener sponsored">
-      <div><div class="gear-n">DAW</div><h3>FL Studio, where every track starts</h3>
-        <p>Every beat, melody, and mix on this site was built here. The workflow moves fast enough to catch an idea before it disappears, and deep enough to actually finish it.</p></div>
-      <span class="gear-feat-cta">Try FL Studio</span>
+  </div>
+  <div class="shelf rv d1" tabindex="0" aria-label="Discography, scroll horizontally">
+    <a class="sleeve" href="https://open.spotify.com/album/0EQS01PkeiRoi9zaeVDtt7" target="_blank" rel="noopener">
+      <span class="sleeve-art"><img src="covers/vol1.webp" alt="Lofi Kaisos Vol. 1 album cover" width="600" height="600" loading="lazy" decoding="async"/><span class="fp"><span class="tri"></span></span></span>
+      <span class="sleeve-meta"><span class="sleeve-n">01</span><span class="sleeve-t">Vol. 1</span></span>
+      <span class="sleeve-mood">where it began</span>
+    </a>
+    <a class="sleeve" href="https://open.spotify.com/album/1G9pQYYIS1hZEqu0hieCyE" target="_blank" rel="noopener">
+      <span class="sleeve-art"><img src="covers/vol2.webp" alt="Lofi Kaisos Vol. 2 album cover" width="600" height="600" loading="lazy" decoding="async"/><span class="fp"><span class="tri"></span></span></span>
+      <span class="sleeve-meta"><span class="sleeve-n">02</span><span class="sleeve-t">Vol. 2</span></span>
+      <span class="sleeve-mood">quiet focus</span>
+    </a>
+    <a class="sleeve" href="https://open.spotify.com/album/3bcGnK12xEytemEmjFGH86" target="_blank" rel="noopener">
+      <span class="sleeve-art"><img src="covers/vol3.webp" alt="Lofi Kaisos Vol. 3 album cover" width="600" height="600" loading="lazy" decoding="async"/><span class="fp"><span class="tri"></span></span></span>
+      <span class="sleeve-meta"><span class="sleeve-n">03</span><span class="sleeve-t">Vol. 3</span></span>
+      <span class="sleeve-mood">soft melancholy</span>
+    </a>
+    <a class="sleeve" href="https://open.spotify.com/album/49c8g3dFdDOS8aezK0ltDb" target="_blank" rel="noopener">
+      <span class="sleeve-art"><img src="covers/vol4.webp" alt="Lofi Kaisos Vol. 4 album cover" width="600" height="600" loading="lazy" decoding="async"/><span class="fp"><span class="tri"></span></span></span>
+      <span class="sleeve-meta"><span class="sleeve-n">04</span><span class="sleeve-t">Vol. 4</span></span>
+      <span class="sleeve-mood">dreamy textures</span>
+    </a>
+    <a class="sleeve" href="https://open.spotify.com/album/0sm4rH9Bv1VJ5r8hTaFDfz" target="_blank" rel="noopener">
+      <span class="sleeve-art"><img src="covers/vol5.webp" alt="Lofi Kaisos Vol. 5 album cover" width="600" height="600" loading="lazy" decoding="async"/><span class="fp"><span class="tri"></span></span></span>
+      <span class="sleeve-meta"><span class="sleeve-n">05</span><span class="sleeve-t">Vol. 5</span></span>
+      <span class="sleeve-mood">calm study beats</span>
+    </a>
+    <a class="sleeve" href="https://open.spotify.com/album/67OMy0DOFbt4Y5iTbL4lnE" target="_blank" rel="noopener">
+      <span class="sleeve-art"><img src="covers/special.webp" alt="Lofi Kaisos Special album cover" width="600" height="600" loading="lazy" decoding="async"/><span class="fp"><span class="tri"></span></span></span>
+      <span class="sleeve-meta"><span class="sleeve-n">06</span><span class="sleeve-t">Special</span></span>
+      <span class="sleeve-mood">late-night focus</span>
+    </a>
+    <a class="sleeve" href="https://open.spotify.com/album/0Vhoh9SYaNQ5IFcKuEj8s3" target="_blank" rel="noopener">
+      <span class="sleeve-art"><img src="covers/purple-gold.webp" alt="Purple Gold single cover" width="600" height="600" loading="lazy" decoding="async"/><span class="fp"><span class="tri"></span></span></span>
+      <span class="sleeve-meta"><span class="sleeve-n">07</span><span class="sleeve-t">Purple Gold</span></span>
+      <span class="sleeve-mood">dark trap, hip-hop</span>
+    </a>
+    <a class="sleeve" href="https://open.spotify.com/album/4e6gK5CEZqllYvsjWDY3Pl" target="_blank" rel="noopener">
+      <span class="sleeve-art"><img src="covers/quiet-chaos.webp" alt="Quiet Chaos album cover" width="600" height="600" loading="lazy" decoding="async"/><span class="fp"><span class="tri"></span></span></span>
+      <span class="sleeve-meta"><span class="sleeve-n">08</span><span class="sleeve-t">Quiet Chaos</span><span class="sleeve-tag">latest</span></span>
+      <span class="sleeve-mood">calm inside the noise</span>
     </a>
   </div>
 </section>
 
-<!-- ══ CONNECT ══ -->
-<section class="sec sec-line" id="connect">
+<hr class="hairline"/>
+
+<!-- ══ STORY ══ -->
+<section id="story" data-phase="mid">
   <div class="wrap">
-    <div class="eyebrow reveal">Connect</div>
-    <div class="connect-grid">
-      <div class="connect-left reveal">
-        <h2 class="h-display reveal reveal--settle">Made in private. <em>Shared in public.</em></h2>
-        <p>Find Kaisos wherever you listen, watch, or create.</p>
-        <div class="soc-list">
-          <a class="soc" href="https://www.instagram.com/lofikaisos/" target="_blank" rel="me noopener"><span><span class="soc-name">Instagram</span> &nbsp;<span class="soc-handle">@lofikaisos</span></span><span class="soc-arrow" aria-hidden="true">→</span></a>
-          <a class="soc" href="https://youtube.com/@LofiKaisos" target="_blank" rel="me noopener"><span><span class="soc-name">YouTube</span> &nbsp;<span class="soc-handle">@LofiKaisos</span></span><span class="soc-arrow" aria-hidden="true">→</span></a>
-          <a class="soc" href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="me noopener"><span><span class="soc-name">Spotify</span> &nbsp;<span class="soc-handle">Kaisos</span></span><span class="soc-arrow" aria-hidden="true">→</span></a>
-          <a class="soc" href="https://music.apple.com/us/artist/kaisos/1735054792" target="_blank" rel="me noopener"><span><span class="soc-name">Apple Music</span> &nbsp;<span class="soc-handle">Kaisos</span></span><span class="soc-arrow" aria-hidden="true">→</span></a>
-          <a class="soc" href="https://www.tiktok.com/@lofikaisos" target="_blank" rel="me noopener"><span><span class="soc-name">TikTok</span> &nbsp;<span class="soc-handle">@lofikaisos</span></span><span class="soc-arrow" aria-hidden="true">→</span></a>
+    <div class="story">
+      <h2 class="voice rv">Built on <span class="au">honest restarts.</span></h2>
+      <p class="op rv d1">It did not start with gear or talent. It started with a keyboard, impatience, and eventually silence. Twice, I walked away. Twice, something pulled me back.</p>
+      <p class="rv d1">The shift was not dramatic. It was a decision to slow down, to make something for myself before worrying what anyone else might think. Lo-fi gave me that space. A genre that asks for presence, not perfection.</p>
+      <p class="rv d2">When I uploaded the first track, I almost deleted it. I left it up. That was the beginning.</p>
+      <div class="story-quote rv d2">
+        <blockquote>&#8220;Progress, not perfection. And this time, I am not starting over. I am continuing.&#8221;</blockquote>
+        <cite>Kaisos</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="hairline"/>
+
+<!-- ══ THE ROOM ══ -->
+<section id="room" data-phase="dawn">
+  <div class="wrap">
+    <h2 class="voice rv">The room is <span class="au">small on purpose.</span></h2>
+    <p class="room-note lede rv d1">Nothing here was bought to impress. Each thing earned its place by being on every track.</p>
+    <p class="aff rv d1">Some links are affiliate links. Buying through them may earn Kaisos a small commission at no extra cost to you.</p>
+    <div class="room-list rv d2">
+      <a class="tool" href="https://amzn.to/4t59kTK" target="_blank" rel="noopener sponsored">
+        <span class="tool-n">i</span>
+        <span><h3>Beyerdynamic DT 900 Pro X</h3><p>Every mix decision on every track happened through these. Open-back means the sound breathes, which is exactly what lo-fi needs.</p></span>
+        <span class="tool-go">View &#8594;</span>
+      </a>
+      <a class="tool" href="https://amzn.to/4w3IrCj" target="_blank" rel="noopener sponsored">
+        <span class="tool-n">ii</span>
+        <span><h3>Akai MPK Mini MKIII</h3><p>Where the melodies actually start. Small enough to never leave the desk, used on every single track.</p></span>
+        <span class="tool-go">View &#8594;</span>
+      </a>
+      <a class="tool" href="https://go.image-line.com/c/7251968/3088747/38091" target="_blank" rel="noopener sponsored">
+        <span class="tool-n">iii</span>
+        <span><h3>FL Studio</h3><p>Every beat, melody, and mix on this site was built here. Fast enough to catch an idea before it disappears, deep enough to finish it.</p></span>
+        <span class="tool-go">Try it &#8594;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<hr class="hairline"/>
+
+<!-- ══ STAY ══ -->
+<section id="stay" data-phase="dawn">
+  <div class="wrap">
+    <div class="stay-grid">
+      <div>
+        <h2 class="voice rv">you&#8217;re exactly <span class="au">where you need to be.</span></h2>
+        <p class="lede rv d1" style="max-width:42ch">The music continues wherever you listen. Come sit for a while.</p>
+        <div class="socs rv d2">
+          <a class="soc" href="https://www.instagram.com/lofikaisos/" target="_blank" rel="me noopener"><span><b>Instagram</b> &nbsp;<span>@lofikaisos</span></span><i aria-hidden="true">&#8594;</i></a>
+          <a class="soc" href="https://youtube.com/@LofiKaisos" target="_blank" rel="me noopener"><span><b>YouTube</b> &nbsp;<span>@LofiKaisos</span></span><i aria-hidden="true">&#8594;</i></a>
+          <a class="soc" href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="me noopener"><span><b>Spotify</b> &nbsp;<span>Kaisos</span></span><i aria-hidden="true">&#8594;</i></a>
+          <a class="soc" href="https://music.apple.com/us/artist/kaisos/1735054792" target="_blank" rel="me noopener"><span><b>Apple Music</b> &nbsp;<span>Kaisos</span></span><i aria-hidden="true">&#8594;</i></a>
+          <a class="soc" href="https://www.tiktok.com/@lofikaisos" target="_blank" rel="me noopener"><span><b>TikTok</b> &nbsp;<span>@lofikaisos</span></span><i aria-hidden="true">&#8594;</i></a>
         </div>
       </div>
-      <div class="reveal d1">
-        <div class="support-card">
+      <div>
+        <div class="pane rv d1">
           <h3>Minimal pieces for quiet creators.</h3>
-          <p>Dark tones, soft gold, purple detail — built to wear while you work. Made for the people who make things in silence.</p>
-          <a class="btn btn-ghost" href="/merch">Enter the Shop <span aria-hidden="true">→</span></a>
+          <p>Dark tones, soft gold, purple detail. Built to wear while you work.</p>
+          <a class="ghost" href="/merch">Enter the shop &#8594;</a>
         </div>
-        <div class="support-card">
+        <div class="pane rv d2">
           <h3>Support the music.</h3>
-          <p>Every track takes time, time away from everything else. If Kaisos has ever made a study session better or a late night feel less lonely, a coffee goes a long way.</p>
-          <a class="btn btn-violet" href="https://ko-fi.com/I3I41YQ1DA" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-kofi"/></svg> Leave a coffee</a>
-          <p class="support-note">No pressure. The music stays free either way.</p>
+          <p>If Kaisos has ever made a study session better or a late night feel less lonely, a coffee goes a long way.</p>
+          <a class="btn-play" href="https://ko-fi.com/I3I41YQ1DA" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><use href="#i-kofi"/></svg> Leave a coffee</a>
+          <p class="note">No pressure. The music stays free either way.</p>
         </div>
       </div>
     </div>
@@ -675,343 +523,61 @@ body{background:var(--bg);overflow-x:hidden}
 </main>
 
 <!-- ══ FOOTER ══ -->
-<footer class="ft">
-  <div class="ft-inner">
+<footer data-phase="dawn">
+  <div class="ft-in">
     <div>
-      <div class="ft-logo">Kaisos</div>
-      <p class="ft-tag">Lo-fi, ambient beats, and chill study music from Munich.</p>
-      <div class="ft-soc">
-        <a class="nv-ic" href="https://www.instagram.com/lofikaisos/" target="_blank" rel="me noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><use href="#i-instagram"/></svg></a>
-        <a class="nv-ic" href="https://youtube.com/@LofiKaisos" target="_blank" rel="me noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><use href="#i-youtube"/></svg></a>
-        <a class="nv-ic" href="https://www.tiktok.com/@lofikaisos" target="_blank" rel="me noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><use href="#i-tiktok"/></svg></a>
-        <a class="nv-ic" href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="me noopener" aria-label="Spotify"><svg viewBox="0 0 24 24"><use href="#i-spotify"/></svg></a>
-      </div>
+      <div class="ft-brand">Kaisos</div>
+      <div class="ft-mood">lo-fi for the quiet hours, from Munich.</div>
     </div>
-    <div class="ft-col">
-      <span class="lbl">Listen</span>
-      <a href="#music">Releases</a>
-      <a href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="noopener">Spotify</a>
-      <a href="https://music.apple.com/us/artist/kaisos/1735054792" target="_blank" rel="noopener">Apple Music</a>
-      <a href="https://youtube.com/@LofiKaisos" target="_blank" rel="noopener">YouTube</a>
-    </div>
-    <div class="ft-col">
-      <span class="lbl">Explore</span>
-      <a href="#story">Story</a>
-      <a href="#gear">Gear</a>
-      <a href="#connect">Connect</a>
+    <div class="ft-links">
+      <a href="https://www.instagram.com/lofikaisos/" target="_blank" rel="me noopener">Instagram</a>
+      <a href="https://youtube.com/@LofiKaisos" target="_blank" rel="me noopener">YouTube</a>
+      <a href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="me noopener">Spotify</a>
       <a href="/merch">Merch</a>
+      <button type="button" data-open-modal="privacy">Privacy</button>
+      <button type="button" data-open-modal="impressum">Impressum</button>
     </div>
-  </div>
-  <div class="ft-base">
-    <div class="ft-copy">© 2026 Kaisos. All rights reserved.</div>
-    <div class="ft-legal">
-      <button type="button" class="footer-link-btn" onclick="openModal('privacy')">Privacy Policy</button>
-      <button type="button" class="footer-link-btn" onclick="openModal('impressum')">Impressum</button>
-    </div>
+    <div class="ft-copy">&#169; 2026 Kaisos. All rights reserved.</div>
   </div>
 </footer>
 
 <!-- ══ IMPRESSUM MODAL ══ -->
-<div class="modal-overlay" id="modal-impressum" role="dialog" aria-modal="true" aria-labelledby="impressum-title" onclick="if(event.target===this)closeModal('impressum')">
+<div class="modal-overlay" id="modal-impressum" role="dialog" aria-modal="true" aria-labelledby="impressum-title">
   <div class="modal-panel" lang="de">
-    <button type="button" class="modal-close" aria-label="Close" onclick="closeModal('impressum')">×</button>
+    <button type="button" class="modal-close" aria-label="Close">&#215;</button>
     <h2 id="impressum-title">Impressum</h2>
-    <h3>Angaben gemäß § 5 TMG</h3>
-    <p>Adnan Cengiz<br/>Landshuter Allee 138<br/>80637 München</p>
+    <h3>Angaben gem&#228;&#223; &#167; 5 TMG</h3>
+    <p>Adnan Cengiz<br/>Landshuter Allee 138<br/>80637 M&#252;nchen</p>
     <h3>Kontakt</h3>
     <p>E-Mail: <a href="mailto:cengiz.adnan93@gmail.com">cengiz.adnan93@gmail.com</a></p>
-    <h3>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
-    <p>Adnan Cengiz<br/>Landshuter Allee 138<br/>80637 München</p>
+    <h3>Verantwortlich f&#252;r den Inhalt nach &#167; 55 Abs. 2 RStV</h3>
+    <p>Adnan Cengiz<br/>Landshuter Allee 138<br/>80637 M&#252;nchen</p>
     <h3>Haftungsausschluss</h3>
-    <p>Die Inhalte dieser Seite wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann keine Gewähr übernommen werden.</p>
+    <p>Die Inhalte dieser Seite wurden mit gr&#246;&#223;tm&#246;glicher Sorgfalt erstellt. F&#252;r die Richtigkeit, Vollst&#228;ndigkeit und Aktualit&#228;t der Inhalte kann keine Gew&#228;hr &#252;bernommen werden.</p>
   </div>
 </div>
 
 <!-- ══ PRIVACY POLICY MODAL ══ -->
-<div class="modal-overlay" id="modal-privacy" role="dialog" aria-modal="true" aria-labelledby="privacy-title" onclick="if(event.target===this)closeModal('privacy')">
+<div class="modal-overlay" id="modal-privacy" role="dialog" aria-modal="true" aria-labelledby="privacy-title">
   <div class="modal-panel">
-    <button type="button" class="modal-close" aria-label="Close" onclick="closeModal('privacy')">×</button>
+    <button type="button" class="modal-close" aria-label="Close">&#215;</button>
     <h2 id="privacy-title">Privacy Policy</h2>
     <h3>Controller</h3>
-    <p>Adnan Cengiz, Landshuter Allee 138, 80637 München<br/>E-Mail: <a href="mailto:cengiz.adnan93@gmail.com">cengiz.adnan93@gmail.com</a></p>
+    <p>Adnan Cengiz, Landshuter Allee 138, 80637 M&#252;nchen<br/>E-Mail: <a href="mailto:cengiz.adnan93@gmail.com">cengiz.adnan93@gmail.com</a></p>
     <h3>Data Collection</h3>
-    <p>This website does not collect personal data. No first-party cookies are set. We use Plausible Analytics — a privacy-friendly, cookieless service that records only aggregated, anonymous usage statistics (page views and outbound clicks); it sets no cookies and performs no cross-site tracking. See <a href="https://plausible.io/privacy" target="_blank" rel="noopener">Plausible's privacy policy</a>.</p>
+    <p>This website does not collect personal data. No first-party cookies are set. We use Plausible Analytics, a privacy-friendly, cookieless service that records only aggregated, anonymous usage statistics (page views and outbound clicks); it sets no cookies and performs no cross-site tracking. See <a href="https://plausible.io/privacy" target="_blank" rel="noopener">Plausible&#8217;s privacy policy</a>.</p>
     <h3>Third-party Services</h3>
     <p>Music players (Spotify, Apple Music, YouTube) load only after you click to play them. Once loaded, these providers may set their own cookies. Please refer to their privacy policies: <a href="https://www.spotify.com/legal/privacy-policy/" target="_blank" rel="noopener">Spotify</a>, <a href="https://more.ko-fi.com/privacy" target="_blank" rel="noopener">Ko-fi</a>.</p>
-    <p lang="de">Spotify-Player werden erst nach einem Klick auf den Play-Button geladen. Erst danach können diese Anbieter eigene Daten erheben. Bitte beachten Sie die Datenschutzerklärungen dieser Anbieter.</p>
+    <p lang="de">Spotify-Player werden erst nach einem Klick auf den Play-Button geladen. Erst danach k&#246;nnen diese Anbieter eigene Daten erheben. Bitte beachten Sie die Datenschutzerkl&#228;rungen dieser Anbieter.</p>
     <h3>Your Rights</h3>
     <p>You have the right to access, rectify, and erase your stored data. Contact: <a href="mailto:cengiz.adnan93@gmail.com">cengiz.adnan93@gmail.com</a></p>
+    <h3>Ambient Sound</h3>
+    <p>The optional &#8220;rain&#8221; toggle generates sound locally in your browser. Nothing is downloaded, recorded, or transmitted.</p>
   </div>
 </div>
 
-<button type="button" class="back-top" id="back-top" aria-label="Back to top"><svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg></button>
-
-<script>
-// ══ WEBGL NEBULA ATMOSPHERE (hand-written, zero dependencies) ══
-(function(){
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches || matchMedia('(prefers-reduced-data: reduce)').matches;
-  const cv = document.getElementById('atmos');
-  if (reduce || !cv) { document.documentElement.classList.add('no-webgl'); return; }
-  let gl;
-  try { gl = cv.getContext('webgl', {antialias:false, alpha:false, depth:false, powerPreference:'low-power'}); } catch(e){}
-  if (!gl) { document.documentElement.classList.add('no-webgl'); return; }
-
-  const vs = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
-  const fs = [
-    'precision mediump float;',
-    'uniform vec2 u_res;uniform float u_t;uniform vec2 u_ptr;',
-    'float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}',
-    'float noise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);',
-    ' float a=hash(i),b=hash(i+vec2(1,0)),c=hash(i+vec2(0,1)),d=hash(i+vec2(1,1));',
-    ' return mix(mix(a,b,f.x),mix(c,d,f.x),f.y);}',
-    'float fbm(vec2 p){float v=0.,a=.5;mat2 m=mat2(1.6,1.2,-1.2,1.6);',
-    ' for(int i=0;i<3;i++){v+=a*noise(p);p=m*p;a*=.5;}return v;}',
-    'void main(){',
-    ' vec2 p=(gl_FragCoord.xy-.5*u_res)/u_res.y;',
-    ' p+=u_ptr*0.06;',
-    ' float t=u_t*0.025;',
-    ' vec2 q=vec2(fbm(p*1.4+t),fbm(p*1.4+vec2(5.2,1.3)-t));',
-    ' float n=fbm(p*2.0+q*1.7+t);',
-    ' vec3 bg=vec3(0.027,0.027,0.059);',
-    ' vec3 purple=vec3(0.545,0.247,0.788);',
-    ' vec3 deep=vec3(0.176,0.059,0.314);',
-    ' vec3 gold=vec3(0.784,0.522,0.059);',
-    ' vec3 col=bg;',
-    ' col=mix(col,deep,smoothstep(0.2,0.85,n)*0.85);',
-    ' col=mix(col,purple,smoothstep(0.5,1.05,n)*0.55);',
-    ' float gm=smoothstep(0.55,0.95,n)*smoothstep(0.5,0.9,q.x+q.y);',
-    ' col=mix(col,gold,gm*0.16);',
-    ' float vig=smoothstep(1.35,0.25,length(p));',
-    ' col*=mix(0.45,1.05,vig);',
-    ' col+=(hash(gl_FragCoord.xy+t)-0.5)*0.015;',
-    ' gl_FragColor=vec4(col,1.0);',
-    '}'
-  ].join('\n');
-
-  function sh(type,src){const s=gl.createShader(type);gl.shaderSource(s,src);gl.compileShader(s);return s;}
-  const prog=gl.createProgram();
-  gl.attachShader(prog,sh(gl.VERTEX_SHADER,vs));
-  gl.attachShader(prog,sh(gl.FRAGMENT_SHADER,fs));
-  gl.linkProgram(prog);
-  if(!gl.getProgramParameter(prog,gl.LINK_STATUS)){ document.documentElement.classList.add('no-webgl'); return; }
-  gl.useProgram(prog);
-  const b=gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER,b);
-  gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);
-  const loc=gl.getAttribLocation(prog,'p');
-  gl.enableVertexAttribArray(loc);
-  gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
-  const uRes=gl.getUniformLocation(prog,'u_res'),uT=gl.getUniformLocation(prog,'u_t'),
-        uPtr=gl.getUniformLocation(prog,'u_ptr');
-
-  let W=0,H=0,DPR=1,maxDPR=1.5,scale=1,lastW=0;
-  const coarse=matchMedia('(pointer:coarse)').matches;
-  function resize(){
-    maxDPR = innerWidth<900 ? 1.0 : 1.5;
-    scale  = innerWidth<900 ? 0.75 : 1.0; // fewer fragments on small screens
-    DPR = Math.min(DPR||maxDPR, maxDPR);
-    W=Math.floor(innerWidth*DPR*scale); H=Math.floor(innerHeight*DPR*scale);
-    cv.width=W; cv.height=H; gl.viewport(0,0,W,H);
-    lastW=innerWidth;
-  }
-  DPR=maxDPR; resize();
-  // ignore pure-height resizes (mobile URL-bar show/hide) on touch devices
-  addEventListener('resize',()=>{ if(coarse && innerWidth===lastW) return; resize(); },{passive:true});
-
-  let px=0,py=0,tx=0,ty=0;
-  addEventListener('pointermove',e=>{tx=(e.clientX/innerWidth-0.5)*2;ty=-(e.clientY/innerHeight-0.5)*2;},{passive:true});
-
-  let running=true,onScreen=true,raf=0,first=true,last=0,lastDraw=0,slow=0,clock=0;
-  function frame(ts){
-    if(!running) return;
-    raf=requestAnimationFrame(frame);
-    if(!last){last=ts;lastDraw=ts;}
-    if(ts-lastDraw<33) return; // cap ~30fps
-    let dt=ts-last; last=ts; lastDraw=ts;
-    if(dt>100)dt=100; // clamp across pauses so the clock never jumps/rewinds
-    if(dt>40 && DPR>1){ if(++slow>20){ DPR=1; resize(); slow=0; } } else slow=0;
-    clock+=dt*0.001; // accumulator freezes while paused → smooth on resume
-    px+=(tx-px)*0.04; py+=(ty-py)*0.04;
-    gl.uniform2f(uRes,W,H); gl.uniform1f(uT,clock);
-    gl.uniform2f(uPtr,px,py);
-    gl.drawArrays(gl.TRIANGLES,0,3);
-    if(first){ cv.style.background='none'; first=false; }
-  }
-  function go(){ if(!raf && running && onScreen){ last=0; raf=requestAnimationFrame(frame); } }
-  function stop(){ running=false; cancelAnimationFrame(raf); raf=0; }
-  ('requestIdleCallback' in window) ? requestIdleCallback(go,{timeout:1400}) : setTimeout(go,400);
-
-  // stop rendering once the hero (where the field reads) is scrolled past
-  const hero=document.querySelector('.hero');
-  if(hero && 'IntersectionObserver' in window){
-    new IntersectionObserver(es=>{
-      onScreen=es[0].isIntersecting;
-      if(onScreen){ running=true; go(); } else { stop(); }
-    },{rootMargin:'200px'}).observe(hero);
-  }
-  document.addEventListener('visibilitychange',()=>{
-    if(document.hidden){ stop(); } else if(onScreen){ running=true; go(); }
-  });
-})();
-
-// ══ HERO DECK POINTER TILT (signature moment only) ══
-(function(){
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  if (!matchMedia('(hover: hover)').matches) return;
-  const host=document.getElementById('hero-tilt'); if(!host) return;
-  const deck=host.querySelector('.tilt-deck');
-  let q=false,nx=0,ny=0;
-  function apply(){ deck.style.setProperty('--ry',nx+'deg'); deck.style.setProperty('--rx',ny+'deg'); q=false; }
-  host.addEventListener('pointermove',e=>{
-    const b=host.getBoundingClientRect();
-    nx=(((e.clientX-b.left)/b.width)-0.5)*18; ny=-((((e.clientY-b.top)/b.height)-0.5)*18);
-    if(!q){q=true;requestAnimationFrame(apply);}
-  },{passive:true});
-  host.addEventListener('pointerleave',()=>{nx=0;ny=0;if(!q){q=true;requestAnimationFrame(apply);}});
-})();
-
-// ══ CLICK-TO-LOAD EMBED (privacy friendly) ══
-document.querySelectorAll('.embed-facade').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    if(btn.classList.contains('loading'))return;
-    btn.classList.add('loading');
-    const src=btn.getAttribute('data-embed'), h=btn.getAttribute('data-h')||'352';
-    const f=document.createElement('iframe');
-    f.src=src; f.height=h; f.loading='lazy'; f.title='Kaisos player';
-    f.setAttribute('frameborder','0');
-    f.setAttribute('referrerpolicy','strict-origin-when-cross-origin');
-    f.setAttribute('sandbox','allow-scripts allow-same-origin allow-presentation allow-popups');
-    f.allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture';
-    f.addEventListener('load',()=>{if(btn.isConnected)btn.replaceWith(f);},{once:true});
-    setTimeout(()=>{if(btn.isConnected)btn.replaceWith(f);},1600);
-  });
-});
-
-// ══ SCROLL REVEAL ══
-(function(){
-  const els=document.querySelectorAll('.reveal');
-  if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('visible'));return;}
-  const io=new IntersectionObserver(en=>en.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target);}}),{threshold:0.14,rootMargin:'0px 0px -8% 0px'});
-  els.forEach(e=>io.observe(e));
-})();
-
-// ══ NAV + PROGRESS + BACK TO TOP ══
-(function(){
-  const nav=document.getElementById('nav'),prog=document.getElementById('progress'),back=document.getElementById('back-top');
-  let tick=false;
-  function onScroll(){
-    if(tick)return; tick=true;
-    requestAnimationFrame(()=>{
-      const y=scrollY,h=document.documentElement.scrollHeight-innerHeight,p=h>0?y/h:0;
-      nav.classList.toggle('scrolled',y>20);
-      prog.style.width=(p*100)+'%';
-      back.classList.toggle('show',y>700);
-      tick=false;
-    });
-  }
-  addEventListener('scroll',onScroll,{passive:true}); onScroll();
-  back.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
-})();
-
-// ══ SCROLL-SPY NAV ══
-(function(){
-  const links=[...document.querySelectorAll('.nv-center a[href^="#"]')];
-  const map=new Map(links.map(a=>[a.getAttribute('href').slice(1),a]));
-  const secs=[...map.keys()].map(id=>document.getElementById(id)).filter(Boolean);
-  if(!('IntersectionObserver' in window)||!secs.length)return;
-  const io=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.remove('active'));map.get(e.target.id)?.classList.add('active');}});},{rootMargin:'-45% 0px -50% 0px'});
-  secs.forEach(s=>io.observe(s));
-})();
-
-// ══ SCROLL LOCK (single source of truth: drawer OR any modal) ══
-// position:fixed + saved offset so iOS Safari can't scroll the page behind
-let scrollLockY=0,scrollLocked=false;
-function syncScrollLock(){
-  const d=document.getElementById('drawer');
-  const open=!!(document.querySelector('.modal-overlay.open')||(d&&d.classList.contains('open')));
-  if(open===scrollLocked)return;
-  const b=document.body;
-  if(open){
-    scrollLockY=window.scrollY||window.pageYOffset||0;
-    b.style.position='fixed';b.style.top=-scrollLockY+'px';b.style.left='0';b.style.right='0';b.style.width='100%';b.style.overflow='hidden';
-    scrollLocked=true;
-  }else{
-    b.style.position='';b.style.top='';b.style.left='';b.style.right='';b.style.width='';b.style.overflow='';
-    scrollLocked=false;
-    window.scrollTo(0,scrollLockY);
-  }
-}
-
-// ══ MOBILE DRAWER ══
-(function(){
-  const b=document.getElementById('burger'),d=document.getElementById('drawer'); if(!b||!d)return;
-  function close(focusBurger){
-    if(!d.classList.contains('open'))return;
-    d.classList.remove('open');b.classList.remove('open');b.setAttribute('aria-expanded','false');
-    syncScrollLock();
-    if(focusBurger)b.focus();
-  }
-  b.addEventListener('click',()=>{
-    const o=d.classList.toggle('open');b.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');
-    syncScrollLock();
-    if(o){const f=d.querySelector('a');if(f)f.focus();}
-  });
-  d.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>close(false)));
-  d.addEventListener('keydown',e=>{
-    if(e.key!=='Tab'||!d.classList.contains('open'))return;
-    const f=[...d.querySelectorAll('a[href],button:not([disabled])')].filter(el=>el.offsetParent!==null);
-    if(!f.length)return;
-    const first=f[0],last=f[f.length-1];
-    if(e.shiftKey?document.activeElement===first:document.activeElement===last){e.preventDefault();(e.shiftKey?last:first).focus();}
-  });
-  document.addEventListener('keydown',e=>{if(e.key==='Escape')close(true);});
-  document.addEventListener('click',e=>{if(d.classList.contains('open')&&!d.contains(e.target)&&!b.contains(e.target))close(false);});
-  matchMedia('(min-width:981px)').addEventListener('change',e=>{if(e.matches)close(false);});
-})();
-
-// ══ LEGAL MODALS ══
-let modalReturnFocus=null;
-document.querySelectorAll('.modal-overlay').forEach(m=>{m.setAttribute('inert','');m.setAttribute('aria-hidden','true');});
-function openModal(id){
-  const m=document.getElementById('modal-'+id); if(!m)return;
-  modalReturnFocus=document.activeElement;
-  m.removeAttribute('inert');
-  m.removeAttribute('aria-hidden');
-  m.classList.add('open');
-  syncScrollLock();
-  const f=m.querySelector('.modal-close'); if(f)f.focus();
-}
-function closeModal(id){
-  const m=document.getElementById('modal-'+id); if(!m)return;
-  m.classList.remove('open');
-  m.setAttribute('inert','');
-  m.setAttribute('aria-hidden','true');
-  syncScrollLock();
-  if(modalReturnFocus){modalReturnFocus.focus();modalReturnFocus=null;}
-}
-document.querySelectorAll('.modal-overlay').forEach(overlay=>{
-  overlay.addEventListener('keydown',e=>{
-    if(e.key!=='Tab')return;
-    const f=overlay.querySelectorAll('.modal-panel button, .modal-panel a, .modal-panel [tabindex]:not([tabindex="-1"])');
-    if(!f.length)return;
-    const first=f[0],last=f[f.length-1];
-    if(e.shiftKey?document.activeElement===first:document.activeElement===last){e.preventDefault();(e.shiftKey?last:first).focus();}
-  });
-});
-document.addEventListener('keydown',e=>{
-  if(e.key==='Escape')document.querySelectorAll('.modal-overlay.open').forEach(m=>closeModal(m.id.replace('modal-','')));
-});
-
-// ══ DEEP-LINK LEGAL MODALS (/#impressum, /#privacy — linked from merch) ══
-(function(){
-  const h=location.hash.slice(1);
-  if(h==='impressum'||h==='privacy'){
-    history.replaceState(null,'',location.pathname+location.search);
-    openModal(h);
-  }
-})();
-</script>
-<script defer data-domain="kaisos.com" src="https://plausible.io/js/script.js"></script>
+<script defer src="/main.js"></script>
 <script defer src="/analytics.js"></script>
+<script defer data-domain="kaisos.com" src="https://plausible.io/js/script.js"></script>
 </body>
 </html>

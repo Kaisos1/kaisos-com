@@ -2,6 +2,19 @@
 
 ---
 
+## Session 51 — Externalize page scripts (index + merch)
+
+Moved the inline `<script>` blocks out of `index.html` and `merch.html` into
+`main.js` and `merch.js` (loaded `defer`). Markup and visuals unchanged.
+
+### Changed
+- `index.html`: inline homepage script → `<script defer src="/main.js">`
+- `merch.html`: inline script → `<script defer src="/merch.js">`
+- `main.js` / `merch.js`: now hold the reveal, nav-state, legal-modal (and
+  homepage bokeh/facade-embed/rain) handlers verbatim — cacheable, non-blocking
+
+---
+
 ## Session 50 — Mobile polish pass (index + merch)
 
 Adversarially-verified mobile-only audit across overflow, touch targets, nav,

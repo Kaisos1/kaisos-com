@@ -1,29 +1,21 @@
-// ══ PROGRESS + MOBILE SHOP CTA (one throttled scroll handler) ══
-(function(){
-  const prog=document.getElementById('progress');
-  const cta=document.getElementById('mobile-shop-cta');
-  const topNav=document.querySelector('nav');
-  const hero=document.querySelector('.merch-hero');
-  let threshold=hero?hero.offsetTop+hero.offsetHeight:400;
-  addEventListener('resize',()=>{threshold=hero?hero.offsetTop+hero.offsetHeight:400;},{passive:true});
-  addEventListener('load',()=>{threshold=hero?hero.offsetTop+hero.offsetHeight:400;},{passive:true});
-  let tick=false;
-  addEventListener('scroll',()=>{
-    if(tick)return; tick=true;
-    requestAnimationFrame(()=>{
-      const s=document.body.scrollHeight-innerHeight, y=scrollY;
-      prog.style.width=(s>0?y/s*100:0)+'%';
-      cta.classList.toggle('visible',y>threshold);
-      topNav.classList.toggle('nav-cta-hidden',y>threshold);
-      tick=false;
-    });
-  },{passive:true});
-})();
+// ══ REVEALS ══
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 
-// ══ SCROLL REVEAL ══
-(function(){
-  const els=document.querySelectorAll('.reveal');
-  if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('visible'));return;}
-  const io=new IntersectionObserver(en=>en.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target);}}),{threshold:0.1});
-  els.forEach(e=>io.observe(e));
-})();
+// ══ NAV STATE ══
+const sentinel=document.createElement('div');
+sentinel.style.cssText='position:absolute;top:80px;height:1px;width:1px';
+document.body.prepend(sentinel);
+new IntersectionObserver(([e])=>document.getElementById('nv').classList.toggle('on',!e.isIntersecting)).observe(sentinel);
+
+// ══ LEGAL MODALS ══
+document.querySelectorAll('[data-open-modal]').forEach(b=>b.addEventListener('click',()=>{
+  document.getElementById('modal-'+b.dataset.openModal).classList.add('open');
+  document.body.style.overflow='hidden';
+}));
+document.querySelectorAll('.modal-overlay').forEach(m=>{
+  const close=()=>{m.classList.remove('open');document.body.style.overflow=''};
+  m.addEventListener('click',e=>{if(e.target===m)close()});
+  m.querySelector('.modal-close').addEventListener('click',close);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.classList.contains('open'))close()});
+});

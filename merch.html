@@ -9,7 +9,7 @@
 <meta name="robots" content="index, follow"/>
 <meta name="author" content="Adnan Cengiz"/>
 <meta property="og:title" content="Merch — Kaisos"/>
-<meta property="og:description" content="Official Kaisos merch. Minimal pieces for quiet creators — the sound, made wearable. Shipped worldwide."/>
+<meta property="og:description" content="Official Kaisos merch. Minimal pieces for quiet creators. The sound, made wearable. Shipped worldwide."/>
 <meta property="og:image" content="https://kaisos.com/og-image.png"/>
 <meta property="og:image:alt" content="Kaisos merch — minimal pieces for quiet creators"/>
 <meta property="og:image:type" content="image/png"/>
@@ -57,412 +57,320 @@
 <link rel="preload" as="font" type="font/woff2" href="/fonts/cg-normal-latin.woff2" crossorigin/>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/cg-italic-latin.woff2" crossorigin/>
 <link rel="stylesheet" href="/fonts.css"/>
-<link rel="stylesheet" href="/site.css"/>
-<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
 <style>
 
-/* ══ A11Y ══ */
-.skip{position:fixed;top:0;left:50%;transform:translate(-50%,-130%);z-index:800;background:var(--accent);color:#fff;padding:0.7rem 1.3rem;border-radius:0 0 6px 6px;font-size:0.78rem;font-weight:600;letter-spacing:0.06em;transition:transform 0.2s}
+/* ══ TOKENS ══ */
+:root{
+  --bg:#07070f;
+  --ink:#ece7f4;
+  --ink-2:#b3a9c9;
+  --ink-3:#736a8a;
+  --gold:#c8850f;
+  --gold-soft:#e0a63e;
+  --violet:#8b3fc9;
+  --violet-soft:#c9a2ec;
+  --line:rgba(232,227,245,0.09);
+  --line-2:rgba(232,227,245,0.16);
+  --pane:rgba(13,12,26,0.55);
+  --pad:clamp(1.2rem,4.5vw,3.2rem);
+  --max:1180px;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink-2);font-family:var(--sans);font-weight:300;line-height:1.8;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+/* ══ NIGHT LAYER ══ */
+.night{position:fixed;inset:0;z-index:0;pointer-events:none;background:
+  radial-gradient(1000px 720px at 18% -6%,rgba(58,26,110,0.36),transparent 62%),
+  radial-gradient(880px 640px at 92% 30%,rgba(24,10,50,0.5),transparent 65%),
+  radial-gradient(700px 560px at 50% 115%,rgba(200,133,15,0.12),transparent 60%)}
+.night::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 120% 90% at 50% 42%,transparent 55%,rgba(7,7,15,0.6) 100%)}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:0.5;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E")}
+
+/* ══ PAGE ══ */
+.page{position:relative;z-index:2}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+section{position:relative;padding:clamp(4.5rem,10vh,7.5rem) 0}
+.hairline{border:0;border-top:1px solid var(--line);max-width:var(--max);margin:0 auto}
+.rv{opacity:0;transform:translateY(22px);transition:opacity 0.9s cubic-bezier(0.16,1,0.3,1),transform 0.9s cubic-bezier(0.16,1,0.3,1)}
+.rv.in{opacity:1;transform:none}
+.d1{transition-delay:0.08s}.d2{transition-delay:0.16s}.d3{transition-delay:0.24s}
+.voice{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--ink);letter-spacing:-0.01em;line-height:1.18;text-wrap:balance;padding-bottom:0.1em}
+.voice .au{color:var(--gold-soft)}
+h2.voice{font-size:clamp(2rem,4.6vw,3.4rem);margin-bottom:1.2rem}
+.lede{color:var(--ink-2);font-weight:300;line-height:1.85}
+
+/* ══ NAV ══ */
+.nv{position:fixed;top:0;left:0;right:0;z-index:50;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);transition:background 0.4s,border-color 0.4s;border-bottom:1px solid transparent}
+.nv.on{background:rgba(7,7,15,0.7);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);border-bottom-color:var(--line)}
+.nv-logo{font-family:var(--serif);font-size:1.4rem;color:var(--gold);text-decoration:none;letter-spacing:0.03em}
+.nv-side{display:flex;align-items:center;gap:1.4rem}
+.nv-back{text-decoration:none;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-3);transition:color 0.25s}
+.nv-back:hover{color:var(--ink)}
+.nv-cta{display:inline-flex;align-items:center;gap:0.45rem;text-decoration:none;background:var(--gold);color:var(--bg);font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.52rem 1.1rem;border-radius:100px;transition:box-shadow 0.25s,transform 0.15s}
+.nv-cta:hover{box-shadow:0 6px 26px rgba(200,133,15,0.4)}
+.nv-cta:active{transform:scale(0.97)}
+.skip{position:fixed;top:0;left:50%;transform:translate(-50%,-130%);z-index:80;background:var(--violet);color:#fff;padding:0.7rem 1.3rem;border-radius:0 0 6px 6px;font-size:0.78rem;transition:transform 0.2s}
 .skip:focus{transform:translate(-50%,0)}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
 
 /* ══ HERO ══ */
-.merch-hero{min-height:54vh;display:flex;align-items:center;padding:140px var(--pad) var(--space-lg);position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
-.merch-hero-bg{position:absolute;inset:0;pointer-events:none}
-.hero-blob{position:absolute;border-radius:50%;filter:blur(60px)}
-.hero-blob-1{width:600px;height:600px;background:radial-gradient(circle,rgba(139,63,201,0.2) 0%,transparent 70%);top:-100px;right:-100px}
-.hero-blob-2{width:400px;height:400px;background:radial-gradient(circle,rgba(200,133,15,0.1) 0%,transparent 70%);bottom:-50px;left:-50px}
-.merch-hero-inner{position:relative;z-index:1;max-width:var(--max);width:100%;margin:0 auto}
-.merch-eyebrow{display:inline-flex;align-items:center;gap:0.6rem;padding:0.3rem 0.85rem;border:1px solid rgba(139,63,201,0.3);border-radius:100px;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent-text);margin-bottom:1.6rem}
-.eyebrow-dot{width:5px;height:5px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent);flex-shrink:0;animation:pulse-dot 2.4s ease-in-out infinite}
-@keyframes pulse-dot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.35;transform:scale(0.6)}}
-.merch-hero h1{font-family:'Cormorant Garamond',serif;font-size:var(--fs-display);font-weight:400;line-height:1.05;letter-spacing:-0.01em;color:var(--white);margin-bottom:1.4rem;max-width:14ch;text-wrap:balance}
-.merch-hero h1 em{font-style:italic;color:var(--accent-text)}
-.merch-hero p{color:var(--muted2);font-weight:300;font-size:1.05rem;max-width:48ch;line-height:1.85;margin-bottom:2.2rem}
-.merch-hero-cta{display:inline-flex;align-items:center;gap:0.5rem;padding:0.9rem 2rem;background:var(--gold);color:var(--bg);font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border-radius:4px;transition:box-shadow 0.25s,transform 0.25s}
-.merch-hero-cta:hover{transform:translateY(-1px);box-shadow:var(--glow-gold)}
-.merch-hero-cta:active{transform:translateY(0) scale(0.98)}
-.merch-hero-cta.ghost{background:transparent;color:var(--gold);box-shadow:inset 0 0 0 1px var(--gold)}
-.merch-hero-cta.ghost:hover{background:rgba(200,133,15,0.08);box-shadow:inset 0 0 0 1px var(--gold)}
-
-/* ══ MARKS STRIP (static, restrained) ══ */
-.marks{border-bottom:1px solid var(--border);background:rgba(13,12,26,0.4)}
-.marks-inner{max-width:var(--max);margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:0.6rem 1.8rem;padding:1.05rem var(--pad)}
-.mark{display:inline-flex;align-items:center;gap:1.8rem;font-size:0.62rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted)}
-.mark::after{content:'';width:4px;height:4px;border-radius:50%;background:var(--gold);opacity:0.6}
-.mark:last-child::after{display:none}
-
-/* ══ PRODUCTS ══ */
-.products-section{padding:var(--space-xl) var(--pad);max-width:var(--max);margin:0 auto}
-.section-header{margin-bottom:3.5rem}
-.eyebrow{display:flex;align-items:center;gap:0.75rem;font-size:var(--fs-eyebrow);letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-text);margin-bottom:0.9rem;font-weight:600}
-.eyebrow::before{content:'';display:block;width:30px;height:1px;background:var(--accent)}
-.section-header h2{font-family:'Cormorant Garamond',serif;font-size:var(--fs-h2);font-weight:400;color:var(--white);line-height:1.15;letter-spacing:-0.01em;text-wrap:balance}
-.section-header h2 em{font-style:italic;color:var(--accent-text)}
-.section-header p{color:var(--muted2);font-size:0.95rem;margin-top:0.9rem;max-width:50ch;line-height:1.8}
-.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-
-/* ── Product card ── */
-.product-card{background:rgba(13,12,26,0.55);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:border-color 0.3s,transform 0.3s,box-shadow 0.3s;position:relative}
-.product-card:hover{border-color:rgba(139,63,201,0.4);transform:translateY(-4px);box-shadow:0 18px 44px -20px rgba(0,0,0,0.7)}
-.product-img{aspect-ratio:1;background:#0a0914;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.product-img>img{width:100%;height:100%;object-fit:contain;transition:transform 0.4s ease}
-.product-card:hover .product-img>img{transform:scale(1.04)}
-.product-info{padding:1.5rem}
-.product-name{font-family:'Cormorant Garamond',serif;font-size:1.18rem;font-weight:500;color:var(--white);margin:0 0 0.35rem;line-height:1.2}
-.product-desc{font-size:0.82rem;color:var(--muted2);line-height:1.7;margin-bottom:1.25rem}
-.product-footer{display:flex;align-items:center;justify-content:space-between;gap:0.6rem 1rem;flex-wrap:wrap}
-.product-price{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--gold);font-weight:500}
-.product-price span{font-family:'Inter',sans-serif;font-size:0.7rem;color:var(--muted);font-weight:400;margin-left:0.25rem}
-.btn-buy{display:inline-flex;align-items:center;gap:0.4rem;padding:0.62rem 1.15rem;background:var(--accent);color:#fff;font-size:0.72rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;border-radius:4px;border:1px solid transparent;transition:background 0.2s,border-color 0.2s,transform 0.15s;white-space:nowrap}
-.btn-buy:hover{background:var(--accent-hover)}
-.btn-buy:active{transform:scale(0.97)}
-.product-index{position:absolute;top:0.85rem;left:1rem;z-index:2;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;color:var(--accent-text);letter-spacing:0.01em;opacity:0.9;pointer-events:none}
+.hero{padding:150px var(--pad) 30px;text-align:center}
+.hero h1{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(2.6rem,7vw,5rem);line-height:1.1;color:var(--ink);letter-spacing:-0.015em;text-wrap:balance;padding-bottom:0.12em}
+.hero h1 .au{color:var(--gold-soft)}
+.hero p{margin:1.6rem auto 0;max-width:46ch;font-size:1.02rem;color:var(--ink-2)}
 
 /* ══ THE DROP ══ */
-.drop{border-bottom:1px solid var(--border);padding:var(--space-xl) var(--pad);position:relative;overflow:hidden}
-.drop-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(2rem,5vw,5rem);align-items:center}
-.drop-media{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:1;background:#0a0914;display:grid;place-items:center;box-shadow:0 50px 100px -34px rgba(0,0,0,0.85),0 0 0 1px var(--border),0 0 60px rgba(139,63,201,0.16)}
-.drop-media>img{width:100%;height:100%;object-fit:contain;position:relative;z-index:1;transition:transform 0.5s ease}
-.drop-media:hover>img{transform:scale(1.03)}
-.drop-mark{position:absolute;inset:0;display:grid;place-items:center;font-family:'Cormorant Garamond',serif;font-size:34rem;line-height:0;color:rgba(176,116,230,0.05);z-index:0;pointer-events:none;user-select:none}
-.drop-text h2{font-family:'Cormorant Garamond',serif;font-size:var(--fs-h2);font-weight:400;color:var(--white);line-height:1.1;letter-spacing:-0.01em;margin-bottom:1rem;text-wrap:balance}
-.drop-text h2 em{font-style:italic;color:var(--accent-text)}
-.drop-cap{color:var(--muted2);font-weight:300;line-height:1.85;max-width:42ch;margin-bottom:2rem}
-.drop-foot{display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap}
-.drop-price{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--gold);font-weight:500;line-height:1;display:inline-flex;align-items:flex-start;gap:0.1em}
-.drop-price .cur{font-size:1rem;transform:translateY(0.25em);opacity:0.85}
-.drop-price span:last-child{font-family:'Inter',sans-serif;font-size:0.7rem;color:var(--muted);font-weight:400;align-self:flex-end;margin-bottom:0.35rem}
+.drop{display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+.drop-media{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:1;background:#0a0914;display:grid;place-items:center;box-shadow:0 50px 100px -34px rgba(0,0,0,0.85),0 0 0 1px var(--line),0 0 60px rgba(139,63,201,0.16);transform:rotate(-1.2deg)}
+.drop-media img{width:100%;height:100%;object-fit:contain;transition:transform 0.5s ease}
+.drop-media:hover img{transform:scale(1.03)}
+.drop-txt .small{display:block;font-size:0.78rem;letter-spacing:0.05em;color:var(--ink-3);margin-bottom:1rem}
+.drop-txt p.lede{max-width:40ch;margin-bottom:2rem}
+.drop-foot{display:flex;align-items:center;gap:1.8rem;flex-wrap:wrap}
+.price{font-family:var(--serif);font-size:2.3rem;color:var(--gold-soft);line-height:1}
+.price span{font-family:var(--sans);font-size:0.68rem;color:var(--ink-3);margin-left:0.3rem}
+.btn-gold{display:inline-flex;align-items:center;gap:0.6rem;text-decoration:none;background:var(--gold);color:var(--bg);font-size:0.78rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;padding:0.95rem 1.9rem;border-radius:100px;transition:transform 0.2s,box-shadow 0.25s}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(200,133,15,0.35)}
+.btn-gold:active{transform:scale(0.98)}
 
-/* ══ BRAND STRIP ══ */
-.brand-strip{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:var(--space-lg) var(--pad);background:linear-gradient(to right,rgba(139,63,201,0.04),transparent)}
-.brand-strip-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
-.brand-strip-text h2{font-family:'Cormorant Garamond',serif;font-size:var(--fs-h2);font-weight:400;color:var(--white);margin-bottom:1rem;line-height:1.2;letter-spacing:-0.01em;text-wrap:balance}
-.brand-strip-text h2 em{font-style:italic;color:var(--accent-text)}
-.brand-strip-text p{color:var(--muted2);font-size:0.95rem;line-height:1.85;margin-bottom:2rem}
-.brand-strip-logo{display:flex;justify-content:center;align-items:center}
-.brand-strip-logo img{width:160px;height:160px;object-fit:contain;filter:drop-shadow(0 0 30px rgba(139,63,201,0.5))}
-.brand-strip-music{margin-top:1rem;font-size:0.8rem;color:var(--muted)}
-.brand-strip-music a{color:var(--muted2);text-decoration:none;transition:color 0.2s}
-.brand-strip-music a:hover{color:var(--gold)}
+/* ══ COLLECTION ══ */
+.coll-head{margin-bottom:2.8rem}
+.coll-head p{font-size:0.9rem;color:var(--ink-3);max-width:44ch}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.item{position:relative;display:block;text-decoration:none;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--pane);transition:border-color 0.3s,transform 0.3s,box-shadow 0.3s}
+.item:hover{border-color:rgba(139,63,201,0.4);transform:translateY(-5px);box-shadow:0 22px 50px -22px rgba(0,0,0,0.75)}
+.item-img{aspect-ratio:1;background:#0a0914;overflow:hidden}
+.item-img img{width:100%;height:100%;object-fit:contain;transition:transform 0.45s ease}
+.item:hover .item-img img{transform:scale(1.05)}
+.item-info{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;padding:1.2rem 1.4rem 0.4rem}
+.item-name{font-family:var(--serif);font-size:1.2rem;color:var(--ink);line-height:1.25}
+.item-price{font-family:var(--serif);font-size:1.15rem;color:var(--gold-soft);white-space:nowrap}
+.item-desc{padding:0 1.4rem 1.3rem;font-size:0.8rem;color:var(--ink-3);line-height:1.7}
+.item-go{position:absolute;top:1rem;right:1rem;width:38px;height:38px;border-radius:50%;background:rgba(139,63,201,0.92);display:grid;place-items:center;color:#fff;font-style:normal;opacity:0;transform:scale(0.85);transition:opacity 0.3s,transform 0.3s}
+.item:hover .item-go{opacity:1;transform:scale(1)}
+@media(hover:none){.item .item-go{opacity:1;transform:scale(0.95)}}
 
-/* ══ CTA ══ */
-.merch-cta{padding:var(--space-xl) var(--pad);text-align:center;border-top:1px solid var(--border);position:relative;overflow:hidden}
-.merch-cta::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(139,63,201,0.12) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
-.merch-cta-inner{position:relative;z-index:1;max-width:520px;margin:0 auto}
-.merch-cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:400;color:var(--white);margin-bottom:1rem;line-height:1.1;letter-spacing:-0.01em;text-wrap:balance}
-.merch-cta h2 em{font-style:italic;color:var(--gold)}
-.merch-cta p{color:var(--muted2);font-size:0.95rem;line-height:1.85;margin-bottom:2.5rem}
-.merch-cta-btn{display:inline-flex;align-items:center;gap:0.5rem;padding:1rem 2.5rem;background:var(--gold);color:var(--bg);font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border-radius:4px;transition:box-shadow 0.25s,transform 0.25s}
-.merch-cta-btn:hover{transform:translateY(-1px);box-shadow:var(--glow-gold)}
-.merch-cta-btn:active{transform:translateY(0) scale(0.98)}
-
-/* ══ MOBILE SHOP CTA ══ */
-.mobile-shop-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:199;background:rgba(7,7,15,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--border);box-shadow:0 -10px 30px rgba(0,0,0,0.35);padding:0.75rem var(--pad) calc(0.75rem + env(safe-area-inset-bottom,0px));transform:translateY(100%);opacity:0;transition:transform 0.35s cubic-bezier(0.4,0,0.2,1),opacity 0.35s}
-.mobile-shop-cta.visible{transform:translateY(0);opacity:1}
-.mobile-shop-cta a{display:flex;align-items:center;justify-content:center;gap:0.6rem;padding:0.9rem;background:var(--gold);color:var(--bg);text-decoration:none;border-radius:4px;font-size:0.82rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;transition:transform 0.15s}
-.mobile-shop-cta a:active{transform:scale(0.98)}
+/* ══ CLOSE ══ */
+.close-sec{text-align:center}
+.close-sec p{max-width:44ch;margin:0 auto 2.2rem;font-size:0.95rem}
+.close-note{margin-top:1rem;font-size:0.74rem;color:var(--ink-3)}
+.close-note a{color:var(--ink-2)}
 
 /* ══ FOOTER ══ */
-.footer-legal{display:flex;align-items:center;gap:1.5rem}
-.footer-legal a{color:var(--muted);text-decoration:none;font-size:0.7rem;letter-spacing:0.09em;text-transform:uppercase;transition:color 0.2s;white-space:nowrap}
-.footer-legal a:hover{color:var(--accent-text)}
-.footer-right{display:flex;align-items:center;gap:0.9rem 1.25rem;flex-wrap:wrap}
-.footer-socials{display:flex;gap:0.4rem}
-.footer-social-icon{width:36px;height:36px;border-radius:50%;border:1px solid var(--border2);display:inline-flex;align-items:center;justify-content:center;color:var(--muted);transition:border-color 0.2s,color 0.2s}
-.footer-social-icon svg{width:14px;height:14px;fill:currentColor}
-.footer-social-icon:hover{border-color:var(--accent);color:var(--accent-text)}
+footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem var(--pad) 2.4rem;background:rgba(7,7,15,0.55)}
+.ft-in{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+.ft-brand{font-family:var(--serif);font-size:1.15rem;color:var(--gold)}
+.ft-mood{font-family:var(--serif);font-style:italic;font-size:0.95rem;color:var(--ink-3)}
+.ft-links{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.ft-links a,.ft-links button{background:none;border:0;cursor:pointer;font-family:var(--sans);font-size:0.72rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink-3);text-decoration:none;padding:0;transition:color 0.2s}
+.ft-links a:hover,.ft-links button:hover{color:var(--ink)}
+.ft-copy{width:100%;font-size:0.7rem;color:var(--ink-3);opacity:0.7}
 
-/* ══ PERF ══ */
-.brand-strip,.merch-cta,footer{content-visibility:auto;contain-intrinsic-size:auto 400px}
+/* ══ MOBILE SHOP BAR ══ */
+.shop-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:40;background:rgba(7,7,15,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:0.75rem var(--pad) calc(0.75rem + env(safe-area-inset-bottom,0px))}
+.shop-bar a{display:flex;align-items:center;justify-content:center;gap:0.6rem;padding:0.95rem;background:var(--gold);color:var(--bg);text-decoration:none;border-radius:100px;font-size:0.8rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase}
 
-/* ══ MOBILE ══ */
+/* ══ MODALS ══ */
+.modal-overlay{position:fixed;inset:0;z-index:70;background:rgba(0,0,0,0.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;pointer-events:none;transition:opacity 0.3s}
+.modal-overlay.open{opacity:1;pointer-events:auto}
+.modal-panel{background:#0d0c1a;border:1px solid var(--line-2);border-radius:12px;padding:2.5rem;max-width:580px;width:100%;max-height:82vh;overflow-y:auto;position:relative;transform:translateY(20px);transition:transform 0.3s;scrollbar-width:thin}
+.modal-overlay.open .modal-panel{transform:translateY(0)}
+.modal-close{position:absolute;top:1rem;right:1rem;width:40px;height:40px;border-radius:50%;border:1px solid var(--line-2);background:none;cursor:pointer;color:var(--ink-3);font-size:1.2rem;line-height:1;transition:color 0.2s,border-color 0.2s}
+.modal-close:hover{color:var(--ink);border-color:var(--violet)}
+.modal-panel h2{font-family:var(--serif);font-weight:400;font-size:1.6rem;color:var(--ink);margin-bottom:1.8rem}
+.modal-panel h3{font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--violet-soft);margin:1.4rem 0 0.4rem}
+.modal-panel p{font-size:0.9rem;line-height:1.85;margin-bottom:0.7rem}
+.modal-panel a{color:var(--violet-soft)}
+
+:focus-visible{outline:2px solid var(--violet);outline-offset:3px;border-radius:3px}
+
+/* ══ RESPONSIVE ══ */
 @media(max-width:900px){
-  .merch-hero{padding-top:120px}
-  .drop-inner{grid-template-columns:1fr;gap:2.2rem}
-  .drop-mark{font-size:22rem}
-  .products-grid{grid-template-columns:1fr 1fr}
-  .brand-strip-inner{grid-template-columns:1fr;gap:2rem}
-  .brand-strip-logo{order:-1;justify-content:flex-start}
-  .brand-strip-logo img{width:84px;height:84px}
-  .mobile-shop-cta{display:block}
-  nav .nav-cta.gold{transition:opacity 0.25s,transform 0.25s,visibility 0.25s}
-  nav.nav-cta-hidden .nav-cta.gold{opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-4px)}
-  footer{padding-bottom:calc(86px + env(safe-area-inset-bottom,0px))}
+  .drop{grid-template-columns:1fr;gap:2.2rem}
+  .drop-media{max-width:420px;margin:0 auto;transform:rotate(0)}
+  .grid{grid-template-columns:1fr 1fr}
+  .shop-bar{display:block}
+  .nv-cta{display:none}
+  footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
 }
-@media(min-width:901px){.mobile-shop-cta{display:none!important}}
-@media(max-width:600px){
-  .merch-hero{min-height:auto;padding:104px var(--pad) 3.2rem}
-  .merch-hero h1{font-size:clamp(2.4rem,11vw,3.2rem)}
-  .merch-hero p{font-size:0.98rem;margin-bottom:1.9rem}
-  .hero-blob-1{width:380px;height:380px;filter:blur(60px)}
-  .hero-blob-2{width:260px;height:260px;filter:blur(60px)}
-  .marks-inner{gap:0.45rem 1.1rem;padding:0.9rem var(--pad)}
-  .mark{gap:1.1rem;font-size:0.66rem;letter-spacing:0.12em}
-  .eyebrow{font-size:0.72rem;letter-spacing:0.14em}
-  .drop{padding:var(--space-lg) var(--pad)}
-  .drop-mark{font-size:15rem}
-  .drop-foot{flex-direction:column;align-items:stretch;gap:1.1rem}
-  .drop-foot .merch-hero-cta{justify-content:center}
-  .drop-price{font-size:2rem}
-  .products-section{padding:var(--space-lg) var(--pad)}
-  .section-header{margin-bottom:2.4rem}
-  .products-grid{grid-template-columns:1fr;gap:1.1rem}
-  .product-info{padding:1.2rem 1.2rem 1.35rem}
-  .product-name{font-size:1.12rem}
-  .product-desc{font-size:0.88rem}
-  .brand-strip,.merch-cta{padding:var(--space-lg) var(--pad)}
-  .footer-socials{gap:0.55rem}
-  .footer-social-icon{width:44px;height:44px}
-  .footer-social-icon svg{width:16px;height:16px}
+@media(max-width:560px){
+  section{padding:3.6rem 0}
+  .hero{padding:120px var(--pad) 20px}
+  .grid{grid-template-columns:1fr;gap:1.1rem}
+  .drop-foot{flex-direction:column;align-items:stretch;gap:1.2rem}
+  .drop-foot .btn-gold{justify-content:center}
+  .modal-overlay{padding:0.9rem}
+  .modal-panel{padding:1.8rem 1.3rem;max-height:88dvh}
 }
-@media(prefers-reduced-motion:reduce){.eyebrow-dot{animation:none}.mobile-shop-cta{transition:none}.drop-media>img{transition:none}}
-@media(prefers-reduced-data:reduce){.hero-blob,.merch-cta::before{display:none}}
+
+/* ══ REDUCED MOTION ══ */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{transition:none}
+  .item,.item-img img,.drop-media img{transition:none}
+}
 </style>
 </head>
 <body>
-<a href="#main" class="skip">Skip to content</a>
-<div class="tex-bg" aria-hidden="true"></div>
-<div class="tex-grain" aria-hidden="true"></div>
-<div class="tex-vig" aria-hidden="true"></div>
-<div id="progress"></div>
+
+<a href="#drop" class="skip">Skip to content</a>
+<div class="night" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
 
 <!-- ══ NAV ══ -->
-<nav aria-label="Primary">
-  <a href="/" class="nav-logo">Kaisos</a>
-  <div class="nav-right">
-    <a href="/" class="nav-back" aria-label="Back to site"><span aria-hidden="true">←</span> <span class="nav-back-txt">Back to site</span></a>
-    <a href="https://kaisos-shop.fourthwall.com/en-eur" target="_blank" rel="noopener" class="nav-cta gold">Shop Now</a>
+<nav class="nv" id="nv" aria-label="Primary">
+  <a href="/" class="nv-logo">Kaisos</a>
+  <div class="nv-side">
+    <a href="/" class="nv-back">&#8592; Back to the music</a>
+    <a class="nv-cta" href="https://kaisos-shop.fourthwall.com/en-eur" target="_blank" rel="noopener">Open the shop</a>
   </div>
 </nav>
 
-<main id="main">
+<main class="page">
 
 <!-- ══ HERO ══ -->
-<section class="merch-hero">
-  <div class="merch-hero-bg">
-    <div class="hero-blob hero-blob-1"></div>
-    <div class="hero-blob hero-blob-2"></div>
-  </div>
-  <div class="merch-hero-inner">
-    <div class="merch-eyebrow"><span class="eyebrow-dot"></span>2026 Collection</div>
-    <h1 class="reveal reveal--settle">Pieces for <em>quiet creators.</em></h1>
-    <p class="reveal d1">Minimal pieces built for the people who make things in silence. Dark tones, soft gold, purple detail — the Kaisos identity, made wearable.</p>
-    <a href="#products" class="merch-hero-cta reveal d2">Step inside <span aria-hidden="true">→</span></a>
+<header class="hero">
+  <h1 class="rv">worn in the <span class="au">quiet</span> hours.</h1>
+  <p class="rv d1">The world you already listen to, in something you can wear at 2am. Printed to order, shipped worldwide.</p>
+</header>
+
+<!-- ══ THE DROP ══ -->
+<section id="drop">
+  <div class="wrap drop">
+    <div class="drop-media rv">
+      <img fetchpriority="high" decoding="async" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/b390bb32-ccc8-4b88-94c8-5d1f07ef9fd9.webp" alt="Kaisos Lofi Hoodie" width="600" height="600"/>
+    </div>
+    <div class="drop-txt">
+      <span class="small rv">The signature piece</span>
+      <h2 class="voice rv">Lofi Hoodie, <span class="au">the one to start with.</span></h2>
+      <p class="lede rv d1">Full back print, Lofi Worlds sleeve, four colorways. Worn by the people who make things in silence.</p>
+      <div class="drop-foot rv d2">
+        <span class="price">$60<span>+ shipping</span></span>
+        <a href="https://kaisos-shop.fourthwall.com/products/kaisos-lofi-hoodie" target="_blank" rel="noopener" class="btn-gold">View the hoodie &#8594;</a>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ══ MARKS ══ -->
-<div class="marks">
-  <div class="marks-inner">
-    <span class="mark">Printed to order</span>
-    <span class="mark">No label, no boss</span>
-    <span class="mark">Dark by default</span>
-    <span class="mark">Drawn in Munich</span>
-  </div>
-</div>
+<hr class="hairline"/>
 
-<!-- ══ THE DROP ══ -->
-<div class="drop">
-  <div class="drop-inner">
-    <div class="drop-media reveal">
-      <span class="product-index" aria-hidden="true">No. 01</span>
-      <span class="drop-mark" aria-hidden="true">K</span>
-      <img fetchpriority="high" decoding="async" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/b390bb32-ccc8-4b88-94c8-5d1f07ef9fd9.webp" alt="Kaisos Lofi Hoodie" width="600" height="600"/>
+<!-- ══ COLLECTION ══ -->
+<section id="collection">
+  <div class="wrap">
+    <div class="coll-head rv">
+      <h2 class="voice">The rest of <span class="au">the rack.</span></h2>
+      <p>The same dark, the same gold, the same quiet. Tap a piece to see it in the shop.</p>
     </div>
-    <div class="drop-text reveal d1">
-      <div class="eyebrow">The Drop</div>
-      <h2>Lofi <em>Hoodie.</em></h2>
-      <p class="drop-cap">Full back print, Lofi Worlds sleeve, four colorways. Worn by the people who make things in silence.</p>
-      <div class="drop-foot">
-        <span class="drop-price"><span class="cur">$</span>60<span>+ shipping</span></span>
-        <a href="https://kaisos-shop.fourthwall.com/products/kaisos-lofi-hoodie" target="_blank" rel="noopener" class="merch-hero-cta ghost">Take one home <span aria-hidden="true">→</span></a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ══ PRODUCTS ══ -->
-<div id="products" class="products-section">
-  <div class="section-header reveal">
-    <div class="eyebrow">The Collection</div>
-    <h2 class="reveal reveal--settle">Made for the <em>quiet hours.</em></h2>
-    <p>Six pieces. The same dark, the same gold, the same quiet — now in cotton.</p>
-  </div>
-
-  <div class="products-grid">
-
-    <div class="product-card reveal">
-      <div class="product-img">
-        <span class="product-index" aria-hidden="true">No. 02</span>
-        <img loading="lazy" decoding="async" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/8f4512af-fc5d-48e7-9c21-f84401fb2837.webp" alt="Kaisos Logo Tee" width="600" height="600"/>
-      </div>
-      <div class="product-info">
-        <h3 class="product-name">Kaisos Logo Tee</h3>
-        <div class="product-desc">Classic K mark on the chest. Minimal, clean, built for everyday wear.</div>
-        <div class="product-footer">
-          <div class="product-price">$29 <span>+ shipping</span></div>
-          <a href="https://kaisos-shop.fourthwall.com/products/kaisos-logo-tee" target="_blank" rel="noopener" class="btn-buy" aria-label="Buy Kaisos Logo Tee">Take one home →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card reveal d2">
-      <div class="product-img">
-        <span class="product-index" aria-hidden="true">No. 03</span>
-        <img loading="lazy" decoding="async" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/a996cb53-143d-4874-b38b-54f1c81a3e6b.webp" alt="Kaisos Lofi Hoodie Vol. 2" width="600" height="600"/>
-      </div>
-      <div class="product-info">
-        <h3 class="product-name">Kaisos Lofi Hoodie Vol. 2</h3>
-        <div class="product-desc">Darker colorways, the Lofi Worlds scene reframed. Vol. 1's quieter sibling.</div>
-        <div class="product-footer">
-          <div class="product-price">$60 <span>+ shipping</span></div>
-          <a href="https://kaisos-shop.fourthwall.com/products/kaisos-lofi-hoodie-2" target="_blank" rel="noopener" class="btn-buy" aria-label="Buy Kaisos Lofi Hoodie Vol. 2">Take one home →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card reveal">
-      <div class="product-img">
-        <span class="product-index" aria-hidden="true">No. 04</span>
-        <img loading="lazy" decoding="async" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/93ba98a1-e2f3-419b-b2ef-8ea2f028dd09.webp" alt="Kaisos Embroidered Cap" width="600" height="600"/>
-      </div>
-      <div class="product-info">
-        <h3 class="product-name">Kaisos Embroidered Cap</h3>
-        <div class="product-desc">Classic dad hat with stitched K logo. Yupoong fit, built to last.</div>
-        <div class="product-footer">
-          <div class="product-price">$32 <span>+ shipping</span></div>
-          <a href="https://kaisos-shop.fourthwall.com/products/kaisos-embroidered-cap" target="_blank" rel="noopener" class="btn-buy" aria-label="Buy Kaisos Embroidered Cap">Take one home →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card reveal d1">
-      <div class="product-img">
-        <span class="product-index" aria-hidden="true">No. 05</span>
-        <img loading="lazy" decoding="async" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/90df3d57-a716-4fa4-8997-45fe5368d13e.webp" alt="Kaisos Lofi Hoodie Vol. 3" width="600" height="600"/>
-      </div>
-      <div class="product-info">
-        <h3 class="product-name">Kaisos Lofi Hoodie Vol. 3</h3>
-        <div class="product-desc">The logo edition. Less scenery, more identity — Kaisos mark bold on the back.</div>
-        <div class="product-footer">
-          <div class="product-price">$60 <span>+ shipping</span></div>
-          <a href="https://kaisos-shop.fourthwall.com/products/kaisos-lofi-hoodie-3" target="_blank" rel="noopener" class="btn-buy" aria-label="Buy Kaisos Lofi Hoodie Vol. 3">Take one home →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card reveal d2">
-      <div class="product-img">
-        <span class="product-index" aria-hidden="true">No. 06</span>
-        <img loading="lazy" decoding="async" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/d2480214-719c-482d-ab74-24374d0cf4d7.webp" alt="Kaisos Mug" width="600" height="600"/>
-      </div>
-      <div class="product-info">
-        <h3 class="product-name">Kaisos Mug</h3>
-        <div class="product-desc">Kaisos artwork, 11oz ceramic. The ritual object for the late-night session.</div>
-        <div class="product-footer">
-          <div class="product-price">$14 <span>+ shipping</span></div>
-          <a href="https://kaisos-shop.fourthwall.com/products/kaisos-mug" target="_blank" rel="noopener" class="btn-buy" aria-label="Buy Kaisos Mug">Take one home →</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- ══ BRAND STRIP ══ -->
-<div class="brand-strip">
-  <div class="brand-strip-inner">
-    <div class="brand-strip-text reveal">
-      <h2 class="reveal reveal--settle">Built for <em>quiet creators.</em></h2>
-      <p>Every piece carries the same identity as the music — made for people who keep the volume low and the lights lower. No logos shouting across the chest. Just the world you already listen to, in something you can wear at 2am.</p>
-      <a href="https://kaisos-shop.fourthwall.com/en-eur" target="_blank" rel="noopener" class="merch-hero-cta ghost">See the whole rack <span aria-hidden="true">→</span></a>
-      <p class="brand-strip-music">The music behind it — <a href="/#music">stream now <span aria-hidden="true">→</span></a></p>
-    </div>
-    <div class="brand-strip-logo reveal d1">
-      <picture>
-        <source srcset="Logo.webp" type="image/webp"/>
-        <img src="Logo.png" alt="Kaisos" width="160" height="160"/>
-      </picture>
+    <div class="grid">
+      <a class="item rv" href="https://kaisos-shop.fourthwall.com/products/kaisos-logo-tee" target="_blank" rel="noopener">
+        <span class="item-img"><img loading="lazy" decoding="async" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/8f4512af-fc5d-48e7-9c21-f84401fb2837.webp" alt="Kaisos Logo Tee" width="600" height="600"/></span>
+        <span class="item-info"><span class="item-name">Logo Tee</span><span class="item-price">$29</span></span>
+        <span class="item-desc">Classic K mark on the chest. Minimal, clean, built for everyday wear.</span>
+        <i class="item-go" aria-hidden="true">&#8594;</i>
+      </a>
+      <a class="item rv d1" href="https://kaisos-shop.fourthwall.com/products/kaisos-lofi-hoodie-2" target="_blank" rel="noopener">
+        <span class="item-img"><img loading="lazy" decoding="async" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/a996cb53-143d-4874-b38b-54f1c81a3e6b.webp" alt="Kaisos Lofi Hoodie Vol. 2" width="600" height="600"/></span>
+        <span class="item-info"><span class="item-name">Lofi Hoodie Vol. 2</span><span class="item-price">$60</span></span>
+        <span class="item-desc">Darker colorways, the Lofi Worlds scene reframed. Vol. 1&#8217;s quieter sibling.</span>
+        <i class="item-go" aria-hidden="true">&#8594;</i>
+      </a>
+      <a class="item rv d2" href="https://kaisos-shop.fourthwall.com/products/kaisos-embroidered-cap" target="_blank" rel="noopener">
+        <span class="item-img"><img loading="lazy" decoding="async" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/93ba98a1-e2f3-419b-b2ef-8ea2f028dd09.webp" alt="Kaisos Embroidered Cap" width="600" height="600"/></span>
+        <span class="item-info"><span class="item-name">Embroidered Cap</span><span class="item-price">$32</span></span>
+        <span class="item-desc">Classic dad hat with stitched K logo. Yupoong fit, built to last.</span>
+        <i class="item-go" aria-hidden="true">&#8594;</i>
+      </a>
+      <a class="item rv" href="https://kaisos-shop.fourthwall.com/products/kaisos-lofi-hoodie-3" target="_blank" rel="noopener">
+        <span class="item-img"><img loading="lazy" decoding="async" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/90df3d57-a716-4fa4-8997-45fe5368d13e.webp" alt="Kaisos Lofi Hoodie Vol. 3" width="600" height="600"/></span>
+        <span class="item-info"><span class="item-name">Lofi Hoodie Vol. 3</span><span class="item-price">$60</span></span>
+        <span class="item-desc">The logo edition. Less scenery, more identity. Kaisos mark bold on the back.</span>
+        <i class="item-go" aria-hidden="true">&#8594;</i>
+      </a>
+      <a class="item rv d1" href="https://kaisos-shop.fourthwall.com/products/kaisos-mug" target="_blank" rel="noopener">
+        <span class="item-img"><img loading="lazy" decoding="async" src="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/d2480214-719c-482d-ab74-24374d0cf4d7.webp" alt="Kaisos Mug" width="600" height="600"/></span>
+        <span class="item-info"><span class="item-name">Mug</span><span class="item-price">$14</span></span>
+        <span class="item-desc">Kaisos artwork, 11oz ceramic. The ritual object for the late-night session.</span>
+        <i class="item-go" aria-hidden="true">&#8594;</i>
+      </a>
     </div>
   </div>
-</div>
+</section>
 
-<!-- ══ CTA ══ -->
-<div class="merch-cta">
-  <div class="merch-cta-inner reveal">
-    <h2 class="reveal reveal--settle">The sound, <em>made wearable.</em></h2>
-    <p>Everything ships from the Fourthwall store. Independent, self-released, and worn by the people who get it.</p>
-    <a href="https://kaisos-shop.fourthwall.com/en-eur" target="_blank" rel="noopener" class="merch-cta-btn">Wear the quiet <span aria-hidden="true">→</span></a>
+<hr class="hairline"/>
+
+<!-- ══ CLOSE ══ -->
+<section class="close-sec">
+  <div class="wrap">
+    <h2 class="voice rv">The sound, <span class="au">made wearable.</span></h2>
+    <p class="lede rv d1">Independent and self-released. Everything ships from the Fourthwall store.</p>
+    <a class="btn-gold rv d2" href="https://kaisos-shop.fourthwall.com/en-eur" target="_blank" rel="noopener">Open the shop &#8594;</a>
+    <p class="close-note rv d2">The music behind it plays at <a href="/#listen">kaisos.com</a>.</p>
   </div>
-</div>
+</section>
 
 </main>
 
 <!-- ══ FOOTER ══ -->
 <footer>
-  <div class="footer-logo">Kaisos</div>
-  <span class="footer-copy">© 2026 Kaisos. All rights reserved.</span>
-  <div class="footer-right">
-    <div class="footer-socials">
-      <a href="https://www.instagram.com/lofikaisos/" target="_blank" rel="me noopener" aria-label="Instagram" class="footer-social-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-      </a>
-      <a href="https://youtube.com/@LofiKaisos" target="_blank" rel="me noopener" aria-label="YouTube" class="footer-social-icon">
-        <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-      </a>
-      <a href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="noopener" aria-label="Spotify" class="footer-social-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
-      </a>
-      <a href="https://www.tiktok.com/@lofikaisos" target="_blank" rel="me noopener" aria-label="TikTok" class="footer-social-icon">
-        <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.27 8.27 0 004.84 1.55V6.79a4.85 4.85 0 01-1.07-.1z"/></svg>
-      </a>
+  <div class="ft-in">
+    <div>
+      <div class="ft-brand">Kaisos</div>
+      <div class="ft-mood">lo-fi for the quiet hours, from Munich.</div>
     </div>
-    <div class="footer-legal">
-      <a href="/#privacy">Privacy</a>
-      <a href="/#impressum">Impressum</a>
+    <div class="ft-links">
+      <a href="/">Music</a>
+      <a href="https://www.instagram.com/lofikaisos/" target="_blank" rel="me noopener">Instagram</a>
+      <a href="https://youtube.com/@LofiKaisos" target="_blank" rel="me noopener">YouTube</a>
+      <button type="button" data-open-modal="privacy">Privacy</button>
+      <button type="button" data-open-modal="impressum">Impressum</button>
     </div>
-    <a href="/" class="footer-back">← kaisos.com</a>
+    <div class="ft-copy">&#169; 2026 Kaisos. All rights reserved.</div>
   </div>
 </footer>
 
-<div class="mobile-shop-cta" id="mobile-shop-cta">
-  <a href="https://kaisos-shop.fourthwall.com/en-eur" target="_blank" rel="noopener">Shop Now →</a>
+<div class="shop-bar" id="shop-bar">
+  <a href="https://kaisos-shop.fourthwall.com/en-eur" target="_blank" rel="noopener">Open the shop &#8594;</a>
 </div>
 
-<script>
-// ══ PROGRESS + MOBILE SHOP CTA (one throttled scroll handler) ══
-(function(){
-  const prog=document.getElementById('progress');
-  const cta=document.getElementById('mobile-shop-cta');
-  const topNav=document.querySelector('nav');
-  const hero=document.querySelector('.merch-hero');
-  let threshold=hero?hero.offsetTop+hero.offsetHeight:400;
-  addEventListener('resize',()=>{threshold=hero?hero.offsetTop+hero.offsetHeight:400;},{passive:true});
-  addEventListener('load',()=>{threshold=hero?hero.offsetTop+hero.offsetHeight:400;},{passive:true});
-  let tick=false;
-  addEventListener('scroll',()=>{
-    if(tick)return; tick=true;
-    requestAnimationFrame(()=>{
-      const s=document.body.scrollHeight-innerHeight, y=scrollY;
-      prog.style.width=(s>0?y/s*100:0)+'%';
-      cta.classList.toggle('visible',y>threshold);
-      topNav.classList.toggle('nav-cta-hidden',y>threshold);
-      tick=false;
-    });
-  },{passive:true});
-})();
+<!-- ══ IMPRESSUM MODAL ══ -->
+<div class="modal-overlay" id="modal-impressum" role="dialog" aria-modal="true" aria-labelledby="impressum-title">
+  <div class="modal-panel" lang="de">
+    <button type="button" class="modal-close" aria-label="Close">&#215;</button>
+    <h2 id="impressum-title">Impressum</h2>
+    <h3>Angaben gem&#228;&#223; &#167; 5 TMG</h3>
+    <p>Adnan Cengiz<br/>Landshuter Allee 138<br/>80637 M&#252;nchen</p>
+    <h3>Kontakt</h3>
+    <p>E-Mail: <a href="mailto:cengiz.adnan93@gmail.com">cengiz.adnan93@gmail.com</a></p>
+    <h3>Verantwortlich f&#252;r den Inhalt nach &#167; 55 Abs. 2 RStV</h3>
+    <p>Adnan Cengiz<br/>Landshuter Allee 138<br/>80637 M&#252;nchen</p>
+    <h3>Haftungsausschluss</h3>
+    <p>Die Inhalte dieser Seite wurden mit gr&#246;&#223;tm&#246;glicher Sorgfalt erstellt. F&#252;r die Richtigkeit, Vollst&#228;ndigkeit und Aktualit&#228;t der Inhalte kann keine Gew&#228;hr &#252;bernommen werden.</p>
+  </div>
+</div>
 
-// ══ SCROLL REVEAL ══
-(function(){
-  const els=document.querySelectorAll('.reveal');
-  if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('visible'));return;}
-  const io=new IntersectionObserver(en=>en.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target);}}),{threshold:0.1});
-  els.forEach(e=>io.observe(e));
-})();
-</script>
+<!-- ══ PRIVACY POLICY MODAL ══ -->
+<div class="modal-overlay" id="modal-privacy" role="dialog" aria-modal="true" aria-labelledby="privacy-title">
+  <div class="modal-panel">
+    <button type="button" class="modal-close" aria-label="Close">&#215;</button>
+    <h2 id="privacy-title">Privacy Policy</h2>
+    <h3>Controller</h3>
+    <p>Adnan Cengiz, Landshuter Allee 138, 80637 M&#252;nchen<br/>E-Mail: <a href="mailto:cengiz.adnan93@gmail.com">cengiz.adnan93@gmail.com</a></p>
+    <h3>Data Collection</h3>
+    <p>This website does not collect personal data. No first-party cookies are set. We use Plausible Analytics, a privacy-friendly, cookieless service that records only aggregated, anonymous usage statistics (page views and outbound clicks); it sets no cookies and performs no cross-site tracking. See <a href="https://plausible.io/privacy" target="_blank" rel="noopener">Plausible&#8217;s privacy policy</a>.</p>
+    <h3>Third-party Services</h3>
+    <p>Product images load from Fourthwall&#8217;s CDN. Purchases happen in the Fourthwall shop, which has its own <a href="https://fourthwall.com/policies/privacy-policy" target="_blank" rel="noopener">privacy policy</a>.</p>
+    <h3>Your Rights</h3>
+    <p>You have the right to access, rectify, and erase your stored data. Contact: <a href="mailto:cengiz.adnan93@gmail.com">cengiz.adnan93@gmail.com</a></p>
+  </div>
+</div>
 
-<script defer data-domain="kaisos.com" src="https://plausible.io/js/script.js"></script>
+<script defer src="/merch.js"></script>
 <script defer src="/analytics.js"></script>
+<script defer data-domain="kaisos.com" src="https://plausible.io/js/script.js"></script>
 </body>
 </html>
