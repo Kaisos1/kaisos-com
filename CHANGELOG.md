@@ -2,6 +2,14 @@
 
 ---
 
+## Session 55 — Switch contact email to contact@kaisos.com
+
+### Changed
+- All contact/press email links now point to `contact@kaisos.com`
+  (was `cengiz.adnan93@gmail.com`) across index, merch, press
+
+---
+
 ## Session 54 — Restore stats + floating Spotify CTA, fix JS caching (index)
 
 Brought back beneficial pieces the redesign dropped, and fixed the stale-cache
