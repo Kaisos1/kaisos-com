@@ -227,6 +227,7 @@ h2.voice{font-size:clamp(2rem,4.6vw,3.4rem);margin-bottom:1.2rem}
 .listen-fab:hover{box-shadow:0 16px 50px rgba(139,63,201,0.7)}
 .listen-fab:active{transform:translate(-50%,2px)}
 .listen-fab svg{width:16px;height:16px;fill:currentColor}
+@media(min-width:901px){.listen-fab{display:none}}
 
 /* ══ THE SHELF ══ */
 .shelf-head{display:flex;align-items:baseline;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:2.6rem}
@@ -284,6 +285,20 @@ h2.voice{font-size:clamp(2rem,4.6vw,3.4rem);margin-bottom:1.2rem}
 .pane .ghost{display:inline-flex;width:100%;justify-content:center;align-items:center;gap:0.5rem;text-decoration:none;border:1px solid rgba(200,133,15,0.45);color:var(--gold-soft);font-size:0.76rem;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;padding:0.9rem 1.5rem;border-radius:100px;transition:background 0.25s,border-color 0.25s}
 .pane .ghost:hover{background:rgba(200,133,15,0.08);border-color:var(--gold)}
 .pane .note{font-size:0.72rem;color:var(--ink-3);text-align:center;margin:0.9rem 0 0}
+.pane .note a{color:var(--gold-soft);text-decoration:none;border-bottom:1px solid rgba(224,166,62,0.3);transition:border-color 0.2s}
+.pane .note a:hover{border-color:var(--gold-soft)}
+.signup .field{margin-bottom:1rem}
+.signup label{display:block;font-size:0.72rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink-3);margin-bottom:0.5rem}
+.signup label .opt{text-transform:none;letter-spacing:0;color:var(--ink-3);opacity:0.7}
+.signup input,.signup textarea{width:100%;background:rgba(255,255,255,0.03);border:1px solid var(--line);border-radius:12px;color:var(--ink);font-family:var(--sans);font-size:0.9rem;font-weight:300;padding:0.85rem 1rem;transition:border-color 0.2s,background 0.2s}
+.signup input:focus,.signup textarea:focus{outline:0;border-color:rgba(200,133,15,0.5);background:rgba(255,255,255,0.05)}
+.signup input::placeholder,.signup textarea::placeholder{color:var(--ink-3)}
+.signup textarea{resize:vertical;min-height:74px;line-height:1.6}
+.signup .btn-play[disabled]{opacity:0.6;cursor:default}
+.signup .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-done{text-align:center;padding:1.4rem 0.5rem}
+.form-done h3{margin-bottom:0.5rem}
+.form-done p{margin-bottom:0}
 
 /* ══ FOOTER ══ */
 footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem var(--pad) 2.4rem;background:rgba(7,7,15,0.55)}
@@ -560,6 +575,24 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem
         </div>
       </div>
       <div>
+        <div class="pane rv" data-signup-pane>
+          <h3>Stay in the quiet.</h3>
+          <p>New drops, quiet-hours notes, the occasional unreleased loop &#8212; or just say hi. No spam, ever.</p>
+          <form name="fan-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="signup" data-signup-form>
+            <input type="hidden" name="form-name" value="fan-signup"/>
+            <p class="hp"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"/></label></p>
+            <div class="field">
+              <label for="fan-email">Email</label>
+              <input id="fan-email" type="email" name="email" required autocomplete="email" placeholder="you@somewhere.com"/>
+            </div>
+            <div class="field">
+              <label for="fan-msg">Message <span class="opt">(optional)</span></label>
+              <textarea id="fan-msg" name="message" placeholder="Say hi, request a room, book a session&#8230;"></textarea>
+            </div>
+            <button type="submit" class="btn-play">Send it &#8594;</button>
+            <p class="note">Or reach me at <a href="mailto:contact@kaisos.com">contact@kaisos.com</a></p>
+          </form>
+        </div>
         <div class="pane rv d1">
           <h3>Minimal pieces for quiet creators.</h3>
           <p>Dark tones, soft gold, purple detail. Built to wear while you work.</p>

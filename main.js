@@ -68,3 +68,19 @@ document.querySelectorAll('.modal-overlay').forEach(m=>{
   m.querySelector('.modal-close').addEventListener('click',close);
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&m.classList.contains('open'))close()});
 });
+
+// ══ FAN SIGNUP ══
+(()=>{
+  const form=document.querySelector('[data-signup-form]');
+  if(!form) return;
+  form.addEventListener('submit',e=>{
+    e.preventDefault();
+    const btn=form.querySelector('button');
+    btn.disabled=true;btn.textContent='Sending…';
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(form)).toString()})
+      .then(r=>{if(!r.ok)throw 0;
+        form.closest('.pane').innerHTML='<div class="form-done"><h3>You’re in.</h3><p>Thanks for being here — I’ll be in touch.</p></div>';
+      })
+      .catch(()=>{btn.disabled=false;btn.textContent='Try again';});
+  });
+})();

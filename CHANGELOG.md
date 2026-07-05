@@ -2,6 +2,17 @@
 
 ---
 
+## Session 56 — Fan signup form + mobile-only Spotify CTA (index)
+
+### Added
+- Netlify-backed fan signup form in the Connect section (email + optional
+  message, honeypot spam guard, AJAX submit with inline success state)
+
+### Changed
+- Floating "Listen on Spotify" CTA now shows on mobile only (hidden ≥901px)
+
+---
+
 ## Session 55 — Switch contact email to contact@kaisos.com
 
 ### Changed
