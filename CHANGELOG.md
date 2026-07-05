@@ -2,6 +2,19 @@
 
 ---
 
+## Session 57 — Hero is now the newest album (index)
+
+### Changed
+- Hero rebuilt to lead with the newest album (Quiet Chaos): cover + inline
+  Spotify play card + platform links; `id="listen"` moved onto the hero
+
+### Removed
+- Standalone "Now Playing" section — folded entirely into the hero (killed
+  duplicated cover, "newest album" line, and 55K proof); dropped dead CSS
+  (.hero-ctas, .np grid, .np-txt, .np-proof)
+
+---
+
 ## Session 56 — Fan signup form + mobile-only Spotify CTA (index)
 
 ### Added

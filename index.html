@@ -177,13 +177,13 @@ h2.voice{font-size:clamp(2rem,4.6vw,3.4rem);margin-bottom:1.2rem}
 .skip{position:fixed;top:0;left:50%;transform:translate(-50%,-130%);z-index:80;background:var(--violet);color:#fff;padding:0.7rem 1.3rem;border-radius:0 0 6px 6px;font-size:0.78rem;transition:transform 0.2s}
 .skip:focus{transform:translate(-50%,0)}
 
-/* ══ HERO — manifesto ══ */
-.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:110px var(--pad) 90px}
-.hero-in{max-width:880px}
-.hero h1{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(3rem,9vw,6.4rem);line-height:1.1;color:var(--ink);letter-spacing:-0.015em;text-wrap:balance;padding-bottom:0.14em}
+/* ══ HERO — newest album ══ */
+.hero{min-height:100svh;display:grid;place-items:center;padding:110px var(--pad) 90px}
+.hero-in{max-width:1120px;width:100%;display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(2.5rem,6vw,5.5rem);align-items:center}
+.hero .small{display:block;margin-bottom:1.1rem}
+.hero h1{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(2.6rem,6.5vw,5rem);line-height:1.06;color:var(--ink);letter-spacing:-0.015em;text-wrap:balance;padding-bottom:0.1em}
 .hero h1 .au{color:var(--gold-soft)}
-.hero-sub{margin:2rem auto 2.8rem;max-width:44ch;font-size:1.05rem;color:var(--ink-2)}
-.hero-ctas{display:flex;gap:1.6rem;justify-content:center;align-items:center;flex-wrap:wrap}
+.hero-sub{margin:1.4rem 0 2rem;max-width:42ch;font-size:1.02rem;color:var(--ink-2)}
 .btn-play{display:inline-flex;align-items:center;gap:0.7rem;text-decoration:none;background:var(--violet);color:#fff;font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:1rem 2.1rem;border-radius:100px;box-shadow:0 10px 40px rgba(139,63,201,0.35);transition:transform 0.2s,box-shadow 0.25s;border:0;cursor:pointer;font-family:var(--sans)}
 .btn-play:hover{transform:translateY(-2px);box-shadow:0 16px 52px rgba(139,63,201,0.5)}
 .btn-play:active{transform:scale(0.98)}
@@ -191,12 +191,9 @@ h2.voice{font-size:clamp(2rem,4.6vw,3.4rem);margin-bottom:1.2rem}
 .link-quiet{font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-3);text-decoration:none;border-bottom:1px solid var(--line-2);padding-bottom:3px;transition:color 0.25s,border-color 0.25s}
 .link-quiet:hover{color:var(--ink);border-color:var(--gold)}
 
-/* ══ NOW PLAYING ══ */
-.np{display:grid;grid-template-columns:0.9fr 1.1fr;gap:clamp(2.5rem,6vw,5.5rem);align-items:center}
+/* ── album cover + player ── */
 .np-cover{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 60px 120px -30px rgba(0,0,0,0.9),0 0 0 1px var(--line),0 0 80px rgba(139,63,201,0.18);transform:rotate(-1.6deg)}
 .np-cover img{width:100%;aspect-ratio:1;object-fit:cover}
-.np-txt .small{display:block;margin-bottom:1rem}
-.np-txt p.lede{max-width:44ch;margin-bottom:1.8rem}
 .embed{border:1px solid var(--line-2);border-radius:14px;overflow:hidden;background:var(--pane);margin-bottom:1.3rem}
 .facade{display:flex;align-items:center;gap:1rem;width:100%;padding:1.05rem 1.2rem;background:none;border:0;cursor:pointer;text-align:left;font-family:inherit;color:var(--ink);transition:opacity 0.3s}
 .facade img{width:52px;height:52px;border-radius:9px;object-fit:cover}
@@ -210,8 +207,6 @@ h2.voice{font-size:clamp(2rem,4.6vw,3.4rem);margin-bottom:1.2rem}
 .plat{display:inline-flex;align-items:center;gap:0.45rem;padding:0.5rem 1rem;border:1px solid var(--line-2);border-radius:100px;color:var(--ink-2);text-decoration:none;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;transition:border-color 0.25s,color 0.25s}
 .plat:hover{border-color:var(--gold);color:var(--gold-soft)}
 .plat svg{width:13px;height:13px;fill:currentColor}
-.np-proof{margin-top:1.6rem;font-size:0.76rem;color:var(--ink-3)}
-.np-proof b{color:var(--ink-2);font-weight:600}
 
 /* ── stats band ── */
 .stats-band{padding:3.4rem 0}
@@ -333,8 +328,10 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem
   .nv-links{display:none}
   .nv-cta{display:none}
   .nv-burger{display:flex}
-  .np{grid-template-columns:1fr;gap:2.4rem}
-  .np-cover{max-width:380px;margin:0 auto;transform:rotate(0)}
+  .hero-in{grid-template-columns:1fr;gap:2.4rem;text-align:center;justify-items:center}
+  .hero-txt .plats{justify-content:center}
+  .hero-sub{margin-left:auto;margin-right:auto}
+  .np-cover{max-width:340px;order:-1;transform:rotate(0)}
   .stay-grid{grid-template-columns:1fr;gap:2.6rem}
 }
 @media(max-width:560px){
@@ -408,39 +405,13 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem
 <main class="page" id="top">
 
 <!-- ══ HERO ══ -->
-<header class="hero" data-phase="dusk">
+<header class="hero" id="listen" data-phase="dusk">
   <div class="hero-in">
-    <h1 class="rv">music for the <span class="au">quiet</span> hours.</h1>
-    <p class="hero-sub rv d1">Lo-fi from Munich for deep focus and late nights. Made slowly, shared freely.</p>
-    <div class="hero-ctas rv d2">
-      <a class="btn-play" href="#listen"><span class="tri"></span> Press play</a>
-      <a class="link-quiet" href="#releases">eight releases</a>
-    </div>
-  </div>
-</header>
-
-<!-- ══ STATS ══ -->
-<section class="stats-band" aria-label="At a glance" data-phase="dusk">
-  <div class="wrap stats">
-    <div class="stat rv"><span class="stat-v">55K<i>+</i></span><span class="stat-l">YouTube subscribers</span></div>
-    <div class="stat rv d1"><span class="stat-v">8</span><span class="stat-l">Releases — seven albums, one single</span></div>
-    <div class="stat rv d2"><span class="stat-v">2024</span><span class="stat-l">Making lo-fi since</span></div>
-  </div>
-</section>
-
-<hr class="hairline"/>
-
-<!-- ══ NOW PLAYING ══ -->
-<section id="listen" data-phase="dusk">
-  <div class="wrap np">
-    <div class="np-cover rv">
-      <img src="covers/quiet-chaos.webp" alt="Quiet Chaos album cover by Kaisos" width="600" height="600" fetchpriority="high" decoding="async"/>
-    </div>
-    <div class="np-txt">
-      <span class="small rv">Now playing</span>
-      <h2 class="voice rv">Quiet Chaos, <span class="au">the newest album.</span></h2>
-      <p class="lede rv d1">Late-night lo-fi for the calm inside the noise.</p>
-      <div class="embed rv d2">
+    <div class="hero-txt">
+      <span class="small rv">Newest album</span>
+      <h1 class="rv d1">Quiet <span class="au">Chaos.</span></h1>
+      <p class="hero-sub rv d2">Late-night lo-fi for the calm inside the noise — from Munich, made slowly for the quiet hours.</p>
+      <div class="embed rv d3">
         <button type="button" class="facade" data-embed="https://open.spotify.com/embed/album/4e6gK5CEZqllYvsjWDY3Pl?utm_source=generator&amp;theme=0" data-h="352" aria-label="Load Spotify player for Quiet Chaos">
           <img src="covers/quiet-chaos.webp" alt="" aria-hidden="true" width="52" height="52"/>
           <span><span class="ft1">Quiet Chaos</span><span class="ft2">Play the full album · Spotify</span></span>
@@ -452,8 +423,19 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem
         <a class="plat" href="https://music.apple.com/us/album/quiet-chaos/6773957574" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-apple"/></svg> Apple Music</a>
         <a class="plat" href="https://youtube.com/@LofiKaisos" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-youtube"/></svg> YouTube</a>
       </div>
-      <p class="np-proof rv d3"><b>55K+ subscribers</b> study, work, and fall asleep to these tracks on YouTube.</p>
     </div>
+    <div class="np-cover rv d1">
+      <img src="covers/quiet-chaos.webp" alt="Quiet Chaos album cover by Kaisos" width="600" height="600" fetchpriority="high" decoding="async"/>
+    </div>
+  </div>
+</header>
+
+<!-- ══ STATS ══ -->
+<section class="stats-band" aria-label="At a glance" data-phase="dusk">
+  <div class="wrap stats">
+    <div class="stat rv"><span class="stat-v">55K<i>+</i></span><span class="stat-l">YouTube subscribers</span></div>
+    <div class="stat rv d1"><span class="stat-v">8</span><span class="stat-l">Releases — seven albums, one single</span></div>
+    <div class="stat rv d2"><span class="stat-v">2024</span><span class="stat-l">Making lo-fi since</span></div>
   </div>
 </section>
 
