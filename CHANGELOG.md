@@ -2,6 +2,25 @@
 
 ---
 
+## Session 75 — Mobile hero: touch swipe carousel, reordered layout (index)
+
+### Added
+- Touch/pointer swipe on the mobile release carousel — drag left/right to
+  move between releases, with live-follow drag and a snap-back or
+  advance/retreat on release past a 12%-of-width threshold. Built on Pointer
+  Events so it also works with mouse drag on touch-capable laptops.
+
+### Changed
+- Mobile hero order reworked via `.hero-txt{display:contents}` +
+  per-child `order`: label → title → meta → quote, then the release
+  carousel, then the platform links — the carousel now sits directly under
+  the quote instead of at the bottom of the column.
+- Mobile-only: the "Play Album" button and its embed slot are hidden
+  (`display:none`); the platform links below the carousel now show only
+  Spotify and Apple Music, YouTube hidden. Desktop layout unchanged.
+
+---
+
 ## Session 74 — Mobile hero carousel overhaul (index)
 
 ### Fixed

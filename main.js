@@ -134,6 +134,39 @@ new IntersectionObserver(([e])=>document.getElementById('nv').classList.toggle('
   prevBtn?.addEventListener('click',()=>show(current-1));
   nextBtn?.addEventListener('click',()=>show(current+1));
 
+  // ── touch/pointer swipe ──
+  const picker=document.getElementById('heroPicker');
+  let dragging=false,dragged=false,startX=0,baseX=0;
+  const currentX=()=>{
+    const m=track.style.transform.match(/-?[\d.]+/);
+    return m?parseFloat(m[0]):0;
+  };
+  picker.addEventListener('pointerdown',e=>{
+    if(e.target.closest('.hero-nav'))return;
+    dragging=true;dragged=false;startX=e.clientX;baseX=currentX();
+    track.style.transition='none';
+    picker.setPointerCapture(e.pointerId);
+  });
+  picker.addEventListener('pointermove',e=>{
+    if(!dragging)return;
+    const dx=e.clientX-startX;
+    if(Math.abs(dx)>6)dragged=true;
+    track.style.transform=`translateX(${baseX+dx}px)`;
+  });
+  const endDrag=e=>{
+    if(!dragging)return;
+    dragging=false;
+    track.style.transition='';
+    const dx=e.clientX-startX;
+    const threshold=picker.clientWidth*0.12;
+    if(dx<=-threshold)show(current+1);
+    else if(dx>=threshold)show(current-1);
+    else alignTrack();
+  };
+  picker.addEventListener('pointerup',endDrag);
+  picker.addEventListener('pointercancel',endDrag);
+  picker.addEventListener('click',e=>{if(dragged)e.stopPropagation()},true);
+
   window.addEventListener('resize',alignTrack);
   alignTrack();
   requestAnimationFrame(alignTrack);
