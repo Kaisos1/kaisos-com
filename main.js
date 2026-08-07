@@ -15,9 +15,12 @@ new IntersectionObserver(([e])=>document.getElementById('nv').classList.toggle('
 
 // ══ LISTEN FAB ══
 (()=>{
-  const fab=document.getElementById('listenFab'),hero=document.querySelector('.hero');
+  const fab=document.getElementById('listenFab'),hero=document.querySelector('.hero'),footer=document.querySelector('footer');
   if(!fab||!hero)return;
-  new IntersectionObserver(([e])=>fab.classList.toggle('show',!e.isIntersecting),{rootMargin:'-45% 0px 0px 0px'}).observe(hero);
+  let pastHero=false,nearFooter=false;
+  const sync=()=>fab.classList.toggle('show',pastHero&&!nearFooter);
+  new IntersectionObserver(([e])=>{pastHero=!e.isIntersecting;sync()},{rootMargin:'-45% 0px 0px 0px'}).observe(hero);
+  if(footer)new IntersectionObserver(([e])=>{nearFooter=e.isIntersecting;sync()}).observe(footer);
 })();
 
 // ══ MOBILE DRAWER ══

@@ -2,6 +2,34 @@
 
 ---
 
+## Session 74 — Mobile hero carousel overhaul (index)
+
+### Fixed
+- `.hero-in{grid-template-columns:1fr}` (≤900px) used a bare `1fr` track,
+  which has an implicit auto min-width — the column refused to shrink below
+  the release carousel's min-content width (~700px of non-shrinking flex
+  cards), so the grid track itself stayed oversized regardless of item-level
+  `min-width:0`. Switched to `minmax(0,1fr)`.
+- `.hero-carousel-panel{margin:0 auto}` with no explicit width meant the grid
+  item ignored the default `stretch` sizing and grew to fit its content
+  (~700px+) instead of its 352px track, silently overflowing symmetrically —
+  masked visually by `.hero{overflow:hidden}` but still breaking the
+  carousel's internal layout math. Added `width:100%` in the mobile media
+  query.
+- `alignTrack()`'s centering math (`track.offsetLeft + slide.offsetLeft +
+  slide.offsetWidth/2`) double-counted `track.offsetLeft` because
+  `.hero-track` had no `position` set, so `slide.offsetLeft` already resolved
+  against the picker (the nearest positioned ancestor) rather than the track.
+  Net effect: the whole picker deck rendered on load off-center, cards spilling
+  past the right edge uncentered/unstyled, no scale/glow on the active card.
+  Fixed by giving `.hero-track` `position:relative`.
+- Floating "Listen on Spotify" mobile FAB stayed visible for the entire rest
+  of the page once past the hero, overlapping the footer and duplicating the
+  in-page Spotify CTA at the bottom. Added a footer `IntersectionObserver` so
+  it hides once the footer scrolls into view.
+
+---
+
 ## Session 73 — Nav home icon, Story merged into Stay, bigger carousel, footer polish (index)
 
 ### Changed
