@@ -1,3 +1,8 @@
+// ══ HAPTICS (subtle mobile vibration on tap) ══
+if('vibrate' in navigator){
+  document.addEventListener('click',e=>{if(e.target.closest('button'))navigator.vibrate(8)});
+}
+
 // ══ REVEALS ══
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));

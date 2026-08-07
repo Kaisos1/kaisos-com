@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <meta name="description" content="Kaisos merch — minimal pieces for quiet creators. Dark tones, soft gold, purple detail. Hoodies, tees, caps and more, shipped worldwide."/>
-<meta name="theme-color" content="#07070f"/>
+<meta name="theme-color" content="#0a0710"/>
 <meta name="color-scheme" content="dark"/>
 <meta name="robots" content="index, follow"/>
 <meta name="author" content="Adnan Cengiz"/>
@@ -54,28 +54,28 @@
 <link rel="preconnect" href="https://plausible.io"/>
 <link rel="preload" as="image" href="https://cdn.fourthwall.com/customizations/sh_6ab8847b-737f-4bdb-ad65-d14f668a8442/b390bb32-ccc8-4b88-94c8-5d1f07ef9fd9.webp" type="image/webp" fetchpriority="high"/>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-latin.woff2" crossorigin/>
-<link rel="preload" as="font" type="font/woff2" href="/fonts/cg-normal-latin.woff2" crossorigin/>
-<link rel="preload" as="font" type="font/woff2" href="/fonts/cg-italic-latin.woff2" crossorigin/>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/fraunces-normal-latin.woff2" crossorigin/>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/fraunces-italic-latin.woff2" crossorigin/>
 <link rel="stylesheet" href="/fonts.css"/>
 <noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
 <style>
 
 /* ══ TOKENS ══ */
 :root{
-  --bg:#07070f;
+  --bg:#0a0710;
   --ink:#ece7f4;
   --ink-2:#b3a9c9;
   --ink-3:#736a8a;
-  --gold:#c8850f;
-  --gold-soft:#e0a63e;
-  --violet:#8b3fc9;
-  --violet-soft:#c9a2ec;
+  --gold:#cf7f18;
+  --gold-soft:#e6a13e;
+  --violet:#9c3fc7;
+  --violet-soft:#d2a3e8;
   --line:rgba(232,227,245,0.09);
   --line-2:rgba(232,227,245,0.16);
   --pane:rgba(13,12,26,0.55);
   --pad:clamp(1.2rem,4.5vw,3.2rem);
   --max:1180px;
-  --serif:'Cormorant Garamond',Georgia,serif;
+  --serif:'Fraunces',Georgia,serif;
   --sans:'Inter',system-ui,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -83,14 +83,6 @@ html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink-2);font-family:var(--sans);font-weight:300;line-height:1.8;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
 img{max-width:100%;display:block}
 a{color:inherit}
-
-/* ══ NIGHT LAYER ══ */
-.night{position:fixed;inset:0;z-index:0;pointer-events:none;background:
-  radial-gradient(1000px 720px at 18% -6%,rgba(58,26,110,0.36),transparent 62%),
-  radial-gradient(880px 640px at 92% 30%,rgba(24,10,50,0.5),transparent 65%),
-  radial-gradient(700px 560px at 50% 115%,rgba(200,133,15,0.12),transparent 60%)}
-.night::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 120% 90% at 50% 42%,transparent 55%,rgba(7,7,15,0.6) 100%)}
-.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:0.5;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E")}
 
 /* ══ PAGE ══ */
 .page{position:relative;z-index:2}
@@ -107,13 +99,13 @@ h2.voice{font-size:clamp(2rem,4.6vw,3.4rem);margin-bottom:1.2rem}
 
 /* ══ NAV ══ */
 .nv{position:fixed;top:0;left:0;right:0;z-index:50;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);transition:background 0.4s,border-color 0.4s;border-bottom:1px solid transparent}
-.nv.on{background:rgba(7,7,15,0.7);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);border-bottom-color:var(--line)}
+.nv.on{background:rgba(10,7,16,0.7);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);border-bottom-color:var(--line)}
 .nv-logo{font-family:var(--serif);font-size:1.4rem;color:var(--gold);text-decoration:none;letter-spacing:0.03em}
 .nv-side{display:flex;align-items:center;gap:1.4rem}
 .nv-back{text-decoration:none;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-3);transition:color 0.25s}
 .nv-back:hover{color:var(--ink)}
 .nv-cta{display:inline-flex;align-items:center;gap:0.45rem;text-decoration:none;background:var(--gold);color:var(--bg);font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.52rem 1.1rem;border-radius:100px;transition:box-shadow 0.25s,transform 0.15s}
-.nv-cta:hover{box-shadow:0 6px 26px rgba(200,133,15,0.4)}
+.nv-cta:hover{box-shadow:0 6px 26px rgba(207,127,24,0.4)}
 .nv-cta:active{transform:scale(0.97)}
 .skip{position:fixed;top:0;left:50%;transform:translate(-50%,-130%);z-index:80;background:var(--violet);color:#fff;padding:0.7rem 1.3rem;border-radius:0 0 6px 6px;font-size:0.78rem;transition:transform 0.2s}
 .skip:focus{transform:translate(-50%,0)}
@@ -126,7 +118,7 @@ h2.voice{font-size:clamp(2rem,4.6vw,3.4rem);margin-bottom:1.2rem}
 
 /* ══ THE DROP ══ */
 .drop{display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(2rem,5vw,5rem);align-items:center}
-.drop-media{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:1;background:#0a0914;display:grid;place-items:center;box-shadow:0 50px 100px -34px rgba(0,0,0,0.85),0 0 0 1px var(--line),0 0 60px rgba(139,63,201,0.16);transform:rotate(-1.2deg)}
+.drop-media{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:1;background:#0a0914;display:grid;place-items:center;box-shadow:0 50px 100px -34px rgba(0,0,0,0.85),0 0 0 1px var(--line),0 0 60px rgba(156,63,199,0.16);transform:rotate(-1.2deg)}
 .drop-media img{width:100%;height:100%;object-fit:contain;transition:transform 0.5s ease}
 .drop-media:hover img{transform:scale(1.03)}
 .drop-txt .small{display:block;font-size:0.78rem;letter-spacing:0.05em;color:var(--ink-3);margin-bottom:1rem}
@@ -135,7 +127,7 @@ h2.voice{font-size:clamp(2rem,4.6vw,3.4rem);margin-bottom:1.2rem}
 .price{font-family:var(--serif);font-size:2.3rem;color:var(--gold-soft);line-height:1}
 .price span{font-family:var(--sans);font-size:0.68rem;color:var(--ink-3);margin-left:0.3rem}
 .btn-gold{display:inline-flex;align-items:center;gap:0.6rem;text-decoration:none;background:var(--gold);color:var(--bg);font-size:0.78rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;padding:0.95rem 1.9rem;border-radius:100px;transition:transform 0.2s,box-shadow 0.25s}
-.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(200,133,15,0.35)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(207,127,24,0.35)}
 .btn-gold:active{transform:scale(0.98)}
 
 /* ══ COLLECTION ══ */
@@ -143,7 +135,7 @@ h2.voice{font-size:clamp(2rem,4.6vw,3.4rem);margin-bottom:1.2rem}
 .coll-head p{font-size:0.9rem;color:var(--ink-3);max-width:44ch}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
 .item{position:relative;display:block;text-decoration:none;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--pane);transition:border-color 0.3s,transform 0.3s,box-shadow 0.3s}
-.item:hover{border-color:rgba(139,63,201,0.4);transform:translateY(-5px);box-shadow:0 22px 50px -22px rgba(0,0,0,0.75)}
+.item:hover{border-color:rgba(156,63,199,0.4);transform:translateY(-5px);box-shadow:0 22px 50px -22px rgba(0,0,0,0.75)}
 .item-img{aspect-ratio:1;background:#0a0914;overflow:hidden}
 .item-img img{width:100%;height:100%;object-fit:contain;transition:transform 0.45s ease}
 .item:hover .item-img img{transform:scale(1.05)}
@@ -151,7 +143,7 @@ h2.voice{font-size:clamp(2rem,4.6vw,3.4rem);margin-bottom:1.2rem}
 .item-name{font-family:var(--serif);font-size:1.2rem;color:var(--ink);line-height:1.25}
 .item-price{font-family:var(--serif);font-size:1.15rem;color:var(--gold-soft);white-space:nowrap}
 .item-desc{padding:0 1.4rem 1.3rem;font-size:0.8rem;color:var(--ink-3);line-height:1.7}
-.item-go{position:absolute;top:1rem;right:1rem;width:38px;height:38px;border-radius:50%;background:rgba(139,63,201,0.92);display:grid;place-items:center;color:#fff;font-style:normal;opacity:0;transform:scale(0.85);transition:opacity 0.3s,transform 0.3s}
+.item-go{position:absolute;top:1rem;right:1rem;width:38px;height:38px;border-radius:50%;background:rgba(156,63,199,0.92);display:grid;place-items:center;color:#fff;font-style:normal;opacity:0;transform:scale(0.85);transition:opacity 0.3s,transform 0.3s}
 .item:hover .item-go{opacity:1;transform:scale(1)}
 @media(hover:none){.item .item-go{opacity:1;transform:scale(0.95)}}
 
@@ -162,7 +154,7 @@ h2.voice{font-size:clamp(2rem,4.6vw,3.4rem);margin-bottom:1.2rem}
 .close-note a{color:var(--ink-2)}
 
 /* ══ FOOTER ══ */
-footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem var(--pad) 2.4rem;background:rgba(7,7,15,0.55)}
+footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem var(--pad) 2.4rem;background:rgba(10,7,16,0.55)}
 .ft-in{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
 .ft-brand{font-family:var(--serif);font-size:1.15rem;color:var(--gold)}
 .ft-mood{font-family:var(--serif);font-style:italic;font-size:0.95rem;color:var(--ink-3)}
@@ -172,7 +164,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem
 .ft-copy{width:100%;font-size:0.7rem;color:var(--ink-3);opacity:0.7}
 
 /* ══ MOBILE SHOP BAR ══ */
-.shop-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:40;background:rgba(7,7,15,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:0.75rem var(--pad) calc(0.75rem + env(safe-area-inset-bottom,0px))}
+.shop-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:40;background:rgba(10,7,16,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:0.75rem var(--pad) calc(0.75rem + env(safe-area-inset-bottom,0px))}
 .shop-bar a{display:flex;align-items:center;justify-content:center;gap:0.6rem;padding:0.95rem;background:var(--gold);color:var(--bg);text-decoration:none;border-radius:100px;font-size:0.8rem;font-weight:700;letter-spacing:0.09em;text-transform:uppercase}
 
 /* ══ MODALS ══ */
@@ -219,8 +211,6 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem
 <body>
 
 <a href="#drop" class="skip">Skip to content</a>
-<div class="night" aria-hidden="true"></div>
-<div class="grain" aria-hidden="true"></div>
 
 <!-- ══ NAV ══ -->
 <nav class="nv" id="nv" aria-label="Primary">
@@ -327,7 +317,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem
       <a href="https://www.instagram.com/lofikaisos/" target="_blank" rel="me noopener">Instagram</a>
       <a href="https://youtube.com/@LofiKaisos" target="_blank" rel="me noopener">YouTube</a>
       <button type="button" data-open-modal="privacy">Privacy</button>
-      <button type="button" data-open-modal="impressum">Impressum</button>
+      <button type="button" data-open-modal="impressum">Legal Notice</button>
     </div>
     <div class="ft-copy">&#169; 2026 Kaisos. All rights reserved.</div>
   </div>
@@ -339,17 +329,17 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem
 
 <!-- ══ IMPRESSUM MODAL ══ -->
 <div class="modal-overlay" id="modal-impressum" role="dialog" aria-modal="true" aria-labelledby="impressum-title">
-  <div class="modal-panel" lang="de">
+  <div class="modal-panel">
     <button type="button" class="modal-close" aria-label="Close">&#215;</button>
-    <h2 id="impressum-title">Impressum</h2>
-    <h3>Angaben gem&#228;&#223; &#167; 5 TMG</h3>
-    <p>Adnan Cengiz<br/>Landshuter Allee 138<br/>80637 M&#252;nchen</p>
-    <h3>Kontakt</h3>
-    <p>E-Mail: <a href="mailto:contact@kaisos.com">contact@kaisos.com</a></p>
-    <h3>Verantwortlich f&#252;r den Inhalt nach &#167; 55 Abs. 2 RStV</h3>
-    <p>Adnan Cengiz<br/>Landshuter Allee 138<br/>80637 M&#252;nchen</p>
-    <h3>Haftungsausschluss</h3>
-    <p>Die Inhalte dieser Seite wurden mit gr&#246;&#223;tm&#246;glicher Sorgfalt erstellt. F&#252;r die Richtigkeit, Vollst&#228;ndigkeit und Aktualit&#228;t der Inhalte kann keine Gew&#228;hr &#252;bernommen werden.</p>
+    <h2 id="impressum-title">Legal Notice</h2>
+    <h3>Information per &#167; 5 TMG (German Telemedia Act)</h3>
+    <p>Adnan Cengiz<br/>Landshuter Allee 138<br/>80637 Munich, Germany</p>
+    <h3>Contact</h3>
+    <p>Email: <a href="mailto:contact@kaisos.com">contact@kaisos.com</a></p>
+    <h3>Responsible for content per &#167; 18 (2) MStV (German Interstate Media Treaty)</h3>
+    <p>Adnan Cengiz<br/>Landshuter Allee 138<br/>80637 Munich, Germany</p>
+    <h3>Disclaimer</h3>
+    <p>The content of this site has been created with the greatest possible care. No guarantee is given for the accuracy, completeness, or timeliness of the content.</p>
   </div>
 </div>
 
@@ -359,7 +349,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem
     <button type="button" class="modal-close" aria-label="Close">&#215;</button>
     <h2 id="privacy-title">Privacy Policy</h2>
     <h3>Controller</h3>
-    <p>Adnan Cengiz, Landshuter Allee 138, 80637 M&#252;nchen<br/>E-Mail: <a href="mailto:contact@kaisos.com">contact@kaisos.com</a></p>
+    <p>Adnan Cengiz, Landshuter Allee 138, 80637 Munich, Germany<br/>Email: <a href="mailto:contact@kaisos.com">contact@kaisos.com</a></p>
     <h3>Data Collection</h3>
     <p>This website does not collect personal data. No first-party cookies are set. We use Plausible Analytics, a privacy-friendly, cookieless service that records only aggregated, anonymous usage statistics (page views and outbound clicks); it sets no cookies and performs no cross-site tracking. See <a href="https://plausible.io/privacy" target="_blank" rel="noopener">Plausible&#8217;s privacy policy</a>.</p>
     <h3>Third-party Services</h3>

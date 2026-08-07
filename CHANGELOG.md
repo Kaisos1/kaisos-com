@@ -2,6 +2,295 @@
 
 ---
 
+## Session 73 — Nav home icon, Story merged into Stay, bigger carousel, footer polish (index)
+
+### Changed
+- Nav "Listen" text link replaced with a home icon (new `#i-home` sprite
+  entry); `.nv-links` and the icon wrapper given proper `align-items:center`
+  and bumped to 21px so it's no longer undersized/misaligned against the
+  other nav items
+- Story section ("Built on honest restarts") moved out of its own standalone
+  section and into the top of the Stay section's left column, above the
+  "you're exactly where you need to be" tagline (which now sits below it).
+  Nav "Story" links now point to `#stay`
+- Removed the "Or reach me at contact@kaisos.com" line from the signup form
+- `.hero-in` lost its `max-width:1400px` cap (same class of bug as the
+  hero-bottom-row fix last session) — the carousel panel now stays exactly
+  centered in the right-half background at any viewport width instead of
+  drifting off-center on wide screens
+- Carousel enlarged again: picker height 460px→500px, cards 190px→215px
+- Footer: bigger/bolder brand mark (1.15rem→1.6rem, weight 600), larger
+  link text and letter-spacing, added a divider before the copyright line,
+  switched vertical alignment from centered to top-aligned
+
+### Removed
+- Dead `#story` CSS selector (`content-visibility` perf rule) now that the
+  standalone Story section no longer exists
+
+---
+
+## Session 72 — Nav logo visibility (index)
+
+### Changed
+- "Kaisos" nav logo: color `var(--ink-2)` → `var(--ink)` (bright near-white
+  instead of muted lavender-grey) and font-weight 400 → 600 for more
+  presence against the dark hero background
+
+---
+
+## Session 71 — Nav logo color + size (index)
+
+### Changed
+- "Kaisos" nav logo: color gold → `var(--ink-2)` (matches the "Listen on
+  Spotify" corner link), size 1.9rem → 2.3rem, with a gold-soft hover state
+  added since it lost its always-gold identity
+
+---
+
+## Session 70 — Hero bottom row: true edge alignment (index)
+
+### Fixed
+- `.hero-bottom-row` had `max-width:1400px`, which centered it and kept
+  "Listen on Spotify" / socials inset from the actual screen edges on wide
+  viewports (visible on a ~2000px browser window: the link sat noticeably
+  right of the "Kaisos" logo instead of under it). Removed the max-width so
+  the row spans full width with just `--pad` padding, same as the nav bar —
+  now the link and socials land exactly under the logo and Support button
+
+---
+
+## Session 69 — Pin hero bottom row to viewport edge (index)
+
+### Changed
+- `.hero-bottom-row` (Listen on Spotify / stats / socials) switched from
+  in-flow (sitting right after the hero content) to `position:absolute;
+  bottom:1.8rem` on desktop, so it's pinned to the true bottom edge of the
+  100svh hero regardless of content height, floating over the background
+  like the original corner design
+- Reverted to normal in-flow stacking on mobile (≤900px) — pinning it
+  absolutely there would overlap the stacked carousel content, since mobile
+  doesn't have the single-viewport space to float it in
+
+---
+
+## Session 68 — Quality pass: colors, alignment, fonts (index)
+
+Did a full visual + code audit (screenshots across hero/story/room/stay/
+footer, plus a hex-color grep for token drift). Findings and fixes:
+
+### Fixed
+- Carousel nav arrows (‹ ›) were HTML entity glyphs that sat visibly
+  off-center in their circular buttons (the Unicode angle-quote glyph's box
+  isn't symmetric). Replaced with proper inline SVG chevrons, sized and
+  centered explicitly
+- `#0a0a0f` was hardcoded twice (Play Album button text + icon fill)
+  instead of using `var(--bg)` (`#07070f`), a near-duplicate off-brand
+  near-black that had drifted from the token. Unified to the token
+- Hero stats numbers had gotten visually weak after merging into the same
+  row as the enlarged "Listen on Spotify" / socials text — bumped stat-v
+  1.5-1.9rem → 1.7-2.15rem and stat-l 0.62rem → 0.66rem for better balance
+
+### Audited, no issues found
+- Color tokens: every brand color goes through a CSS custom property, only
+  one true duplicate found (the #0a0a0f above)
+- Shape system: pills (100px) for buttons/tags, soft-round (16-28px) for
+  panels/cards, circles for icon buttons — consistent throughout
+- Icon family: all hand-drawn as simple monoline/solid paths in one
+  consistent style, no mixed icon libraries
+- Scroll handling: everything already uses `IntersectionObserver`, no raw
+  scroll listeners
+- Story/Room/Stay/Footer sections: typography, spacing, and copy voice
+  consistent with the rest of the site
+
+---
+
+## Session 67 — Restore corners, bigger logo, remove discography shelf (index)
+
+### Changed
+- Nav logo enlarged 1.4rem→1.9rem
+- Restored the "Listen on Spotify" link and social icons removed in the
+  Session 66 audit pass, this time on one aligned row with the stats
+  (`.hero-bottom-row`: link left, stats center, socials right) instead of
+  stats sitting alone above them
+- Hero grid columns changed 0.9fr/1.1fr → 1fr 1fr so the carousel panel
+  centers exactly within the right half of the split background instead of
+  sitting slightly left of it
+
+### Removed
+- The "Nine nights, one world" discography shelf section (all 9 sleeve
+  cards) — cut entirely per request, along with its dead CSS (`.shelf*`,
+  `.sleeve*`) and the "Releases" nav link (both desktop nav and mobile
+  drawer) since its target no longer exists
+
+---
+
+## Session 66 — Design audit fixes (index)
+
+Ran the `design-taste-frontend` skill against the hero/full page. Most of the
+skill's guidance is React/Tailwind-specific and doesn't apply to this static
+site; the applicable findings:
+
+### Removed
+- Duplicate Spotify CTAs: the hero had up to 4 separate "go listen on
+  Spotify" entry points (Play Album, Spotify pill, "Listen on Spotify"
+  corner link, Spotify icon in the corner socials row) on top of the
+  already-covered Spotify/Apple/YouTube pills. Dropped the bottom corner
+  block (`.hero-corners`) entirely; Spotify/Apple/YouTube are already one
+  click away via the plats row, and the full socials list already lives in
+  the Stay section further down the page
+
+### Changed
+- Mobile hero padding tightened (bottom padding 6.5rem/5.5rem → 3rem/2.5rem)
+  now that the corner block isn't reserving space — less scroll before
+  Releases
+- Em-dashes removed from all visible copy (meta tags, og tags, hero
+  description, per-album mood text, signup copy, thank-you message) in
+  favor of colons/commas/periods
+
+### Audit notes (not acted on)
+- Site uses Inter for body text, which the skill flags as a generic default;
+  this is pre-existing documented brand identity (CLAUDE.md), not new slop,
+  left as-is
+- Violet/gold accent palette technically matches the skill's "AI purple"
+  warning, but it's the deliberate, consistently-applied Kaisos brand
+  palette — also left as-is
+
+---
+
+## Session 65 — Infinite carousel loop + "Untold Truths" release (index)
+
+### Added
+- New release "Untold Truths" (Spotify `3xJm2P1qHg15yLCm1PjcWr`, Apple Music
+  linked) as the new default/newest hero album, tagged "NEW" — cover art
+  pulled from Spotify's CDN and converted to `covers/untold-truths.webp`
+- Genre `tag` field per album (was previously hardcoded "Lo-Fi" for every
+  release regardless of which was selected — now updates with the carousel)
+- 9th shelf sleeve for Untold Truths, "latest" tag moved off Quiet Chaos
+
+### Changed
+- Hero corner links ("Listen on Spotify" + socials) sized up
+- Stats row (55K→50K+ subscribers, now 9 releases) moved to a centered
+  full-width row below the hero's two columns instead of inside the text
+  column
+- Bumped release counts site-wide: JSON-LD `numberOfAlbums` 8→9, meta
+  description, og:description, shelf heading ("Eight nights" → "Nine
+  nights"), stats label
+- YouTube subscriber count corrected 55K+ → 50K+ across index, links.html,
+  and press.html
+
+### Fixed
+- Carousel now visually loops: previously only the *navigation* wrapped
+  (prev/next), but the strip itself was a fixed 8-slide list, so picking the
+  first or last album showed dead empty space on one side. Rewritten to
+  render a 7-slide window (current ± 3) with modulo-wrapped indices,
+  re-rendered on every selection — covers now appear on both sides of the
+  active slide no matter which album is selected
+
+---
+
+## Session 64 — Stats moved into hero (index)
+
+### Changed
+- Moved the "55K+ / 8 releases / 2024" stats row up into the hero (left
+  column, below the platform pills) so it's visible without scrolling
+- Removed the standalone `.stats-band` section it used to live in — no
+  longer duplicated further down the page
+
+---
+
+## Session 63 — Static background + looping carousel nav (index)
+
+### Changed
+- Removed the Ken Burns zoom/pan animation on the hero background — the
+  active album cover on the right is now solid/static, no motion
+- Added prev/next arrow buttons to the carousel panel; navigation wraps
+  around (last→first, first→last) instead of stopping at the ends
+
+### Removed
+- Now-dead `prefers-reduced-motion` override for the deleted Ken Burns
+  animation
+
+---
+
+## Session 62 — Exact 50/50 hero split (index)
+
+### Changed
+- Hero background split changed from 48/38 to an exact 50/50: `.hero-portrait`
+  width 48%→50%, `.hero-bg-img` left offset 38%→50%, `.hero-orbs` width
+  48%→50%, scrim gradient stops shifted to match the new seam
+
+---
+
+## Session 61 — Portrait covers + split hero background (index)
+
+### Changed
+- Carousel covers switched from square (1:1) to portrait (3:5), matching the
+  discography shelf's card proportions
+- Hero background split into two independent zones: the right ~62% shows the
+  selected album's cover (Ken Burns zoom, toned down after going portrait —
+  scale 1.02→1.08 instead of 1.06→1.17 to avoid over-cropping), the left ~48%
+  now shows a fixed `ProfileImg.webp` (Kaisos portrait) that never changes
+  when picking a release, instead of the same cover bleeding across the whole
+  hero
+- Mobile (≤900px) reverts both layers to full-width stacked, dimmed portrait
+  underneath — the split only makes sense in the 2-column desktop layout
+
+---
+
+## Session 60 — Bigger carousel + living hero background (index)
+
+### Changed
+- Hero grid rebalanced 0.9fr/1.1fr and carousel panel enlarged (covers
+  190px→240px, panel height 300px→380px) so the carousel reads as the visual
+  anchor instead of the text column
+- Hero background no longer a flat static photo: slow 24s Ken Burns zoom/pan
+  on the active cover, plus 7 drifting bokeh lights concentrated behind the
+  text (reuses the existing `.orb`/`drift` system) for a livelier backdrop
+  without needing a real video asset
+
+---
+
+## Session 59 — Two-column hero with coverflow carousel (index)
+
+### Changed
+- Hero rebuilt to a 2-column layout: album details left (title, year/genre/kind
+  meta row, description, gradient "Play Album" CTA, platform pills), glass
+  carousel panel right — replaces the earlier full-bleed background + vertical
+  picker from Session 58
+- Carousel: horizontal coverflow (active cover scaled up + gold glow, neighbors
+  scaled down/dimmed); clicking any cover slides it to center and updates the
+  background, title, meta, description, embed and platform links
+- Added corner elements inside the hero: "Listen on Spotify" bottom-left,
+  social icons (Instagram/YouTube/Spotify/TikTok) bottom-right
+- Removed the boxed Spotify "facade" now-playing card in favor of the Play
+  Album pill (loads the same inline iframe embed on click)
+
+### Fixed
+- Carousel centering math (`offsetLeft` is relative to a flex item's own flex
+  container, not its grandparent — was mis-centering every slide but index 0)
+- Hero grid items lacked `min-width:0`, letting the carousel's true content
+  width blow out the mobile layout and overflow the viewport
+- Carousel alignment now also recalculates on `load` and via `requestAnimationFrame`
+  so it's correct even if late layout shifts happen after first paint
+
+---
+
+## Session 58 — Netflix-style hero (index)
+
+### Changed
+- Hero rebuilt as a full-bleed cinematic background: darkened/scaled album
+  cover behind the text instead of the floating tilted cover card
+- Added a picker strip (all 8 releases as small covers) below the hero copy —
+  click swaps the background, title, blurb, Spotify embed facade, and
+  platform links (Apple Music link hidden when a release isn't on Apple)
+- Background crossfades between two stacked layers on selection
+
+### Removed
+- `.np-cover` floating cover card + its mobile override — replaced by the
+  full-bleed background
+
+---
+
 ## Session 57 — Hero is now the newest album (index)
 
 ### Changed

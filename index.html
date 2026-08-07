@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<meta name="description" content="Kaisos — lo-fi music producer from Munich. Ambient beats, dark trap, and chill study music. Eight self-released titles, including the album Quiet Chaos. On Spotify, Apple Music, and YouTube."/>
-<meta name="theme-color" content="#07070f"/>
+<meta name="description" content="Kaisos: lo-fi music producer from Munich. Ambient beats, dark trap, and chill study music. Nine self-released titles, including the album Untold Truths. On Spotify, Apple Music, and YouTube."/>
+<meta name="theme-color" content="#0a0710"/>
 <meta name="color-scheme" content="dark"/>
 <meta name="robots" content="index, follow"/>
 <meta name="author" content="Adnan Cengiz"/>
-<meta property="og:title" content="Kaisos — Lo-Fi Worlds from Munich"/>
-<meta property="og:description" content="Lo-fi music producer from Munich. Ambient beats, dark trap, and chill hip-hop. Eight self-released releases, including the album Quiet Chaos. 55K+ YouTube subscribers."/>
+<meta property="og:title" content="Kaisos: Lo-Fi Worlds from Munich"/>
+<meta property="og:description" content="Lo-fi music producer from Munich. Ambient beats, dark trap, and chill hip-hop. Nine self-released releases, including the album Untold Truths. 50K+ YouTube subscribers."/>
 <meta property="og:image" content="https://kaisos.com/og-image.png"/>
-<meta property="og:image:alt" content="Kaisos — Lo-Fi Music Producer from Munich"/>
+<meta property="og:image:alt" content="Kaisos: Lo-Fi Music Producer from Munich"/>
 <meta property="og:image:type" content="image/png"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
@@ -23,7 +23,7 @@
 <link rel="canonical" href="https://kaisos.com"/>
 <link rel="icon" type="image/png" href="/favicon.png"/>
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
-<title>Kaisos — Lo-Fi Music Producer from Munich | Ambient Beats &amp; Chill Hip-Hop</title>
+<title>Kaisos: Lo-Fi Music Producer from Munich | Ambient Beats &amp; Chill Hip-Hop</title>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -40,8 +40,8 @@
       "@type":"MusicArtist",
       "@id":"https://kaisos.com/#artist",
       "name":"Kaisos",
-      "description":"Lo-fi music producer from Munich, Germany. Ambient beats, dark trap, and chill hip-hop since 2024. Eight self-released titles on Spotify, Apple Music, and YouTube.",
-      "genre":["Lo-fi","Lo-fi Hip Hop","Chillhop","Ambient","Chill","Study Music"],
+      "description":"Lo-fi music producer from Munich, Germany. Ambient beats, dark trap, and chill hip-hop since 2024. Nine self-released titles on Spotify, Apple Music, and YouTube.",
+      "genre":["Lo-fi","Lo-fi Hip Hop","Chillhop","Ambient","Chill","Study Music","Dark Trap"],
       "url":"https://kaisos.com",
       "image":"https://kaisos.com/ProfileImg.png",
       "foundingLocation":{"@type":"Place","name":"Munich, Germany"},
@@ -52,8 +52,9 @@
         "https://www.instagram.com/lofikaisos/",
         "https://www.tiktok.com/@lofikaisos"
       ],
-      "numberOfAlbums":8,
+      "numberOfAlbums":9,
       "album":[
+        {"@type":"MusicAlbum","name":"Untold Truths","albumReleaseType":"AlbumRelease","url":"https://open.spotify.com/album/3xJm2P1qHg15yLCm1PjcWr","datePublished":"2026"},
         {"@type":"MusicAlbum","name":"Quiet Chaos","albumReleaseType":"AlbumRelease","url":"https://open.spotify.com/album/4e6gK5CEZqllYvsjWDY3Pl","datePublished":"2025"},
         {"@type":"MusicAlbum","name":"Purple Gold","albumReleaseType":"SingleRelease","url":"https://open.spotify.com/album/0Vhoh9SYaNQ5IFcKuEj8s3","datePublished":"2025"},
         {"@type":"MusicAlbum","name":"Lofi Kaisos Special","albumReleaseType":"AlbumRelease","url":"https://open.spotify.com/album/67OMy0DOFbt4Y5iTbL4lnE","datePublished":"2024"},
@@ -67,10 +68,10 @@
   ]
 }
 </script>
-<link rel="preload" as="image" href="covers/quiet-chaos.webp" type="image/webp"/>
+<link rel="preload" as="image" href="covers/untold-truths.webp" type="image/webp"/>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-latin.woff2" crossorigin/>
-<link rel="preload" as="font" type="font/woff2" href="/fonts/cg-normal-latin.woff2" crossorigin/>
-<link rel="preload" as="font" type="font/woff2" href="/fonts/cg-italic-latin.woff2" crossorigin/>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/fraunces-normal-latin.woff2" crossorigin/>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/fraunces-italic-latin.woff2" crossorigin/>
 <link rel="dns-prefetch" href="https://open.spotify.com"/>
 <link rel="preconnect" href="https://open.spotify.com"/>
 <link rel="stylesheet" href="/fonts.css"/>
@@ -79,20 +80,20 @@
 
 /* ══ TOKENS ══ */
 :root{
-  --bg:#07070f;
+  --bg:#0a0710;
   --ink:#ece7f4;
   --ink-2:#b3a9c9;
   --ink-3:#736a8a;
-  --gold:#c8850f;
-  --gold-soft:#e0a63e;
-  --violet:#8b3fc9;
-  --violet-soft:#c9a2ec;
+  --gold:#cf7f18;
+  --gold-soft:#e6a13e;
+  --violet:#9c3fc7;
+  --violet-soft:#d2a3e8;
   --line:rgba(232,227,245,0.09);
   --line-2:rgba(232,227,245,0.16);
   --pane:rgba(13,12,26,0.55);
   --pad:clamp(1.2rem,4.5vw,3.2rem);
   --max:1180px;
-  --serif:'Cormorant Garamond',Georgia,serif;
+  --serif:'Fraunces',Georgia,serif;
   --sans:'Inter',system-ui,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -100,30 +101,6 @@ html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink-2);font-family:var(--sans);font-weight:300;line-height:1.8;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
 img{max-width:100%;display:block}
 a{color:inherit}
-
-/* ══ NIGHT LAYER — the page moves through one night ══ */
-.night{position:fixed;inset:0;z-index:0;pointer-events:none}
-.night i{position:absolute;inset:0;opacity:0;transition:opacity 2.6s ease}
-.night .ph-dusk{background:
-  radial-gradient(1100px 700px at 80% -10%,rgba(139,63,201,0.30),transparent 60%),
-  radial-gradient(900px 620px at 6% 14%,rgba(45,15,80,0.42),transparent 62%),
-  radial-gradient(720px 600px at 60% 110%,rgba(200,133,15,0.10),transparent 60%)}
-.night .ph-mid{background:
-  radial-gradient(1000px 720px at 18% -6%,rgba(58,26,110,0.36),transparent 62%),
-  radial-gradient(880px 640px at 92% 30%,rgba(24,10,50,0.5),transparent 65%),
-  radial-gradient(700px 560px at 50% 115%,rgba(139,63,201,0.12),transparent 60%)}
-.night .ph-dawn{background:
-  radial-gradient(1050px 700px at 22% 108%,rgba(200,133,15,0.16),transparent 62%),
-  radial-gradient(900px 640px at 85% -8%,rgba(88,40,140,0.28),transparent 60%),
-  radial-gradient(760px 560px at 8% 30%,rgba(30,14,58,0.42),transparent 62%)}
-body[data-phase="dusk"] .ph-dusk,body[data-phase="mid"] .ph-mid,body[data-phase="dawn"] .ph-dawn{opacity:1}
-.night::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 120% 90% at 50% 42%,transparent 55%,rgba(7,7,15,0.6) 100%)}
-.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:0.5;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E")}
-
-/* ── bokeh drift ── */
-.orbs{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.orb{position:absolute;border-radius:50%;filter:blur(3px);opacity:0.35;animation:drift 22s ease-in-out infinite alternate}
-@keyframes drift{from{transform:translate3d(0,0,0)}to{transform:translate3d(var(--dx,20px),var(--dy,-46px),0)}}
 
 /* ══ PAGE / RHYTHM ══ */
 .page{position:relative;z-index:2}
@@ -143,16 +120,19 @@ h2.voice{font-size:clamp(2rem,4.6vw,3.4rem);margin-bottom:1.2rem}
 
 /* ══ NAV ══ */
 .nv{position:fixed;top:0;left:0;right:0;z-index:50;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);transition:background 0.4s,border-color 0.4s;border-bottom:1px solid transparent}
-.nv.on{background:rgba(7,7,15,0.7);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);border-bottom-color:var(--line)}
-.nv-logo{font-family:var(--serif);font-size:1.4rem;color:var(--gold);text-decoration:none;letter-spacing:0.03em}
-.nv-links{display:flex;gap:2rem;list-style:none}
+.nv.on{background:rgba(10,7,16,0.7);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);border-bottom-color:var(--line)}
+.nv-logo{font-family:var(--serif);font-weight:600;font-size:2.3rem;color:var(--ink);text-decoration:none;letter-spacing:0.03em;transition:color 0.25s}
+.nv-logo:hover{color:var(--gold-soft)}
+.nv-links{display:flex;align-items:center;gap:2rem;list-style:none}
 .nv-links a{text-decoration:none;font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink-3);transition:color 0.25s}
+.nv-home{display:flex;align-items:center;color:var(--ink-3);transition:color 0.25s}
+.nv-home:hover{color:var(--ink)}
+.nv-home svg{width:21px;height:21px;fill:currentColor}
 .nv-links a:hover{color:var(--ink)}
 .nv-side{display:flex;align-items:center;gap:0.9rem}
-.nv-cta{display:inline-flex;align-items:center;gap:0.45rem;text-decoration:none;background:var(--violet);color:#fff;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:0.52rem 1.05rem;border-radius:100px;transition:box-shadow 0.25s,transform 0.15s}
-.nv-cta:hover{box-shadow:0 6px 26px rgba(139,63,201,0.45)}
+.nv-cta{display:inline-flex;align-items:center;border:0;cursor:pointer;font-family:var(--sans);text-decoration:none;background:var(--violet);color:#fff;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:0.52rem 1.15rem;border-radius:100px;transition:box-shadow 0.25s,transform 0.15s}
+.nv-cta:hover{box-shadow:0 6px 26px rgba(156,63,199,0.45)}
 .nv-cta:active{transform:scale(0.97)}
-.nv-cta svg{width:14px;height:14px;fill:currentColor}
 
 /* ── mobile burger + drawer ── */
 .nv-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;padding:0;background:none;border:0;cursor:pointer}
@@ -161,7 +141,7 @@ h2.voice{font-size:clamp(2rem,4.6vw,3.4rem);margin-bottom:1.2rem}
 .nv-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .nv-burger[aria-expanded="true"] span:nth-child(2){opacity:0}
 .nv-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.drawer{position:fixed;inset:0;z-index:49;display:grid;place-items:center;background:rgba(7,7,15,0.94);backdrop-filter:blur(24px) saturate(140%);-webkit-backdrop-filter:blur(24px) saturate(140%);opacity:0;visibility:hidden;transition:opacity 0.35s,visibility 0.35s}
+.drawer{position:fixed;inset:0;z-index:49;display:grid;place-items:center;background:rgba(10,7,16,0.94);backdrop-filter:blur(24px) saturate(140%);-webkit-backdrop-filter:blur(24px) saturate(140%);opacity:0;visibility:hidden;transition:opacity 0.35s,visibility 0.35s}
 .drawer.open{opacity:1;visibility:visible}
 .drawer-in{display:flex;flex-direction:column;align-items:center;gap:1.9rem;text-align:center}
 .drawer-in a{font-family:var(--serif);font-style:italic;font-weight:400;font-size:2rem;line-height:1;color:var(--ink);text-decoration:none;opacity:0;transform:translateY(14px);transition:color 0.25s}
@@ -173,95 +153,120 @@ h2.voice{font-size:clamp(2rem,4.6vw,3.4rem);margin-bottom:1.2rem}
 .drawer.open .drawer-in a:nth-child(4){transition-delay:0.24s}
 .drawer.open .drawer-in a:nth-child(5){transition-delay:0.32s}
 .drawer-cta{margin-top:1.1rem;font-family:var(--sans)!important;font-style:normal!important;font-size:0.74rem!important;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#fff!important;background:var(--violet);padding:0.85rem 2.4rem;border-radius:100px}
-.drawer-cta:hover{color:#fff!important;box-shadow:0 6px 26px rgba(139,63,201,0.45)}
+.drawer-cta:hover{color:#fff!important;box-shadow:0 6px 26px rgba(156,63,199,0.45)}
 .skip{position:fixed;top:0;left:50%;transform:translate(-50%,-130%);z-index:80;background:var(--violet);color:#fff;padding:0.7rem 1.3rem;border-radius:0 0 6px 6px;font-size:0.78rem;transition:transform 0.2s}
 .skip:focus{transform:translate(-50%,0)}
 
 /* ══ HERO — newest album ══ */
-.hero{min-height:100svh;display:grid;place-items:center;padding:110px var(--pad) 90px}
-.hero-in{max-width:1120px;width:100%;display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(2.5rem,6vw,5.5rem);align-items:center}
-.hero .small{display:block;margin-bottom:1.1rem}
-.hero h1{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(2.6rem,6.5vw,5rem);line-height:1.06;color:var(--ink);letter-spacing:-0.015em;text-wrap:balance;padding-bottom:0.1em}
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:110px var(--pad) 0;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-portrait{position:absolute;inset:0;right:auto;width:50%;background-image:url('ProfileImg.webp');background-size:cover;background-position:60% center;opacity:0.75;filter:brightness(0.8) saturate(1.1)}
+.hero-portrait::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 90% 80% at 30% 45%,rgba(156,63,199,0.16),transparent 65%)}
+.hero-bg-img{position:absolute;inset:0;left:50%;background-size:cover;background-position:center 30%;opacity:0;transform:scale(1.02);filter:brightness(0.72) saturate(1.15);transition:opacity 1.2s ease}
+.hero-bg-img.on{opacity:1}
+.hero-scrim{position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(10,7,16,0.15) 0%,rgba(10,7,16,0.3) 45%,var(--bg) 96%),
+  linear-gradient(90deg,rgba(10,7,16,0.88) 0%,rgba(10,7,16,0.7) 38%,rgba(10,7,16,0.4) 50%,rgba(10,7,16,0.08) 78%)}
+.hero-in{position:relative;z-index:2;min-width:0;width:100%;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:2rem}
+.hero-txt{max-width:460px;min-width:0;margin:0 auto;text-align:left}
+.hero .small{display:flex;align-items:center;gap:0.6rem;margin-bottom:1.1rem}
+.new-badge{display:inline-block;background:var(--gold-soft);color:#1a1206;font-size:0.62rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.22rem 0.55rem;border-radius:100px}
+.hero h1{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(2.6rem,6.5vw,5rem);line-height:1.06;color:var(--ink);letter-spacing:-0.015em;text-wrap:balance;padding-bottom:0.1em;transition:opacity 0.3s}
 .hero h1 .au{color:var(--gold-soft)}
-.hero-sub{margin:1.4rem 0 2rem;max-width:42ch;font-size:1.02rem;color:var(--ink-2)}
-.btn-play{display:inline-flex;align-items:center;gap:0.7rem;text-decoration:none;background:var(--violet);color:#fff;font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:1rem 2.1rem;border-radius:100px;box-shadow:0 10px 40px rgba(139,63,201,0.35);transition:transform 0.2s,box-shadow 0.25s;border:0;cursor:pointer;font-family:var(--sans)}
-.btn-play:hover{transform:translateY(-2px);box-shadow:0 16px 52px rgba(139,63,201,0.5)}
-.btn-play:active{transform:scale(0.98)}
-.tri{width:0;height:0;border-style:solid;border-width:5.5px 0 5.5px 9px;border-color:transparent transparent transparent currentColor}
-.link-quiet{font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-3);text-decoration:none;border-bottom:1px solid var(--line-2);padding-bottom:3px;transition:color 0.25s,border-color 0.25s}
-.link-quiet:hover{color:var(--ink);border-color:var(--gold)}
 
-/* ── album cover + player ── */
-.np-cover{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 60px 120px -30px rgba(0,0,0,0.9),0 0 0 1px var(--line),0 0 80px rgba(139,63,201,0.18);transform:rotate(-1.6deg)}
-.np-cover img{width:100%;aspect-ratio:1;object-fit:cover}
-.embed{border:1px solid var(--line-2);border-radius:14px;overflow:hidden;background:var(--pane);margin-bottom:1.3rem}
-.facade{display:flex;align-items:center;gap:1rem;width:100%;padding:1.05rem 1.2rem;background:none;border:0;cursor:pointer;text-align:left;font-family:inherit;color:var(--ink);transition:opacity 0.3s}
-.facade img{width:52px;height:52px;border-radius:9px;object-fit:cover}
-.facade .ft1{display:block;font-size:0.92rem;font-weight:500;color:var(--ink)}
-.facade .ft2{display:block;font-size:0.74rem;color:var(--ink-3)}
-.facade .fp{margin-left:auto;width:44px;height:44px;flex-shrink:0;border-radius:50%;background:var(--violet);display:grid;place-items:center;color:#fff;box-shadow:0 6px 22px rgba(139,63,201,0.45);transition:transform 0.2s}
-.facade:hover .fp{transform:scale(1.08)}
-.facade.loading{opacity:0.45;pointer-events:none}
-.embed iframe{display:block;width:100%;border:0}
+/* ── meta row ── */
+.hero-meta{display:flex;align-items:center;gap:0.8rem;margin:1.2rem 0 0;flex-wrap:wrap}
+.hero-meta span{font-size:0.82rem;color:var(--ink-2)}
+.hero-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--ink-3)}
+.hero-meta .tag{background:rgba(156,63,199,0.18);border:1px solid rgba(156,63,199,0.4);color:var(--violet-soft);padding:0.28rem 0.85rem;border-radius:100px;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase}
+
+.hero-sub{margin:1.4rem 0 2rem;max-width:42ch;font-family:var(--serif);font-style:italic;font-size:1.1rem;color:var(--ink-2);transition:opacity 0.3s}
+
+/* ── CTA row ── */
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.3rem}
+.btn-album{display:inline-flex;align-items:center;gap:0.65rem;background:linear-gradient(135deg,var(--gold-soft),var(--violet));color:var(--bg);border:0;font-family:var(--sans);font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:1rem 2rem;border-radius:100px;cursor:pointer;box-shadow:0 10px 34px rgba(156,63,199,0.35);transition:transform 0.2s,box-shadow 0.25s}
+.btn-album:hover{transform:translateY(-2px);box-shadow:0 16px 46px rgba(156,63,199,0.5)}
+.btn-album:active{transform:scale(0.98)}
+.btn-album svg{width:11px;height:11px;fill:var(--bg)}
+.btn-album.loaded{display:none}
+
+/* ── glass carousel panel (right side) ── */
+.hero-carousel-panel{position:relative;z-index:2;min-width:0;max-width:900px;margin:0 auto;padding:2.2rem 1.4rem;overflow:hidden}
+.hero-picker{position:relative;min-width:0;height:min(56vh,540px);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-track{display:flex;align-items:center;transition:transform 0.55s cubic-bezier(0.16,1,0.3,1)}
+.hero-pick{flex:0 0 auto;width:min(255px,28vw);margin:0 -20px;aspect-ratio:3/5;border-radius:16px;overflow:hidden;padding:0;border:0;background:none;cursor:pointer;opacity:0.7;filter:blur(0);transform:scale(0.92);box-shadow:0 20px 50px -14px rgba(0,0,0,0.7);transition:transform 0.5s cubic-bezier(0.16,1,0.3,1),opacity 0.5s ease,filter 0.5s ease,box-shadow 0.5s ease}
+.hero-pick img{width:100%;height:100%;object-fit:cover}
+.hero-pick:hover{opacity:0.9}
+.hero-pick[data-d="2"],.hero-pick[data-d="3"]{opacity:0.45;filter:blur(2.5px);transform:scale(0.82)}
+.hero-pick.active{opacity:1;filter:none;border-radius:22px;transform:scale(1.2) translateY(-8px);box-shadow:0 38px 90px -12px rgba(0,0,0,0.9),0 0 0 1px rgba(207,127,24,0.45),0 0 34px rgba(207,127,24,0.22),0 0 50px rgba(156,63,199,0.18);z-index:3}
+
+/* ── carousel nav arrows ── */
+.hero-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:4;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,0.14);background:rgba(10,7,16,0.55);color:var(--ink);cursor:pointer;display:grid;place-items:center;backdrop-filter:blur(6px);transition:background 0.25s,border-color 0.25s,transform 0.2s}
+.hero-nav svg{width:18px;height:18px}
+.hero-nav:hover{background:rgba(207,127,24,0.25);border-color:rgba(207,127,24,0.5)}
+.hero-nav:active{transform:translateY(-50%) scale(0.92)}
+.hero-nav-prev{left:0.8rem}
+.hero-nav-next{right:0.8rem}
+
+/* ── hero bottom row: listen link / stats / socials ── */
+.hero-bottom-row{position:absolute;left:0;right:0;bottom:1.8rem;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:1.6rem var(--pad) 0;border-top:1px solid var(--line)}
+.hero-corner{flex:0 0 auto;display:flex;align-items:center;gap:0.7rem;color:var(--ink-2);font-size:0.92rem;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;text-decoration:none;transition:color 0.25s}
+.hero-corner:hover{color:var(--gold-soft)}
+.hero-corner svg{width:22px;height:22px;fill:currentColor}
+.hero-socs{gap:1.4rem}
+.hero-socs a{color:var(--ink-2);transition:color 0.25s,transform 0.2s}
+.hero-socs a:hover{color:var(--gold-soft);transform:translateY(-2px)}
+.hero-socs svg{width:21px;height:21px;fill:currentColor}
+.btn-play{display:inline-flex;align-items:center;gap:0.7rem;text-decoration:none;background:var(--violet);color:#fff;font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:1rem 2.1rem;border-radius:100px;box-shadow:0 10px 40px rgba(156,63,199,0.35);transition:transform 0.2s,box-shadow 0.25s;border:0;cursor:pointer;font-family:var(--sans)}
+.btn-play:hover{transform:translateY(-2px);box-shadow:0 16px 52px rgba(156,63,199,0.5)}
+.btn-play:active{transform:scale(0.98)}
+
+/* ── now-playing embed ── */
+.embed-slot{border-radius:14px;overflow:hidden}
+.embed-slot:not(:empty){border:1px solid var(--line-2);background:var(--pane);margin-bottom:1.3rem}
+.embed-slot iframe{display:block;width:100%;border:0}
+
+/* ── cover art ── */
+.cover-play{max-width:300px;border-radius:16px;overflow:hidden;aspect-ratio:1/1;margin:0 auto 1.3rem;box-shadow:0 20px 50px -18px rgba(0,0,0,0.7)}
+.cover-play img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* ── spotify button ── */
+.btn-spotify{display:inline-flex;align-items:center;gap:0.7rem;text-decoration:none;background:#e0333f;color:#fff;font-size:0.78rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:1rem 2.1rem;border-radius:100px;box-shadow:0 10px 40px rgba(224,51,63,0.35);transition:transform 0.2s,box-shadow 0.25s;width:100%;justify-content:center}
+.btn-spotify:hover{transform:translateY(-2px);box-shadow:0 16px 52px rgba(224,51,63,0.5)}
+.btn-spotify:active{transform:scale(0.98)}
+.btn-spotify svg{width:16px;height:16px;fill:#fff}
 .plats{display:flex;gap:0.5rem;flex-wrap:wrap}
 .plat{display:inline-flex;align-items:center;gap:0.45rem;padding:0.5rem 1rem;border:1px solid var(--line-2);border-radius:100px;color:var(--ink-2);text-decoration:none;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;transition:border-color 0.25s,color 0.25s}
 .plat:hover{border-color:var(--gold);color:var(--gold-soft)}
 .plat svg{width:13px;height:13px;fill:currentColor}
 
-/* ── stats band ── */
-.stats-band{padding:3.4rem 0}
+/* ── stats ── */
 .stats{display:flex;justify-content:center;gap:clamp(2.2rem,8vw,5.5rem);flex-wrap:wrap;text-align:center}
 .stat{display:flex;flex-direction:column;gap:0.5rem}
 .stat-v{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(2.3rem,5vw,3.1rem);line-height:1;color:var(--gold-soft)}
 .stat-v i{font-style:normal;font-size:0.55em;color:var(--ink-3)}
 .stat-l{font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3)}
+.hero-stats{flex:1 1 auto;gap:clamp(1.5rem,4vw,3.5rem)}
+.hero-stats .stat-v{font-size:clamp(1.7rem,3vw,2.15rem)}
+.hero-stats .stat-l{font-size:0.66rem}
 
 /* ── floating listen CTA ── */
-.listen-fab{position:fixed;left:50%;bottom:1.5rem;z-index:48;display:inline-flex;align-items:center;gap:0.6rem;background:var(--violet);color:#fff;font-family:var(--sans);font-size:0.76rem;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;padding:0.85rem 1.7rem;border-radius:100px;text-decoration:none;box-shadow:0 12px 38px rgba(139,63,201,0.5);opacity:0;visibility:hidden;transform:translate(-50%,150%);transition:transform 0.45s cubic-bezier(.2,.9,.3,1),opacity 0.35s,visibility 0.35s,box-shadow 0.25s}
+.listen-fab{position:fixed;left:50%;bottom:1.5rem;z-index:48;display:inline-flex;align-items:center;gap:0.6rem;background:var(--violet);color:#fff;font-family:var(--sans);font-size:0.76rem;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;padding:0.85rem 1.7rem;border-radius:100px;text-decoration:none;box-shadow:0 12px 38px rgba(156,63,199,0.5);opacity:0;visibility:hidden;transform:translate(-50%,150%);transition:transform 0.45s cubic-bezier(.2,.9,.3,1),opacity 0.35s,visibility 0.35s,box-shadow 0.25s}
 .listen-fab.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
-.listen-fab:hover{box-shadow:0 16px 50px rgba(139,63,201,0.7)}
+.listen-fab:hover{box-shadow:0 16px 50px rgba(156,63,199,0.7)}
 .listen-fab:active{transform:translate(-50%,2px)}
 .listen-fab svg{width:16px;height:16px;fill:currentColor}
 @media(min-width:901px){.listen-fab{display:none}}
 
-/* ══ THE SHELF ══ */
-.shelf-head{display:flex;align-items:baseline;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:2.6rem}
-.shelf-head p{font-size:0.86rem;color:var(--ink-3);max-width:36ch}
-.shelf{display:flex;gap:1.6rem;overflow-x:auto;scroll-snap-type:x proximity;padding:1rem var(--pad) 2rem;scrollbar-width:thin;scrollbar-color:var(--violet) transparent;-webkit-mask-image:linear-gradient(to right,transparent,#000 var(--pad),#000 calc(100% - var(--pad)),transparent);mask-image:linear-gradient(to right,transparent,#000 var(--pad),#000 calc(100% - var(--pad)),transparent)}
-.sleeve{scroll-snap-align:center;flex:0 0 min(320px,74vw);text-decoration:none;transition:transform 0.35s cubic-bezier(0.16,1,0.3,1)}
-.sleeve:hover{transform:translateY(-8px)}
-.sleeve-art{position:relative;display:block;border-radius:12px;overflow:hidden;box-shadow:0 26px 60px -26px rgba(0,0,0,0.9),0 0 0 1px var(--line);transition:box-shadow 0.35s}
-.sleeve:hover .sleeve-art{box-shadow:0 44px 80px -28px rgba(0,0,0,0.95),0 0 0 1px rgba(139,63,201,0.45),0 0 46px rgba(139,63,201,0.2)}
-.sleeve-art img{width:100%;aspect-ratio:1;object-fit:cover;transition:transform 0.6s ease}
-.sleeve:hover .sleeve-art img{transform:scale(1.04)}
-.sleeve-art .fp{position:absolute;inset:auto 0.9rem 0.9rem auto;width:42px;height:42px;border-radius:50%;background:rgba(139,63,201,0.92);display:grid;place-items:center;color:#fff;opacity:0;transform:scale(0.85);transition:opacity 0.3s,transform 0.3s}
-.sleeve:hover .fp{opacity:1;transform:scale(1)}
-@media(hover:none){.sleeve .fp{opacity:1;transform:scale(0.95)}}
-.sleeve-meta{display:flex;align-items:baseline;gap:0.7rem;padding:1rem 0.2rem 0}
-.sleeve-n{font-family:var(--serif);font-style:italic;font-size:0.95rem;color:var(--ink-3)}
-.sleeve-t{font-family:var(--serif);font-size:1.25rem;color:var(--ink);line-height:1.2}
-.sleeve-mood{display:block;font-size:0.74rem;color:var(--ink-3);padding:0.15rem 0.2rem 0}
-.sleeve-tag{margin-left:auto;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold-soft);border:1px solid rgba(200,133,15,0.4);border-radius:100px;padding:0.16rem 0.6rem;white-space:nowrap}
-
 /* ══ STORY ══ */
 .story{max-width:660px;margin:0 auto}
+.stay-grid .story{max-width:none;margin:0 0 2.8rem}
+.stay-tagline{margin-top:0}
 .story p{margin-bottom:1.3rem;font-size:1.02rem;line-height:2}
 .story .op::first-letter{font-family:var(--serif);font-style:italic;font-size:3.8rem;line-height:0.75;float:left;padding:0.4rem 0.6rem 0 0;color:var(--gold)}
 .story-quote{margin:2.6rem 0 0;padding-left:1.6rem;border-left:2px solid var(--violet)}
 .story-quote blockquote{font-family:var(--serif);font-style:italic;font-size:1.5rem;line-height:1.5;color:var(--ink)}
 .story-quote cite{display:block;margin-top:0.8rem;font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);font-style:normal}
-
-/* ══ THE ROOM ══ */
-.room-note{max-width:52ch;margin-bottom:0.9rem}
-.aff{font-size:0.74rem;color:var(--ink-3);opacity:0.75;margin-bottom:2.6rem}
-.room-list{border-top:1px solid var(--line)}
-.tool{display:grid;grid-template-columns:2.6rem 1fr auto;gap:1.4rem;align-items:baseline;padding:1.6rem 0;border-bottom:1px solid var(--line);text-decoration:none;transition:padding 0.25s}
-.tool:hover{padding-left:0.7rem}
-.tool-n{font-family:var(--serif);font-style:italic;font-size:1.1rem;color:var(--violet-soft)}
-.tool h3{font-family:var(--serif);font-weight:400;font-size:1.3rem;color:var(--ink);margin-bottom:0.3rem}
-.tool p{font-size:0.86rem;color:var(--ink-2);max-width:56ch}
-.tool-go{font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-3);white-space:nowrap;transition:color 0.25s}
-.tool:hover .tool-go{color:var(--gold-soft)}
 
 /* ══ STAY ══ */
 .stay-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:clamp(2.5rem,6vw,5rem);align-items:start}
@@ -277,33 +282,30 @@ h2.voice{font-size:clamp(2rem,4.6vw,3.4rem);margin-bottom:1.2rem}
 .pane h3{font-family:var(--serif);font-weight:400;font-size:1.45rem;color:var(--ink);margin-bottom:0.6rem}
 .pane p{font-size:0.87rem;margin-bottom:1.5rem}
 .pane .btn-play{width:100%;justify-content:center;padding:0.9rem 1.5rem}
-.pane .ghost{display:inline-flex;width:100%;justify-content:center;align-items:center;gap:0.5rem;text-decoration:none;border:1px solid rgba(200,133,15,0.45);color:var(--gold-soft);font-size:0.76rem;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;padding:0.9rem 1.5rem;border-radius:100px;transition:background 0.25s,border-color 0.25s}
-.pane .ghost:hover{background:rgba(200,133,15,0.08);border-color:var(--gold)}
+.pane .ghost{display:inline-flex;width:100%;justify-content:center;align-items:center;gap:0.5rem;text-decoration:none;border:1px solid rgba(207,127,24,0.45);color:var(--gold-soft);font-size:0.76rem;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;padding:0.9rem 1.5rem;border-radius:100px;margin-bottom:0.9rem;transition:background 0.25s,border-color 0.25s}
+.pane .ghost:hover{background:rgba(207,127,24,0.08);border-color:var(--gold)}
 .pane .note{font-size:0.72rem;color:var(--ink-3);text-align:center;margin:0.9rem 0 0}
 .pane .note a{color:var(--gold-soft);text-decoration:none;border-bottom:1px solid rgba(224,166,62,0.3);transition:border-color 0.2s}
 .pane .note a:hover{border-color:var(--gold-soft)}
-.signup .field{margin-bottom:1rem}
-.signup label{display:block;font-size:0.72rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink-3);margin-bottom:0.5rem}
-.signup label .opt{text-transform:none;letter-spacing:0;color:var(--ink-3);opacity:0.7}
-.signup input,.signup textarea{width:100%;background:rgba(255,255,255,0.03);border:1px solid var(--line);border-radius:12px;color:var(--ink);font-family:var(--sans);font-size:0.9rem;font-weight:300;padding:0.85rem 1rem;transition:border-color 0.2s,background 0.2s}
-.signup input:focus,.signup textarea:focus{outline:0;border-color:rgba(200,133,15,0.5);background:rgba(255,255,255,0.05)}
-.signup input::placeholder,.signup textarea::placeholder{color:var(--ink-3)}
-.signup textarea{resize:vertical;min-height:74px;line-height:1.6}
-.signup .btn-play[disabled]{opacity:0.6;cursor:default}
-.signup .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.form-done{text-align:center;padding:1.4rem 0.5rem}
-.form-done h3{margin-bottom:0.5rem}
-.form-done p{margin-bottom:0}
+.aff-mini{margin-top:1.2rem;padding-top:1rem;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:center;gap:0.6rem 0.9rem}
+.aff-mini-label{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-3);opacity:0.7}
+.aff-mini a{font-size:0.74rem;color:var(--ink-2);text-decoration:none;border-bottom:1px solid var(--line-2);transition:color 0.2s,border-color 0.2s}
+.aff-mini a:hover{color:var(--gold-soft);border-color:var(--gold-soft)}
 
 /* ══ FOOTER ══ */
-footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem var(--pad) 2.4rem;background:rgba(7,7,15,0.55)}
-.ft-in{max-width:var(--max);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
-.ft-brand{font-family:var(--serif);font-size:1.15rem;color:var(--gold)}
-.ft-mood{font-family:var(--serif);font-style:italic;font-size:0.95rem;color:var(--ink-3)}
-.ft-links{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
-.ft-links a,.ft-links button{background:none;border:0;cursor:pointer;font-family:var(--sans);font-size:0.72rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink-3);text-decoration:none;padding:0;transition:color 0.2s}
+footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3.4rem var(--pad) 2.6rem;background:rgba(10,7,16,0.55)}
+.ft-in{max-width:var(--max);margin:0 auto;display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem 2.5rem;flex-wrap:wrap}
+.ft-brand{font-family:var(--serif);font-weight:600;font-size:1.6rem;color:var(--gold);line-height:1}
+.ft-mood{font-family:var(--serif);font-style:italic;font-size:0.98rem;color:var(--ink-3);margin-top:0.5rem}
+.ft-copy{margin-top:1.2rem;font-size:0.72rem;color:var(--ink-3);opacity:0.75}
+.ft-side{display:flex;flex-direction:column;align-items:flex-end;gap:1.1rem}
+.ft-socs{display:flex;align-items:center;gap:0.7rem}
+.ft-socs a{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid var(--line-2);color:var(--ink-3);transition:color 0.2s,border-color 0.2s,transform 0.2s}
+.ft-socs a:hover{color:var(--gold-soft);border-color:rgba(207,127,24,0.4);transform:translateY(-2px)}
+.ft-socs a svg{width:16px;height:16px;fill:currentColor}
+.ft-links{display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap}
+.ft-links a,.ft-links button{background:none;border:0;cursor:pointer;font-family:var(--sans);font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-3);text-decoration:none;padding:0;transition:color 0.2s}
 .ft-links a:hover,.ft-links button:hover{color:var(--ink)}
-.ft-copy{width:100%;font-size:0.7rem;color:var(--ink-3);opacity:0.7}
 
 /* ══ MODALS ══ */
 .modal-overlay{position:fixed;inset:0;z-index:70;background:rgba(0,0,0,0.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:2rem;opacity:0;pointer-events:none;transition:opacity 0.3s}
@@ -317,30 +319,60 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem
 .modal-panel p{font-size:0.9rem;line-height:1.85;margin-bottom:0.7rem}
 .modal-panel a{color:var(--violet-soft)}
 
+/* ══ CONTACT FORM ══ */
+.contact-intro{color:var(--ink-2)}
+.hp-field{position:absolute;left:-9999px}
+.form-row{margin-top:1.2rem}
+.form-row label{display:block;font-size:0.68rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-3);margin-bottom:0.5rem}
+.form-row label span{text-transform:none;letter-spacing:0;font-weight:400;opacity:0.7}
+.req{color:var(--gold-soft);opacity:1!important}
+.form-hint{margin-top:0.9rem;font-size:0.68rem;color:var(--ink-3)}
+.form-row input[type="text"],.form-row input[type="email"],.form-row textarea{width:100%;background:rgba(232,227,245,0.04);border:1px solid var(--line-2);border-radius:10px;padding:0.8rem 1rem;font-family:var(--sans);font-size:0.9rem;color:var(--ink);transition:border-color 0.25s,background 0.25s}
+.form-row input[type="text"]:focus,.form-row input[type="email"]:focus,.form-row textarea:focus{outline:none;border-color:var(--violet);background:rgba(232,227,245,0.07)}
+.form-row textarea{resize:vertical;min-height:100px}
+.form-row input[type="file"]{width:100%;font-size:0.8rem;color:var(--ink-3)}
+.form-row input[type="file"]::file-selector-button{background:var(--pane);border:1px solid var(--line-2);color:var(--ink-2);border-radius:100px;padding:0.5rem 1rem;font-size:0.72rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;margin-right:0.8rem;transition:border-color 0.25s,color 0.25s}
+.form-row input[type="file"]::file-selector-button:hover{border-color:var(--gold-soft);color:var(--gold-soft)}
+#contactForm .btn-play{width:100%;justify-content:center;margin-top:1.6rem}
+.form-status{margin-top:0.9rem;text-align:center;font-size:0.82rem}
+.form-status.ok{color:var(--gold-soft)}
+.form-status.err{color:#e0333f}
+
 /* ══ FOCUS ══ */
 :focus-visible{outline:2px solid var(--violet);outline-offset:3px;border-radius:3px}
 
 /* ══ PERF ══ */
-#story,#room,#stay,footer{content-visibility:auto;contain-intrinsic-size:auto 560px}
+#stay,footer{content-visibility:auto;contain-intrinsic-size:auto 560px}
 
 /* ══ RESPONSIVE ══ */
 @media(max-width:900px){
   .nv-links{display:none}
   .nv-cta{display:none}
   .nv-burger{display:flex}
-  .hero-in{grid-template-columns:1fr;gap:2.4rem;text-align:center;justify-items:center}
-  .hero-txt .plats{justify-content:center}
+  .hero{padding:110px var(--pad) 3rem}
+  .hero-in{grid-template-columns:1fr;text-align:center;gap:2.6rem}
+  .hero-txt{max-width:none;margin:0 auto}
+  .hero-meta,.hero-cta,.hero-txt .plats{justify-content:center}
   .hero-sub{margin-left:auto;margin-right:auto}
-  .np-cover{max-width:340px;order:-1;transform:rotate(0)}
+  .hero-carousel-panel{padding:1.6rem 0.5rem}
+  .hero-pick{width:min(150px,42vw);margin:0 -12px}
+  .hero-bottom-row{position:static;flex-direction:column;gap:1.4rem;margin-top:2.4rem;padding:1.6rem var(--pad) 0}
+  .hero-stats{justify-content:center}
+  .hero-portrait{width:100%;opacity:0.35}
+  .hero-bg-img{left:0}
+  .hero-scrim{background:
+    linear-gradient(180deg,rgba(10,7,16,0.45) 0%,rgba(10,7,16,0.6) 45%,var(--bg) 96%),
+    linear-gradient(0deg,rgba(10,7,16,0.75) 0%,rgba(10,7,16,0.2) 55%)}
   .stay-grid{grid-template-columns:1fr;gap:2.6rem}
+  .ft-in{text-align:center;justify-content:center}
+  .ft-side{align-items:center}
 }
 @media(max-width:560px){
   section{padding:4.2rem 0}
-  .hero{padding:96px var(--pad) 60px}
+  .hero{padding:96px var(--pad) 2.5rem}
   .hero-sub{margin:1.6rem auto 2.2rem}
-  .sleeve{flex-basis:min(270px,78vw)}
-  .tool{grid-template-columns:1fr;gap:0.5rem}
-  .tool-n{display:none}
+  .hero-pick{width:min(120px,38vw);margin:0 -10px}
+  .hero-picker{height:auto;padding:1.2rem 0}
   .pane{padding:1.7rem 1.4rem}
   .modal-overlay{padding:0.9rem}
   .modal-panel{padding:1.8rem 1.3rem;max-height:88dvh}
@@ -348,15 +380,13 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem
 
 /* ══ REDUCED MOTION ══ */
 @media(prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .orb{animation:none}
+  html{scroll-behavior:smooth}
   .rv{transition:none}
-  .night i{transition:none}
-  .sleeve,.sleeve-art img,.facade .fp{transition:none}
+  .hero-bg-img,.hero-pick,.hero-track{transition:none}
 }
 </style>
 </head>
-<body data-phase="dusk">
+<body>
 
 <!-- ══ ICON SPRITE ══ -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
@@ -366,25 +396,21 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem
   <path id="i-instagram" d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm0 2h10c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3zm5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5.25-2.75a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5z"/>
   <path id="i-tiktok" d="M16.5 2h-3.1v12.9a2.35 2.35 0 1 1-2-2.32V9.4a5.45 5.45 0 1 0 5.1 5.43V8.5a6.5 6.5 0 0 0 3.8 1.22V6.6a3.6 3.6 0 0 1-2.6-1.1A3.6 3.6 0 0 1 16.5 2.9V2z"/>
   <path id="i-kofi" d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"/>
+  <path id="i-home" d="M12 2.6 1.5 11h3V21h6v-6h3v6h6V11h3z"/>
 </defs></svg>
 
 <a href="#listen" class="skip">Skip to content</a>
-
-<div class="night" aria-hidden="true"><i class="ph-dusk"></i><i class="ph-mid"></i><i class="ph-dawn"></i></div>
-<div class="orbs" aria-hidden="true" id="orbs"></div>
-<div class="grain" aria-hidden="true"></div>
 
 <!-- ══ NAV ══ -->
 <nav class="nv" id="nv" aria-label="Primary">
   <a href="#top" class="nv-logo">Kaisos</a>
   <ul class="nv-links">
-    <li><a href="#listen">Listen</a></li>
-    <li><a href="#releases">Releases</a></li>
-    <li><a href="#story">Story</a></li>
-    <li><a href="/merch">Merch</a></li>
+    <li><a href="#listen" class="nv-home" aria-label="Home"><svg viewBox="0 0 24 24"><use href="#i-home"/></svg></a></li>
+    <li><a href="#stay">Story</a></li>
+    <li><a href="#stay">Merch</a></li>
   </ul>
   <div class="nv-side">
-    <a class="nv-cta" href="https://ko-fi.com/I3I41YQ1DA" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-kofi"/></svg><span>Support</span></a>
+    <button type="button" class="nv-cta" data-open-modal="contact">Contact</button>
     <button type="button" class="nv-burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
       <span></span><span></span><span></span>
     </button>
@@ -395,9 +421,9 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem
 <div class="drawer" id="drawer" aria-hidden="true">
   <nav class="drawer-in" aria-label="Mobile">
     <a href="#listen">Listen</a>
-    <a href="#releases">Releases</a>
-    <a href="#story">Story</a>
-    <a href="/merch">Merch</a>
+    <a href="#stay">Story</a>
+    <a href="#stay">Merch</a>
+    <button type="button" data-open-modal="contact">Contact</button>
     <a class="drawer-cta" href="https://ko-fi.com/I3I41YQ1DA" target="_blank" rel="noopener">Support</a>
   </nav>
 </div>
@@ -405,148 +431,79 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem
 <main class="page" id="top">
 
 <!-- ══ HERO ══ -->
-<header class="hero" id="listen" data-phase="dusk">
+<header class="hero" id="listen">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-portrait"></div>
+    <div class="hero-bg-img on" id="heroBgA" style="background-image:url('covers/untold-truths.webp')"></div>
+    <div class="hero-bg-img" id="heroBgB"></div>
+    <div class="hero-scrim"></div>
+  </div>
   <div class="hero-in">
     <div class="hero-txt">
-      <span class="small rv">Newest album</span>
-      <h1 class="rv d1">Quiet <span class="au">Chaos.</span></h1>
-      <p class="hero-sub rv d2">Late-night lo-fi for the calm inside the noise — from Munich, made slowly for the quiet hours.</p>
-      <div class="embed rv d3">
-        <button type="button" class="facade" data-embed="https://open.spotify.com/embed/album/4e6gK5CEZqllYvsjWDY3Pl?utm_source=generator&amp;theme=0" data-h="352" aria-label="Load Spotify player for Quiet Chaos">
-          <img src="covers/quiet-chaos.webp" alt="" aria-hidden="true" width="52" height="52"/>
-          <span><span class="ft1">Quiet Chaos</span><span class="ft2">Play the full album · Spotify</span></span>
-          <span class="fp"><span class="tri"></span></span>
+      <span class="small rv" id="heroLabel"><span class="new-badge">New</span> Newest album</span>
+      <h1 class="rv d1" id="heroTitle">Untold <span class="au">Truths.</span></h1>
+      <div class="hero-meta rv d1" id="heroMeta">
+        <span id="heroYear">2026</span><span class="dot"></span><span class="tag" id="heroTag">Dark Trap</span><span class="dot"></span><span id="heroKind">Album</span>
+      </div>
+      <p class="hero-sub rv d2" id="heroSub">&#8220;I stopped writing what sounded good and started writing what was true.&#8221;</p>
+      <div class="hero-cta rv d3">
+        <button type="button" class="btn-album" id="heroPlayBtn" data-embed="https://open.spotify.com/embed/album/3xJm2P1qHg15yLCm1PjcWr?utm_source=generator&amp;theme=0" data-h="352" aria-label="Play Untold Truths on Spotify">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          Play Album
         </button>
       </div>
-      <div class="plats rv d3">
-        <a class="plat" href="https://open.spotify.com/album/4e6gK5CEZqllYvsjWDY3Pl" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-spotify"/></svg> Spotify</a>
-        <a class="plat" href="https://music.apple.com/us/album/quiet-chaos/6773957574" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-apple"/></svg> Apple Music</a>
+      <div class="embed-slot" id="heroEmbedSlot"></div>
+      <div class="plats rv d3" id="heroPlats">
+        <a class="plat" href="https://open.spotify.com/album/3xJm2P1qHg15yLCm1PjcWr" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-spotify"/></svg> Spotify</a>
+        <a class="plat" href="https://music.apple.com/us/album/untold-truths/6786814026" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-apple"/></svg> Apple Music</a>
         <a class="plat" href="https://youtube.com/@LofiKaisos" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-youtube"/></svg> YouTube</a>
       </div>
     </div>
-    <div class="np-cover rv d1">
-      <img src="covers/quiet-chaos.webp" alt="Quiet Chaos album cover by Kaisos" width="600" height="600" fetchpriority="high" decoding="async"/>
+    <div class="hero-carousel-panel rv d3">
+      <div class="hero-picker" id="heroPicker" aria-label="Choose a release">
+        <div class="hero-track" id="heroTrack"></div>
+      </div>
+      <button type="button" class="hero-nav hero-nav-prev" id="heroPrev" aria-label="Previous release"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button type="button" class="hero-nav hero-nav-next" id="heroNext" aria-label="Next release"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+  <div class="hero-bottom-row rv d3">
+    <a class="hero-corner hero-listen-corner" href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><use href="#i-spotify"/></svg> Listen on Spotify
+    </a>
+    <div class="stats hero-stats">
+      <div class="stat"><span class="stat-v">50K<i>+</i></span><span class="stat-l">YouTube subscribers</span></div>
+      <div class="stat"><span class="stat-v">9</span><span class="stat-l">Releases, eight albums and one single</span></div>
+      <div class="stat"><span class="stat-v">2024</span><span class="stat-l">Making lo-fi since</span></div>
+    </div>
+    <div class="hero-corner hero-socs">
+      <a href="https://www.instagram.com/lofikaisos/" target="_blank" rel="me noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><use href="#i-instagram"/></svg></a>
+      <a href="https://youtube.com/@LofiKaisos" target="_blank" rel="me noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><use href="#i-youtube"/></svg></a>
+      <a href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="me noopener" aria-label="Spotify"><svg viewBox="0 0 24 24"><use href="#i-spotify"/></svg></a>
+      <a href="https://music.apple.com/us/artist/kaisos/1735054792" target="_blank" rel="me noopener" aria-label="Apple Music"><svg viewBox="0 0 24 24"><use href="#i-apple"/></svg></a>
+      <a href="https://www.tiktok.com/@lofikaisos" target="_blank" rel="me noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><use href="#i-tiktok"/></svg></a>
     </div>
   </div>
 </header>
 
-<!-- ══ STATS ══ -->
-<section class="stats-band" aria-label="At a glance" data-phase="dusk">
-  <div class="wrap stats">
-    <div class="stat rv"><span class="stat-v">55K<i>+</i></span><span class="stat-l">YouTube subscribers</span></div>
-    <div class="stat rv d1"><span class="stat-v">8</span><span class="stat-l">Releases — seven albums, one single</span></div>
-    <div class="stat rv d2"><span class="stat-v">2024</span><span class="stat-l">Making lo-fi since</span></div>
-  </div>
-</section>
-
-<hr class="hairline"/>
-
-<!-- ══ THE SHELF ══ -->
-<section id="releases" data-phase="mid">
-  <div class="wrap">
-    <div class="shelf-head rv">
-      <h2 class="voice">Eight nights, <span class="au">one world.</span></h2>
-      <p>In the order they happened, from the first upload to now. Tap a cover to listen.</p>
-    </div>
-  </div>
-  <div class="shelf rv d1" tabindex="0" aria-label="Discography, scroll horizontally">
-    <a class="sleeve" href="https://open.spotify.com/album/0EQS01PkeiRoi9zaeVDtt7" target="_blank" rel="noopener">
-      <span class="sleeve-art"><img src="covers/vol1.webp" alt="Lofi Kaisos Vol. 1 album cover" width="600" height="600" loading="lazy" decoding="async"/><span class="fp"><span class="tri"></span></span></span>
-      <span class="sleeve-meta"><span class="sleeve-n">01</span><span class="sleeve-t">Vol. 1</span></span>
-      <span class="sleeve-mood">where it began</span>
-    </a>
-    <a class="sleeve" href="https://open.spotify.com/album/1G9pQYYIS1hZEqu0hieCyE" target="_blank" rel="noopener">
-      <span class="sleeve-art"><img src="covers/vol2.webp" alt="Lofi Kaisos Vol. 2 album cover" width="600" height="600" loading="lazy" decoding="async"/><span class="fp"><span class="tri"></span></span></span>
-      <span class="sleeve-meta"><span class="sleeve-n">02</span><span class="sleeve-t">Vol. 2</span></span>
-      <span class="sleeve-mood">quiet focus</span>
-    </a>
-    <a class="sleeve" href="https://open.spotify.com/album/3bcGnK12xEytemEmjFGH86" target="_blank" rel="noopener">
-      <span class="sleeve-art"><img src="covers/vol3.webp" alt="Lofi Kaisos Vol. 3 album cover" width="600" height="600" loading="lazy" decoding="async"/><span class="fp"><span class="tri"></span></span></span>
-      <span class="sleeve-meta"><span class="sleeve-n">03</span><span class="sleeve-t">Vol. 3</span></span>
-      <span class="sleeve-mood">soft melancholy</span>
-    </a>
-    <a class="sleeve" href="https://open.spotify.com/album/49c8g3dFdDOS8aezK0ltDb" target="_blank" rel="noopener">
-      <span class="sleeve-art"><img src="covers/vol4.webp" alt="Lofi Kaisos Vol. 4 album cover" width="600" height="600" loading="lazy" decoding="async"/><span class="fp"><span class="tri"></span></span></span>
-      <span class="sleeve-meta"><span class="sleeve-n">04</span><span class="sleeve-t">Vol. 4</span></span>
-      <span class="sleeve-mood">dreamy textures</span>
-    </a>
-    <a class="sleeve" href="https://open.spotify.com/album/0sm4rH9Bv1VJ5r8hTaFDfz" target="_blank" rel="noopener">
-      <span class="sleeve-art"><img src="covers/vol5.webp" alt="Lofi Kaisos Vol. 5 album cover" width="600" height="600" loading="lazy" decoding="async"/><span class="fp"><span class="tri"></span></span></span>
-      <span class="sleeve-meta"><span class="sleeve-n">05</span><span class="sleeve-t">Vol. 5</span></span>
-      <span class="sleeve-mood">calm study beats</span>
-    </a>
-    <a class="sleeve" href="https://open.spotify.com/album/67OMy0DOFbt4Y5iTbL4lnE" target="_blank" rel="noopener">
-      <span class="sleeve-art"><img src="covers/special.webp" alt="Lofi Kaisos Special album cover" width="600" height="600" loading="lazy" decoding="async"/><span class="fp"><span class="tri"></span></span></span>
-      <span class="sleeve-meta"><span class="sleeve-n">06</span><span class="sleeve-t">Special</span></span>
-      <span class="sleeve-mood">late-night focus</span>
-    </a>
-    <a class="sleeve" href="https://open.spotify.com/album/0Vhoh9SYaNQ5IFcKuEj8s3" target="_blank" rel="noopener">
-      <span class="sleeve-art"><img src="covers/purple-gold.webp" alt="Purple Gold single cover" width="600" height="600" loading="lazy" decoding="async"/><span class="fp"><span class="tri"></span></span></span>
-      <span class="sleeve-meta"><span class="sleeve-n">07</span><span class="sleeve-t">Purple Gold</span></span>
-      <span class="sleeve-mood">dark trap, hip-hop</span>
-    </a>
-    <a class="sleeve" href="https://open.spotify.com/album/4e6gK5CEZqllYvsjWDY3Pl" target="_blank" rel="noopener">
-      <span class="sleeve-art"><img src="covers/quiet-chaos.webp" alt="Quiet Chaos album cover" width="600" height="600" loading="lazy" decoding="async"/><span class="fp"><span class="tri"></span></span></span>
-      <span class="sleeve-meta"><span class="sleeve-n">08</span><span class="sleeve-t">Quiet Chaos</span><span class="sleeve-tag">latest</span></span>
-      <span class="sleeve-mood">calm inside the noise</span>
-    </a>
-  </div>
-</section>
-
-<hr class="hairline"/>
-
-<!-- ══ STORY ══ -->
-<section id="story" data-phase="mid">
-  <div class="wrap">
-    <div class="story">
-      <h2 class="voice rv">Built on <span class="au">honest restarts.</span></h2>
-      <p class="op rv d1">It did not start with gear or talent. It started with a keyboard, impatience, and eventually silence. Twice, I walked away. Twice, something pulled me back.</p>
-      <p class="rv d1">The shift was not dramatic. It was a decision to slow down, to make something for myself before worrying what anyone else might think. Lo-fi gave me that space. A genre that asks for presence, not perfection.</p>
-      <p class="rv d2">When I uploaded the first track, I almost deleted it. I left it up. That was the beginning.</p>
-      <div class="story-quote rv d2">
-        <blockquote>&#8220;Progress, not perfection. And this time, I am not starting over. I am continuing.&#8221;</blockquote>
-        <cite>Kaisos</cite>
-      </div>
-    </div>
-  </div>
-</section>
-
-<hr class="hairline"/>
-
-<!-- ══ THE ROOM ══ -->
-<section id="room" data-phase="dawn">
-  <div class="wrap">
-    <h2 class="voice rv">The room is <span class="au">small on purpose.</span></h2>
-    <p class="room-note lede rv d1">Nothing here was bought to impress. Each thing earned its place by being on every track.</p>
-    <p class="aff rv d1">Some links are affiliate links. Buying through them may earn Kaisos a small commission at no extra cost to you.</p>
-    <div class="room-list rv d2">
-      <a class="tool" href="https://amzn.to/4t59kTK" target="_blank" rel="noopener sponsored">
-        <span class="tool-n">i</span>
-        <span><h3>Beyerdynamic DT 900 Pro X</h3><p>Every mix decision on every track happened through these. Open-back means the sound breathes, which is exactly what lo-fi needs.</p></span>
-        <span class="tool-go">View &#8594;</span>
-      </a>
-      <a class="tool" href="https://amzn.to/4w3IrCj" target="_blank" rel="noopener sponsored">
-        <span class="tool-n">ii</span>
-        <span><h3>Akai MPK Mini MKIII</h3><p>Where the melodies actually start. Small enough to never leave the desk, used on every single track.</p></span>
-        <span class="tool-go">View &#8594;</span>
-      </a>
-      <a class="tool" href="https://go.image-line.com/c/7251968/3088747/38091" target="_blank" rel="noopener sponsored">
-        <span class="tool-n">iii</span>
-        <span><h3>FL Studio</h3><p>Every beat, melody, and mix on this site was built here. Fast enough to catch an idea before it disappears, deep enough to finish it.</p></span>
-        <span class="tool-go">Try it &#8594;</span>
-      </a>
-    </div>
-  </div>
-</section>
-
 <hr class="hairline"/>
 
 <!-- ══ STAY ══ -->
-<section id="stay" data-phase="dawn">
+<section id="stay">
   <div class="wrap">
     <div class="stay-grid">
       <div>
-        <h2 class="voice rv">you&#8217;re exactly <span class="au">where you need to be.</span></h2>
+        <div class="story">
+          <h2 class="voice rv">Built on <span class="au">honest restarts.</span></h2>
+          <p class="op rv d1">It did not start with gear or talent. It started with a keyboard, impatience, and eventually silence. Twice, I walked away. Twice, something pulled me back.</p>
+          <p class="rv d1">The shift was not dramatic. It was a decision to slow down, to make something for myself before worrying what anyone else might think. Lo-fi gave me that space. A genre that asks for presence, not perfection.</p>
+          <p class="rv d2">When I uploaded the first track, I almost deleted it. I left it up. That was the beginning.</p>
+          <div class="story-quote rv d2">
+            <blockquote>&#8220;Progress, not perfection. And this time, I am not starting over. I am continuing.&#8221;</blockquote>
+            <cite>Kaisos</cite>
+          </div>
+        </div>
+        <h2 class="voice rv stay-tagline">you&#8217;re exactly <span class="au">where you need to be.</span></h2>
         <p class="lede rv d1" style="max-width:42ch">The music continues wherever you listen. Come sit for a while.</p>
         <div class="socs rv d2">
           <a class="soc" href="https://www.instagram.com/lofikaisos/" target="_blank" rel="me noopener"><span><b>Instagram</b> &nbsp;<span>@lofikaisos</span></span><i aria-hidden="true">&#8594;</i></a>
@@ -557,34 +514,24 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem
         </div>
       </div>
       <div>
-        <div class="pane rv" data-signup-pane>
-          <h3>Stay in the quiet.</h3>
-          <p>New drops, quiet-hours notes, the occasional unreleased loop &#8212; or just say hi. No spam, ever.</p>
-          <form name="fan-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="signup" data-signup-form>
-            <input type="hidden" name="form-name" value="fan-signup"/>
-            <p class="hp"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"/></label></p>
-            <div class="field">
-              <label for="fan-email">Email</label>
-              <input id="fan-email" type="email" name="email" required autocomplete="email" placeholder="you@somewhere.com"/>
-            </div>
-            <div class="field">
-              <label for="fan-msg">Message <span class="opt">(optional)</span></label>
-              <textarea id="fan-msg" name="message" placeholder="Say hi, request a room, book a session&#8230;"></textarea>
-            </div>
-            <button type="submit" class="btn-play">Send it &#8594;</button>
-            <p class="note">Or reach me at <a href="mailto:contact@kaisos.com">contact@kaisos.com</a></p>
-          </form>
-        </div>
-        <div class="pane rv d1">
-          <h3>Minimal pieces for quiet creators.</h3>
-          <p>Dark tones, soft gold, purple detail. Built to wear while you work.</p>
-          <a class="ghost" href="/merch">Enter the shop &#8594;</a>
+        <div class="pane rv">
+          <h3>Some hours need noise, not quiet.</h3>
+          <p>The playlist for the reps, not the rest.</p>
+          <div class="cover-play"><img src="covers/gym-violence-radio.webp" alt="Gym Violence Radio playlist cover" loading="lazy" decoding="async"/></div>
+          <a class="btn-spotify" href="https://open.spotify.com/playlist/26x2otL7vDpi9Av47880sK" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#i-spotify"/></svg> Listen on Spotify</a>
         </div>
         <div class="pane rv d2">
           <h3>Support the music.</h3>
           <p>If Kaisos has ever made a study session better or a late night feel less lonely, a coffee goes a long way.</p>
+          <a class="ghost" href="https://kaisos-shop.fourthwall.com" target="_blank" rel="noopener">Enter the shop &#8594;</a>
           <a class="btn-play" href="https://ko-fi.com/I3I41YQ1DA" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><use href="#i-kofi"/></svg> Leave a coffee</a>
           <p class="note">No pressure. The music stays free either way.</p>
+          <div class="aff-mini">
+            <span class="aff-mini-label">The gear</span>
+            <a href="https://amzn.to/4t59kTK" target="_blank" rel="noopener sponsored">Beyerdynamic DT 900 Pro X</a>
+            <a href="https://amzn.to/4w3IrCj" target="_blank" rel="noopener sponsored">Akai MPK Mini MKIII</a>
+            <a href="https://go.image-line.com/c/7251968/3088747/38091" target="_blank" rel="noopener sponsored">FL Studio</a>
+          </div>
         </div>
       </div>
     </div>
@@ -599,37 +546,42 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem
 </a>
 
 <!-- ══ FOOTER ══ -->
-<footer data-phase="dawn">
+<footer>
   <div class="ft-in">
     <div>
       <div class="ft-brand">Kaisos</div>
       <div class="ft-mood">lo-fi for the quiet hours, from Munich.</div>
+      <div class="ft-copy">&#169; 2026 Kaisos. All rights reserved.</div>
     </div>
-    <div class="ft-links">
-      <a href="https://www.instagram.com/lofikaisos/" target="_blank" rel="me noopener">Instagram</a>
-      <a href="https://youtube.com/@LofiKaisos" target="_blank" rel="me noopener">YouTube</a>
-      <a href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="me noopener">Spotify</a>
-      <a href="/merch">Merch</a>
-      <button type="button" data-open-modal="privacy">Privacy</button>
-      <button type="button" data-open-modal="impressum">Impressum</button>
+    <div class="ft-side">
+      <div class="ft-socs">
+        <a href="https://www.instagram.com/lofikaisos/" target="_blank" rel="me noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><use href="#i-instagram"/></svg></a>
+        <a href="https://youtube.com/@LofiKaisos" target="_blank" rel="me noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><use href="#i-youtube"/></svg></a>
+        <a href="https://open.spotify.com/artist/5luMo1wzJV2T84LVD8g66M" target="_blank" rel="me noopener" aria-label="Spotify"><svg viewBox="0 0 24 24"><use href="#i-spotify"/></svg></a>
+        <a href="https://music.apple.com/us/artist/kaisos/1735054792" target="_blank" rel="me noopener" aria-label="Apple Music"><svg viewBox="0 0 24 24"><use href="#i-apple"/></svg></a>
+        <a href="https://www.tiktok.com/@lofikaisos" target="_blank" rel="me noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><use href="#i-tiktok"/></svg></a>
+      </div>
+      <div class="ft-links">
+        <button type="button" data-open-modal="privacy">Privacy</button>
+        <button type="button" data-open-modal="impressum">Legal Notice</button>
+      </div>
     </div>
-    <div class="ft-copy">&#169; 2026 Kaisos. All rights reserved.</div>
   </div>
 </footer>
 
 <!-- ══ IMPRESSUM MODAL ══ -->
 <div class="modal-overlay" id="modal-impressum" role="dialog" aria-modal="true" aria-labelledby="impressum-title">
-  <div class="modal-panel" lang="de">
+  <div class="modal-panel">
     <button type="button" class="modal-close" aria-label="Close">&#215;</button>
-    <h2 id="impressum-title">Impressum</h2>
-    <h3>Angaben gem&#228;&#223; &#167; 5 TMG</h3>
-    <p>Adnan Cengiz<br/>Landshuter Allee 138<br/>80637 M&#252;nchen</p>
-    <h3>Kontakt</h3>
-    <p>E-Mail: <a href="mailto:contact@kaisos.com">contact@kaisos.com</a></p>
-    <h3>Verantwortlich f&#252;r den Inhalt nach &#167; 55 Abs. 2 RStV</h3>
-    <p>Adnan Cengiz<br/>Landshuter Allee 138<br/>80637 M&#252;nchen</p>
-    <h3>Haftungsausschluss</h3>
-    <p>Die Inhalte dieser Seite wurden mit gr&#246;&#223;tm&#246;glicher Sorgfalt erstellt. F&#252;r die Richtigkeit, Vollst&#228;ndigkeit und Aktualit&#228;t der Inhalte kann keine Gew&#228;hr &#252;bernommen werden.</p>
+    <h2 id="impressum-title">Legal Notice</h2>
+    <h3>Information per &#167; 5 TMG (German Telemedia Act)</h3>
+    <p>Adnan Cengiz<br/>Landshuter Allee 138<br/>80637 Munich, Germany</p>
+    <h3>Contact</h3>
+    <p>Email: <a href="mailto:contact@kaisos.com">contact@kaisos.com</a></p>
+    <h3>Responsible for content per &#167; 18 (2) MStV (German Interstate Media Treaty)</h3>
+    <p>Adnan Cengiz<br/>Landshuter Allee 138<br/>80637 Munich, Germany</p>
+    <h3>Disclaimer</h3>
+    <p>The content of this site has been created with the greatest possible care. No guarantee is given for the accuracy, completeness, or timeliness of the content.</p>
   </div>
 </div>
 
@@ -639,14 +591,49 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:3rem
     <button type="button" class="modal-close" aria-label="Close">&#215;</button>
     <h2 id="privacy-title">Privacy Policy</h2>
     <h3>Controller</h3>
-    <p>Adnan Cengiz, Landshuter Allee 138, 80637 M&#252;nchen<br/>E-Mail: <a href="mailto:contact@kaisos.com">contact@kaisos.com</a></p>
+    <p>Adnan Cengiz, Landshuter Allee 138, 80637 Munich, Germany<br/>Email: <a href="mailto:contact@kaisos.com">contact@kaisos.com</a></p>
     <h3>Data Collection</h3>
     <p>This website does not collect personal data. No first-party cookies are set. We use Plausible Analytics, a privacy-friendly, cookieless service that records only aggregated, anonymous usage statistics (page views and outbound clicks); it sets no cookies and performs no cross-site tracking. See <a href="https://plausible.io/privacy" target="_blank" rel="noopener">Plausible&#8217;s privacy policy</a>.</p>
     <h3>Third-party Services</h3>
-    <p>Music players (Spotify, Apple Music, YouTube) load only after you click to play them. Once loaded, these providers may set their own cookies. Please refer to their privacy policies: <a href="https://www.spotify.com/legal/privacy-policy/" target="_blank" rel="noopener">Spotify</a>, <a href="https://more.ko-fi.com/privacy" target="_blank" rel="noopener">Ko-fi</a>.</p>
-    <p lang="de">Spotify-Player werden erst nach einem Klick auf den Play-Button geladen. Erst danach k&#246;nnen diese Anbieter eigene Daten erheben. Bitte beachten Sie die Datenschutzerkl&#228;rungen dieser Anbieter.</p>
+    <p>Music players (Spotify, Apple Music, YouTube) load only after you click to play them. Once loaded, these providers may set their own cookies. The shop link and coffee link take you to third-party sites for the purchase. Please refer to their privacy policies: <a href="https://www.spotify.com/legal/privacy-policy/" target="_blank" rel="noopener">Spotify</a>, <a href="https://more.ko-fi.com/privacy" target="_blank" rel="noopener">Ko-fi</a>, <a href="https://fourthwall.com/policies/privacy-policy" target="_blank" rel="noopener">Fourthwall</a>.</p>
     <h3>Your Rights</h3>
     <p>You have the right to access, rectify, and erase your stored data. Contact: <a href="mailto:contact@kaisos.com">contact@kaisos.com</a></p>
+  </div>
+</div>
+
+<!-- ══ CONTACT MODAL ══ -->
+<div class="modal-overlay" id="modal-contact" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+  <div class="modal-panel">
+    <button type="button" class="modal-close" aria-label="Close">&#215;</button>
+    <h2 id="contact-title">Let&#8217;s talk.</h2>
+    <p class="contact-intro">Message me directly. Feedback, collabs, press, whatever it is. Photos and video are welcome.</p>
+    <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
+      <input type="hidden" name="form-name" value="contact"/>
+      <p class="hp-field"><label>Leave this field empty <input name="bot-field"/></label></p>
+      <div class="form-row">
+        <label for="cName">Name <span class="req">*</span></label>
+        <input type="text" id="cName" name="name" required/>
+      </div>
+      <div class="form-row">
+        <label for="cEmail">Email <span class="req">*</span></label>
+        <input type="email" id="cEmail" name="email" required/>
+      </div>
+      <div class="form-row">
+        <label for="cSubject">Subject <span class="req">*</span></label>
+        <input type="text" id="cSubject" name="subject" required/>
+      </div>
+      <div class="form-row">
+        <label for="cMessage">Message <span class="req">*</span></label>
+        <textarea id="cMessage" name="message" rows="4" required></textarea>
+      </div>
+      <div class="form-row">
+        <label for="cFiles">Attach images or video <span>(optional)</span></label>
+        <input type="file" id="cFiles" name="attachments" accept="image/*,video/*" multiple/>
+      </div>
+      <p class="form-hint"><span class="req">*</span> Required</p>
+      <button type="submit" class="btn-play" id="contactSubmit">Send message</button>
+      <p class="form-status" id="contactStatus" aria-live="polite"></p>
+    </form>
   </div>
 </div>
 
